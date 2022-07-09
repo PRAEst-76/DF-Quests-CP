@@ -9,12 +9,14 @@ I'll add quests to this over time. What is here now is hopefully just the start.
 
 **Caveat:** As I am new to scripting quests and somewhat scatterbrained, there may be breaking bugs or bits that don't make sense. Please report any bugs you find as issues with as much information as possible (Daggerfall Unity version, OS, you character level and class, what mods you have enabled etc.)
 
-## To install:
+
+
+### To install:
 
 Copy the PRAEst76 directory and all it's contents into your Daggerfall Unity game folder under
 ```
 DaggerfallUnity_Data\StreamingAssets\QuestPacks\
 ```
-## To uninstall:
+### To uninstall:
 
 Reverse the above process.
