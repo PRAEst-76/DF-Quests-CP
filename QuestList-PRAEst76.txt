@@ -1,0 +1,4 @@
+schema: *name, group, membership, minReq, flag, notes
+
+PRA001.txt, Commoners, N, 0, 1, The Finger of Doom
+PRA002.txt, Commoners, N, 0, 1, The Ratcatcher General
