@@ -1,0 +1,116 @@
+Quest: PRA003
+DisplayName: In Every Dream Home...
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+I don't need anything doing but I know a lady in
+a sad situation that is looking for someone to
+help her with a family affair if you are
+interested in that sort of thing?
+
+RefuseQuest:   [1001]
+No skin off my nose. Some people just aren't into
+helping those in need I figure.
+
+AcceptQuest:  [1002]
+You'll find her at _ladyhome_. Hopefully you
+can do something for the poor lass. She should be
+there for another week or so.
+
+QuestFail:  [1003]
+I think _lady_ will have left _ladyhome_ by now.
+Oh well.
+
+QuestComplete:  [1004]
+They are both at rest now.
+You've done a very good deed.
+
+RumorsDuringQuest:  [1005]
+Lady's got some family troubles.
+<--->
+That poor girl.
+<--->
+That poor man.
+<--->
+I blame the parents.
+
+Message:  1020
+Oh hello. Have you come about the job? I want you to go check on my son-in-law, _widower_ at _farm_. See if he's alright.
+
+Message: 1021
+Leave me be!
+
+Message: 1022
+_maid_ says: He's not right. Best see his father-in-law, _father_ at _dadhome_.
+
+Message: 1023
+He's definately not right, but we can fix it. Go to _grave_ and bring me _heart_
+
+Message: 1024
+Halt!
+
+Message: 1025
+We must take heart to _dung_
+
+Message: 1026
+Stop this foolishness
+
+Message: 1027
+Oh ok then
+
+Message: 1028
+Take me Home
+
+Message: 1029
+Thank you.
+
+Message:  1100
+%qdt:
+I've been sent by _questgiver_ at __questgiver_
+to visit _lady_ at _ladyhome_ in ____ladyhome_ who has family issues.
+
+QBN:
+Item _reward_ gold
+
+Clock _timer_ 7.00:00 11.00:00
+
+Person _questgiver_ group Questor
+Person _lady_ faction Random_Noble female
+Person _widower_ faction Random_Noble male
+Person _maid_ faction Random_Noble female
+Person _father_ faction Random_Noble male
+
+Place _ladyhome_ local house1
+Place _farm_ remote farmhome
+Place _dadhome_ remote wealthyhome
+Place _grave_ remote graveyard
+Place _dung_ remote dungeon
+Place _othergrave_ remote graveyard
+
+Item _heart_ daedra_heart
+
+Foe _guards_ is 3 Warrior
+
+--	Quest start-up:
+    start timer _timer_
+    place npc _lady_ at _ladyhome_
+    log 1100 step 0 
+
+_pcgetsgold_ task:
+	when _done_
+	give pc _reward_ 
+	end quest 
+
+_done_ task:
+    when _final_
+
+_qgclicked_ task:
+	clicked npc _questgiver_ 
+
+_timer_ task:
+	end quest saying 1003
+
+_clearclick_ task:
+	when _qgclicked_ and not _done_
+	clear _qgclicked_ _clearclick_ 

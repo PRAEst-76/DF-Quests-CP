@@ -1,0 +1,5 @@
+schema: *name, group, membership, minReq, flag, notes
+
+PRA001, Commoners, N, 0, 1, The Finger of Doom
+PRA002, Commoners, N, 0, 1, The Ratcatcher General
+PRA003, Commoners, N, 0, 1, In Every Dream Home...
