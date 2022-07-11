@@ -1,5 +1,5 @@
 Quest: PRA003
-DisplayName: In Every Dream Home...
+DisplayName: In Every Dream Home
 -- Message panels
 QRC:
 
@@ -7,16 +7,18 @@ QuestorOffer:  [1000]
 I don't need anything doing but I know a lady in
 a sad situation that is looking for someone to
 help her with a family affair if you are
-interested in that sort of thing?
+interested in that sort of thing? Probably won't
+involve fighting orcs or slaying dragons, but I
+think she is a moneyed dame, if that's your draw? 
 
 RefuseQuest:   [1001]
 No skin off my nose. Some people just aren't into
-helping those in need I figure.
+helping those in need, I figure.
 
 AcceptQuest:  [1002]
-You'll find her at _ladyhome_. Hopefully you
-can do something for the poor lass. She should be
-there for another week or so.
+Well, you'll find her at _ladyhome_.
+Hopefully you can do something for the poor lass.
+She should be there for another week or so.
 
 QuestFail:  [1003]
 I think _lady_ will have left _ladyhome_ by now.
@@ -27,68 +29,210 @@ They are both at rest now.
 You've done a very good deed.
 
 RumorsDuringQuest:  [1005]
-Lady's got some family troubles.
+I hear _lady_'s got some family troubles.
 <--->
-That poor girl.
+Heard about the tragedy at _farm_? That poor girl.
 <--->
-That poor man.
+Heard about the tragedy at _farm_? That poor man.
 <--->
-I blame the parents.
+Just awful what happened to _widower_'s wife? I blame the parents.
+<--->
+Did you hear _lady_'s daughter killed herself. Probably money. It's always money.
 
 Message:  1020
-Oh hello. Have you come about the job? I want you to go check on my son-in-law, _widower_ at _farm_. See if he's alright.
+Oh hello! Sorry, you startled me. I was lost in
+my thoughts.
+You have come to help? I'm not sure what you can
+do. I'm not sure what anyone can do now. We've
+lost our only child. Our beautiful _daughter_.
 
 Message: 1021
-Leave me be!
+You see, she was wed to a man, _widower_. Not of
+good stock, but a good man. Built that farm with
+his own hands. Tried to give her a good life, but
+a few weeks past she took her own life. We do not
+know why. She was happy and loved.
 
 Message: 1022
-_maid_ says: He's not right. Best see his father-in-law, _father_ at _dadhome_.
+Now he lies there in his rooms, unwilling to eat
+or speak to anyone. The _farm_ is going to seed
+without his care; the hands are leaving, unable
+or unwilling to see him waste away from his
+heartbreak.
+The maid came to me in tears, not knowing what to
+do. He will not speak to me or the girls father.
 
 Message: 1023
-He's definately not right, but we can fix it. Go to _grave_ and bring me _heart_
+I am desperate dear %pct! Can you go to _farm_
+and see if you can speak to him and rouse him
+from his grief? 
 
 Message: 1024
-Halt!
+Thank you %pcf. That is all I ask. Perhaps such
+as you can make him see some glimmer of light!
 
 Message: 1025
-We must take heart to _dung_
+I'm sorry %hnr. _widower_ is not seeing guests at
+this time. He is unwell.
 
 Message: 1026
-Stop this foolishness
+Oh, _lady_ sent you? In that case he is inside.
+Please try to talk him out of his doom. He was a
+good man and did not deserve any of this. This
+farm is dying without him.
 
 Message: 1027
-Oh ok then
+Who are you? It matters not. Who sent you?
+_lady_? _father_?
+It matters not. My _daughter_ is gone. All is gone.
+Please leave me. I wish to be alone.
 
 Message: 1028
-Take me Home
+Please, my %hnr. I must speak to you.
 
 Message: 1029
-Thank you.
+If you look around you will see this farm is
+dying as our master dies. As his lady died. It
+grieves. The workers are leaving. Many have not
+been paid this month. The land he worked so hard
+for is turning to dust and the money is gone.
+
+Message: 1030
+_daughter_'s father, _father_ sent word that also
+grieves the loss of his daugher, however he has a
+solution that may help us. Anything that can help
+_farm_ is worth a try now.
+
+Message: 1031
+Go. Speak to him at _dadhome_. See if he can help
+us. I know he is a man of considerable wealth and
+power.
+Please do this. Help end this curse of despair on
+this land.
+
+Message: 1032
+Then please go. Leave me to my grief.
+
+Message: 1035
+Excuse me %hnr. Can I help you?
+
+Message: 1036
+Ah yes, you are here from _farm_. Terrible
+business. Just terrible.
+<ce>
+Please. His Lordship is inside. You may go through.
+He is grieving as you understand so please be
+mindful.
+
+Message: 1037
+So _maid_ sent you. My son-in-law is in a bad
+place. We all are, but his loss has felled him.
+He knows not why his beloved would leave him so.
+She was a troubled girl in her youth, but happy
+she was with him. We hoped for granchildren.
+Alas, we shall never see them now.
+
+Message: 1038
+They talked of my solution. Surely they expected
+money. The farm as it is would be a bottomless
+pit to toss my wealth into. I may cast it to
+Oblivion.
+<ce>
+No. I have a better solution. One that helps us
+all. My son, the farm, my... wife.
+<ce>
+And my beautiful daughter.
+
+Message: 1039
+I am a mage of considerable power and means, %pcf.
+There are magics the Mages Guild dare not speak
+of. For they are fearful of magic. Truthfully.
+<ce>
+I can bring my daughter back to this world %pcf.
+Back to us and the farm
+
+Message: 1040
+Her mother will hear none of this and my son will
+hear nothing in his current state.
+<ce>
+I will need you to go to the crypt where my
+daugher is interred and bring me back her remains.
+<ce>
+This... is dirty work, but it is for my family.
+I am confident I can do this and you know I can
+reward you beyond the reward of seeing a family
+together again.
+
+Message: 1041
+So go now to _grave_ and bring my little girl back to me.
+
+Message: 1045
+Halt! Graverobber! You dare desecrate this young woman?!
+You will lie in a paupers grave of your own for this!
+
+Message: 1046
+You return. You have the... yes. My daughter. How
+small she seems. Like when...
+No matter. Your part is done. You have done well.
+This family thanks you, or will thank you.
 
 Message:  1100
 %qdt:
 I've been sent by _questgiver_ at __questgiver_
-to visit _lady_ at _ladyhome_ in ____ladyhome_ who has family issues.
+to visit _lady_ at _ladyhome_ in __ladyhome_
+who has family issues.
+
+Message: 1101
+%qdt:
+_lady_ has told me the sad story of her daughter
+and sent me to _farm_ to try to talk some sense
+to her son-in-law _widower_ who has fallen into
+grief.
+
+Message: 1102
+%qdt:
+The poor man wouldn't speak to me, maybe someone
+else here will?
+
+Message: 1103
+The maid, _maid_ told me to see _widower_'s father-in-law,
+_father_ at _dadhome_ who may be able to help.
+
+Message: 1104
+%qdt:
+Rather horribly the father wants to try to bring
+his daughter back from the dead. He seems to think
+he can.
+He wants me to collect her remains from _grave_
+and bring them back to him.
+
+Message: 1105
+%qdt:
+I retrived the girls remains, but they were guarded for some reason. 
+
+Message: 1106
+%qdt:
+I've returned the remains to the father. What he plans to do with them is unclear. I'd rather not know to be fair.
 
 QBN:
 Item _reward_ gold
 
 Clock _timer_ 7.00:00 11.00:00
+Clock _aword_ 00:01
 
 Person _questgiver_ group Questor
 Person _lady_ faction Random_Noble female
+Person _daughter_ faction Random_Noble female
 Person _widower_ faction Random_Noble male
 Person _maid_ faction Random_Noble female
 Person _father_ faction Random_Noble male
 
-Place _ladyhome_ local house1
+Place _ladyhome_ local tavern
 Place _farm_ remote farmhome
 Place _dadhome_ remote wealthyhome
 Place _grave_ remote graveyard
-Place _dung_ remote dungeon
-Place _othergrave_ remote graveyard
 
-Item _heart_ daedra_heart
+Item _remains_ large_sack
 
 Foe _guards_ is 3 Warrior
 
@@ -97,13 +241,76 @@ Foe _guards_ is 3 Warrior
     place npc _lady_ at _ladyhome_
     log 1100 step 0 
 
+_ladyclicked_ task:
+    clicked npc _lady_ say 1020
+    say 1021
+    say 1022
+    prompt 1023 yes _help_ no _donthelp_
+
+_help_ task:
+    say 1024
+    log 1101 step 1
+    place npc _widower_ at _farm_
+    pc at _farm_ set _infarm_
+
+_donthelp_ task:
+    end quest saying 1032
+
+_infarm_ task:
+    when _infarm_
+    say 1025
+    say 1026
+
+_widowerclicked_ task:
+    clicked npc _widower_ say 1027
+    start timer _aword_
+    log 1102 step 2
+
+_aword_ task:
+    say 1028
+    say 1029
+    say 1030
+    say 1031
+    place npc _father_ at _dadhome_
+    pc at _dadhome_ set _indadhome_
+    log 1103 step 3    
+
+_indadhome_ task:
+    when not _graverobber_
+    say 1035
+    say 1036
+
+_dadclicked_ task:
+    clicked npc _father_ say 1037
+    say 1038
+    say 1039
+    say 1040
+    say 1041
+    pc at _grave_ set _ingrave_
+    place item _remains_ at _grave_
+    log 1104 step 4
+
+_ingrave_ task:
+    have _remains_ set _graverobber_
+    log 1105 step 5
+
+_graverobber_ task:
+    say 1045
+    create foe _guards_ every 1 minutes 1 times with 100% success
+
+_backwithremains_ task:   
+    when _graverobber_
+    clicked npc _father_ say 1046
+    take _remains_ from pc
+    log 1106 step 6
+
+_done_ task:
+    when _graverobber_ and _backwithremains_
+
 _pcgetsgold_ task:
 	when _done_
 	give pc _reward_ 
 	end quest 
-
-_done_ task:
-    when _final_
 
 _qgclicked_ task:
 	clicked npc _questgiver_ 
