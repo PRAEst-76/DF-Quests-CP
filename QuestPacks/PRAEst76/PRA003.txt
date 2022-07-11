@@ -25,8 +25,7 @@ I think _lady_ will have left _ladyhome_ by now.
 Oh well.
 
 QuestComplete:  [1004]
-They are both at rest now.
-You've done a very good deed.
+They are both at rest now together. Their troubles are over.
 
 RumorsDuringQuest:  [1005]
 I hear _lady_'s got some family troubles.
@@ -93,15 +92,16 @@ Please, my %hnr. I must speak to you.
 Message: 1029
 If you look around you will see this farm is
 dying as our master dies. As his lady died. It
-grieves. The workers are leaving. Many have not
-been paid this month. The land he worked so hard
-for is turning to dust and the money is gone.
+grieves you see. The workers are leaving. Many
+have not been paid this month. The land he worked
+so hard for is turning to dust and all the money
+has gone.
 
 Message: 1030
-_daughter_'s father, _father_ sent word that also
-grieves the loss of his daugher, however he has a
-solution that may help us. Anything that can help
-_farm_ is worth a try now.
+However _daughter_'s father, _father_ sent
+word that also greatly grieves the loss of his
+daugher, however he says he can help us. Anything
+that can help _farm_ is worth a try now.
 
 Message: 1031
 Go. Speak to him at _dadhome_. See if he can help
@@ -133,10 +133,10 @@ she was with him. We hoped for granchildren.
 Alas, we shall never see them now.
 
 Message: 1038
-They talked of my solution. Surely they expected
-money. The farm as it is would be a bottomless
-pit to toss my wealth into. I may cast it to
-Oblivion.
+They talked of my solution? Surely they expected
+money. The farm as it is would be but a
+bottomless pit to toss my wealth into. I may as
+well cast it into to Oblivion.
 <ce>
 No. I have a better solution. One that helps us
 all. My son, the farm, my... wife.
@@ -173,8 +173,130 @@ You will lie in a paupers grave of your own for this!
 Message: 1046
 You return. You have the... yes. My daughter. How
 small she seems. Like when...
-No matter. Your part is done. You have done well.
-This family thanks you, or will thank you.
+No matter. The deed is done. This family thanks 
+you, or they will thank you when our _daughter_
+is back with us once more.
+
+Message: 1047
+There is but one more step. I shall prepare her
+remains. If you wish to help me see this through
+and return my beautiful _daughter_ to this world
+and her beloved then return this time tomorrow.
+<ce>I shall tell you what needs to be done then.
+For now, go and rest. You have earned it,
+and more.
+
+Message: 1048
+You return once more. Good. I was concerned you
+would have been reluctant to help any further.
+I'll admit this is a diffcult task, for you and
+for us. But a necessary one.
+
+Message: 1049
+I have performed the first part of the ritual.
+Her heart was the most important aspect of her. I
+have removed and prepared it for rebirth into her
+new form. The ritus needs to be performed
+within a week at _lab_. We should take the
+heart and the necessary equipment and make for
+_lab_ without delay.
+
+Message: 1050
+This is the place. There is an altar within that
+needs to be cleansed and prepared. However to get
+there we will probably need to face enemies.
+Harden yourself. We are almost there. My daughter
+will live once more.
+
+Message: 1051
+This is the altar %pcf. I shall prepare the
+ritual. Keep guard on your guard, for we are
+not safe in this place.
+
+Message: 1052
+Stop _father_! Stop what you are doing with our
+little _daughter_. This is madness! She is dead.
+She cannot return.
+
+Message: 1053
+_lady_! You followed us here?! I can return her!
+I know how. We can have our daughter back with us.
+Back with _widower_. He is lost without her!
+
+Message: 1054
+_widower_ is dead! His grief destroyed him. His
+farm is lost. We've all lost. Let us not lose our
+minds and souls as well.
+
+Message:1055
+No. He let his grief consume him. I am stronger.
+I have the power to return her to us. I will not
+let you stop me.
+
+Message:1056
+You stupid old goat! I always said your lust for
+control would destroy you in the end.
+Men! End him and retrive my daughters remains!
+
+Message:1057
+Curse you _lady_! %pcf! To my aid!
+
+Message: 1058
+She is dead. _lady_ is dead. I knew it would end
+like this, but I can still have my daughter.
+<ce>
+Guard me while I continue the ritual! I can't
+afford any more interruptions. Precision is
+vital!
+
+Message:1059
+She is waking... She is with us again! My
+beautiful _daughter_.
+<ce>
+_daughter_? Can you hear me? It is _father_, your father?
+<ce>
+_daughter_?
+
+Message: 1060
+Oh no. _daughter_! This cannot be. The ritual was
+correct!
+_daughter_
+No! Stop! %pcf! She is an abomination!
+End this, please!
+
+Message: 1061
+Noooooo..!
+
+Message: 1062
+Then you will also fall! Men, kill the %pct!
+
+Message: 1063
+Curse you %pcf. I knew you would not have the
+stomach for this. Like many of your kind before
+you, you will lie with my witch of
+a wife, but in a burial pit.
+
+Message: 1064
+Well done all. I shall return my daughter to her
+slumber in the family tomb. _father_ can lie here
+in the tomb of his own making.
+<ce>
+There is but one more task to do here. Men, you
+know your orders...
+
+Message: 1065
+They... they are dead. Both... both of my parents
+are dead. I am... finally free. The only... way I
+could... escape... thank you &pcf.
+
+Message: 1066
+Please... one more... task. Just one more...
+Return me to my love. He lies... in _othergrave_
+I wish... us to be alone together... as we could
+not be... in life.
+<ce>
+Return me to _widower_. In... _othergrave_.
+Please %pcf!
 
 Message:  1100
 %qdt:
@@ -208,11 +330,15 @@ and bring them back to him.
 
 Message: 1105
 %qdt:
-I retrived the girls remains, but they were guarded for some reason. 
+I retrived the girls remains, but they were guarded
+for some reason. Now to get them back to her father.
 
 Message: 1106
 %qdt:
-I've returned the remains to the father. What he plans to do with them is unclear. I'd rather not know to be fair.
+I've returned the remains to the father. What he
+plans to do with them is unclear. He told me to
+return at the same time tomorrow. I guess I shall
+find out then.
 
 QBN:
 Item _reward_ gold
@@ -231,10 +357,16 @@ Place _ladyhome_ local tavern
 Place _farm_ remote farmhome
 Place _dadhome_ remote wealthyhome
 Place _grave_ remote graveyard
+Place _lab_ remote dungeon
+Place _othergrave_ remote graveyard
 
 Item _remains_ large_sack
+Item _heart_ daedra_heart
 
-Foe _guards_ is 3 Warrior
+Foe _guards_ is 2 Warrior
+Foe _mum_ is 1 archer and 2 Warrior and 1 mage
+Foe _dad_ is 1 mage and 2 skeletons
+Foe _daugdead_ is fleshatronach
 
 --	Quest start-up:
     start timer _timer_
@@ -303,6 +435,18 @@ _backwithremains_ task:
     clicked npc _father_ say 1046
     take _remains_ from pc
     log 1106 step 6
+
+_returndad_ task:
+
+_indung_ task:
+
+_ritual_ task:
+
+_cleanup_ task:
+
+_ritual2_ task:
+
+_ghost_ task:
 
 _done_ task:
     when _graverobber_ and _backwithremains_
