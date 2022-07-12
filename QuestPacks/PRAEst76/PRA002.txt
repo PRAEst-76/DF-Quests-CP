@@ -112,9 +112,9 @@ Place _rathouse1_ local house1
 
 Clock _timer_ 1.00:00 0 flag 17 range 0 2
 
-Clock _nest_ 00:05 00:15
+Clock _nest_ 00:10 00:30
 
-Clock _destroyed_ 00:05 00:15
+Clock _destroyed_ 00:10 00:30
 
 Clock _plague_ 01:00 03:00
 
