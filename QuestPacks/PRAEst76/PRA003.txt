@@ -70,7 +70,8 @@ Message:  1024
 Thank you %pcf. That is all I ask. Perhaps such
 as you can make him see some glimmer of light!
 Please now, go to the __farm_ and try to
-stir him out of his darkness.
+stir him out of his darkness. Here is some gold
+to cover your expenses.
 
 Message:  1025
 I'm sorry %hnr. _widower_ is not seeing guests at
@@ -100,14 +101,14 @@ so hard for is turning to dust and all the money
 has gone.
 
 Message:  1030
-However _daughter_'s father, _father_ sent
-word that also greatly grieves the loss of his
-daugher, however he says he can help us. Anything
-that can help _farm_ is worth a try now.
+However _daughter_'s father, _father_
+sent word that he also greatly grieves the loss
+of his daugher, however he says he can help us.
+Anything that can help _farm_ is worth a try now.
 
 Message:  1031
-Go. Speak to him at __dadhome_. See if he can help
-us. I know he is a man of considerable wealth and
+Go. Speak to him at __dadhome_. See if he can
+help us. I know he is a man of considerable wealth and
 power.
 Please do this. Help end this curse of despair on
 this land.
@@ -362,6 +363,24 @@ Message: 1152
 I have collected the remains of _daughter_.
 Now to return them to _father_
 
+Message: 1153
+Why do we delay?! Time is of the essence in our
+task, %pcf!
+I must have my daugher back with us.
+We must go to the _lab_!
+Now!
+
+Message: 1154
+Enough! I can no longer tolerate your cowardly
+procrastinations, %pcf. If do not posess the
+stomach for this then you shall die for wasting
+my time and risking my daughter!
+
+Message: 1155
+%pcf! You took my daughters remains from
+her tomb but did not return them to me.
+I will take them from your corpse!
+
 Message: 1201
 Dear %pcf
                                 %qdat
@@ -379,17 +398,63 @@ stomach for your excuses.
                             _lady_
                             ____lady_
 
+Message: 1202
+Dear %pcf
+                                %qdat
+I am _maid_, the maid at __farm_. I am writing
+with the sad news that our dear lost employer
+_widower_ succumed to his grief. I can only
+assume that your trip to see his father-in-law
+was unsuccessful.
+The few of us that are left are packing our
+things to leave as the Bank of %reg
+has reclaimed the lands and asked us to depart
+immediately. I shall be traveling back to my
+village, however some here have no place to go.
+I hope they will be ok. I'm sure you tried your
+hardest to convince _father_ to help.
+So I do not blame you in this.
+I wish you good health in your travels.
+                        Yours faithfully,
+                        _maid_
+                        (former) Maid of __farm_
+
+Message: 1203
+% %pcf
+                                %qdat
+I am somewhat dissapointed, but not surprised
+that you did not return to me at __dadhome_
+as I requested. Our task was a heavy one and
+I suspected you did not have the gumption for
+such work.
+No matter. I have procured the services of a
+mercenary to do that which you could not.
+You are no longer required. I expect the
+monies paid to you thus far should cover your
+expenses while assisting our family.
+I bear you no ill will in this, however I do not
+expect to see or hear from you again.
+                        _father_
+                        __dadhome_
 
 QBN:
+Item _stipend_ gold range 20 to 30
 Item _reward_ jade
 Item _money_ gold
 Item _deathnotice_ letter used 1201
+Item _deathnotice2_ letter used 1202
+Item _nogumption_ letter used 1203
 
 Clock _wait_ 7.00:00 11.00:00
 Clock _death_ 10.00:00 14.00:00
+Clock _death2_ 10.00:00 14.00:00
 Clock _widowerroused_ 00:02
 Clock _themaid_ 00:02
 Clock _thedad_ 00:02
+Clock _dadletter_ 3.00:00 5.00:00
+Clock _whereremains_ 6.00:00 9.00:00 
+Clock _delay_ 5.00:00 7.00:00
+Clock _enough_ 5.00:00 7.00:00
 Clock _rest_ 1.00:00
 Clock _wifehere_ 00:05
 
@@ -436,6 +501,10 @@ variable _together_
     pc at _lab_ set _indung_
     pc at _othergrave_ set _finalgrave_
 
+_wait_ task:
+    change repute with _lady_ by -2
+    end quest saying 1003
+
 _ladyclicked_ task:
     clicked npc _lady_ say 1020
     stop timer _wait_
@@ -448,10 +517,16 @@ _help_ task:
     start timer _death_
     log 1101 step 1
     say 1024
+    give pc _stipend_
 --    place npc _widower_ at _farm_
 
 _donthelp_ task:
     end quest saying 1032
+
+_death_ task:
+    give pc _deathnotice_ notify 1151
+    change repute with _lady_ by -5
+    end quest
 
 _atfarm_ task:
     when _infarm_ and not _inconsolable_
@@ -476,6 +551,12 @@ _themaid_ task:
     say 1031
 --    place npc _father_ at _dadhome_
     log 1103 step 3
+    start timer _death2_
+
+_death2_ task:
+    give pc _deathnotice2_ notify 1151
+    change repute with _maid_ by -5
+    end quest
 
 _atdadhome_ task:
     when _indadhome_ and not _graverobber_
@@ -484,6 +565,7 @@ _atdadhome_ task:
     start timer _thedad_
 
 _thedad_ task:
+    when _indadhome_ and not _graverobber_
     say 1037
     say 1038
     say 1039
@@ -492,6 +574,8 @@ _thedad_ task:
     reveal __grave_
     pc at __grave_ set _ingrave_
     log 1104 step 4
+    stop timer _death2_
+    start timer _whereremains_
 
 _ingrave_ task:
     say 1152
@@ -504,25 +588,54 @@ _grobber_ task:
     say 1045
     create foe _guards_ every 1 minutes 1 times with 100% success
 
+_whereremains_ task:
+    say 1155
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _dad_
+    end quest
+
 _backwremains_ task:
     when _graverobber_ and _indadhome_
+    stop timer _whereremains_
     say 1046
     take _remains_ from pc
     say 1047
     give pc _money_
     log 1106 step 6
     start timer _rest_
+    start timer _dadletter_
     setvar _backwithremains_
 
+_dadletter_ task:
+    give pc _nogumption_ notify 1151
+    change repute with _father_ by -5
+    end quest
+
 _rest_ task:
-    when _indadhome_
+    when _backwithremains_ and _indadhome_
+    stop timer _dadletter_
     say 1048
     reveal _lab_
     give pc _heart_
     add _father_ face saying 1049
     place item _altar_ at _lab_
+    start timer _delay_
+
+_delay_ task:
+    say 1153
+    start timer _enough_
+
+_enough_ task:
+    say 1154
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _dad_
+    end quest
 
 _indung_ task:
+    stop timer _delay_
+    stop timer _enough_
     say 1050
 
 _ritual_ task:
@@ -601,15 +714,6 @@ _pcgetsgold_ task:
 
 _qgclicked_ task:
     clicked npc _questgiver_
-
-_wait_ task:
-    change repute with _lady_ by -2
-    end quest saying 1003
-
-_death_ task:
-    give pc _deathnotice_ notify 1151
-    change repute with _lady_ by -5
-    end quest
 
 _clearclick_ task:
     when _qgclicked_ and not _done_
