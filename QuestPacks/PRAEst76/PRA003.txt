@@ -30,9 +30,9 @@ They are both at rest now together. Their troubles are over.
 RumorsDuringQuest:  [1005]
 I hear _lady_'s got some family troubles.
 <--->
-Heard about the tragedy at _farm_? That poor girl.
+Heard about the tragedy at __farm_? That poor girl.
 <--->
-Heard about the tragedy at _farm_? That poor man.
+Heard about the tragedy at __farm_? That poor man.
 <--->
 Just awful what happened to _widower_'s wife? I blame the parents.
 <--->
@@ -69,7 +69,7 @@ from his grief?
 Message:  1024
 Thank you %pcf. That is all I ask. Perhaps such
 as you can make him see some glimmer of light!
-Please now, go to the _farm_ and try to
+Please now, go to the __farm_ and try to
 stir him out of his darkness.
 
 Message:  1025
@@ -106,7 +106,7 @@ daugher, however he says he can help us. Anything
 that can help _farm_ is worth a try now.
 
 Message:  1031
-Go. Speak to him at _dadhome_. See if he can help
+Go. Speak to him at __dadhome_. See if he can help
 us. I know he is a man of considerable wealth and
 power.
 Please do this. Help end this curse of despair on
@@ -123,7 +123,7 @@ Message:  1035
 Excuse me %hnr. Can I help you?
 
 Message:  1036
-Ah yes, you are here from _farm_. Terrible
+Ah yes, you are here from __farm_. Terrible
 business. Just terrible.
 <ce>
 Please. His Lordship is inside. You may go through.
@@ -131,16 +131,17 @@ He is grieving as you understand so please be
 mindful.
 
 Message:  1037
-So _maid_ sent you. My son-in-law is in a bad
-place. We all are, but his loss has felled him.
-He knows not why his beloved would leave him so.
-She was a troubled girl in her youth, but happy
-she was with him. We hoped for granchildren.
-Alas, we shall never see them now.
+So _widower_'s maid sent you. She is a good
+girl. My son-in-law is in a bad place. We all
+are, but his loss has felled him. He knows not
+why his beloved would leave him so. She was a
+troubled girl in her youth, but happy
+she was, with him. We had hoped for
+grandchildren. Alas, we shall never see them now.
 
 Message:  1038
 They talked of my solution? Surely they expected
-money. The farm as it is would be but a
+money. But the farm as it is would be just a
 bottomless pit to toss my wealth into. I may as
 well cast it into to Oblivion.
 <ce>
@@ -170,7 +171,7 @@ reward you beyond the reward of seeing a family
 together again.
 
 Message:  1041
-So go now to _grave_ and bring my little girl back to me.
+So go now to __grave_ and bring my little girl back to me.
 
 Message:  1045
 Halt! Graverobber! You dare desecrate this young woman?!
@@ -188,8 +189,10 @@ There is but one more step. I shall prepare her
 remains. If you wish to help me see this through
 and return my beautiful _daughter_ to this world
 and her beloved then return this time tomorrow.
-<ce>             I shall tell you what needs to be done then.
-For now, go and rest. You have earned it,
+<ce>
+I shall tell you what needs to be done then.
+For now, take this small payment for your deeds
+thus far and go and rest. You have earned it,
 and more.
 
 Message:  1048
@@ -304,6 +307,10 @@ not be... in life.
 Return me to _widower_. In... _othergrave_.
 Please %pcf!
 
+Message: 1067
+I have left _daughter_'s remains with those of
+_widower_. I hope they find peace here.
+
 Message:  1100
 %qdt:
 I've been sent by _questgiver_ at __questgiver_
@@ -324,7 +331,7 @@ else here will?
 
 Message:  1103
 The maid, _maid_ told me to see _widower_'s father-in-law,
-_father_ at _dadhome_ in __dadhome_ who may be able to help.
+_father_ in __dadhome_ who may be able to help.
 
 Message:  1104
 %qdt:
@@ -346,102 +353,150 @@ plans to do with them is unclear. He told me to
 return at the same time tomorrow. I guess I shall
 find out then.
 
+Message: 1151
+A page stops you and hands you a letter with a
+noble seal. He does not make eye contact or await
+a gratuity.
+
+Message: 1152
+I have collected the remains of _daughter_.
+Now to return them to _father_
+
+Message: 1201
+Dear %pcf
+                                %qdat
+I have just received word that _widower_ has died.
+His heart could no longer take his grief it seems.
+The maid said you had not been there. Why did you
+not visit him as I asked?!
+Maybe there was nothing you could do, but you 
+said you would try.
+We are now filled with double the sorrow, and his
+lands they worked so hard to tame have gone to
+seed.
+Please do not respond, as I don't really have the
+stomach for your excuses.
+                            _lady_
+                            ____lady_
+
+
 QBN:
 Item _reward_ jade
 Item _money_ gold
+Item _deathnotice_ letter used 1201
 
-Clock _timer_ 7.00:00 11.00:00
+Clock _wait_ 7.00:00 11.00:00
+Clock _death_ 10.00:00 14.00:00
+Clock _widowerroused_ 00:02
+Clock _themaid_ 00:02
+Clock _thedad_ 00:02
+Clock _rest_ 1.00:00
+Clock _wifehere_ 00:05
 
 Person _questgiver_ group Questor
 Person _lady_ faction Random_Noble female
 Person _daughter_ faction Random_Noble female
 Person _widower_ faction Random_Noble male
-Person _maid_ faction Random_Noble female
 Person _father_ faction Random_Noble male
+Person _maid_ faction Default female
 
 Place _ladyhome_ local tavern
-Place _farm_ remote house
-Place _dadhome_ remote house5
+Place _farm_ remote farmhome
+Place _dadhome_ remote wealthyhome
 Place _grave_ remote graveyard
 Place _lab_ remote dungeon
 Place _othergrave_ remote graveyard
 
 Item _remains_ large_sack
---Item _heart_ daedra_heart
+Item _altar_ lodestone
+Item _heart_ daedra_heart
 
 Foe _guards_ is 2 Warrior
---Foe _mum_ is 1 archer and 2 Warrior and 1 mage
---Foe _dad_ is 1 mage and 2 skeletons
---Foe _daugdead_ is fleshatronach
+Foe _mum_ is 1 Spellsword
+Foe _mumguard_ is 2 Warrior
+Foe _dad_ is 1 Sorcerer
+Foe _dadguard_ is 2 Skeletal_warrior
+Foe _daugdead_ is Flesh_atronach
 
 variable _backwithremains_
 variable _infarm_
 variable _indadhome_
 variable _graverobber_
 variable _inconsolable_
+variable _free_
+variable _finalgrave_
+variable _together_
 
 --	Quest start-up:
-    start timer _timer_
+    start timer _wait_
     place npc _lady_ at _ladyhome_
     log 1100 step 0
     pc at _farm_ set _infarm_
     pc at _dadhome_ set _indadhome_
+    pc at _lab_ set _indung_
+    pc at _othergrave_ set _finalgrave_
 
 _ladyclicked_ task:
     clicked npc _lady_ say 1020
+    stop timer _wait_
     say 1021
     say 1022
     prompt 1023 yes _help_ no _donthelp_
 
 _help_ task:
+    reveal _farm_
+    start timer _death_
     log 1101 step 1
     say 1024
-    place npc _widower_ at _farm_
-    place npc _maid_ at _farm_
+--    place npc _widower_ at _farm_
 
 _donthelp_ task:
     end quest saying 1032
 
 _atfarm_ task:
-    when _infarm_
+    when _infarm_ and not _inconsolable_
     say 1025
     say 1026
-    when not _inconsolable_
+    start timer _widowerroused_
 
-_widowerclicked_ task:
-    clicked npc _widower_ say 1027
+_widowerroused_ task:
+    say 1027
     setvar _inconsolable_
-    mute npc _widower_
+    stop timer _death_
+    start timer _themaid_
     say 1033
     log 1102 step 2
 
-_aword_ task:
-    when _inconsolable_
-    clicked npc _maid_ say 1028
+_themaid_ task:
+--    when _inconsolable_
+    say 1028
     say 1029
     say 1030
+    reveal _dadhome_
     say 1031
-    place npc _father_ at _dadhome_
+--    place npc _father_ at _dadhome_
     log 1103 step 3
-    mute npc _maid_
 
 _atdadhome_ task:
     when _indadhome_ and not _graverobber_
     say 1035
     say 1036
+    start timer _thedad_
 
-_dadclicked_ task:
-    clicked npc _father_ say 1037
+_thedad_ task:
+    say 1037
     say 1038
     say 1039
     say 1040
     say 1041
-    pc at _grave_ set _ingrave_
-    place item _remains_ at _grave_
+    reveal __grave_
+    pc at __grave_ set _ingrave_
     log 1104 step 4
 
 _ingrave_ task:
-    have _remains_ set _graverobber_
+    say 1152
+    get item _remains_
+    setvar _graverobber_
     log 1105 step 5
 
 _grobber_ task:
@@ -450,27 +505,94 @@ _grobber_ task:
     create foe _guards_ every 1 minutes 1 times with 100% success
 
 _backwremains_ task:
-    when _graverobber_
-    clicked npc _father_ say 1046
-    setvar _backwithremains_
+    when _graverobber_ and _indadhome_
+    say 1046
     take _remains_ from pc
+    say 1047
     give pc _money_
     log 1106 step 6
+    start timer _rest_
+    setvar _backwithremains_
 
---_returndad_ task:
+_rest_ task:
+    when _indadhome_
+    say 1048
+    reveal _lab_
+    give pc _heart_
+    add _father_ face saying 1049
+    place item _altar_ at _lab_
 
---_indung_ task:
+_indung_ task:
+    say 1050
 
---_ritual_ task:
+_ritual_ task:
+    clicked item _altar_
+    say 1051
+    start timer _wifehere_
 
---_cleanup_ task:
+_wifehere_ task:
+    say 1052
+    say 1053
+    say 1054
+    say 1055
+    say 1056
+    prompt 1057 yes _ritual2_ no _cleanup_
 
---_ritual2_ task:
+_cleanup_ task:
+    drop _father_ face
+    add _lady_ face
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _dad_
+    give item _heart_ to _dad_
 
---_ghost_ task:
+_daddead_ task:
+    killed _dad_
+    killed _dadguard_
+    say 1064
+    drop _lady_ face
+    create foe _mum_ every 0 minutes 1 times with 100% success
+    create foe _mumguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _mum_
+    setvar _free_
+
+_ritual2_ task:
+    create foe _mum_ every 0 minutes 1 times with 100% success
+    create foe _mumguard_ every 0 minutes 1 times with 100% success
+
+_mumkilled_ task:
+    killed _mum_
+    killed _mumguard_
+    say 1058
+    say 1059
+    say 1060
+    say 1061
+    drop _father_ face
+    create foe _daugdead_ every 0 minutes 1 times with 100% success
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    give item _heart_ to _daugdead_
+
+_deadagain_ task:
+    killed _daugdead_
+    killed _dad_
+    setvar _free_
+
+_ghost_ task:
+    when _free_
+    killed _dad_
+    killed _mum_
+    say 1065
+    say 1066
+    reveal _othergrave_
+
+_finalrest_ task:
+    when _finalgrave_
+    take _heart_ from pc
+    say 1067
+    setvar _together_
 
 _done_ task:
-    when _graverobber_ and _backwithremains_
+    when _together_
 
 _pcgetsgold_ task:
     when _done_
@@ -480,8 +602,14 @@ _pcgetsgold_ task:
 _qgclicked_ task:
     clicked npc _questgiver_
 
-_timer_ task:
+_wait_ task:
+    change repute with _lady_ by -2
     end quest saying 1003
+
+_death_ task:
+    give pc _deathnotice_ notify 1151
+    change repute with _lady_ by -5
+    end quest
 
 _clearclick_ task:
     when _qgclicked_ and not _done_
