@@ -1,15 +1,16 @@
 Quest: PRA003
-DisplayName: In Every Dream Home
+DisplayName: In Every Dream Home...
 -- Message panels
 QRC:
 
 QuestorOffer:  [1000]
-I don't need anything doing but I know a lady in
+I don't need anything doing, but I know a lady in
 a sad situation that is looking for someone to
-help her with a family affair if you are
-interested in that sort of thing? Probably won't
-involve fighting orcs or slaying dragons, but I
-think she is a moneyed dame, if that's your draw? 
+help her with a family affair, if you are
+interested in that sort of thing?
+Probably won't involve fighting orcs or slaying
+dragons, but I think she is a moneyed dame, if
+that's your draw? 
 
 RefuseQuest:  [1001]
 No skin off my nose. Some people just aren't into
@@ -104,7 +105,8 @@ Message:  1030
 However _daughter_'s father, _father_
 sent word that he also greatly grieves the loss
 of his daugher, however he says he can help us.
-Anything that can help _farm_ is worth a try now.
+Anything that can help __farm_ is
+worth a try now.
 
 Message:  1031
 Go. Speak to him at __dadhome_. See if he can
@@ -172,11 +174,13 @@ reward you beyond the reward of seeing a family
 together again.
 
 Message:  1041
-So go now to __grave_ and bring my little girl back to me.
+So go now to __grave_ and bring my little
+girl back to me.
 
 Message:  1045
-Halt! Graverobber! You dare desecrate this young woman?!
-You will lie in a paupers grave of your own for this!
+Halt! Graverobber! You dare desecrate this young
+woman?! You will lie in a paupers grave of your
+own for this!
 
 Message:  1046
 You return. You have the... yes. My daughter. How
@@ -263,7 +267,8 @@ Message:  1059
 She is waking... She is with us again! My
 beautiful _daughter_.
 <ce>
-_daughter_? Can you hear me? It is _father_, your father?
+_daughter_? Can you hear me? It is _father_,
+your father?
 <ce>
 _daughter_?
 
@@ -314,16 +319,17 @@ _widower_. I hope they find peace here.
 
 Message:  1100
 %qdt:
-I've been sent by _questgiver_ at __questgiver_
-to visit _lady_ at _ladyhome_ in __ladyhome_
+I've been sent by _questgiver_
+at __questgiver_ to visit _lady_
+at _ladyhome_ in __ladyhome_
 who has family issues.
 
 Message:  1101
 %qdt:
-_lady_ has told me the sad story of her daughter
-and sent me to _farm_ in __farm_ to try to talk some sense
-to her son-in-law _widower_ who has fallen into
-grief.
+_lady_ has told me the sad story of her
+daughter and sent me to __farm_
+to try to talk some sense to her son-in-law
+_widower_ who has fallen into grief.
 
 Message:  1102
 %qdt:
@@ -331,15 +337,16 @@ The poor man wouldn't speak to me, maybe someone
 else here will?
 
 Message:  1103
-The maid, _maid_ told me to see _widower_'s father-in-law,
-_father_ in __dadhome_ who may be able to help.
+The maid, _maid_ told me to see
+_widower_'s father-in-law, _father_ in
+__dadhome_ who may be able to help.
 
 Message:  1104
 %qdt:
 Rather horribly the father wants to try to bring
 his daughter back from the dead. He seems to think
 he can.
-He wants me to collect her remains from _grave_ in __grave_
+He wants me to collect her remains from __grave_
 and bring them back to him.
 
 Message:  1105
@@ -498,6 +505,7 @@ variable _together_
     log 1100 step 0
     pc at _farm_ set _infarm_
     pc at _dadhome_ set _indadhome_
+    pc at _grave_ set _ingrave_
     pc at _lab_ set _indung_
     pc at _othergrave_ set _finalgrave_
 
@@ -513,12 +521,10 @@ _ladyclicked_ task:
     prompt 1023 yes _help_ no _donthelp_
 
 _help_ task:
+    give pc _stipend_ notify 1024
     reveal _farm_
     start timer _death_
     log 1101 step 1
-    say 1024
-    give pc _stipend_
---    place npc _widower_ at _farm_
 
 _donthelp_ task:
     end quest saying 1032
@@ -571,14 +577,13 @@ _thedad_ task:
     say 1039
     say 1040
     say 1041
-    reveal __grave_
-    pc at __grave_ set _ingrave_
+    reveal _grave_
     log 1104 step 4
     stop timer _death2_
     start timer _whereremains_
 
-_ingrave_ task:
-    say 1152
+_gravesite_ task:
+    when _ingrave_ say 1152
     get item _remains_
     setvar _graverobber_
     log 1105 step 5
