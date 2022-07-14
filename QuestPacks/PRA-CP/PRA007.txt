@@ -1,0 +1,47 @@
+Quest: PRA007
+DisplayName:All Mixed Up
+
+QRC:
+
+QuestorOffer:  [1000]
+%oth, you look like that %ra, %nm. Is that you?"
+<--->
+You're not by any chance %nm, are you?"
+<--->
+Wait a minute. You're not %nm, are you?"
+
+RefuseQuest:  [1001]
+Oh. I guess I was wrong.
+<ce>
+Sorry.
+<--->
+Really? Are you sure?
+<ce>
+I get a little confused sometimes.
+
+AcceptQuest:  [1002]
+Thief! Thiiiief! You're the one that took my gem!
+Guards! Guaaards!
+
+QuestFail:  [1003]
+Real life is not for you. Best find a dungeon to die in.
+
+QuestComplete:  [1004]
+You would have made your father proud.
+
+Message: 1050
+As you hear the accusation, you wonder if perhaps you did steal %g3 gem. However you have no recollection of doing so.
+
+Message: 1051
+_questgiver_ has just run out the door screaming.
+<ce>
+You notice a patron sigh and approach you.
+
+Message: 1052
+What did you say to _questgiver_?
+Yoou know what? It doesn't matter. He was doing
+well until some bloody %ra went and set him off
+again.
+<ce>
+Well, go on. Go and find him before he hurts
+himself or gets lost in a dungeon, again.
