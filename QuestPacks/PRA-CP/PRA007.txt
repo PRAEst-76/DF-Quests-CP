@@ -27,7 +27,7 @@ QuestFail:  [1003]
 Real life is not for you. Best find a dungeon to die in.
 
 QuestComplete:  [1004]
-You would have made your father proud.
+_questgiver_ should get help now.
 
 RumorsDuringQuest:  [1005]
 I hear _questgiver_ has run off again.
@@ -51,6 +51,7 @@ My brother said he saw someone riding hell for leather out of __remtav_, heading
 Message: 1014
 Someone was seen going into _dun_. Probably dead now.
 
+--Quest Dialog
 Message:  1050
 As you hear the accusation, you wonder if perhaps
 you did steal %g3 gem? However you have no
@@ -77,12 +78,15 @@ Well, go on. Go and find him before he hurts
 himself or gets lost in a dungeon or something.
 
 Message:  1053
-Try asking around town if you don't see %g2.
+Try asking around town if anyone has seen %g2,
+or they know anything of note.
 <ce>
 Just bring %g2 back to me at _house_
 when you find %g2. Ask for _local0_.
 <ce>
-_questgiver_ probably just needs a bit
+If _questgiver_'s still in an agitated state you
+may have to... subdue %g2.
+I'd say %g probably just needs a bit
 of a lie down.
 
 Message: 1055
@@ -102,6 +106,13 @@ food but he just muttered about _remtav_
 in __remtav_.
 <ce>
 You might want to check there.
+
+Message:  1057
+You still haven't found _questgiver_? As you can
+see %g hasn't shown up here.
+<ce>
+Try asking if anyone has any news, if they can't
+tell you about _questgiver_ directly.
 
 Message:  1058
 I'm sorry, you've just missed %g. Hid out in
@@ -294,12 +305,11 @@ Place _temple_ remote temple
 Item _deathnotice_ letter used 1250
 Item _reward_ gold
 
-Foe _lunatic_ is Thief
+Foe _lunatic_ is Monk
 
-Clock _guards_ 00:01 00:03
-Clock _fled_ 03:00 1.00:00
-Clock _fled1_ 1.00:00 3.00:00
-Clock _fled2_ 5.00:00 7.00:00
+Clock _fled_ 01:00 12:00
+Clock _fled1_ 5:00 1.00:00
+Clock _fled2_ 3.00:00 5.00:00
 Clock _chase_ 00:05 01:00
 Clock _awake_ 03:00 12:00
 Clock _dead_ 7.00:00 10.00:00
@@ -315,14 +325,12 @@ variable _location1_
 variable _location2_
 variable _location3_
 variable _location4_
-variable _knockedout_
 variable _rescued_
 variable _treated_
+variable _friendclicked_
 
 --	Quest start-up:
     say 1050
-    hide npc _questgiver_
-    start timer _guards_
     pc at _store_ set _location1_
     pc at _remtav_ set _location2_
     pc at _res_ set _location3_
@@ -332,20 +340,20 @@ variable _treated_
     dialog link for location _remtav_ person _questgiver_
     dialog link for location _dun_ person _questgiver_
     log 1150 step 0
-
-_leaving_ task:
-    when pc exits city
-    setvar _atwild_
-
-_guards_ task:
+    play sound door_slam every 0 minutes 1 times
+    hide npc _questgiver_
     say 1051
     say 1052
     say 1053
     log 1151 step 1
-    add dialog for person _questgiver_
+    place npc _local0_ at _house_
     start timer _fled_
     setvar _atstore_
     place npc _questgiver_ at _store_
+
+_leaving_ task:
+    when pc exits city
+    setvar _atwild_
 
 _civ_ task:
     when _location1_ or _location2_ or _location3_ or _location4_
@@ -357,6 +365,7 @@ _found_ task:
     setvar _rabbiting_
 
 _runrabbit_ task:
+    clear _atstore_ _atres_ _attav_
     when _rabbiting_
     stop timer _chase_
     say 1059
@@ -367,15 +376,18 @@ _runrabbit_ task:
 _subdued_ task:
     injured _lunatic_
     say 1302
+    stop timer _fled_
+    stop timer _fled1_
+    stop timer _fled2_
+    stop timer _chase_
     remove foe _lunatic_
     add _questgiver_ face
     log 1170 step 4
-    setvar _knockedout_
     start timer _awake_
     clear _rabbiting_
 
 _awake_ task:
-    clear _knockedout_
+    clear _subdued_
     say 1301
     prompt 1062 yes _rabbitagain_ no _norabbit_
 
@@ -384,7 +396,7 @@ _rabbitagain_ task:
 
 _norabbit_ task:
     say 1305
-    setvar _knockedout_
+    setvar _subdued_
     start timer _awake_
     clear _rabbiting_
 
@@ -440,12 +452,18 @@ _rescue_ task:
     add _questgiver_ face
     log 1156 step 5
 
-_got_ task:
-    when _rescued_ or _knockedout_
-    place npc _local0_ at _house_
+_friend_ task:
+    clicked npc _local0_
+    setvar _friendclicked_
 
-_friendclicked_ task:
-    clicked npc _local0_ say 1061
+_clearfriend_ task:
+    when _friendclicked_ and not _subdued_ or not _rescued_
+    say 1057
+    clear _friendclicked_ _friend_ _clearfriend_
+
+_got_ task:
+    when _friendclicked_ and _rescued_ or _subdued_
+    say 1061
     place npc _doctor_ at _temple_
     log 1157 step 6
 
