@@ -1,14 +1,14 @@
 Quest: PRA007
-DisplayName:All Mixed Up
-
+DisplayName: All Mixed Up
+-- Message panels
 QRC:
 
 QuestorOffer:  [1000]
-%oth, you look like that %ra, %nm. Is that you?"
+%oth, you look like that %ra, %pcf. Is that you?
 <--->
-You're not by any chance %nm, are you?"
+You're not by any chance %pcf, are you?
 <--->
-Wait a minute. You're not %nm, are you?"
+Wait a minute. You're not %pcf, are you?
 
 RefuseQuest:  [1001]
 Oh. I guess I was wrong.
@@ -29,19 +29,452 @@ Real life is not for you. Best find a dungeon to die in.
 QuestComplete:  [1004]
 You would have made your father proud.
 
-Message: 1050
-As you hear the accusation, you wonder if perhaps you did steal %g3 gem. However you have no recollection of doing so.
+RumorsDuringQuest:  [1005]
+I hear _questgiver_ has run off again.
+<--->
+_questgiver_ has had another one of %g3 turns.
+<--->
+Apparently some %ra spooked _questgiver_. Some people have no shame.
+<--->
+Some nutter is hiding under a table in _store_ and they can't get %g2 to come out.
 
-Message: 1051
-_questgiver_ has just run out the door screaming.
+--More Rumors
+Message: 1011
+A figure was seen sneaking out the back door of __store_'s _store_. Slunk off towards _res_ in __res_.
+
+Message: 1012
+I saw _questgiver_ leaving _res_ a short while ago. Looking furtive was %g. Seemed to head towards _remtav_ in __remtav_.
+
+Message: 1013
+My brother said he saw someone riding hell for leather out of __remtav_, heading towards _dun_.
+
+Message: 1014
+Someone was seen going into _dun_. Probably dead now.
+
+Message:  1050
+As you hear the accusation, you wonder if perhaps
+you did steal %g3 gem? However you have no
+recollection of doing so.
 <ce>
-You notice a patron sigh and approach you.
+It might have been another %ra called %pcf...
 
-Message: 1052
-What did you say to _questgiver_?
-Yoou know what? It doesn't matter. He was doing
+Message:  1051
+_questgiver_ has just scurried out the door.
+No guards appear to be coming.
+<ce>
+You notice a local who glares at you and
+approaches.
+
+Message:  1052
+%oth! What did you say to
+_questgiver_?!
+<ce>
+You know what? It doesn't matter! He was doing
 well until some bloody %ra went and set him off
 again.
 <ce>
 Well, go on. Go and find him before he hurts
-himself or gets lost in a dungeon, again.
+himself or gets lost in a dungeon or something.
+
+Message:  1053
+Try asking around town if you don't see %g2.
+<ce>
+Just bring %g2 back to me at _house_
+when you find %g2. Ask for _local0_.
+<ce>
+_questgiver_ probably just needs a bit
+of a lie down.
+
+Message: 1055
+_questgiver_? Yes, %g was here. Wouldn't leave.
+Hid under the table saying a %ra was trying
+"inner-act" with him. Crazy if you ask me.
+<ce>
+Ran off towards _local2_'s house at
+_res_. Glad to be shot of %g2.
+
+Message:  1056
+Yes. _questgiver_ was here. Hiding in the corner
+there.
+<ce>
+Was here all night in fact. I offered %g2 some
+food but he just muttered about _remtav_
+in __remtav_.
+<ce>
+You might want to check there.
+
+Message:  1058
+I'm sorry, you've just missed %g. Hid out in
+corner. Left without paying his bill I hear.
+Seemed agitated.
+<ce>
+Talked about _dun_. That's not a nice place.
+
+Message:  1059
+No! It's you. What do you want from me? Leave me
+alone!
+
+Message:  1060
+Please help me. I don't know how I got here. I
+just want to go home.
+<ce>
+_local0_ sent you? Oh thank you. Please take me home!
+
+Message:  1061
+Glad you brought _questgiver_ back. %pcf.
+I spoke to the Healer, _doctor_ from
+__temple_ and they have something new
+to try.
+<ce>
+Maybe bring him there?
+
+Message:  1062
+%oth, you look like that worg, %n. Is that me?
+<--->
+You are by any chance %n, are we?
+<--->
+Wait a minute. You're not %n, we are?
+
+Message:  1063
+Ah, _questgiver_ I was expecting you.
+I hear the potion we gave you has lost it's
+effectiveness somewhat.
+<ce>
+Not to fear, we have a new one to try. It should
+help keep those nasty thoughts at bay
+<ce>
+And thank you, %pcf, for bringing %g2 to us.
+We can take it from here.
+
+Message:  1064
+This should cover your expenses.
+
+--Logs
+Message:  1150
+%qdt:
+_questgiver_ of ___questgiver_ suddenly
+accused me of theft before calling the guards
+and running out of the building screaming.
+<ce>
+I'm sure I'm probably innocent of this,
+but will have to explain that to the guards.
+<ce>
+If they'll listen.
+
+Message:  1151
+%qdt:
+No guards came. Instead _local0_
+told me _questgiver_ has a few wheels
+missing from %g3 cart.
+<ce>
+Apparently they now expect me to track %g2
+down and bring %g2 to them at _house_.
+<ce>
+I'll need to ask around to figure out where %g
+has run off to.
+
+Message:  1152
+%qdt:
+_questgiver_ was at _store_ but apparently isn't
+there anymore. I guess I need to ask around
+again, see if anyone has seen %g2.
+
+Message:  1153
+%qdt:
+_questgiver_ was here at _res_ but has left.
+Who knows where. I guess I could ask people.
+
+Message:  1154
+%qdt:
+Missed %g2 at _remtav_, but apparently
+_questgiver_ was heard mumbling something
+about _dun_. I best find them
+before they get hurt.
+
+Message:  1170
+%qdt:
+I found _questgiver_. Had to subdue %g2.
+Now to get him back to _local0_
+at _house_ in __house_ before he wakes up.
+
+Message:  1156
+%qdt:
+I found _questgiver_ in _dun_. It appears
+that %g has calmed down somewhat and wants to go
+home. Now to get out.
+
+Message:  1157
+%qdt:
+_local0_ has told me to take _questgiver_
+to _temple_ in __temple_
+where _doctor_ has a new treatment
+for %g3 "condition".
+
+--AnyInfo
+Message:  1201
+I hear _questgiver_ got thrown from a horse while travelling fast and says %g fell through the world and there was nothing there. Just a big void.
+<--->
+What I'd give to know about _questgiver_... no really. I'm writing a book about %g2. I think %g's an interesting character.
+<--->
+I talked to _questgiver_ once and %g told me none of us are real.
+<--->
+I had a good rumour about _questgiver_ but it got left out.
+<--->
+_questgiver_ has called for the guards so much they no longer get placed near %g2.
+<--->
+I hear some %ra has been asking questions about _questgiver_. Oh that's you? Sorry. That's all I know.
+<--->
+They say _questgiver_ is a liar, but if one believes their lies are the truth are they really lies? Something to think about.
+<--->
+Did _questgiver_ run off again? Sometimes %g hides out in _store_ when %g is having one of %g3 funny turns. Maybe look there.
+<--->
+I'd avoid _questgiver_ if I were you. Bit of a nutter that one.
+<--->
+_questgiver_ has some issues. I filed a report but it got closed.
+<--->
+_questgiver_ once told me that I looked rough because someone called Ninelan forgot about me. What a weird thing to say.
+<--->
+_questgiver_ has some insects inside %g2. So %g says. Crazy talk.
+
+Message: 1202
+_local0_ is a decent sort. Always looking out for that poor _questgiver_. Lives at _house_ in __house_.
+
+
+Message:  1250
+%pcf
+Sorry to have to tell you, but _questgiver_
+was found dead in _dun_ by some adventurers
+so you can call off your obviously thorough
+search of the region.
+<ce>
+Be careful what you say to people in future, eh?
+<ce>
+                            _local0_
+                            __local0_
+                            ___local0_
+                            ____local0_
+
+Message:  1300
+A scruffy boy with a runny nose hands you a letter. Stares at you for a bit. Then wanders off.
+
+Message:  1301
+Damn. %g's awake again.
+
+Message:  1302
+_questgiver_ is unconscious. Time to get him home.
+
+Message: 1303
+There he is! There is _questgiver_!
+
+Message: 1304
+_questgiver_ almost instantaneously appears to
+vanish before your eyes only to be replaced by
+a raving _lunatic_ who attacks desperately.
+<ce>
+Metaphorically, of course.
+
+Message: 1305
+_questgiver_ has passed out again thankfully.
+
+QBN:
+Person _questgiver_ group Questor male anyInfo 1201
+Person _local0_ group Resident2 anyInfo 1202
+Person _local1_ group Resident1
+Person _local2_ group Resident2
+Person _local3_ group Resident1
+Person _doctor_ group Cleric
+
+Place _store_ local generalstore rumors 1011
+Place _res_ local house rumors 1012
+Place _house_ local house
+Place _remtav_ remote tavern rumors 1013
+Place _dun_ remote dungeon rumors 1014
+Place _temple_ remote temple
+
+Item _deathnotice_ letter used 1250
+Item _reward_ gold
+
+Foe _lunatic_ is Thief
+
+Clock _guards_ 00:01 00:03
+Clock _fled_ 03:00 1.00:00
+Clock _fled1_ 1.00:00 3.00:00
+Clock _fled2_ 5.00:00 7.00:00
+Clock _chase_ 00:05 01:00
+Clock _awake_ 03:00 12:00
+Clock _dead_ 7.00:00 10.00:00
+Clock _letter_ 3.00:00 5.00:00
+
+variable _atstore_
+variable _attav_
+variable _atres_
+variable _atdun_
+variable _atwild_
+variable _rabbiting_
+variable _location1_
+variable _location2_
+variable _location3_
+variable _location4_
+variable _knockedout_
+variable _rescued_
+variable _treated_
+
+--	Quest start-up:
+    say 1050
+    hide npc _questgiver_
+    start timer _guards_
+    pc at _store_ set _location1_
+    pc at _remtav_ set _location2_
+    pc at _res_ set _location3_
+    pc at _dun_ set _location4_
+    dialog link for location _store_ person _questgiver_
+    dialog link for location _res_ person _questgiver_
+    dialog link for location _remtav_ person _questgiver_
+    dialog link for location _dun_ person _questgiver_
+    log 1150 step 0
+
+_leaving_ task:
+    when pc exits city
+    setvar _atwild_
+
+_guards_ task:
+    say 1051
+    say 1052
+    say 1053
+    log 1151 step 1
+    add dialog for person _questgiver_
+    start timer _fled_
+    setvar _atstore_
+    place npc _questgiver_ at _store_
+
+_civ_ task:
+    when _location1_ or _location2_ or _location3_ or _location4_
+    clear _atwild_
+    stop timer _chase_
+
+_found_ task:
+    clicked npc _questgiver_
+    setvar _rabbiting_
+
+_runrabbit_ task:
+    when _rabbiting_
+    stop timer _chase_
+    say 1059
+    hide npc _questgiver_
+    say 1304
+    create foe _lunatic_ every 0 minutes 1 times with 100% success
+
+_subdued_ task:
+    injured _lunatic_
+    say 1302
+    remove foe _lunatic_
+    add _questgiver_ face
+    log 1170 step 4
+    setvar _knockedout_
+    start timer _awake_
+    clear _rabbiting_
+
+_awake_ task:
+    clear _knockedout_
+    say 1301
+    prompt 1062 yes _rabbitagain_ no _norabbit_
+
+_rabbitagain_ task:
+    setvar _rabbiting_
+
+_norabbit_ task:
+    say 1305
+    setvar _knockedout_
+    start timer _awake_
+    clear _rabbiting_
+
+_fled_ task:
+    hide npc _questgiver_
+    place npc _local1_ at _store_
+    clicked npc _local1_ say 1055
+    setvar _atres_
+    start timer _fled1_
+    place npc _questgiver_ at _res_
+    add dialog for location _store_
+    log 1152 step 2
+
+_chase_ task:
+    say 1303
+    setvar _rabbiting_
+
+_fled1_ task:
+    hide npc _questgiver_
+    place npc _local2_ at _res_
+    clicked npc _local1_ say 1056
+    setvar _attav_
+    setvar _atwild_
+    start timer _fled2_
+    place npc _questgiver_ at _remtav_
+    add dialog for location _res_
+    log 1153 step 2
+
+_fled2_ task:
+    hide npc _questgiver_
+    place npc _local3_ at _remtav_
+    clicked npc _local3_ say 1058
+    setvar _atdun_
+    setvar _atwild_
+    start timer _dead_
+    place npc _questgiver_ at _dun_
+    add dialog for location _remtav_
+    reveal _dun_
+    log 1154 step 4
+
+_outside_ task:
+    when _atwild_
+    start timer _chase_
+
+_indun_ task:
+    when _location4_
+    add dialog for location _dun_
+
+_rescue_ task:
+    clicked npc _questgiver_ say 1060
+    stop timer _dead_
+    setvar _rescued_
+    add _questgiver_ face
+    log 1156 step 5
+
+_got_ task:
+    when _rescued_ or _knockedout_
+    place npc _local0_ at _house_
+
+_friendclicked_ task:
+    clicked npc _local0_ say 1061
+    place npc _doctor_ at _temple_
+    log 1157 step 6
+
+_doc_ task:
+    clicked npc _doctor_
+
+_treatment_ task:
+    when _rescued_ or _subdued_ and _doc_ 
+    say 1063
+    say 1064
+    setvar _treated_
+
+_dead_ task:
+    start timer _letter_
+
+_letter_ task:
+    give pc _deathnotice_ notify 1300
+    change repute with _local0_ by -5
+    end quest
+
+_pcgetsgold_ task:
+    when _treated_
+    change repute with _doctor_ by +10
+    give pc _reward_
+    end quest
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_clearclick_ task:
+    when _qgclicked_ and not _treated_
+    clear _qgclicked_ _clearclick_
