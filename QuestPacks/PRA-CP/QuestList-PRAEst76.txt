@@ -1,6 +1,6 @@
 schema: *name, group, membership, minReq, flag, notes
 
-PRA001, FightersGuild, M, 0, 0, The Finger of Doom
-PRA002, FightersGuild, M, 0, 0, The Ratcatcher General
-PRA003, FightersGuild, M, 0, 0, In Every Dream Home...
-PRA007, FightersGuild, M, 0, 0, All Mixed Up
+PRA001, Commoners, N, 0, 1, The Finger of Doom
+PRA002, Commoners, N, 0, 1, The Ratcatcher General
+PRA003, Commoners, N, 0, 1, In Every Dream Home...
+PRA007, Commoners, N, 0, 1, All Mixed Up
