@@ -1,0 +1,284 @@
+Quest: PRA1004
+DisplayName: Holding the baby
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+Dear %pct, you could help me. If you could. You see I have an urgent meeting with a person of note and cannot find someone to take care of my child, _child_. Can you please just look after %g2 for a moment. I should not be more than an hour. Then I will return and take %g2 again and pay you. Please. This is very important. Our future depends on it.
+
+RefuseQuest:  [1001]
+Oh no. What shall we do now. Please. Oh. My child!
+
+AcceptQuest:  [1002]
+OH! Thanks you! I shall not be long. Merely a few hours. No longer. I will meet you at my home, once my business has concluded. I shall be at _house_ in __house_ In 12 hours. No longer. I promise. I shall return in no less than a day. Please take care of my child!
+
+QuestFail:  [1003]
+You failed to keep the child safe.
+
+QuestComplete:  [1004]
+Well done. You took care of a child.
+
+RumorsDuringQuest:  [1005]
+_questgiver_ is a terrible mother. Always pawning that poor child off on strangers so she can do her "business"
+
+RumorsPostfailure:  [1006]
+Did you hear that poor _child_ was lost?
+
+RumorsPostsuccess:  [1007]
+I feel for poo _child_. Parents like that.
+
+QuestorPostsuccess:  [1008]
+Well done.
+
+-- Logs
+Message:  1030
+A lady called _questgiver_ has got me to babysit her child _child_ while she goes... somewhere. She promises she'll come back to retrieve %g2 soon, but was unspecific as to when. I am to return the child to _house_ in __house_... at some stage.
+
+-- Dialog
+Message:  1100
+Halt stranger. That is my child you have there. I demand you turn %g2 over to me. %g3 mother is a drunk and a whore and I'm sick of her leaving %g2 with strangers like you while she plies her wares in back alleys.
+Turn him over now and you will depart with your life.
+
+Message:  1101
+You have done the right thing stranger. This child will have no life of consequence with that strop. I will take %g2 far from this place and see her life is rich and fullfiling.
+
+Message:  1102
+I will not risk my child's life by attacking you, no. I will find some other way to retrieve my child. I will bide my time. Waiting for the right moment for you to be distracted talking to me while my brother attacks from behind.
+
+Message:  1103
+_questgiver_? No. She is not here. I know not where she is.
+No. I will not take the child. You agreed to do this, any risk is on your hands. I let _questgiver_ doss here, but I don't get involved beyond that.
+Be off with you. Return when she does. I will speak with you no longer.
+
+Message: 1104
+Oh. You are the person _questgiver_ employed to take care of _child_. It is good you have returned. I fear _questgiver_ is deathly ill. She had an... accident. She is at _temple_. Take her child to her. A _priest_ is taking care of her there.
+
+Message:  1105
+You return. Good.
+Where... where is my baby?
+
+Message:  1106
+You what?!
+You fool, %g3 father is dead! You have given my baby to a cult!
+Oh no!!! You monster! My baby!
+Go! Get my child. If you are good for anything you will undo what you have done before... before they...
+Go you idiot! What are you waiting for?!
+<ce>
+Do you agree to retrive the Child?
+
+Message:  1107
+Aaah! No! You've killed my baby! You've killed my baby!!
+
+Message: 1108
+I don't know where they are, but you might want to speak to _sister_ in __sishome_. She might know. She is his sister. They used to be close. Too close!
+Go! Find her. Make her tell you where they are. Ask people! Do something!!
+Get my baby!
+
+Message: 1110
+Oh, what a cute little button. Looks just like you!
+
+Message:  1111
+Adventuring is a bit of a difficult life for a child isn't it? With all those nasty monsters and Orcs and such coming at you with weapons. Where do you keep the child during your questin'? In a bag or do you have someone that holds 'em while you get to slayin'?
+
+Message:  1112
+Is the little one on solids now? Eating carrots? Carrots are good for the hair I belive. Might make it red though. No-one wants a red haired child.
+
+Message:  1113
+Ours went to school in Wayrest of course. Just the best for ours. She turned out well. Works for the bank there now. Doesn't have red hair. You might want to consider that kind of life for your child.
+
+Message:  1114
+I mean, it's not for me to judge. That's your child. Just saying that I think your line of work isn't a great life for a child. Very dangerous.
+
+Message:  1115
+Look at me rabbiting on like this. I really must be off. Those messages won't run themselves. And I've got to meet %fn to let her in on the latest gossip.
+
+Message: 1116
+Oh, speaking of which. Did you hear the latest about %fn? She's got herself a new man. Didn't wait long for that. I guess they don't wait these days.
+
+Message:  1117
+I see that _father_ was seen doing some business at The Bank of ___culthome_. Suspicious one that. The sister is no better. If she even is his sister. Something weird going on there.
+
+Message:  1118
+Anyways. Must be off. Take care of that little one when you are doing yer murderous speluking won't you?
+
+Message: 1119
+And don't let her eat any carrots. You know what that causes!
+
+Message: 1120
+How awfully rude. I guess parents these days just aren't up to much. Hhmph.
+
+Message:  1121
+Who are you?
+Oh, you are the %ra _questgiver_ left _child_ with. Well you are too late. She's... had an accident. She's at _temple_ in __temple_. I don't think she'll make it this time. I always warned her...
+<ce>
+Anyway, you should take the child there. Maybe, it might help her to see her little one.
+
+Message:  1125
+Yes, I am _sister_. What do you want?
+
+Message:  1126
+_father_? Who sent you? No matter, I'll send you back to them in peices.
+
+-- Corrispondence
+Message: 1201
+Beloved Sister,
+<ce>
+We have purchased a building in __culthome_ to be our base of operations. One I have retrieved my child from that wench I shall take her with me to be raised accordingly to our masters wishes.
+<ce>
+Once your tasks are complete you should ride to join us so we may begin our ascendence.
+<ce>
+_father_
+_culthome_
+__culthome_
+___culthome_
+____culthome_
+
+-- Descriptive text
+Message: 1301
+You've been left holding the baby. Guess you have some time to entertain the little tyke.
+
+Message:  1302
+The child starts to cry
+
+Message:  1303
+The child spots a cat.
+
+Message:  1304
+The child is hungry.
+
+Message:  1305
+The child has pooped.
+
+Message:  1306
+An old lady appoaches you.
+
+Message:  1320
+A man approaches you.
+
+Message:  1321
+In the confusion the man grabs the child and dissapears.
+
+QBN:
+
+Person _questgiver_ group Questor female
+Person _child_ faction Children male
+Person _friend_ faction Default female
+Person _father_ faction The_Necromancers male
+Person _sister_ faction The_Necromancers female
+
+Place _house_ local house
+Place _sishouse_ remote house1
+Place _culthome_ remote house
+Place _temple_ remote temple
+
+Foe _sismad_ is Nightblade
+Foe _dadmad_ is Sorceror
+Foe _mummad_ is Thief
+Foe _cult_ is 3 Nightblade
+
+Item _note_ letter used 1201
+
+Clock _cry_ 00:30 01:00
+Clock _olddear_ 01:00 03:00
+Clock _cat_ 01:00 03:00
+Clock _hungry_ 01:30 03:00
+Clock _poop_ 01:30 03:00
+Clock _dad_ 1:00 4:00
+Clock _kidnap_ 00:05 00:10
+Clock _returns_ 1:00 06:00
+Clock _accident_ 03:00 1.00:00
+
+variable _nobaby_
+
+--	Quest start-up:
+    log 1030 step 0
+    add _child_ face
+    start timer _cry_
+    say 1301
+
+_cry_ task:
+    say 1302
+    start timer _olddear_
+
+_olddear_ task:
+    say 1306
+    say 1110
+    prompt 1111 yes _olddear2_ no _shutup_
+
+_olddear2_ task:
+    say 1112
+    prompt 1113 yes _olddear3_ no _shutup_
+
+_olddear3_ task:
+    say 1114
+    say 1115
+    prompt 1116 yes _olddear4_ no _shutup_
+
+_olddear4_ task:
+    say 1117
+    say 1118
+    say 1119
+    start timer _cat_
+
+_shutup_ task:
+    say 1120    
+    start timer _cat_
+
+_cat_ task:
+    say 1303
+    start timer _hungry_
+
+_hungry_ task:
+    say 1304
+    start timer _poop_
+
+_poop_ task:
+    say 1305
+    start timer _dad_
+
+_dad_ task: 
+    say 1320
+    prompt 1100 yes _givebaby_ no _dontgivebaby_
+    start timer _returns_
+
+_givebaby_ task:
+    drop _child_ face
+    say 1101
+    setvar _nobaby_
+
+_dontgivebaby_ task:
+    say 1102
+    create foe _dadmad_ every 0 minutes 1 times with 100% success
+    create foe _sismad_ every 0 minutes 1 times with 100% success
+    start timer _kidnap_
+
+_daddead_ task: 
+    killed _dadmad_
+    stop timer _kidnap_
+
+_kidnap_ task:
+    remove foe _dadmad_
+    say 1321
+    drop _child_ face
+    setvar _nobaby_
+
+_returns_ task:
+    place npc _questgiver_ at _house_
+    start timer _accident_
+
+_accident_ task:
+    hide npc _questgiver_
+    place npc _friend_ at _house_
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_pcgetsgold_ task:
+    when _qgclicked_ and _returned_
+    give pc _reward_
+    change repute with _questgiver_ by +4
+    end quest
+
+_clearclick_ task:
+    when _qgclicked_ and not _returned_
+    clear _qgclicked_ _clearclick_

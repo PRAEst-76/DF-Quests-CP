@@ -1,0 +1,198 @@
+Quest: PRA1001
+DisplayName: The Finger of Doom
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+_questgiver_ holds out %g3 hand with %g3 index digit extended.
+<ce>
+"Hey %pcf. Pull my finger! Go on. Pull it!"
+
+RefuseQuest:  [1001]
+_questgiver_ lowers %g3 hand with a pained expression.
+<ce>
+"%oth! Will no-one pull my finger?!"
+
+AcceptQuest:  [1002]
+You reach out and gingerly pull _questgiver_'s
+finger. Upon doing so %g3's face becomes strained
+and %g emits a loud trump from %g3 posterior.
+Then %g smiles at you.
+<ce>
+"Ahhhh... Heh heh, I needed that."
+
+QuestFail:  [1003]
+You failed to kill _enemy_ before it caused a ruckus.
+
+QuestComplete:  [1004]
+_questgiver_ looks somewhat exhausted and smiles
+at you sheepishly.
+<ce>
+"I'm very sorry. My little joke very much...
+backfired... on me there, somewhat."
+<ce>
+_questgiver_ attempts a smile, and waves %g3
+hand, as if attempting to wave away the
+whole sorry experience.
+<ce>
+"You know, you're all right, %pcf.
+Here, have a drink on me."
+
+RumorsDuringQuest:  [1005]
+That _questgiver_ is always asking people to pull %g3 finger.
+<--->
+_questgiver_ is a weird one. Made an unusual request from me the other day. I just ignored %g2.
+
+RumorsPostfailure:  [1006]
+I hear _questgiver_ had to pay a mercenary to have a nasty _enemy_ removed that some shameful %ra summoned.
+
+RumorsPostsuccess:  [1007]
+Apparently _questgiver_ finally got someone to pull %g3 finger. I wonder what that was all about.
+<--->
+I heared _questgiver_ had some kind of personal problem, but you sorted it out. Do I even want to know?
+
+QuestorPostsuccess:  [1008]
+Thanks again for your help with my... little incident, %pcf.
+<--->
+I trust that my, erm, issue... is still just between us?
+
+Message:  1020
+You have dealt with _questgiver_'s accidental
+nether summons.
+
+Message:  1021
+_questgiver_ suddenly looks pained, grimices and emits an
+even more violent eruption from %g3 rump.
+<ce>
+"Aaagh! Oh no!"
+
+Message:  1025
+A look of horror crosses %g3 visage and another
+series of noisy parps erupts, followed by the
+sound of tearing cloth and a suddenly a foul
+creature emerges from %g3 behind.
+<ce>
+At this %g attempts to recover himself despite his ordeal
+<ce>
+"Ahh! By %god's name! What... what was that?!"
+<ce>
+Then %g points at the _enemy_ that has appeared and yells,
+<ce>
+"Quickly kill it!"
+
+Message:  1022
+A grubby urchin approaches you and asks if you
+are %pcn, but before you can respond he shoves a
+crumpled note into your hands then runs off into
+the distance.
+
+Message:  1023
+%pcn!
+<ce>
+                                                %qdt
+<ce>
+That _enemy_ made a complete mess here. I had to
+pay for a mercenary to deal with it out of my
+own pocket! I'm not made of money you know?!
+<ce>
+You were the one that pulled the finger, so this
+was your doing. I'm not going to ask for
+recompense as your kind never take responsiblity
+for the messes you make, but %oth,
+I'm going to tell everyone here including
+%t %nrn, that you are an
+irresponsible braggard and a coward.
+<ce>
+In the name of %god I say, A coward!
+<ce>
+<ce>
+                                                    _questgiver_
+                                                    __questgiver_
+                                                    ___questgiver_
+
+Message:  1024
+"Though it's probably best if you don't pull any
+more fingers in future though, eh? And maybe don't
+mention this embarrasing situation to anyone.
+<ce>
+Please?"
+
+Message:  1026
+That _enemy_ made a complete mess here. I had to
+pay for a mercenary to deal with it out of my
+own pocket! I'm not made of money you know?!
+<ce>
+You were the one that pulled the finger, so this
+was your doing. I'm not going to ask for
+recompense as your kind never take responsiblity
+for the messes you make, but %oth,
+I'm going to tell everyone here including
+%t %nrn, that you are an
+irresponsible braggard and a coward.
+<ce>
+In the name of %god I say, A coward!
+
+Message:  1030
+%qdt
+_questgiver_ asked me to pull %g3 finger, which I
+did, upon which an _enemy_ tore it's way out of
+%g3 pantaloons.
+I guess I'll need to deal with that
+along with everything else.
+
+Message:  1031
+%qdt
+I've dealt with _questgiver_'s expulsion.
+I should go back and give %g2 the good news.
+
+QBN:
+Item _letter_ letter used 1023
+
+Item _reward_ gold range 10 to 20
+
+Person _questgiver_ group Questor male
+
+Clock _coward_ 03:00
+Clock _note_ 21:00
+
+Foe _enemy_ is Imp
+
+--	Quest start-up:
+    start timer _coward_
+    start timer _note_
+    log 1030 step 0
+    create foe _enemy_ every 0 minutes 1 times with 100% success
+    say 1021
+    say 1025
+
+_slain_ task:
+    killed 1 _enemy_ saying 1020
+    log 1031 step 1
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_pcgetsgold_ task:
+    when _qgclicked_ and _slain_
+    give pc _reward_
+    say 1024
+    change repute with _questgiver_ by +4
+    end quest
+
+_note_ task:
+    give pc _letter_ notify 1022
+    _letter_ used do _scolded_
+
+_coward_ task:
+    when _qgclicked_ and not _slain_
+    say 1026
+    stop timer _note_
+    start task _scolded_
+
+_scolded_ task:
+    change repute with _questgiver_ by -2
+    end quest
+
+_clearclick_ task:
+    when _qgclicked_ and not _slain_
+    clear _qgclicked_ _clearclick_

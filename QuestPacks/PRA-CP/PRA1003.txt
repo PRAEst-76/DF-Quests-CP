@@ -1,0 +1,893 @@
+Quest: PRA1003
+DisplayName: In Every Dream Home...
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+I don't need anything doing, but I know a lady in
+a sad situation that is looking for someone to
+help her with a family affair, if you are
+interested in that sort of thing?
+<ce>
+Probably won't involve fighting orcs or slaying
+dragons, but I think she is a moneyed dame, if
+that's your draw? Might drop you a few coins if
+you help her out.
+
+RefuseQuest:  [1001]
+No skin off my nose. Some people just aren't into
+helping those in need, I figure.
+
+AcceptQuest:  [1002]
+Well, you'll find her at _ladyhome_.
+Hopefully you can do something for the poor lass.
+She should be there for another week or so.
+
+QuestFail:  [1003]
+I think _lady_ will have left _ladyhome_ by now.
+Oh well.
+
+QuestComplete:  [1004]
+They are both at rest now together. Their troubles are over.
+
+RumorsDuringQuest:  [1005]
+I hear _lady_'s got some family troubles.
+<--->
+Heard about the tragedy at __farm_? That poor girl.
+<--->
+Heard about the tragedy at __farm_? That poor man.
+<--->
+Just awful what happened to _widower_'s wife? I blame the parents.
+<--->
+Did you hear _lady_'s daughter killed herself. Probably money. It's always money.
+
+Message: 1010
+Be wary of that one. Acts all high and mighty, but I've seen her in some low places.
+<--->
+She's always well turned out, even when she's in the shadows.
+
+Message: 1011
+I heard he was kicked out of the Mages Guild for bad practice.
+<--->
+Noisy skeltons in that closet. That's all I'm saying.
+
+Message: 1012
+A good lass I hear. Very loyal. Not sure to who though.
+<--->
+Works on that farm. I think, though I see her around a lot. Not sure what she does there.
+<--->
+She has a soft spot for yer fella. I guess the way is open now.
+
+Message: 1013
+A sad tale that one. There was always a darkness in her eyes that the beautiful smile couldn't really hide.
+<--->
+I heard about what happened. Suspicious, if you ask me. It's her bloke I feel sorry for.
+<--->
+Why would a girl like that do such a thing? I guess we never really know a person.
+
+Message: 1014
+Salt of the earth. Worked all his life. Sad what happened. Really sad.
+<--->
+A good man. I hear he's not taking the death of his wife well. Horrible thing.
+
+Message:  1020
+Oh hello! Sorry, you startled me. I was lost in
+my thoughts...
+<ce>
+You have come to help? I'm not sure what you can
+do. I'm not sure what anyone can do now. We've
+lost our only child. Our beautiful _daughter_.
+
+Message:  1021
+You see, she was wed to a man, _widower_.
+Not of good stock, but a good man nonetheless.
+Built that farm with his own hands. Tried to give
+her a good life... but a few weeks past... she
+took her own life. We do not know why. She was
+happy and loved by all that knew her.
+
+Message:  1022
+Now he lies there in his rooms, unwilling to eat
+or speak to anyone. The farm is going to seed
+without his care; the hands are leaving, unable
+or unwilling to see him waste away from his
+heartbreak!
+<ce>
+The maid came to me in tears, not knowing what to
+do. He will not speak to me or the girls father.
+
+Message:  1023
+I am desperate dear %pcf! Can you go to there
+and see if you can speak to him and rouse him
+from his grief? 
+
+Message:  1024
+Thank you %pcf. That is all I ask. Perhaps such
+as you can make him see some glimmer of light!
+<ce>
+Please now, go to __farm_ and try to
+stir him out of his darkness. Here is some gold
+to cover your expenses.
+
+Message:  1025
+I'm sorry %hnr. _widower_ is not seeing
+any guests at this time.
+<ce>
+He is... unwell.
+
+Message:  1026
+Oh, _lady_ sent you?! In that case
+he is inside.
+<ce>
+Please try to talk him out of his doom! He was a
+good man... IS a good man, and did not deserve
+any of this. This farm is dying without him.
+
+Message:  1027
+Who are you? It matters not. Who sent you?
+_lady_? _father_?
+<ce>
+It matters not.
+<ce>
+My _daughter_... is gone.
+<ce>
+All is gone.
+<ce>
+Please leave me.
+<ce>
+I wish to be alone.
+
+Message:  1028
+Please, %hnr. I must speak to you outside.
+
+Message: 1029
+If you look around you will see this farm is
+dying as our master dies. As his lady died. It
+grieves, you see.
+<ce>
+The workers are leaving. Many have not been paid
+this month. The land he worked so hard for is
+turning to dust and all the money has gone.
+
+Message:  1030
+However _daughter_'s father, _father_,
+sent word that he also equally grieves the loss
+of his daugher, however he says he can help us.
+<ce>
+Our master won't hear from him, but perhaps you
+can talk to _father_? Tell him how things are
+here. How broken _widower_ is...
+
+Message:  1031
+Thank you! Thank you!
+<ce>
+Please. Go now. Speak to him at his quarters at
+__dadhome_.
+<ce>
+See if he can help us. I know he is a man of
+considerable wealth and power.
+<ce>
+Please do this! Help end this curse of despair on
+this land!
+
+Message:  1032
+Then leave me, %ra. Leave me to my grief.
+
+Message:  1033
+The poor man wouldn't speak to me, maybe someone
+else here will?
+
+Message: 1034
+Please %god. Will no one help us!
+<ce>
+Take your iron heart from these darkned lands
+less you make them darker with your presence!
+
+Message:  1035
+Excuse me %hnr. Can I help you?
+
+Message:  1036
+Ah yes, you are here from __farm_. Terrible
+business. Just terrible.
+<ce>
+Please. His Lordship is inside. You may go
+through.
+<ce>
+He is grieving, as you understand, so please be
+mindful.
+
+Message:  1037
+So _widower_'s maid sent you?
+<ce>
+She is a good sort, that one.
+<ce>
+My son-in-law is in a bad place, we all are, but
+his loss has felled him.
+<ce>
+He knows not why his beloved would leave him so.
+She was a troubled girl, in her youth, but happy
+she was, with him. We had hoped for
+grandchildren.
+<ce>
+Alas, we shall never see them now.
+
+Message:  1038
+They talked of my solution?
+<ce>
+Surely they expect money. But the farm as it is
+would be just a bottomless pit for me to toss my
+wealth into. I may as cast it to Oblivion.
+<ce>
+No. I have a better solution. One that helps us
+all. My son, the farm, my... wife.
+<ce>
+And my beautiful daughter.
+
+Message:  1039
+I am a mage of considerable power and means,
+%pcf.
+<ce>
+There are magics the Mages Guild dare not speak
+of. For they are fearful of the power. This is a
+truth.
+<ce>
+I can bring my daughter back to this world %pcf.
+Back to us and the farm. I have that power.
+
+Message:  1040
+Her mother will hear none of this and my son will
+hear nothing at all in his current state.
+<ce>
+I will need you to go to the crypt where my
+daugher is interred and bring me back her remains.
+<ce>
+This... is dirty work, but it is for my family.
+I am confident I can do this and you know I can
+reward you beyond the reward of seeing a family
+together again.
+
+Message:  1041
+Can you do this for me? For us?
+
+Message: 1042
+Good! So go now to __grave_ and bring my little
+girl back to me. Time is of the essence, so do
+not tarry in your task.
+
+Message: 1043
+Alas. I expected as much. My servant will show
+you out. I can find another, better, to the task.
+
+Message: 1044
+Alas. I expected as much. You have the stink of
+the Mages Guild about you.
+
+Message:  1045
+Halt! Graverobber! You dare desecrate this young
+woman?! You will lie in a paupers grave of your
+own for this!
+
+Message:  1046
+You return. You have the... yes. My daughter.
+<ce>
+How small she seems. Like when... No matter. The
+deed is done. This family thanks you, or they
+will thank you when our _daughter_ is back with
+us once more.
+
+Message:  1047
+There is but one more step. I shall prepare her
+remains. If you wish to help me see this through
+and return my beautiful _daughter_ to this world
+and her beloved then return this time tomorrow.
+<ce>
+I shall tell you what needs to be done then.
+For now, take this small payment for your deeds
+thus far and go and rest. You have earned it,
+and more.
+
+Message:  1048
+You return once more. Good. I was concerned you
+would have been reluctant to help any further.
+I'll admit this is a diffcult task, for you and
+for us. But a necessary one.
+
+Message:  1049
+I have performed the first part of the ritual.
+Her heart was the most important aspect of her. I
+have removed and prepared it for rebirth into her
+new form. The ritus needs to be performed
+within a week at _lab_. We should take the
+heart and the necessary equipment and make for
+_lab_ without delay.
+
+Message:  1050
+This is the place. There is an altar within that
+needs to be cleansed and prepared. However to get
+there we will probably need to face enemies.
+Harden yourself. We are almost there. My daughter
+will live once more.
+
+Message:  1051
+This is the altar %pcf. I shall prepare the
+ritual. Keep guard on your guard, for we are
+not safe in this place.
+
+Message:  1052
+Stop _father_! Stop what you are doing with our
+little _daughter_. This is madness! She is dead.
+She cannot return.
+
+Message:  1053
+_lady_! You followed us here?! I can return her!
+I know how. We can have our daughter back with us.
+Back with _widower_. He is lost without her!
+
+Message:  1054
+_widower_ is dead! His grief destroyed him. His
+farm is lost. We've all lost. Let us not lose our
+minds and souls as well.
+
+Message:  1055
+No. He let his grief consume him. I am stronger.
+I have the power to return her to us. I will not
+let you stop me.
+
+Message:  1056
+You stupid old goat! I always said your lust for
+control would destroy you in the end.
+Men! End him and retrive my daughters remains!
+
+Message:  1057
+Curse you _lady_! %pcf! To my aid!
+
+Message:  1058
+She is dead. _lady_ is dead. I knew it would end
+like this, but I can still have my daughter.
+<ce>
+Guard me while I continue the ritual! I can't
+afford any more interruptions. Precision is
+vital!
+
+Message:  1059
+She is waking... She is with us again! My
+beautiful _daughter_.
+<ce>
+_daughter_? Can you hear me? It is _father_,
+your father?
+<ce>
+_daughter_?
+
+Message:  1060
+Oh no. _daughter_! This cannot be. The ritual was
+correct!
+_daughter_
+No! Stop! %pcf! She is an abomination!
+End this, please!
+
+Message:  1061
+Noooooo..!
+
+Message:  1062
+Then you will also fall! Men, kill the %pct!
+
+Message:  1063
+Curse you %pcf. I knew you would not have the
+stomach for this. Like many of your kind before
+you, you will lie with my witch of
+a wife, but in a burial pit.
+
+Message:  1064
+Well done all. I shall return my daughter to her
+slumber in the family tomb. _father_ can lie here
+in the tomb of his own making.
+<ce>
+There is but one more task to do here. Men, you
+know your orders...
+
+Message:  1065
+They... they are dead. Both... both of my parents
+are dead. I am... finally free. The only... way I
+could... escape... thank you &pcf.
+
+Message:  1066
+Please... one more... task. Just one more...
+Return me to my love. He lies... in _othergrave_
+I wish... us to be alone together... as we could
+not be... in life.
+<ce>
+Return me to _widower_. In... _othergrave_.
+Please %pcf!
+
+Message: 1067
+I have left _daughter_'s remains with those of
+_widower_. I hope they find peace here.
+
+Message:  1100
+%qdt:
+I've been sent by _questgiver_
+at __questgiver_ to visit _lady_
+at _ladyhome_ in __ladyhome_
+who has family issues.
+
+Message:  1101
+%qdt:
+_lady_ has told me the sad story of her
+daughter and sent me to __farm_
+to try to talk some sense to her son-in-law
+_widower_ who has fallen into grief.
+
+Message:  1102
+%qdt:
+The poor man wouldn't speak to me, maybe someone
+else here will?
+
+Message:  1103
+The maid, _maid_ told me to see
+_widower_'s father-in-law, _father_ in
+__dadhome_ who may be able to help.
+
+Message:  1104
+%qdt:
+Rather horribly the father wants to try to bring
+his daughter back from the dead. He seems to think
+he can.
+He wants me to collect her remains from __grave_
+and bring them back to him.
+
+Message:  1105
+%qdt:
+I retrived the girls remains, but they were guarded
+for some reason. Now to get them back to her father.
+
+Message:  1106
+%qdt:
+I've returned the remains to the father. What he
+plans to do with them is unclear. He told me to
+return at the same time tomorrow. I guess I shall
+find out then.
+
+Message: 1107
+%qdt:
+_father_ wanted me to dig up his daughter for
+some necromantic ritual. I told him I wished no
+part in it. I guess that's that.
+
+Message: 1108
+%qdt:
+_father_ wants us to take _daughter_'s
+remains to _lab_.
+<ce>
+He plans to bring his daughter back from the dead
+somehow.
+
+Message: 1109
+%qdt:
+_father_ is getting impatient to _lab_.
+I should make haste.
+
+Message: 1110
+%qdt:
+We are at _lab_. Now to find this altar
+so _father_ can perform the ritual to
+raise his daughter.
+
+Message: 1111
+%qdt:
+Both parents are dead, as is _widower_. However
+_daughter_'s ghost has appeared and told me to
+take her remains to those of her husband in
+__othergrave_ so they can be together.
+
+Message: 1151
+A page stops you and hands you a letter with a
+noble seal. He does not make eye contact or await
+a gratuity.
+
+Message: 1152
+I have collected the remains of _daughter_.
+Now to return them to _father_
+
+Message: 1153
+Why do we delay?! Time is of the essence in our
+task, %pcf!
+I must have my daugher back with us.
+We must go to the _lab_!
+Now!
+
+Message: 1154
+Enough! I can no longer tolerate your cowardly
+procrastinations, %pcf. If do not posess the
+stomach for this then you shall die for wasting
+my time and risking my daughter!
+
+Message: 1155
+%pcf! You took my daughters remains from
+her tomb but did not return them to me.
+I will take them from your corpse!
+
+Message: 1156
+You hear something. Someone.
+
+Message: 1157
+%pcf?
+<ce>
+I'm afraid you have something that doesn't belong
+to you. And knowledge is the most valuable thing
+there is.
+<ce>
+Nothing personal.
+
+Message: 1158
+Looks like _father_ didn't want me walking away
+knowing what he was planning. I may have made a
+powerful enemy.
+
+Message: 1201
+Dear %pcf
+                                %qdat
+I have just received word that _widower_ has died.
+His heart could no longer take his grief it seems.
+The maid said you had not been there. Why did you
+not visit him as I asked?!
+Maybe there was nothing you could do, but you 
+said you would try.
+We are now filled with double the sorrow, and his
+lands they worked so hard to tame have gone to
+seed.
+Please do not respond, as I don't really have the
+stomach for your excuses.
+                            _lady_
+                            ____lady_
+
+Message: 1202
+Dear %pcf
+                                %qdat
+I am _maid_, the maid at __farm_. I am writing
+with the sad news that our dear lost employer
+_widower_ succumed to his grief. I can only
+assume that your trip to see his father-in-law
+was unsuccessful.
+The few of us that are left are packing our
+things to leave as the Bank of %reg
+has reclaimed the lands and asked us to depart
+immediately. I shall be traveling back to my
+village, however some here have no place to go.
+I hope they will be ok. I'm sure you tried your
+hardest to convince _father_ to help.
+So I do not blame you in this.
+I wish you good health in your travels.
+                        Yours faithfully,
+                        _maid_
+                        (former) Maid of __farm_
+
+Message: 1203
+% %pcf
+                                %qdat
+I am somewhat dissapointed, but not surprised
+that you did not return to me at __dadhome_
+as I requested. Our task was a heavy one and
+I suspected you did not have the gumption for
+such work.
+No matter. I have procured the services of a
+mercenary to do that which you could not.
+You are no longer required. I expect the
+monies paid to you thus far should cover your
+expenses while assisting our family.
+I bear you no ill will in this, however I do not
+expect to see or hear from you again.
+                        _father_
+                        __dadhome_
+
+QBN:
+Item _stipend_ gold range 30 to 50
+Item _reward_ gold_bar
+Item _bonemoney_ gold
+Item _deathnotice_ letter used 1201
+Item _deathnotice2_ letter used 1202
+Item _nogumption_ letter used 1203
+
+Clock _wait_ 7.00:00 11.00:00
+Clock _death_ 10.00:00 14.00:00
+Clock _death2_ 10.00:00 14.00:00
+Clock _widowerroused_ 00:02 00:05
+Clock _themaid_ 00:02 00:05
+Clock _thedad_ 00:02 00:05
+Clock _silence_ 1.00:00
+Clock _dadletter_ 3.00:00 5.00:00
+Clock _whereremains_ 6.00:00 9.00:00 
+Clock _delay_ 5.00:00 7.00:00
+Clock _enough_ 5.00:00 7.00:00
+Clock _rest_ 1.00:00
+Clock _wifehere_ 00:05
+
+Person _questgiver_ group Questor
+Person _lady_ faction Random_Noble female anyInfo 1010
+Person _daughter_ faction Random_Noble female anyInfo 1013
+Person _widower_ faction Random_Noble male anyInfo 1014
+Person _father_ faction Random_Noble male anyInfo 1011
+Person _maid_ faction Default female anyInfo 1012
+
+Place _ladyhome_ local tavern
+Place _farm_ remote farmhome
+Place _dadhome_ remote wealthyhome
+Place _grave_ remote graveyard
+Place _lab_ remote dungeon9
+Place _othergrave_ remote graveyard
+
+Item _remains_ large_sack
+Item _altar_ lodestone
+Item _heart_ daedra_heart
+
+Foe _guards_ is 2 Warrior
+Foe _mum_ is 1 Spellsword
+Foe _mumguard_ is 2 Warrior
+Foe _dad_ is 1 Sorcerer
+Foe _dadguard_ is 2 Skeletal_warrior
+Foe _daugdead_ is Flesh_atronach
+
+variable _backwithremains_
+variable _infarm_
+variable _indadhome_
+variable _ingrave_
+variable _graverobber_
+variable _free_
+variable _finalgrave_
+variable _together_
+
+--	Quest start-up:
+    start timer _wait_
+    place npc _lady_ at _ladyhome_
+    log 1100 step 0
+    add dialog for person _lady_
+    pc at _farm_ set _infarm_
+    pc at _dadhome_ set _indadhome_
+    pc at _grave_ set _ingrave_
+    pc at _lab_ set _indung_
+    pc at _othergrave_ set _finalgrave_
+
+_wait_ task:
+    change repute with _lady_ by -2
+    end quest saying 1003
+
+_ladyclicked_ task:
+    clicked npc _lady_ say 1020
+    stop timer _wait_
+    say 1021
+    say 1022
+    prompt 1023 yes _help_ no _donthelp_
+
+_help_ task:
+    say 1024
+    add dialog for person _daughter_
+    add dialog for person _widower_
+    get item _stipend_
+    reveal _farm_
+    start timer _death_
+    log 1101 step 1
+
+_donthelp_ task:
+    end quest saying 1032
+
+_death_ task:
+    give pc _deathnotice_ notify 1151
+    change repute with _lady_ by -5
+    end quest
+
+_atfarm_ task:
+    when _infarm_
+    say 1025
+    say 1026
+    start timer _widowerroused_
+
+_widowerroused_ task:
+    say 1027
+    stop timer _death_
+    start timer _themaid_
+    say 1033
+    log 1102 step 2
+
+_themaid_ task:
+    add dialog for person _maid_
+    say 1028
+    say 1029
+    prompt 1030 yes _maidyes_ no _maidno_
+
+_maidyes_ task:
+    reveal _dadhome_
+    say 1031
+    log 1103 step 3
+    add dialog for person _father_
+    start timer _death2_
+
+_maidno_ task:
+    say 1034
+    end quest
+
+_death2_ task:
+    give pc _deathnotice2_ notify 1151
+    change repute with _maid_ by -5
+    end quest
+
+_atdadhome_ task:
+    when _indadhome_ and not _graverobber_
+    say 1035
+    say 1036
+    start timer _thedad_
+
+_thedad_ task:
+    when _indadhome_ and not _graverobber_
+    stop timer _death2_
+    say 1037
+    say 1038
+    say 1039
+    say 1040
+    prompt 1041 yes _yesdad_ no _nodad_
+
+_yesdad_ task:
+    say 1042
+    reveal __grave_
+    log 1104 step 4
+    start timer _whereremains_
+
+_nodad_ task:
+    say 1043
+    start timer _silence_
+    log 1107 step 4
+
+_silence_ task:
+    say 1156
+    say 1157
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    end quest saying 1158
+
+_gravesite_ task:
+    when _ingrave_
+    say 1152
+    get item _remains_
+    setvar _graverobber_
+    log 1105 step 5
+
+_grobber_ task:
+    when _graverobber_
+    say 1045
+    create foe _guards_ every 1 minutes 1 times with 100% success
+
+_whereremains_ task:
+    say 1155
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _dad_
+    end quest
+
+_backwremains_ task:
+    when _graverobber_ and _indadhome_
+    stop timer _whereremains_
+    say 1046
+    take _remains_ from pc
+    say 1047
+    get item _bonemoney_
+    log 1106 step 6
+    start timer _rest_
+    start timer _dadletter_
+    setvar _backwithremains_
+
+_dadletter_ task:
+    give pc _nogumption_ notify 1151
+    change repute with _father_ by -5
+    end quest
+
+_rest_ task:
+    when _backwithremains_ and _indadhome_
+    stop timer _dadletter_
+    say 1048
+    reveal _lab_
+    give pc _heart_
+    add _father_ face saying 1049
+    place item _altar_ at _lab_
+    start timer _delay_
+    log 1108 step 7
+
+_delay_ task:
+    say 1153
+    start timer _enough_
+    log 1109 step 8
+
+_enough_ task:
+    say 1154
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _dad_
+    end quest
+
+_indung_ task:
+    stop timer _delay_
+    stop timer _enough_
+    say 1050
+    log 1110 step 9
+
+_ritual_ task:
+    clicked item _altar_
+    say 1051
+    start timer _wifehere_
+
+_wifehere_ task:
+    say 1052
+    say 1053
+    say 1054
+    say 1055
+    say 1056
+    prompt 1057 yes _ritual2_ no _cleanup_
+
+_cleanup_ task:
+    say 1063
+    drop _father_ face
+    add _lady_ face
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _dad_
+    give item _heart_ to _dad_
+
+_daddead_ task:
+    killed _dad_
+    killed _dadguard_
+    say 1064
+    drop _lady_ face
+    create foe _mum_ every 0 minutes 1 times with 100% success
+    create foe _mumguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _mum_
+    setvar _free_
+
+_ritual2_ task:
+    say 1062
+    create foe _mum_ every 0 minutes 1 times with 100% success
+    create foe _mumguard_ every 0 minutes 1 times with 100% success
+
+_mumkilled_ task:
+    killed _mum_
+    killed _mumguard_
+    say 1058
+    say 1059
+    say 1060
+    say 1061
+    drop _father_ face
+    create foe _daugdead_ every 0 minutes 1 times with 100% success
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    give item _heart_ to _daugdead_
+
+_deadagain_ task:
+    killed _daugdead_
+    killed _dad_
+    setvar _free_
+
+_ghost_ task:
+    when _free_
+    killed _dad_
+    killed _mum_
+    say 1065
+    say 1066
+    reveal _othergrave_
+    log 1111 step 10
+
+_finalrest_ task:
+    when _finalgrave_
+    take _heart_ from pc
+    say 1067
+    setvar _together_
+
+_done_ task:
+    when _together_
+
+_pcgetsgold_ task:
+    when _done_
+    change repute with _daughter_ by +10
+    give pc _reward_
+    end quest
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_clearclick_ task:
+    when _qgclicked_ and not _done_
+    clear _qgclicked_ _clearclick_

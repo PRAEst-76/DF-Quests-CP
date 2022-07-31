@@ -1,4 +1,4 @@
-Quest: PRA006
+Quest: PRA1006
 DisplayName: Get a job!
 -- Message panels
 QRC:
@@ -40,3 +40,5 @@ Real life is not for you. Best find a dungeon to die in.
 
 QuestComplete:  [1004]
 You would have made your father proud, %pcf.
+
+QBN:
