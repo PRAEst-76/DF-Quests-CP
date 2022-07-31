@@ -177,6 +177,7 @@ Foe _mummad_ is Thief
 Foe _cult_ is 3 Nightblade
 
 Item _note_ letter used 1201
+Item _reward_ gold
 
 Clock _cry_ 00:30 01:00
 Clock _olddear_ 01:00 03:00
