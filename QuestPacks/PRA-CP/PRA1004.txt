@@ -224,7 +224,7 @@ You've killed my baby!!
 
 Message:  1108
 I don't know where they are, but you might want
-to speak to _sister_ in __sishome_.
+to speak to _sister_ in __sishouse_.
 She might know. She is his sister.
 They used to be close.
 Too close!
@@ -235,6 +235,7 @@ Get my baby!
 
 Message:  1110
 Oh, what a cute little button. Looks just like you!
+I know they all say that, but this one does.
 
 Message:  1111
 Adventuring is a bit of a difficult life for a
@@ -244,6 +245,7 @@ weapons.
 Where do you keep the child during your questin'?
 In a bag or do you have someone that holds 'em
 while you get to slayin' and lootin'?
+<ce>Interrupt her?
 
 Message:  1112
 Is the little one on solids now?
@@ -260,6 +262,7 @@ Works for the bank there now. Doesn't have red
 hair.
 You might want to consider that kind of life for
 your child.
+<ce>Tell her to shut up?
 
 Message:  1114
 I mean, it's not for me to judge. That's your
@@ -280,11 +283,12 @@ about %fn?
 She's got herself a new man!
 Didn't wait long for that.
 I guess they don't wait these days.
+<ce>Just walk off?
 
 Message:  1117
 I see that _father_ was seen doing
 some business at The Bank of
-___culthome_.
+____culthome_.
 Suspicious one that.
 The sister is no better.
 If she even is his sister.
@@ -329,7 +333,9 @@ trespasser, as will you.
 The child stays with me.
 
 Message:  1136
-You were warned. Men!
+You were warned.
+<ce>
+Men!
 
 Message:  1137
 You won't take the child!
@@ -400,6 +406,37 @@ for habitation/trade/perfomance*.
                                 Scribe
                                 ___cultdun_ RSC
 
+-- Rumours
+Message:  1203
+Well, you know what they say. If you can't say anything nice...
+<--->
+I feel sorry for that child. Father run off. Mother a drunk.
+<--->
+I've seen _questgiver_ in alleys with strange men.
+<--->
+Seen her worse for wear a few times. Poor child.
+
+Message: 1204
+Horrible woman that.
+<--->
+Takes in all kinds that one. Soft heart under all that stone.
+<--->
+Wouldn't want to get into an argument with that one.
+
+Message: 1205
+That's a rum character and no mistake.
+<--->
+Very close with his sister I hear. Very close.
+<--->
+He and his friends have been buying property in ___culthome_ I hear.
+
+Message:  1206
+Very close with her brother I hear. Very close.
+<--->
+Very shady character. I'd avoid that one if I was you.
+<--->
+Lives in __sishouse_. Alone, but seems to have all sorts coming and going. All sorts.
+
 -- Descriptive text
 Message:  1301
 <ce>                  You've been left holding the baby.
@@ -455,6 +492,7 @@ Place _culthome_ remote house
 Place _cultdun_ remote dungeon
 Place _temple_ remote temple
 
+Foe _rat_ is 1 Giant_rat
 Foe _sismad_ is Nightblade
 Foe _dadmad_ is Sorceror
 Foe _mummad_ is Thief
@@ -469,6 +507,7 @@ Clock _olddear_ 01:00 03:00
 Clock _cat_ 01:00 03:00
 Clock _hungry_ 01:30 03:00
 Clock _poop_ 01:30 03:00
+Clock _ratss_ 00:05 00:15
 Clock _dad_ 1:00 4:00
 Clock _kidnap_ 00:05 00:10
 Clock _returns_ 1:00 06:00
@@ -485,9 +524,9 @@ variable _havebaby_
     start timer _cry_
     say 1301
     setvar _havebaby_
-    place npc _friend_ at _house_
-    place npc _questgiver_ at _house_
     hide npc _questgiver_
+    place npc _questgiver_ at _temple_
+    place npc _friend_ at _house_
 
 _cry_ task:
     say 1302
@@ -529,6 +568,10 @@ _hungry_ task:
 
 _poop_ task:
     say 1305
+    start timer _ratss_
+
+_ratss_ task:
+    create foe _rat_ every 1 minutes 4 times with 80% success
     start timer _dad_
 
 _dad_ task:
@@ -570,13 +613,13 @@ _kidnap_ task:
     log 1034 step 3
 
 _returns_ task:
-    hide npc _friend_
-    restore npc _questgiver_
+    place npc _friend_ at _temple_
+    place npc _questgiver_ at _house_
     start timer _accident_
 
 _accident_ task:
-    hide npc _questgiver_
-    restore npc _friend_
+    place npc _questgiver_ at _temple_
+    place npc _friend_ at _house_
 
 _qgclicked_ task:
     clicked npc _questgiver_
@@ -592,8 +635,9 @@ _thefriend_ task:
 _badnews_ task:
     when _friendclicked_ and _accident_
     say 1104
-    log 141 step 10
+    log 1045 step 10
     place npc _priest_ at _temple_
+    hide npc __questgiver_
 
 _returnswithbaby_ task:
     when _qgclicked_ and _havebaby_
