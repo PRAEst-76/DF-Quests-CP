@@ -4,19 +4,35 @@ DisplayName: Holding the baby
 QRC:
 
 QuestorOffer:  [1000]
-Dear %pct, you could help me. If you could. You see I have an urgent meeting with a person of note and cannot find someone to take care of my child, _child_. Can you please just look after %g2 for a moment. I should not be more than an hour. Then I will return and take %g2 again and pay you. Please. This is very important. Our future depends on it.
+Dear %pct, you could help me. If you could?
+You see I have an urgent meeting with a person
+of note and cannot find someone to take care of
+my child, _child_.
+Can you please just look after %g2 for a moment.
+I should not be more than an hour. Then I will
+return and take %g2 again and pay you.
+Please.
+This is very important. Our future depends on it.
 
 RefuseQuest:  [1001]
 Oh no. What shall we do now. Please. Oh. My child!
 
 AcceptQuest:  [1002]
-OH! Thanks you! I shall not be long. Merely a few hours. No longer. I will meet you at my home, once my business has concluded. I shall be at _house_ in __house_ In 12 hours. No longer. I promise. I shall return in no less than a day. Please take care of my child!
+OH! Thanks you! I shall not be long.
+Merely a few hours. No longer.
+I will meet you at my home, once my business has
+concluded.
+I shall be at _house_ in
+__house_ In 12 hours.
+No longer. I promise.
+I shall return in no less than a day.
+Please take care of my child!
 
 QuestFail:  [1003]
-You failed to keep the child safe.
+<ce>You failed to keep the child safe.
 
 QuestComplete:  [1004]
-Well done. You took care of a child.
+<ce>Well done. You took care of a child.
 
 RumorsDuringQuest:  [1005]
 _questgiver_ is a terrible mother. Always pawning that poor child off on strangers so she can do her "business"
@@ -25,19 +41,121 @@ RumorsPostfailure:  [1006]
 Did you hear that poor _child_ was lost?
 
 RumorsPostsuccess:  [1007]
-I feel for poo _child_. Parents like that.
+I feel for poor _child_. Parents like that...
 
 QuestorPostsuccess:  [1008]
-Well done.
+Thank you.
 
 -- Logs
 Message:  1030
+%qdt
 A lady called _questgiver_ has got me to babysit
 her child while she goes... somewhere. She
 promises she'll come back to retrieve %g2 soon,
 but was unspecific as to when.
 I am to return the child to _house_
 in __house_... at some point.
+
+Message: 1031
+%qdt
+A man called _father_ who claims to be the child's
+father stopped me and demanded the child.
+He claimed the child's mother was an unfit parent
+and demanded I turn the child over to him.
+
+Message: 1032
+The man seemed sincere, also desperate and
+somewhat threatening.
+I hope I did the right thing.
+
+Message: 1033
+The man seemed desperate and threatening. So I
+refused his request. One of his associates
+attempted to ambush me.
+
+Message: 1034
+He snatched the child in the struggle, and
+vanished. I don'k know where he went. I guess I
+need to go speak to _questgiver_ at
+_house_. Maybe she knows who he is.
+This won't be easy.
+
+Message: 1035
+%qdt
+_questgiver wasn't there yet. Seems to be taking
+a long time. Her housemate was unhelpful.
+I will need to return later.
+
+Message: 1036
+%qdt
+_questgiver_ was understandably very upset. She
+claimed the man was not the child's father.
+However she seemed to know who he was and told
+me to speak to a woman called _sister_
+who is possibly the man's sisters who lives
+in __sisterhome_.
+
+Message: 1037
+%qdt
+_sister_ was... unhelpful.
+There might be something in her home that will
+point me in the direction of _father_. Otherwise
+it's back to asking the locals.
+
+Message: 1038
+%qdt
+Apparently _father_ is in a house called
+_culthome_ in __culthome_. He's probably not
+going to just hand over the child willingly.
+I'll need to think about how to handle this.
+
+Message: 1039
+%qdt
+They asked me to leave _culthome_.
+Said the child will have a better life there.
+Place stank of evil.
+
+Message: 1040
+%qdt
+I've got the child. Now to get him back to his
+mother.
+
+Message: 1041
+%qdt
+_father_ has taken off with the kid after setting
+his men on me.
+I'll need to look around for clues as to where he
+may have gone.
+
+Message: 1042
+%qdt
+It seems _father_ has another shady property
+called _cultdun_ in ___cultdun_.
+I guess I should look there.
+
+Message: 1043
+%qdt
+It appears _father_ was injured in the
+struggle before he fled.
+I'm going to try to follow his blood trail.
+
+Message: 1044
+%qdt
+_father_ is dead. I didn't badly injure
+him, so I can only assume he met his end from
+the squatters in _cultdun_.
+The child is ok. It looks like he was trying
+to protect the kid. Maybe he really was his
+father.
+Now to take the kid and get out of here.
+
+Message: 1045
+In a tragic twist it seems _questgiver_
+has succumbed to what her unsympathetic
+landlady termed "an accident". She implied this
+wasn't the first, but is possibly the last.
+I should see the priest, _priest_ at
+_temple_ in __temple_ who is taking care of her.
 
 -- Dialog
 Message:  1100
@@ -226,7 +344,7 @@ Message:  1143
 _child_ will be tended to under our care.
 Life in _temple_ is not a bad one. Perhaps %g
 will grow up to help poor lost souls like those
-of his parents.
+of %g3 parents.
 <ce>
 This has been a sad tale, and one that we see
 repeated so often.
@@ -288,39 +406,39 @@ Message:  1301
 <ce>        Guess you have some time to entertain the little tyke.
 
 Message:  1302
-The child starts to cry.
+<ce>The child starts to cry.
 
 Message:  1307
-It's crying has drawn the attenton of a harpy.
+<ce>It's crying has drawn the attenton of a harpy.
 
 Message:  1308
-Actually it looks like it's just an old lady.
+<ce>Actually it looks like it's just an old lady.
 
 Message:  1303
-The child spots a cat.
+<ce>The child spots a cat.
 
 Message:  1304
-The child is hungry.
+<ce>The child is hungry.
 
 Message:  1305
-The child has pooped.
+<ce>The child has pooped.
 
 Message:  1309
-The poop has drawn rats.
+<ce>The poop has drawn rats.
 
 Message:  1306
-An old lady appoaches you.
+<ce>An old lady appoaches you.
 
 Message:  1320
-A man approaches you.
+<ce>A man approaches you.
 
 Message:  1321
-In the confusion the man grabs the child and dissapears.
+<ce>In the confusion the man grabs the child and dissapears.
 
 Message:  1324
-The child is safe, however _father_ is dead.
-It looks like he was injured but got the child
-to relative safety before he died.
+<ce>The child is safe, however _father_ is dead.
+<ce>It looks like he was injured but got the child
+<ce>to relative safety before he died.
 
 QBN:
 
@@ -415,24 +533,33 @@ _poop_ task:
 
 _dad_ task:
     say 1320
+    log 1032 step 1
     prompt 1100 yes _givebaby_ no _dontgivebaby_
     start timer _returns_
 
 _givebaby_ task:
+    log 1033 step 2
     drop _child_ face
     say 1101
     clear _havebaby_
     setvar _nobaby_
 
 _dontgivebaby_ task:
+    log 1034 step 2
     say 1102
     create foe _dadmad_ every 0 minutes 1 times with 100% success
     create foe _sismad_ every 0 minutes 1 times with 100% success
     start timer _kidnap_
 
-_daddead_ task:
-    killed _dadmad_
+_dadinjured_ task:
+    injured _dadmad_
     stop timer _kidnap_
+    drop _child_ face
+    clear _havebaby_
+    setvar _nobaby_
+    remove foe _dadmad_
+    say 1321
+    log 1034 step 3
 
 _kidnap_ task:
     remove foe _dadmad_
@@ -440,6 +567,7 @@ _kidnap_ task:
     drop _child_ face
     clear _havebaby_
     setvar _nobaby_
+    log 1034 step 3
 
 _returns_ task:
     hide npc _friend_
@@ -459,10 +587,12 @@ _friendclicked_ task:
 _thefriend_ task:
     when _friendclicked_ and not _accident_
     say 1103
+    log 1035 step 4
 
 _badnews_ task:
     when _friendclicked_ and _accident_
     say 1104
+    log 141 step 10
     place npc _priest_ at _temple_
 
 _returnswithbaby_ task:
@@ -481,6 +611,7 @@ _returnsnobaby_ task:
 
 _findthechild_ task:
     say 1108
+    log 1036 step 5
     place npc _sister_ at _sishouse_
 
 _forgetit_ task:
@@ -492,6 +623,7 @@ _sisterclicked_ task:
     clicked npc _sister_
     say 1125
     say 1126
+    log 1037 step 6
     hide npc _sister_
     create foe _sismad_ every 0 minutes 1 times with 100% success
     give item _note_ to _sismad_
@@ -499,6 +631,7 @@ _sisterclicked_ task:
 _thecult_ task:
     clicked npc _father_
     say 1135
+    log 1039 step 7
     start timer _trespass_
 
 _trespass_ task:
@@ -508,6 +641,7 @@ _trespass_ task:
 
 _fled_ task:
     say 1137
+    log 1041 step 8
     hide npc _father_
     place item _claim_ at _culthome_
     place npc _child_ at _cultdun_
@@ -518,6 +652,7 @@ _childclicked_ task:
 _dung_ task:
     when _childclicked_
     say 1324
+    log 1044 step 9
     hide npc _child_
     add _child_ face
     setvar _havebaby_
