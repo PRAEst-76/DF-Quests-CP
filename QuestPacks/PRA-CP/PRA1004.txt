@@ -4,26 +4,29 @@ DisplayName: Holding the baby
 QRC:
 
 QuestorOffer:  [1000]
-Dear %pct, you could help me. If you could?
+Dear %pct, you could help me. If you would?
 You see I have an urgent meeting with a person
 of note and cannot find someone to take care of
 my child, _child_.
-Can you please just look after %g2 for a moment.
+Can you please just look after %g2 for a short
+time.
 I should not be more than an hour. Then I will
 return and take %g2 again and pay you.
 Please.
 This is very important. Our future depends on it.
 
 RefuseQuest:  [1001]
-Oh no. What shall we do now. Please. Oh. My child!
+Oh no. What shall we do now.
+Please. Oh. My child!
 
 AcceptQuest:  [1002]
-OH! Thanks you! I shall not be long.
-Merely a few hours. No longer.
+Oh! Thank you. Thank you!
+I shall not be long.
+Merely a  hours. No longer.
 I will meet you at my home, once my business has
 concluded.
 I shall be at _house_ in
-__house_ In 12 hours.
+__house_ in around 12 hours.
 No longer. I promise.
 I shall return in no less than a day.
 Please take care of my child!
@@ -49,12 +52,13 @@ Thank you.
 -- Logs
 Message:  1030
 %qdt
-A lady called _questgiver_ has got me to babysit
-her child while she goes... somewhere. She
-promises she'll come back to retrieve %g2 soon,
-but was unspecific as to when.
+A lady called _questgiver_ has talked me into
+minding her child while she goes to...
+do something or other.
+She promises she'll come back to retrieve him
+soon, but was unspecific as to when.
 I am to return the child to _house_
-in __house_... at some point.
+in __house_... at some stage.
 
 Message: 1031
 %qdt
@@ -92,8 +96,8 @@ _questgiver_ was understandably very upset. She
 claimed the man was not the child's father.
 However she seemed to know who he was and told
 me to speak to a woman called _sister_
-who is possibly the man's sisters who lives
-in __sisterhome_.
+who is seemingly this man's sister who lives
+in __sishouse_.
 
 Message: 1037
 %qdt
@@ -371,40 +375,40 @@ Beloved Sister,
 We have purchased a building in __culthome_
 to be our base of operations.
 Once I have retrieved my child from that wench
-I shall take him with me to be raised accordingly
-to our masters wishes.
+I shall take him with me to be raised in
+accordance with the rules of our Lord.
 <ce>
-Once your tasks are complete you should ride to
-join us so we may begin our ascendence.
+Once your tasks in __sishouse_ are complete
+you should ride with haste to join us so we
+may begin in earnest.
 <ce>
-_father_
-_culthome_
-__culthome_
-___culthome_
-____culthome_
+                            _father_
+                            _culthome_
+                            ___culthome_
+                            ____culthome_
 
 Message:  1202
 Dear _father_,
 <ce>
 It has come to the attention of the regional
 safety commission that a property of yours in
-___cultdun_, namely _cultdun_
+____cultdun_, namely __cultdun_
 does not reach the safety standards for the
 area.
 A recent survey performed found that it met only
 2 of the 5 criteria for passable status.
 <ce>
-Under ___cultdun_ law you now have 90 days
-to bring the property up to legal code or The
-RSC of ___cultdun_ will be forced to
-issue a condemnation notice that could result
-in a fine and the property being declared unfit
-for habitation/trade/perfomance*.
+Under ____cultdun_ law you now have
+90 days to bring the property up to legal code
+or The RSC of ____cultdun_ will
+be forced to issue a condemnation notice that
+could result in a fine and the property being
+declared unfit for habitation/trade/perfomance*.
 (*delete where applicable).
 <ce>
-                                %n
-                                Scribe
-                                ___cultdun_ RSC
+                            %n
+                            Scribe
+                            ____cultdun_ RSC
 
 -- Rumours
 Message:  1203
@@ -445,6 +449,19 @@ Message:  1301
 Message:  1302
 <ce>The child starts to cry.
 
+Message:  1313
+<ce>Do you wish to try to sooth the child with
+a song?
+
+Message:  1316
+<ce>You sing the child an old %ra lullaby.
+
+Message:  1314
+<ce>The child has been soothed by your dulcet tones.
+
+Message:  1315
+<ce>No. That's actually made the child even more unhappy.
+
 Message:  1307
 <ce>It's crying has drawn the attenton of a harpy.
 
@@ -460,6 +477,17 @@ Message:  1304
 Message:  1305
 <ce>The child has pooped.
 
+Message:  1310
+<ce>Do you want to attempt to fashion a makeshift
+diaper from random cloth and junk?
+
+Message:  1311
+<ce>You have dealt with the threat.
+
+Message:  1312
+<ce>Well that didn't work and now you are covered
+in poop as well.
+
 Message:  1309
 <ce>The poop has drawn rats.
 
@@ -472,6 +500,13 @@ Message:  1320
 Message:  1321
 <ce>In the confusion the man grabs the child and dissapears.
 
+Message:  1322
+<ce>Says they have a place called _cultdun_.
+<ce>I should look there.
+
+Message:  1323
+<ce>_culthome_. Is that where he has the kid?
+
 Message:  1324
 <ce>The child is safe, however _father_ is dead.
 <ce>It looks like he was injured but got the child
@@ -479,17 +514,17 @@ Message:  1324
 
 QBN:
 
-Person _questgiver_ group Questor female
+Person _questgiver_ group Questor female anyInfo 1203
 Person _child_ faction Children male
-Person _friend_ faction Default female
-Person _father_ faction The_Necromancers male
-Person _sister_ faction The_Necromancers female
-Person _priest_ faction Generic_Temple
+Person _friend_ faction Default female anyInfo 1204
+Person _father_ faction The_Necromancers male anyInfo 1205
+Person _sister_ faction The_Necromancers female anyInfo 1206
+Person _priest_ faction Healers male
 
 Place _house_ local house
 Place _sishouse_ remote house1
-Place _culthome_ remote house
-Place _cultdun_ remote dungeon
+Place _culthome_ remote house2
+Place _cultdun_ remote dungeon4
 Place _temple_ remote temple
 
 Foe _rat_ is 1 Giant_rat
@@ -503,11 +538,11 @@ Item _claim_ letter used 1202
 Item _reward_ gold
 
 Clock _cry_ 00:30 01:00
-Clock _olddear_ 01:00 03:00
+Clock _olddear_ 00:10 00:30
 Clock _cat_ 01:00 03:00
 Clock _hungry_ 01:30 03:00
 Clock _poop_ 01:30 03:00
-Clock _ratss_ 00:05 00:15
+Clock _ratattack_ 00:03 00:06
 Clock _dad_ 1:00 4:00
 Clock _kidnap_ 00:05 00:10
 Clock _returns_ 1:00 06:00
@@ -515,41 +550,81 @@ Clock _accident_ 03:00 1.00:00
 Clock _trespass_ 00:03 00:06
 Clock _fled_ 00:03 00:06
 
+variable _pooped_
+variable _changing_
+variable _crying_
+variable _songbird_
+variable _chanteuse_
+variable _nanny_
 variable _nobaby_
 variable _havebaby_
 
 --	Quest start-up:
     log 1030 step 0
+    hide npc _questgiver_
+    hide npc _child_
     add _child_ face
     start timer _cry_
     say 1301
     setvar _havebaby_
-    hide npc _questgiver_
-    place npc _questgiver_ at _temple_
-    place npc _friend_ at _house_
+    add dialog for person _questgiver_
+    dialog link for person _father_
+    dialog link for person _friend_
+    dialog link for person _sister_
+    place npc _priest_ at _temple_
+    place npc _father_ at _culthome_
+    place npc _sister_ at _sishouse_
+    place foe _cult_ at _culthome_
+    restrain foe _cult_
 
 _cry_ task:
     say 1302
+    setvar _crying_
+    prompt 1313 yes _sing_ no _nosing_
+
+_sing_ task:
+    say 1316
+    setvar _songbird_
+    start task _singing_
+
+_singing_ task:
+    when attribute Personality is at least 50
+    setvar _chanteuse_
+
+_soothed_ task:
+    when _crying_ and _songbird_ and _chanteuse_
+    say 1314
     start timer _olddear_
 
-_olddear_ task:
+_notsoothed_ task:
+    when _crying_ and _songbird_ and not _chanteuse_
+    say 1315
+    start task _harpyattack_
+
+_nosing_ task:
+    start timer _olddear_
+
+_harpyattack_ task:
     say 1307
     say 1308
+
+_olddear_ task:
     say 1306
     say 1110
-    prompt 1111 yes _olddear2_ no _shutup_
+    prompt 1111 yes _shutup_ no _olddear2_
 
 _olddear2_ task:
     say 1112
-    prompt 1113 yes _olddear3_ no _shutup_
+    prompt 1113 yes _shutup_ no _olddear3_
 
 _olddear3_ task:
     say 1114
     say 1115
-    prompt 1116 yes _olddear4_ no _shutup_
+    prompt 1116 yes _shutup_ no _olddear4_
 
 _olddear4_ task:
     say 1117
+    add dialog for person _father_
     say 1118
     say 1119
     start timer _cat_
@@ -568,27 +643,48 @@ _hungry_ task:
 
 _poop_ task:
     say 1305
-    start timer _ratss_
+    setvar _pooped_
+    prompt 1310 yes _change_ no _ratattack_
 
-_ratss_ task:
+_change_ task:
+    when _pooped_
+    when skill Medical is at least 15
+    when attribute Agility is at least 50
+    when attribute Luck is at least 50
+    setvar _nanny_
+
+_failedchange_ task:
+    when _change_ and not _nanny_
+    say 1312
+    start timer _ratattack_
+
+_ratattack_ task:
+    say 1309
     create foe _rat_ every 1 minutes 4 times with 80% success
+    start timer _dad_
+
+_changed_ task:
+    when _change_ and _nanny_
+    stop timer _ratattack_
+    say 1311
     start timer _dad_
 
 _dad_ task:
     say 1320
-    log 1032 step 1
+    log 1031 step 1
+    add dialog for person _father_
     prompt 1100 yes _givebaby_ no _dontgivebaby_
     start timer _returns_
 
 _givebaby_ task:
-    log 1033 step 2
+    log 1032 step 2
     drop _child_ face
     say 1101
     clear _havebaby_
     setvar _nobaby_
 
 _dontgivebaby_ task:
-    log 1034 step 2
+    log 1033 step 2
     say 1102
     create foe _dadmad_ every 0 minutes 1 times with 100% success
     create foe _sismad_ every 0 minutes 1 times with 100% success
@@ -626,6 +722,7 @@ _qgclicked_ task:
 
 _friendclicked_ task:
     clicked npc _friend_
+    add dialog for person _friend_
 
 _thefriend_ task:
     when _friendclicked_ and not _accident_
@@ -635,9 +732,9 @@ _thefriend_ task:
 _badnews_ task:
     when _friendclicked_ and _accident_
     say 1104
-    log 1045 step 10
+    log 1045 step 12
     place npc _priest_ at _temple_
-    hide npc __questgiver_
+    hide npc _questgiver_
 
 _returnswithbaby_ task:
     when _qgclicked_ and _havebaby_
@@ -656,6 +753,7 @@ _returnsnobaby_ task:
 _findthechild_ task:
     say 1108
     log 1036 step 5
+    add dialog for person _sister_
     place npc _sister_ at _sishouse_
 
 _forgetit_ task:
@@ -672,23 +770,40 @@ _sisterclicked_ task:
     create foe _sismad_ every 0 minutes 1 times with 100% success
     give item _note_ to _sismad_
 
+_noteread_ task:
+    _note_ used saying 1323 do _notereadlog_
+
+_notereadlog_ task:
+    log 1038 7
+
 _thecult_ task:
     clicked npc _father_
     say 1135
-    log 1039 step 7
+    log 1039 step 8
     start timer _trespass_
 
 _trespass_ task:
     say 1136
+    unrestrain foe _cult_
     create foe _cult_ every 1 minutes 2 times with 90% success
-    start timer _fled_
+    hide npc _father_
+    create foe _dadmad_ every 1 minutes 1 times with 100% success
 
 _fled_ task:
+    when _trespass_
+    injured _dadmad_
+    remove foe _dadmad_
     say 1137
-    log 1041 step 8
-    hide npc _father_
+    log 1041 step 9
     place item _claim_ at _culthome_
     place npc _child_ at _cultdun_
+
+_readclaim_ task:
+    _claim_ used saying 1322 do _revealdung_
+
+_revealdung_ task:
+    log 1042 10
+    reveal _cultdun_
 
 _childclicked_ task:
     clicked npc _child_
@@ -696,7 +811,7 @@ _childclicked_ task:
 _dung_ task:
     when _childclicked_
     say 1324
-    log 1044 step 9
+    log 1044 step 11
     hide npc _child_
     add _child_ face
     setvar _havebaby_
