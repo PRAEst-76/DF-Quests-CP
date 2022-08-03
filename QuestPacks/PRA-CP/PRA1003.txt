@@ -19,7 +19,9 @@ No skin off my nose. Some people just aren't into
 helping those in need, I figure.
 
 AcceptQuest:  [1002]
-Well, you'll find her at _ladyhome_.
+Well, her name is _lady_ and you'll
+find her at _ladyhome_.
+<ce>
 Hopefully you can do something for the poor lass.
 She should be there for another week or so.
 
