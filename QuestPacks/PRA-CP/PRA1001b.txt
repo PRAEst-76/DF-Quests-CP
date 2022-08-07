@@ -1,0 +1,310 @@
+Quest: PRA1001b
+DisplayName: The Crypt of Doom
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+
+RumorsPostfailure:  [1006]
+
+RumorsPostsuccess:  [1007]
+
+QuestorPostsuccess:  [1008]
+
+-- Dialogue
+Message: 1101
+"Ah, %pct. Thank you for coming. _questgiver_ is stable
+for now but I'm not sure how many more episodes his
+poor body can take. This has been happening now for
+weeks. When he was lucid he told me you were there
+for the first... er... spasm?"
+
+Message:  1102
+"I have never anything like this before, it appears
+to a particularly cruel curse that has been placed
+upon him, perhaps by a vengeful business associate
+or former lover."
+<ce>
+"If we could only..."
+
+Message:  1103
+"Each emergence leaves him more and more weakened.
+There is only do much we can do here at the temple,
+however the evoker, _evoker_, at the mages
+guild may be able to help with a treatment for the curse.
+They will apparently require a sample of the emergence
+sac. I will prepare the sample which you must take them
+without delay."
+
+Message:  1104
+"Here is the sample. It is as fresh as possible.
+I have sealed it in a jar. Do not lose this as I
+would rather he not have to go through this again."
+
+Message:  1105
+"Please. Hurry to the evoker, _evoker_.
+Do not become sidetracked. The mages can be wily and
+try to lure you into other tasks and concerns.
+Please focus on determining the nature of the curse.
+For _questgivers_ sake. Hurry _evoker_ too.
+Mages often care little for the lives of normal people."
+
+Message:  1106
+"Ah yes, you are from _temple_...
+You have the sample we requested? Good. I can set to
+divining the kind of curse used.
+I believe there have been two other cases of this
+recently."
+
+Message:  1107
+"The priest did not know this? I would have thought the
+temples would be aware? I imagine they perhaps found
+such demises so abhorrent to their frail sensitivies
+that they deemed it prudent not to discuss them.
+<ce>
+To us this is is fascinating, of concern of course,
+but fascinating nontheless.
+
+Message:  1108
+"Demises? Deaths, yes."
+<ce>
+"I fear the victims have both perished as a result of
+the curse. We didn't pay much need to it at first,
+but now with three such cases..."
+
+Message:  1109
+"I shall do what I can with what you have given me,
+however it would expedite matters considerably should
+we retrieve samples from the bowels of the previous
+two victims."
+<ce>
+"An unpleasant task I know, but a necessary one."
+
+Message:  1110
+"The first is buried at _cemetary_ and should be
+simple for you to obtain."
+<ce>
+He holds up his hand before you can respond.
+<ce>
+"Yes. Lets not waste time on subtlties. You've come
+this far. This is what needs to be done. By you. Now."
+
+Message:  1111
+"The second however left for his ancient family crypt
+when realising the full extent of his situation and
+presumably took his own life there out of some sense of
+familial duty, unless he was killed by the denizens such
+places usually contain."
+<ce>
+"Find his body and obtain the sample. Otherwise who knows
+how long divining the source might take."
+
+Message:  1112
+"Are you still here?"
+
+Message:  1113
+Who are you? Why are you here? Did you know my husband?
+<ce>
+<ce>Tell her the truth?
+
+Message:  1114
+"They are trying to find a cure? Why? My husband is dead. How can it help him now?"
+
+Message:  1115
+Others? Oh no. Who would do this?
+<ce>
+What do you need of me?
+<ce>
+<ce>Tell her what you need to do as sensitively as you can?
+
+Message:  1116
+What?! No! That...
+<ce>
+You... Do... Do what you must!
+Please ensure no-one else suffers as he did.
+Just see that you leave is grave as it was.
+
+Message:  1117
+He was a good man. He didn't deserve this. The children think he is away in Skyrim on business. I'm not ready to tell them.
+Please. I don't mean to be rude, but I wish to be alone with my husband.
+
+Message:  1118
+What?! No! That...
+<ce>
+No, that is monsterous! I will not allow it.
+Get away from me!
+Not! Allow!
+Guards! Guards!!
+
+-- Corrispondence
+Message:  1201
+Dear %pcf,
+My name is _priest_ at _temple_.
+I am writing to you as you previously assisted a man
+here called _questgiver_ with a personal problem.
+I sadly have to inform you that his condition has
+severely worsened and he is now in our care.
+He does not wish the nature of his illness to become
+widely known and as such has requested your assistance
+in helping us treat him. He has added that he can
+renumerate you for your time if it helps.
+If you can assist us in our investigation into his
+ailment I would be very appreciative but advise you
+to make haste to us here in the temple as we fear
+that any worsening in his condition may be fatal.
+                            Gods bless.
+                            _priest_
+
+Message:  1202
+Dear %pcf,
+I'm afraid _questgiver_ died this evening.
+We kept him as comfortable as we could but I cannot lie
+and say his death was not unpleasant.
+He suffered greatly.
+I hope that your visit to the mages was productive, but
+alas can do nothing to help my patient, who at least is
+beyond suffering now.
+Perhaps any research the envoker was able to perform may
+help with any future cases, of which I hope there is none.
+I wish you good journeys.
+                            Gods bless.
+                            _priest_
+
+-- Notifications
+Message:  1301
+A messenger appears as if out of nowhere and silently
+holds out a letter addressed to you.
+Without awaiting approval or a gratuity he dissapears
+almost as quickly.
+
+Message:  1302
+You look up and the silent messenger is before you.
+He barely nods and then dissapears, almost as if by magic.
+Looking down you realise you hold a letter.
+
+Message:  1303
+You look at the small figure asleep in the bed.
+The man is noticeably more emaciated than he was when you
+last saw him. The humour has gone from his face, which is
+of a grey pallor. His eyes are dark and sunken. He looks
+at least 20 years older then when you last saw him,
+despite it being a matter of weeks.
+He shakes in his slumber like a brittle tree in a storm.
+
+Message: 1304
+The man stirs then his eyes open and he starts to moan.
+<ce>
+"Ohhh. Ohhh nooo! Nooooo!"
+
+Message: 1305
+The priest tries to hold _questgiver_ down while inserting
+a wooden spoon between his teeth.
+"Quickly. Deal with that comes! I'll try to keep him calm."
+
+Message:  1306
+The foul creature is dead. _questgiver_ is
+unconscious again. His breathing ragged.
+
+Message:  1307
+The priest carefull uses a flat knife to scrape some of
+the homunculous' birth sac from the bed into a jar. He
+carefully seals it with a cork, wraps it in a cloth,
+ties some twine around it and hands it to you.
+
+Message:  1308
+The evoker takes the jar from you and sets it carefully
+on a table behind him. He then proceeds to carefully
+ignore it and continues talking.
+
+Message:  1309
+Arriving at the grave of the first victim you notice a
+woman, tending to the flowers placed there.
+She looks up in surprise as you approach.
+
+Message:  1310
+She looks horrified when you tell her.
+
+-- Meat
+QBN:
+
+-- Props
+Item _letter_ letter used 1201
+Item _deathnotice_ letter used 1202
+
+-- Cast
+Person _questgiver_ group Questor male
+Person _priest_ faction Healers male
+Person _otherpriest_ faction Healers female
+Person _evoker_ faction The_Mages_Guild male
+
+-- Antagonists
+Foe _explusion_ is Imp
+
+-- Locations
+Place _temple_ remote temple
+Place _tmg_ remote magery
+
+-- Timers
+Clock _notify_ 20.00:00 40.00:00
+Clock _dead_ 7.00:00 10.00:00
+
+--	Quest start-up:
+    start timer _notify_
+    
+_notify_ task:    
+    give pc _letter_ notify 1301
+    place npc _priest_ at _temple_
+    start timer _dead_
+
+_priestclicked_ task:
+    clicked npc _priest_
+
+_incare_ task:
+    when _priestclicked_
+    say 1101
+    say 1303
+    say 1102
+    say 1304
+    say 1305
+    place foe _explusion_ at _temple_
+
+_nolongerfunny_ task:
+    killed _explusion_
+    say 1306
+    say 1103
+    say 1307
+    say 1104
+    say 1105
+    place npc _evoker_ at _tmg_
+
+_evokerclicked_ task:
+    clicked npc _evoker_
+
+_atmages_ task:
+    when _evokerclicked_
+    say 1106
+    say 1308
+    say 1107
+    say 1108
+    say 1109
+    say 1110
+    say 1111
+    say 1112
+
+_firstsample_ task:
+    when _atgrave_
+    say 1309
+
+_dead_ task:
+    give pc _deathnotice_ notify 1302
+    end quest

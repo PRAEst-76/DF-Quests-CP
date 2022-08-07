@@ -728,7 +728,7 @@ _thedad_ task:
 
 _yesdad_ task:
     say 1042
-    reveal __grave_
+    reveal _grave_
     log 1104 step 4
     start timer _whereremains_
 

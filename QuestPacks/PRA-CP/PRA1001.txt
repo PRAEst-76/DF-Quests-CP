@@ -177,6 +177,7 @@ _pcgetsgold_ task:
     give pc _reward_
     say 1024
     change repute with _questgiver_ by +4
+    start quest PRA1001b
     end quest
 
 _note_ task:

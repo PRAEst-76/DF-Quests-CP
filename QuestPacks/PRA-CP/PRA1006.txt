@@ -41,4 +41,14 @@ Real life is not for you. Best find a dungeon to die in.
 QuestComplete:  [1004]
 You would have made your father proud, %pcf.
 
+Message:  1005
+Sorry, _questgiver_ sent you?
+<ce>
+Never heard of %g2. I think someone is winding you up.
+<ce>
+As for jobs. Erm, all I need at the moment is someone
+to go and sort out the bottles in the cellar.
+Can't pay much, but it's honest work.
+
+
 QBN:

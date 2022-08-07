@@ -4,33 +4,43 @@ DisplayName: Holding the baby
 QRC:
 
 QuestorOffer:  [1000]
-Dear %pct, you could help me. If you would?
-You see I have an urgent meeting with a person
+The flustered young woman touches your arm "Dear
+%pct, you could help me. If you would?"
+<ce>
+"You see I have an urgent meeting with a person
 of note and cannot find someone to take care of
-my child, _child_.
-Can you please just look after %g2 for a short
-time.
-I should not be more than an hour. Then I will
-return and take %g2 again and pay you.
-Please.
-This is very important. Our future depends on it.
+my child, _child_."
+<ce>
+"Can you please just watch him for a short
+time."
+She avoids your gaze. "I should not be more than
+an hour. Two at most. Then I will return and take
+him off your hands and pay you. Please?"
+<ce>
+"This is a very important meeting. Our future...
+his future depends on it."
 
 RefuseQuest:  [1001]
-Oh no! What shall we do now?
-My poor child!
+She looks crest-fallen. "Oh no! What shall we do
+now?"
+<ce>
+"My poor, poor child!"
 
 AcceptQuest:  [1002]
-Oh! Thank you. Thank you!
-I shall not be long. I promise.
-Merely an hour or so. No longer.
-I will meet you at my home, once my business has
-concluded.
-I shall be at _house_ in
-__house_ in around six hours.
-No longer. I promise. Maybe twelve.
-I shall return in no less than a day.
-Please take care of my child!
-See you tomorrow!
+"Oh! Thank you... Thank you!"
+<ce>
+"Here he is. I shall not be long. I promise.
+Only a few hours. No longer. Honest. I will meet
+you at my home, once my business has concluded."
+<ce>
+She turns to leave, "I shall be at _house_
+in __house_ in around six hours. No longer. I
+promise. Maybe twelve..."
+<ce>
+"I shall return in no less than a day. Please
+take care of my beautiful boy! I love you."
+<ce>
+"See you tomorrow!" and with that she is gone.
 
 QuestFail:  [1003]
 <ce>                You failed to take care of the child.
@@ -67,38 +77,53 @@ Thank you for everything you did for _child_
 Message:  1030
 %qdt:
 A lady called _questgiver_ has talked me into
-minding her child while she goes to...
-do something or other.
-She promises she'll come back to retrieve him
-soon, but was unspecific as to when.
-I am to return the child to _house_
-in __house_... at some stage.
+minding her child while she goes to do something
+or other.
+<ce>
+She promises she'll come back soon, but was
+unclear how soon.
+<ce>
+I am to return the child to her at her home 
+_house_ in __house_
+whenever she eventually returns from her meeting.
+<ce>
+I should check there later.
 
 Message:  1031
 %qdt:
 A man called _father_ who claims to be the
 child's father stopped me.
 <ce>
-He said the child's mother was an unfit parent
-and demanded I turn the kid over to him.
+He said the child's mother was an unfit parent and
+demanded I turn the kid over to him.
 
 Message:  1032
 The man seemed sincere, but also desperate and
 somewhat threatening.
 <ce>
-I hope I did the right thing.
+I hope I did the right thing giving him the kid.
 
 Message:  1033
 The man seemed desperate and threatening. So I
 refused his request. One of his associates
 attempted to ambush me.
-<ce>
+
+Message:  1034
 He snatched the child during the struggle, and
-vanished. I don'k know where he went. I guess I
+vanished. I don't know where he went. I guess I
 need to go speak to _questgiver_ at
-_house_. Maybe she knows who he is.
+_house_. Maybe she knows who
+he is.
 <ce>
 This won't be easy.
+
+Message:  1048
+Someone, probably one of _father_'s associates
+snatched the kid when I was distracted. I've no
+idea where they went.
+<ce>
+I'll need to give the bad news to _questgiver_.
+Maybe she knows where they might have taken him.
 
 Message:  1035
 %qdt:
@@ -112,49 +137,64 @@ Message:  1036
 %qdt:
 _questgiver_ was understandably very upset. She
 claimed the man was not the child's father.
-However she seemed to know who he was and told
-me to speak to a woman called _sister_
+However she seemed to know who he was and told me to
+speak to a woman called _sister_
 who is seemingly this man's sister who lives
 in __sishouse_.
 
 Message:  1037
 %qdt:
-_sister_ was... unhelpful, and tried to kill me.
-<ce>
+_sister_ was... unhelpful, and tried to kill me,
+which would be somewhat of an over-reaction for
+someone with nothing to hide. She fled before I
+could get any information out of her.
+
+Message:  1047
+%qdt:
+_sister_ was... unhelpful, and tried to kill me,
+I was forced to slay her and her associates.
+
+Message:  1043
 There might be something in her home that will
 point me in the direction of _father_. Otherwise
 it's back to asking around.
 
+Message:  1040
+She had an invoice for a horse and lodgings at
+_remtav_ in ___remtav_.
+Perhaps that is where she is heading?
+
 Message:  1038
-%qdt:
-Apparently _father_ is in a house called
-_culthome_ in __culthome_. He's probably not
-going to just hand over the child willingly.
-I'll need to think about how to handle this.
+According to a letter she had on her, _father_
+is in __culthome_ at _culthome_.
+He's probably not going to just hand over the child
+willingly. I'll need to think about how to handle this.
 
 Message:  1039
 %qdt:
 Found the kid at _culthome_ with his "father"
 and his friends. They asked me to leave and said
 the child will have a better life there.
-<ce>
+
+Message:  1049
 Can I just leave the child there? They seem
 resourceful, but also dangerous. Getting the
 kid away from them will be hard and bloody.
 Maybe he is better off there?
 
 Message:  1041
-%qdt:
 _father_ has taken off with the kid after setting
 his men on me.
 I'll need to look around for clues as to where he
 may have gone.
 
 Message:  1042
-%qdt:
-It seems _father_ has another shady property
-called _cultdun_ in ___cultdun_.
-I guess I should look there.
+_father_ has taken off with the kid after setting
+his men on me.
+According to a note I found it seems he has another
+shady property in ____cultdun_ called
+___cultdun_.
+Perhaps that is where he has fled to?
 
 Message:  1044
 %qdt:
@@ -183,322 +223,424 @@ try to return the child to them before she does.
 
 -- Dialog
 Message:  1100
-Halt stranger. That is my child you have there.
-I am _father_, his father and a man of means.
-I demand you turn him over to me. His mother is a
-drunk and a whore and I'm sick of her leaving him
-with strangers like you while she plies her wares
-in back alleys.
+"Halt, stranger!" he says, holding up his hand.
+You notice the other hovers near his belt.
 <ce>
-Turn him over now and you will depart with your life.
+"That is my child you have there. I am
+_father_, his father and a man of means.
+I demand you turn him over to me! His mother is
+a drunk and a whore, and I'm sick of seeing her
+leaving him with strangers like you while she
+plies her wares in back alleys!"
+<ce>
+He glares at you menacingly. "Turn him over now
+and you will depart with your life."
 
 Message:  1101
-You have done the right thing stranger.
+He takes the child from you. "You have done the
+right thing stranger."
 <ce>
-This child will have no life of consequence with
+"This child will have no life of consequence with
 that strop. I will take him far from this place
-and see his life is rich and fullfiling.
+and see his life is rich and fullfiling."
+<ce>
+And with that he departs, you notice at this
+point he was not alone.
 
 Message:  1102
-I will not risk my child's life by attacking you
-directly.
+His expression doesn't change, but you detect a
+flicker behind his eyes. "I will not risk my
+child's life by attacking you directly."
 <ce>
-No.
+"No." he says, shaking his head.
 <ce>
-I will find some other way to retrieve my child.
+"I will find some other way to retrieve my child."
 <ce>
-I will bide my time. Waiting for the right moment
+"I will bide my time. Waiting for the right moment
 for you to be distracted talking to me while my
-brother attacks from behind!
+brother attacks from behind!"
+<ce>
+What was that?
 
 Message:  1103
-_questgiver_? No. She is not here. I know not
-where she is.
+The woman snaps at you. "_questgiver_?
+No. She is not here. I know not where she is."
 <ce>
-And no. I will not take the child, so don't even
+"And no. I will not take the child, so don't even
 ask. You agreed to do this, any risk is on your
-hands.
+hands." She holds up her own for emphasis.
 <ce>
-I let _questgiver_ doss here, but I
-don't get involved beyond that.
+"I let _questgiver_ doss here, but I don't
+get involved beyond that."
 <ce>
-Be off with you. Return when she does.
-I will speak with you no longer.
+She gestures at you dismissively. "Be off with
+you. Return when she does. I will speak with you
+no longer."
 
 Message:  1109
-Look. I told you she's not here!
+She looks irritated to see you return. "Look. I
+told you she's not here!"
 <ce>
-Come back when she is.
+"Come back when she is."
 <ce>
-I don't know where she is! I never know where
-she is! Now get out!
+She replies before you get a chance to speak. "I
+don't know where she is! I never know where she
+is! She could be out all night. She's dissapeared
+for days before. I don't care! Now get out!"
 
 Message:  1104
-Oh. You are the person _questgiver_
-employed to take care of _child_.
-It is good you have returned.
-I fear _questgiver_ is deathly ill.
-She had an... accident.
-She is at _temple_.
-Take her child to her.
-_priest_ is taking care of her there.
+The woman looks distracted. "Oh. You are the
+%ra _questgiver_ employed to take care
+of _child_."
+"It is good you have returned."
+She rubs her hands together nervously. "I fear
+_questgiver_ is deathly ill. She had an...
+accident."
+<ce>
+"She is at _temple_. Take her child to
+her there.
+A priest called _priest_ is taking care
+of her. Speak to him. I've done all I can."
+<ce>
+"Please go."
 
 Message:  1105
-You return. Good.
+She seems preoccupied already. "You return. Good."
 <ce>
-Where... where is my baby?
+She looks you over, as if seeing you for the
+first time. A look of alarm and confusion crosses
+her face, followed by fear. "Where... where is my
+baby? Where is my baby boy?"
 
 Message:  1106
-You what?!
+_questgiver_'s face is twisted with panic
+and rage. "You what?!"
 <ce>
-You fool, his father is dead! You have given my
-baby to a cult!
+"You fool, his father is dead! You have given my
+baby to a cult!"
 <ce>
-Oh no!!! You monster. You monster! My baby!
+She holds her hands to her face, tears welling up
+in her eyes. "Oh no! No no no!!!"
 <ce>
-Go! Get my child!
+She yells at you, her hands clenched into fists.
+"You monster! You monster! My baby!"
 <ce>
-If you are good for anything you will undo what
-you have done before... before they...
+"If you are good for anything you will undo what
+you have done before... before they..." she tails
+off, then recovers her rage, "Go you idiot!
+What are you waiting for?!"
 <ce>
-Go you idiot! What are you waiting for?!
-<ce>
-<ce>                  Do you agree to retrive the Child?
+<ce>                  Do you agree to find her child?
 
 Message:  1107
-Aaah! No! Nononono!
+"Aaah! No! Nononono!" she yells, doubling over as
+if in pain.
 <ce>
-My baby!
+"My baby! My sweet baby!"
 <ce>
-You've killed my baby!!
+She pulls herself upright again, glaring at you,
+eyes full of madness, "You've... you've killed my
+baby!! My baaabiiieee!!!"
 
 Message:  1108
-I don't know where they are! ..but you might want
-to speak to _sister_ in __sishouse_.
-She might know. She is his sister, I think.
+Some of her anger dissapates, to be replaced only
+by exhaustion and frustration. "I don't know
+where they are, but..." she thinks, "You might
+try to speak to _sister_ in
+__sishouse_. She might know. She is his
+sister,I think."
 <ce>
-They used to be close. Too close!
+"They used to be close. Too close!" You notice
+some anger returns. "Go! Find her! Find my baby!
+Make her tell you where they are."
 <ce>
-Go! Find her! Find my baby! Make her tell you
-where they are.
+"Go! Ask people! Do something!!"
 <ce>
-Go! Ask people! Do something!!
+"Find my baby!!" and with that she slumps
+exhaustedly to the floor.
 <ce>
-Find my baby!!
+"Find my baby..."
 
 Message:  1110
-Oh my, what a cute little button! Looks just like
-you!
+The lady stands a little too close, smelling of
+a mixture of old flowers, spices and leaked
+bodily fluids. She prods at the kid with a
+extended bony digit. "Oh my, what a cute little
+button she is! And looks just like you!"
 <ce>
-I know they all say that, but this one really
-does. The absolute spit!
+"I know they all say that, but this one really
+does. The absolute spit!"
 
 Message:  1111
-Adventuring is a bit of a difficult life for a
+She smiles at the child while she continues,
+"Adventuring is a bit of a difficult life for a
 child though isn't it? With all those nasty
 monsters and Orcs and bandits and such coming at
 you all the time with their great big weapons
-out...
+out..."
 <ce>
-Where do you keep the child during your questin'?
-In a bag or do you have someone that holds 'em
-for you while you get to slayin' and lootin'?
+She makes a silly face at the kid who stares back
+at her not knowing whether to return the smile or
+cry. "Where do you keep the child during all your
+questin'? In a bag or do you have someone that
+holds 'em for you while you get to slayin' and
+lootin' and the like?"
 <ce>
 <ce>                            Interrupt her?
 
 Message:  1112
-Is the little one on solids now?
+"Is the little one on solids now? Eating her
+carrots?"
 <ce>
-Eating his carrots?
+She nods to herself. "Carrots are good for the
+hair so they say. Might make it red though, and
+no-one wants a red haired child."
 <ce>
-Carrots are good for the hair I believe. Might
-make it red though and no-one wants a red haired
-child.
-<ce>
-Perish the thought!
+She grins toothlessly at the child, "No, they
+certainly don't!"
 
 Message:  1113
-Ours went to school in Wayrest of course. Just
-the best for ours. She turned out well. Works for
-the bank there now. Doesn't have red hair.
+She attempts an air of sophistication, "Ours went
+to school in Wayrest of course. Just the best for
+her. She turned out well. Works for the bank there
+now. Doesn't have red hair."
 <ce>
-You might want to consider that kind of life for
-your child.
+She addresses you patronisingly, "You might want to
+consider that for your little girl."
 <ce>
 <ce>                         Tell her to shut up?
 
 Message:  1114
-I mean, it's not for me to judge. That's your
-child. Just saying that I think your line of work
-isn't a great life for a child.
+She closes her eyes and dismissively shakes her
+head, "I mean, it's not for me to judge. And 
+don't think I am. That's your child. Just saying,
+as a lady of years, that I think your line of
+work isn't the best life for a child."
 <ce>
-Very dangerous.
+"No offense. I just think it's rather dangerous."
 
 Message:  1115
-Look at me rabbiting on like this. I really must
-be off. Those messages won't run themselves.
+"Look at me rabbiting on like this. I really must
+be off. Those messages won't run themselves."
 <ce>
-And I've got to meet %fn to let her
-in on the latest gossip.
+"And I've got to meet %fn to let her
+in on the latest gossip."
+<ce>
+She turns to leave.
 
 Message:  1116
-Oh, speaking of which; did you hear the latest
-about %fn?
+She turns back to you, "Oh, speaking of which;
+did you hear the latest about %fn?"
 <ce>
-She's got herself a new man! Sure her husband is
-barely cold.
+She doesn't wait for a response, "She's got
+herself a new man! A %ra. Sure her husband is
+barely cold."
 <ce>
-Didn't wait long for that. I guess they don't
-wait these days.
+"Didn't wait long for that. I guess they don't
+wait these days."
+<ce>
+You won't get a word in edgeways here.
 <ce>
 <ce>                            Just walk off?
 
 Message:  1117
-I see that _father_ was seen doing
-some business at The Bank of
-____culthome_.
+"Oh, and I see that _father_ was spotted
+doing some business at The Bank of
+____culthome_."
 <ce>
-Suspicious one that if you ask me. The sister is
+"Suspicious one that if you ask me. The sister is
 no better. If she even is his sister. Something
-funny going on there.
+funny going on there." She screws up her face.
 
 Message:  1118
-Anyways. Must be off.
+"Anyways. Must be off. I'm sure you've things to
+do. The little one will need din-dins soon."
 <ce>
-Take care of that little one when you are doing
-yer murderous speluking won't you?
+"Take care of that little blessing when you are
+doing yer murderous speluking won't you?"
 
 Message:  1119
-And don't let her eat any carrots.
+"And don't let her eat any carrots!"
 <ce>
-You know what that causes!
+"You know what that causes! And no man will want
+that." and with that last peice of worldly
+advice, she leaves. You decide to go elsewhere
+quickly in case she comes back.
 
 Message:  1120
-How awfully rude. I guess parents these days just
-aren't up to much. Hmph.
+"How awfully rude. I guess parents these days just
+aren't up to much. Hmph."
+<ce>
+She spits on the ground and shuffles off.
 
 Message:  1122
-Thank you for taking care of my baby. I hope he
+_questgiver_ looks different. Less distracted.
+More relaxed. Quite relaxed. She quickly takes
+the child back off you again.
+<ce>
+"Thank you for taking care of my baby. I hope he
 didn't give you too much trouble. I know he can
-be a handful at times.
+be a handful at times."
 
 Message:  1123
-Here, I have some money for you. I shall also
-reccomend your services to all my friends.
+"Here, I have some money for you." she reaches
+into a tatty purse and pulls out some coin,
+"I shall also reccomend your services to all my
+friends."
 
 Message:  1125
-Yes, I am _sister_. What do you want?
+The striking woman eyes you cautiously.
+"Yes, I am _sister_. What do you want?"
 
 Message:  1126
-_father_?
+"_father_?" she becomes defensive.
 <ce>
-Who sent you? No matter...
-<ce>
-I'll send you back to them in peices!
+"Who sent you? No matter... I'll send you back to
+them in tiny peices!" she draws her blade.
 
 Message:  1127
-How did you find me! No matter...
+_sister_ looks up, startled by your appearence,
+"How did you find me! No matter... You'll not
+find my brothers! You'll not leave here alive!"
 <ce>
-You'll not find my brothers! You'll not leave
-here alive!
+She calls out "_broker_! To my aid!"
+<ce>
+It very much seems that she's not going to
+willingly tell you what you need to know.
 
 Message:  1135
-I know why you are here, %ra. She sent you to
-find us! I am surprised she cares enough to
-make the effort, but she is a drunken sot and
-harlot, not fit to be a mother or much else for
-that matter.
+_father_ stands before you defiantly. "I know why
+you are here, %ra. She sent you to find us!
+I am surprised she cares enough to make the
+effort, but she is a drunken sot and harlot, not
+fit to be a mother or much else for that matter."
 <ce>
-However, that is irrelevant now. The child is
-safe now with his father, I assure you of that.
+He shakes his head, "However, that is irrelevant
+now. The child is safe here with his father, I
+can assure you of that."
 <ce>
-You may leave. Now.
+He points at the door "You may leave. Now. Tell
+_questgiver_ whatever you wish."
 <ce>
-Tell _questgiver_ whatever you wish.
-She is of no importance.
+"The world cares not a wit for her or her kind,
+but if she should show up here, she will be killed
+as a trespasser... as will you if you ever dare
+to return. We shall depart here for... a place
+that is not your concern, but soon. Do not look
+for us again. You will find only death."
+
+Message:  1328
+"Halt! You are in possession of stolen merchandise!
+Turn it over or face the consequences!"
+
+Message:  1330
+"Good %ra. I'll let this slip this time, but try
+to keep your child out of theivery. I imagine
+he's not a guild member, so it won't just be us
+he needs to worry about next time."
 <ce>
-If she shows up here she will be killed as a
-trespasser, as will you if you dare to return.
-<ce>
-The child stays with me.
+"You get me?"
+
+Message:  1331
+"Then you leave me no choice but to take you in.
+You can come quietly or... not so quietly."
 
 Message:  1138
-We are watching you %ra. Don't try anything.
+You enter unaccosted, but many eyes are on you.
+Many hands are on the hilts of many weapons.
+<ce>
+"We are watching you %ra. Don't try anything!
+He is waiting to speak to you. Through there."
 
 Message:  1136
-You were warned.
+_father_'s eyes narrow "You were warned."
 <ce>
-Men!
+"Men!" he calls, and the whole building turns
+upon you...
 
 Message:  1137
-You won't take the child!
+_father_ yells out "You won't take the child!"
+<ce>
+He grabs young _child_ and runs for another exit
+with his men covering him.
 
 Message:  1139
-I'm glad you arrived. _questgiver_ is gravely ill.
-Her life choices have taken their toll I fear.
+The priest looks concerned, "I'm glad you arrived.
+_questgiver_ is gravely ill. Her life choices have
+finally taken their toll I fear."
 
 Message:  1140
-Oh, the child is taken? Oh no!
+His look of concern turns to shock, "Oh! The
+child is taken? Oh no!"
 <ce>
-I think we should keep this news from her for
-now. It will not help her in her situation.
+He takes you aside, "I think we should keep this
+news from her for now. It will not help her in
+her situation."
 <ce>
-Please do your best to retrieve him! He should be
-reunited with his mother before... well.
+"Please do your best to retrieve him! He should be
+reunited with his mother before... well." he looks
+at the floor with a hand on your arm.
 
 Message:  1141
-I'm glad you have returned. _questgiver_ does not
-have long. This life of hers has punished her
-greatly.
+"I'm glad you have returned. _questgiver_
+does not have long. This life of hers has
+punished her greatly."
 <ce>
-Perhaps seeing this little one safe will help
-ease her passing.
+"Perhaps seeing this little one safe will help
+ease her passing."
+<ce>
+He passes the child onto an acolyte who takes him
+to his dying mother.
 
 Message:  1143
-_child_ will be tended to under our care.
-Life in _temple_ is not a bad one. Perhaps %g
+"_child_ will be tended to under our care.
+Life in _temple_ is not a bad one. Perhaps he
 will grow up to help poor lost souls like those
-of %g3 parents.
+of his parents."
 <ce>
-This has been a sad tale, and one that we see
-repeated so often.
-Take care of any young ones you find.
-Guide them as you can. This world is a harsh arena.
+"This has been a sad tale, and one that we see
+repeated so often."
+<ce>
+"Take care of any young ones you find.
+Guide them as you can."
+<ce>
+"This world is a harsh arena."
 
 Message:  1144
-The _temple_ is not wealthy,
-but we have gathered a small sum to reumburse
-you.
-I hope also you take away the reward of helping
-those less fortunate than yourself.
+"_temple_ is not wealthy, but we have
+gathered a small sum to reumburse you. I hope
+also you take away the reward of helping those
+less fortunate than yourself."
+<ce>
+He hands you a small bag of gold.
 
 Message:  1145
-I am so glad to see you have brought the child
+"I am so glad to see you have brought the child
 back to us. If only his dear lost mother could
-still see him.
+still see him."
 
 Message:  1146
-I see your received my letter.
-You do not have the child? This troubling.
-The father you say? She did not mention him,
-though she cursed someone in her fever.
+"I see your received my letter. You do not have
+the child? This troubling. The father you say?
+She did not mention him, though she cursed
+someone in her fever."
 <ce>
-If you could somehow retrieve the child from
+"If you could somehow retrieve the child from
 this man and return him to us, he would be well
-taken care of.
+taken care of."
 
 Message:  1147
-You are the one who took the child,
-_child_.
+"You are the one who took the child,
+_child_."
 <ce>
-I see you have him with you. Have you brought
-him back to us?
+"I see you have him with you. Have you brought
+him back to us?"
 
 Message:  1148
-We will see he is taken care of. You have done
+"We will see he is taken care of. You have done
 the right thing. We will see to it that the
 Knights are informed and there is no further
-need to look for you.
+need to look for you."
 
 -- Corrispondence
 Message:  1201
@@ -613,7 +755,7 @@ It has been good doing business with you and your
 endevours, whatever they may be.
 <ce>
 <ce>
-                        %nam
+                        _broker_
                         ___remtav_
 
 -- Rumours
@@ -639,6 +781,10 @@ That's a rum character and no mistake.
 Very close with his sister I hear. Very close.
 <--->
 He and his friends have been buying property in ___culthome_ I hear.
+<--->
+He's a dark one. Sister in ___sishouse_ is no better.
+<--->
+I used to be friends with his sister, _sister_, until she... well, lets say you don't want to turn your back on her.
 
 Message:  1206
 Very close with her brother I hear. Very close.
@@ -646,6 +792,20 @@ Very close with her brother I hear. Very close.
 Very shady character. I'd avoid that one if I was you.
 <--->
 Lives in __sishouse_. Alone, but seems to have all sorts coming and going. All sorts.
+
+-- General Rumours
+Message:  1210
+My brother saw someone get caught shoplifting earlier with a baby. Some folk are really desperate.
+
+Message:  1211
+Poor _questgiver_'s baby got snatched I hear. Who would do such a thing?
+<--->
+I hear _questgiver_'s baby was taken. A mother like that, it was going to happen.
+
+Message: 1212
+_questgiver_ is very sick I hear. Taken to temple. Not looking good.
+<--->
+I hear that _questgiver_ has died or something, Daedra took her baby.
 
 -- Descriptive text
 Message:  1301
@@ -657,20 +817,23 @@ Message:  1302
 <ce>                       The child starts to cry.
 
 Message:  1313
-<ce>              Do you wish to try to sooth the child with
+<ce>              Do you wish to try to soothe the child with
 a song?
 
 Message:  1316
 <ce>                You sing the child an old %ra lullaby.
 
 Message:  1314
-<ce>           The child has been soothed by your dulcet tones.
+<ce>You sing the child an old %ra lullaby.
+<ce>Your dulcent tones seem to settle him.
 
 Message:  1315
-<ce>        No. That's actually made the child even more unhappy.
+<ce>You try to sing him an old %ra lullaby,
+<ce>but unfortunately your awkward scaling
+<ce>seems to upset him even more.
 
 Message:  1307
-<ce>            It's crying has drawn the attenton of a harpy.
+<ce>            His crying has drawn the attenton of a harpy.
 
 Message:  1308
 <ce>            Actually it looks like it's just an old lady.
@@ -679,12 +842,14 @@ Message:  1303
 <ce>                        The child spots a cat.
 
 Message:  1317
-<ce>   You managed to keep a hold of the boy
-<ce>as he struggles to chase after the cat.
+<ce>The child spots a cat and tries to chase
+<ce>after it, luckily you manage to keep a hold
+<ce>of the boy so he doesn't scamper off.
 
 Message:  1318
-<ce>    The kid slips out of your arms and
-<ce>scampers off after the cat.
+<ce>The child spots a cat and, before you can
+<ce>stop him, he struggles out of your arms and
+<ce>scampers off after it.
 <ce>
 <ce>                           The chase is on.
 
@@ -719,10 +884,6 @@ Message:  1326
 Message:  1327
 <ce>                          A guard appaears.
 
-Message:  1328
-Halt! You are in possession of stolen merchandise!
-Turn it over or face the consequences!
-
 Message:  1329
 <ce>            Oh no. Looks like the kid grabbed a malachite
 <ce>                         statue in the store.
@@ -732,28 +893,17 @@ Message:  1329
 <ce>
 <ce>                  Do you hand it over to the guard?
 
-Message:  1330
-Good %ra. I'll let this slip this time, but try
-to keep your child out of theivery. I imagine
-he's not a guild member, so it won't just be us
-he needs to worry about next time.
-<ce>
-You get me?
-
-Message:  1331
-Then you leave me no choice but to take you in.
-You can come quietly or... not so quietly.
-
 Message:  1304
 <ce>                         The child is hungry.
 <ce>
-<ce>Do you want to try feeding him a ration from your backpack?
+<ce>Do you want to try feeding him a ration
+<ce>from your backpack?
 
 Message:  1352
-<ce>He spat it out. He obviously doesn't like that.
+<ce>He spat it out and made a face. Seems he doesn't
+<ce>like rations.
 <ce>
-<ce>Maybe you can find something in town for him to eat?
-
+<ce>Maybe you can find something else for him to eat?
 
 Message:  1347
 <ce>             The kid is really hungry now and starting to
@@ -766,12 +916,21 @@ Message:  1332
 <ce>
 <ce>                               Buy one?
 
+Message:  1359
+<ce>Do you want to order him something from the kitchens?
+
 Message:  1333
 <ce>           The kid wants a red one. Those look quite spicy,
 <ce>             get him one of those instead of the regular?
 
 Message:  1334
 <ce>                    The kid seemed to enjoy that.
+
+Message:  1360
+<ce>Todays special is Fish & bread platter. He ate
+that ok, quite a large meal for a small child so
+you finished it off.
+
 
 Message:  1337
 <ce>                  The kid starts to throw a tantrum.
@@ -802,7 +961,7 @@ Message:  1346
 <ce>          He's taken the regular snack and thrown it on the
 <ce>                               ground.
 <ce>
-<ce>                     Now he's throwing a tantrum.
+<ce>                     He's throwing a tantrum.
 
 Message:  1305
 <ce>                        The child has pooped.
@@ -830,24 +989,48 @@ Message:  1306
 Message:  1320
 <ce>                        A man approaches you.
 
+Message:  1358
+<ce>You have probably lost him, but you bet he'll
+send people after you. Best get the kid home.
+
 Message:  1321
 <ce>       In the confusion the man grabs the child and dissapears.
 
+Message:  1357
+<ce>While you were distracted someone grabbed the kid and ran off.
+
 Message:  1322
-<ce>               Says they have a place called _cultdun_.
-<ce>                         I should look there.
+<ce>               This note claims they have a property called
+<ce>___cultdun_ in ____cultdun_.
+<ce>                         Maybe that is where _father_ has fled to.
 
 Message:  1335
-<ce>_questgiver_ might be back by now. I should go to _house_ and check.
+<ce>_questgiver_ might be back by now.
+I should go to _house_ and check.
 
 Message:  1353
-<ce>_sister_ has run off, maybe in her haste to escape she left something behind. I should check her home again.
+<ce>_sister_ has run off, maybe in
+<ce>her haste to escape she left something behind.
+<ce>I should check her home again.
+
+Message:  1355
+<ce>This is an invoice for a horse and lodgings at
+<ce>__remtav_. Maybe that is where she is heading?
+
+Message:  1361
+<ce>_sister_ and _broker_ are dead.
+<ce>Maybe one of them might have something on them that will
+<ce>point me towards where _father_ has taken the kid?
 
 Message:  1323
-<ce>              _culthome_. Is that where he has the kid?
+<ce>              __culthome_. Is that where he has taken the kid?
 
 Message:  1349
 <ce>                Are you sure you want to leave the kid there?
+
+Message:  1356
+<ce>Got him! Now to get him home safely,
+_father_ will probably be on my tail.
 
 Message:  1324
 <ce>             The child is safe, however _father_ is dead.
@@ -855,27 +1038,28 @@ Message:  1324
 <ce>                  to relative safety before he died.
 
 Message:  1351
-<ce>A street urchin of the usual sort calls you
-by name and proffers a letter at you.
-You take it from him and he dissapears.
+<ce>            A street urchin of the usual sort calls you by
+<ce>            name and proffers a letter at you. You take it
+<ce>                     from him and he dissapears.
 
 Message:  1354
-You hope _child_ is ok with his "father".
-They have probably gone elsewhere by now.
+<ce>              You hope _child_ is ok with his "father".
+<ce>                 They have probably moved on by now.
 
 QBN:
 
 Person _questgiver_ group Questor female anyInfo 1203
 Person _child_ faction Children male
-Person _friend_ faction Apothecaries_of_Mara female anyInfo 1204
+Person _friend_ faction The_Benevolence_of_Mara female anyInfo 1204
 Person _father_ faction The_Necromancers male anyInfo 1205
 Person _sister_ faction The_Necromancers female anyInfo 1206
+Person _broker_ faction The_Necromancers male
 Person _priest_ faction Teachers_of_Stendarr male
 
 Place _house_ local house
 Place _store_ local generalstore
 Place _sishouse_ remote house
-Place _remtav_ remote tavernhome
+Place _remtav_ remote tavern
 Place _culthome_ remote house
 Place _cultdun_ remote dungeon4
 Place _temple_ local temple
@@ -883,11 +1067,16 @@ Place _temple_ local temple
 Foe _harpy_ is Harpy
 Foe _rat_ is Giant_rat
 Foe _sismad_ is Nightblade
+Foe _sismad2_ is Nightblade
 Foe _dadmad_ is Mage
+Foe _dadmad2_ is Mage
+Foe _dadmad3_ is Mage
 Foe _backstabber_ is Assassin
 Foe _mummad_ is Thief
 Foe _cult_ is 3 Nightblade
 Foe _knights_ is 2 Knight
+Foe _brokermad_ is Thief
+Foe _guard_ is 1 Warrior
 
 Item _statue_ totem
 Item _note_ letter used 1201
@@ -896,6 +1085,8 @@ Item _claim_ letter used 1202
 Item _deathletter_ letter used 1207
 Item _wantednotice_ letter used 1208
 Item _reward_ gold
+Item _meal_ gold range 15 to 30
+Item _snack_ gold range 3 to 6
 
 Clock _cry_ 00:15 00:45
 Clock _olddear_ 00:05 00:15
@@ -909,13 +1100,13 @@ Clock _notharpy_ 00:01
 Clock _poop_ 00:30 01:30
 Clock _ratattack_ 00:01 00:05
 Clock _dad_ 1:00 3:00
-Clock _kidnap_ 00:05 00:10
+Clock _kidnap_ 00:03 00:06
+Clock _goons_ 00:15 00:30
 Clock _returns_ 1:00 06:00
-Clock _accident_ 08:00 1.00:00
+Clock _accident_ 1.06:00 3.00:00
 Clock _death_ 7.00:00 12.00:00
 Clock _enough_ 7.00:00 14.00:00
 Clock _trespass_ 00:03 00:06
-Clock _trespasser_ 00:01
 
 variable _instore_
 variable _damncat_
@@ -926,11 +1117,15 @@ variable _nanny_
 variable _atcult_
 variable _havebaby_
 variable _withdad_
+variable _unawares_
+variable _rude_
+variable _atremtav_
 variable _warning_
 variable _warned_
 variable _rescued_
 variable _intemple_
 variable _fate_
+variable _dadwantsbaby_
 
 --	Quest start-up:
     log 1030 step 0
@@ -952,19 +1147,23 @@ variable _fate_
     place npc _sister_ at _sishouse_
     place npc _priest_ at _temple_
     place npc _child_ at _cultdun_
-    place foe _cult_ at _culthome_
     pc at _culthome_ set _atcult_
+    pc at _cultdun_ set _atdun_
     pc at _temple_ set _intemple_
-    hide npc _questgiver_
-    hide npc _child_
+    pc at _remtav_ set _atremtav_
+    pc at any tavern set _unawares_
+    _note_ used saying 1323 do _notelog_
+    _invoice_ used saying 1355 do _invoicelog_
+    _claim_ used saying 1322 do _revealdung_
+    hide npc _questgiver
     hide npc _priest_
 
 _cry_ task:
     say 1302
+    play sound cryingkid.wav every 0 minutes 10 times
     prompt 1313 yes _sing_ no _dontsing_
 
 _sing_ task:
-    say 1316
 
 _chanteuse_ task:
     when attribute Personality is at least 50
@@ -972,6 +1171,7 @@ _chanteuse_ task:
 _soothed_ task:
     when _sing_ and _chanteuse_
     say 1314
+    clear _cry_
     start timer _olddear_
 
 _notsoothed_ task:
@@ -988,6 +1188,7 @@ _harpyattack_ task:
 
 _notharpy_ task:
     say 1308
+    clear _cry_
     start task _olddear1_
 
 _olddear1_ task:
@@ -1020,11 +1221,11 @@ _shutup_ task:
     start timer _cat_
 
 _cat_ task:
-    say 1303
 
 _catnotchased_ task:
     when _cat_ and _agi_
     say 1317
+    play sound meow_soft every 0 minutes 1 times
     start timer _hungry_
 
 _catchased_ task:
@@ -1032,6 +1233,7 @@ _catchased_ task:
     say 1318
     setvar _damncat_
     drop _child_ face
+    play sound meow_loud every 0 minutes 1 times
     clear _havebaby_
 
 _chasingkid_ task:
@@ -1045,7 +1247,7 @@ _thechase_ task:
     setvar _chasing_
 
 _caught_ task:
-    when _fast_ and _chasing_
+    when _fast_ or _wilderness_ and _chasing_
     say 1343
     add _child_ face
     setvar _havebaby_
@@ -1086,6 +1288,7 @@ _theft_ task:
     when _grabkid_ and not _sharp_ and not _instore_
     say 1327
     say 1328
+    rumor mill 1210
     prompt 1329 yes _givestatue_ no _keepstatue_
 
 _givestatue_ task:
@@ -1111,18 +1314,25 @@ _hangry_ task:
 
 _civilization_ task:
     when pc enters village
+    when pc enters hamlet
     when pc enters city
     clear _wilderness_
 
 _wilderness_ task:
     when pc exits village
+    when pc exits hamlet
     when pc exits city
     clear _civilization_
 
 _food_ task:
-    when _hangry_ and _civilization_
-    stop timer _hangry_
+    when _feed_ or _hangry_ and _civilization_ and not _unawares_
+    stop timer _tantrum_
     prompt 1332 yes _buy_ no _tantrum_
+
+_roomservice_ task:
+    when _feed_ or _hangry_ and _civilization_ and _unawares_
+    stop timer _tantrum_
+    prompt 1359 yes _fancymeal_ no _tantrum_
 
 _buy_ task:
     prompt 1333 yes _redsnack_ no _noredsnack_
@@ -1150,10 +1360,23 @@ _drawharpy_ task:
 
 _deadharpy_ task:
     killed 1 _harpy_ saying 1341
+    clear _hungry_ _hangry_ _feed_
+    start timer _poop_
+
+_fancymeal_ task:
+    say 1360
+    take _meal_ from pc
+    stop timer _hangry_
+    stop timer _tantrum_
+    clear _feed_
     start timer _poop_
 
 _redsnack_ task:
     say 1334
+    take _snack_ from pc
+    stop timer _hangry_
+    stop timer _tantrum_
+    clear _feed_
     setvar _spicymeatball_
     start timer _poop_
 
@@ -1218,7 +1441,9 @@ _dontgivebaby_ task:
     create foe _backstabber_ every 0 minutes 1 times with 100% success
     change foe _backstabber_ infighting false
     change foe _dadmad_ infighting false
-    start timer _kidnap_
+    setvar _dadwantsbaby_
+    log 1033 step 2
+    start timer _goons_
 
 _dadinjured_ task:
     injured _dadmad_
@@ -1226,20 +1451,44 @@ _dadinjured_ task:
 
 _dadgone_ task:
     when _dadinjured_ and _dontgivebaby_
-    stop timer _kidnap_
     drop _child_ face
+    stop timer _goons_
+    stop timer _kidnap_
     clear _havebaby_
+    clear _dadwantsbaby_
     setvar _withdad_
     say 1321
-    log 1033 step 2
+    log 1034 step 3
+
+_kidnapper_ task:
+    stop timer _goons_
+    when _dadwantsbaby_ and _havebaby_ and _unawares_
+    start timer _kidnap_
+
+_goons_ task:
+    say 1358
+    remove foe _dadmad_
+    send _cult_ every 30 minutes with 50% success
+    change foe _cult_ infighting false
+
+_cultinjured_ task:
+    injured _cult_
+
+_cultgrab_ task:
+    when _dadwantsbaby_ and _cultinjured_ and not _fast_
+    start task _kidnap_
 
 _kidnap_ task:
-    remove foe _dadmad_
-    say 1321
+    unset _havebaby_
     drop _child_ face
-    clear _havebaby_
+    unset _dadwantsbaby_
+    stop timer _goons_
+    remove foe _dadmad_
+    remove foe _cult_
+    clear _goons_
     setvar _withdad_
-    log 1033 step 2
+    say 1357
+    log 1048 step 3
 
 _returns_ task:
     say 1335
@@ -1248,6 +1497,7 @@ _returns_ task:
     start timer _accident_
 
 _accident_ task:
+    rumor mill 1212
     place npc _questgiver_ at _temple_
     hide npc _questgiver_
     restore npc _friend_
@@ -1256,16 +1506,12 @@ _accident_ task:
     add _priest_ as questor
     start timer _death_
 
-_kidcult_ task:
-    when _withdad_
-    place npc _child_ at _culthome_
-
 _qgclicked_ task:
     clicked npc _questgiver_
 
-_clearclick_ task:
-    when _qgclicked_ and not _withdad_
-    clear _qgclicked_ _clearclick_
+--_clearclick_ task:
+--    when _qgclicked_ and not _withdad_
+--    clear _qgclicked_ _clearclick_
 
 _friendclicked_ task:
     clicked npc _friend_
@@ -1273,12 +1519,15 @@ _friendclicked_ task:
 _thefriend_ task:
     when _friendclicked_ and not _accident_
     add dialog for person _friend_
+    setvar _rude_
     say 1103
-    log 1035 step 10
+    log 1035 step 4
+    clear _friendclicked_
 
 _thefriendagain_ task:
-    when _friendclicked_ and _withdad_ and not _accident_
+    when _friendclicked_ and _rude_ and not _accident_
     say 1109
+    clear _friendclicked_
 
 _badnews_ task:
     when _friendclicked_ and _accident_
@@ -1298,130 +1547,130 @@ _returnsnobaby_ task:
     when _qgclicked_ and _withdad_
     change repute with _questgiver_ by -10
     say 1105
+    rumor mill 1211
     prompt 1106 yes _findthechild_ no _forgetit_
 
 _findthechild_ task:
     say 1108
-    log 1036 step 3
+    log 1036 step 4
     add dialog for person _sister_
     place npc _sister_ at _sishouse_
-    clear _qgclicked_ _clearclick_
 
 _forgetit_ task:
-    say 1107
     hide npc _questgiver_
-    create foe _mummad_ every 0 minutes 1 times with 100% success
+    create foe _mummad_ every 0 minutes 1 times with 100% success msg 1107
     end quest
 
 _sisterclicked_ task:
     clicked npc _sister_
+
+_sister1_ task:
+    when _sisterclicked_ and not _atremtav_    
     say 1125
     say 1126
-    log 1037 step 4
     hide npc _sister_
-    create foe _sismad_ every 0 minutes 1 times with 100% success
-    give item _note_ to _sismad_
+    place foe _sismad_ at _sishouse_
 
 _sisinjured_ task:
     injured _sismad_ saying 1353
     remove foe _sismad_
     place item _invoice_ at _sishouse_
-    start task _sismadhide_
+    log 1037 step 5
+    log 1043 step 6
+    place npc _sister_ at _remtav_
+    clear _sisterclicked_
 
-_sismadhide_ task:
-    place foe _sismad_ at _remtav_
-    give item _note_ to _sismad_
-    restrain foe _sismad_
+_invoicelog_ task:
+    log 1040 step 6
 
-_sismadclicked_ task:
-    clicked foe _sismad_
-
-_sismadfound_ task:
-    when _sismadclicked_ and _sismadhide_
+_sister2_ task:
+    when _sisterclicked_ and _atremtav_
     say 1127
-    unrestrain foe _sismad_
+    hide npc _sister_
+    place foe _sismad2_ at _remtav_
+    create foe _brokermad_ every 0 minutes 1 times with 100% success
+    change foe _sismad2_ infighting false
+    change foe _brokermad_ infighting false
 
-_noteread_ task:
-    _note_ used do _notelog_
+_sisdead_ task:
+    killed _sismad2_
+    give item _note_ to _sismad2_
+
+_brokerdead_ task:
+    killed _brokermad_
+
+_bothdead_ task:
+    when _sisdead_ and _brokerdead_
+    say 1361
+    log 1047 step 5
 
 _notelog_ task:
-    say 1323
-    log 1038 step 5
+    log 1038 step 6
 
 _thecult_ task:
     when _atcult_ and _withdad_ and not _warned_
-    restrain foe _cult_
     setvar _warning_
     say 1138
+    create foe _cult_ every 0 minutes 0 times with 100% success
+    restrain foe _cult_
 
 _thefather_ task:
     clicked npc _father_
     say 1135
-    log 1039 step 6
+    log 1039 step 7
     start timer _trespass_
 
-_getkid_ task:
-    when _atcult_ and _childclicked_
-    hide npc _child_
-    add _child_ face
-    stop timer _trespass_
-    start task _trespasser_
-
 _leftcult_ task:
-    when not _atcult_ and _warning_
+    when not _atcult_ and _warning_ and not _fled_
     say 1349
+    log 1049 step 8
     stop timer _trespass_
     clear _warning_
     setvar _warned_
 
-_returntocult_ task:
-    when _atcult_ and _warned_
-    start timer _trespasser_
-
 _trespasser_ task:
-    say 1136
-    drop _child_ face
-    enemies makehostile
-    unrestrain foe _cult_
-    create foe _cult_ every 1 minutes 2 times with 90% success
-    hide npc _father_
-    hide npc _child_
-    create foe _dadmad_ every 1 minutes 1 times with 100% success    
+    when _atcult_ and _warned_ and not _fled_
+    start task _trespass_
 
 _trespass_ task:
     say 1136
-    drop _child_ face
-    enemies makehostile
     unrestrain foe _cult_
-    create foe _cult_ every 1 minutes 2 times with 90% success
     hide npc _father_
-    hide npc _child_
-    create foe _dadmad_ every 1 minutes 1 times with 100% success
+    place foe _dadmad2_ at _culthome_
+    create foe _cult_ every 1 minutes 2 times with 90% success
+
+_dadinjured2_ task:
+    injured _dadmad2_
+    remove foe _dadmad2_
 
 _fled_ task:
-    when _trespass_ and _dadinjured_
+    when _trespass_ and _dadinjured2_
+    clear _havebaby_
+    drop _child_ face
     say 1137
-    log 1041 step 7
+    log 1041 step 8
     place item _claim_ at _culthome_
-    place npc _father_ at _cultdun_
+    place foe _dadmad3_ at _cultdun_
     place npc _child_ at _cultdun_
-    hide npc _father_
+    restore npc _child_
 
 _readclaim_ task:
     _claim_ used do _revealdung_
 
 _revealdung_ task:
-    say 1322
     log 1042 step 8
     reveal _cultdun_
+
+_atdun_ task:
+    kill foe _dadmad3_
 
 _childclicked_ task:
     clicked npc _child_
 
 _dung_ task:
-    when _childclicked_ and not _withdad_
+    when _childclicked_ and _atdun_
     say 1324
-    log 1044 step 10
+    log 1044 step 9
     hide npc _child_
     add _child_ face
     setvar _havebaby_
@@ -1434,7 +1683,7 @@ _thepriest_ task:
     when _priestclicked_ and _withdad_ and not _death_
     say 1139
     say 1140
-    log 1046 step 9
+    log 1046 step 10
     clear _priestclicked_
 
 _backwithmother_ task:
