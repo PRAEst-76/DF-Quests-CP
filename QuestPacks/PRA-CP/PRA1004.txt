@@ -1155,7 +1155,7 @@ variable _dadwantsbaby_
     _note_ used saying 1323 do _notelog_
     _invoice_ used saying 1355 do _invoicelog_
     _claim_ used saying 1322 do _revealdung_
-    hide npc _questgiver
+    hide npc _questgiver_
     hide npc _priest_
 
 _cry_ task:
