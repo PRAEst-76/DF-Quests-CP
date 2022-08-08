@@ -25,13 +25,13 @@ QuestorPostsuccess:  [1008]
 Message: 1101
 "Ah, %pct. Thank you for coming. _questgiver_ is stable
 for now but I'm not sure how many more episodes his
-poor body can take. This has been happening now for
+poor body can take. He has been having these attacks for
 weeks. When he was lucid he told me you were there
 for the first... er... spasm?"
 
 Message:  1102
-"I have never anything like this before, it appears
-to a particularly cruel curse that has been placed
+"I have never seen anything like this before, it appears
+to be a particularly cruel curse that has been placed
 upon him, perhaps by a vengeful business associate
 or former lover."
 <ce>
@@ -43,7 +43,8 @@ There is only do much we can do here at the temple,
 however the evoker, _evoker_, at the mages
 guild may be able to help with a treatment for the curse.
 They will apparently require a sample of the emergence
-sac. I will prepare the sample which you must take them
+sac to divinate the nature of the curse.
+I will prepare the sample which you must take them
 without delay."
 
 Message:  1104
@@ -72,7 +73,7 @@ temples would be aware? I imagine they perhaps found
 such demises so abhorrent to their frail sensitivies
 that they deemed it prudent not to discuss them.
 <ce>
-To us this is is fascinating, of concern of course,
+To us this is is fascinating, of concern no doubt,
 but fascinating nontheless.
 
 Message:  1108
@@ -145,6 +146,93 @@ No, that is monsterous! I will not allow it.
 Get away from me!
 Not! Allow!
 Guards! Guards!!
+
+Message: 1120
+"Well, what do we have here? A %ra, from the crypt?"
+"We were going to rob that crypt. It was our plan.
+How abouts you just hand over what you've found down there.
+Like that jar. Bet that's something important. Give us it!"
+
+Message: 1121
+
+"Ooh. You know, that's not fair. We planned this raid weeks ago.
+This is our crypt. We got dressed up and everything this morning.
+%rn even made us snacks for the trip!
+Was up from cock-crow wrapping them up nice in parchment paper.
+You really owe us."
+
+Message: 1122
+
+"Nah. Sod that. How about we takes everything?
+Guys, let's upend this fool and see what falls out!"
+
+Message:1123
+
+"I'm sad that you've made this so diffuclt.
+Guys, let's upend this fool and see what falls out!"
+
+Message:1124
+"Ah. You have returned. You have the... excellent.
+I'll get to work right away, of course, this would
+be even quicker if I had the other sample.
+Hint, hint!"
+
+Message:1125
+"I know what you are thinking. I have started
+divining the initial specimen. I just like to
+keep things tidy. Some of my colleagues work
+in chaos. Not me. I like to remain focused."
+"Now get me that last sample."
+
+Message:1126
+"Welcome back. Now, the final sample. You were able to retrieve it?"
+"Excellent, most excellent. With all three specimens I should be
+able to triangulate the source of the curse."
+
+Message:1127
+"This will take some time. I know we do not have that so spare so
+I will be as expedient as my craft allows."
+"Please, return tomorrow at this time. I should have some 
+information for you then, but not before.
+I'm sure you can busy yourself in the interim."
+
+Message: 1128
+"I have... done all I can. This has not been easy.
+The source of the curse has been elusive. I'll admit,
+this is unlike any curse I have seen before. I will need
+to write a journal for the council on this when
+time allows."
+"However, I believe I have created a cure. I have infused
+this amulet with a powerful curse removal spell focused
+on the energies from the samples you supplied. If the
+victim wears this it should drive the curse from them."
+
+Message: 1129
+"Please let me know if this works. I mean... I have no doubt
+that it will, but... you know? The journal? I could get a
+grant for further research."
+
+Message: 1130
+"%pcf. I fear I do not have good news. _questgiver_
+succumbed yesterday. I was to write you with the news but
+did not get the time due to clerical praparations.
+I fear even had you arrived sooner it may have still
+been too late. This foul curse took such a toll upon 
+his body that he would have perished eventually."
+
+Message: 1131
+"You have the... ah. Yes. I see. A talisman. If I may
+take it from you? I ride for the coast. There have
+been reports of a possibly similar case there involving
+a child. I will take the item to them. Perhaps it may
+save a life yet."
+
+Message: 1132
+"I shall report any results to _evoker_ as I'm sure they requested.
+Here is payment for the work you have done, for _temple_
+and poor _questgiver_.
+Goodbye %pcf. I hope you never have to encounter such foulness
+again, but if you do, you will know where to find me."
 
 -- Corrispondence
 Message:  1201
@@ -233,6 +321,14 @@ She looks up in surprise as you approach.
 
 Message:  1310
 She looks horrified when you tell her.
+
+Message: 1311
+Upon leaving the crypt you are approached by a rough looking adventuring party.
+
+Message:1312
+<ce>_evoker_ takes the jar from you and places it on his
+<ce>table next to the other.
+<ce>You wonder if he's actually done anything with it.
 
 -- Meat
 QBN:
