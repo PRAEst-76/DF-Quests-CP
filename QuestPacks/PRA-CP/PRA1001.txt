@@ -22,7 +22,7 @@ Then %g smiles at you.
 "Ahhhh... Heh heh, I needed that."
 
 QuestFail:  [1003]
-You failed to kill _enemy_ before it caused a ruckus.
+<ce>You failed to kill _enemy_ before it caused a ruckus.
 
 QuestComplete:  [1004]
 _questgiver_ looks somewhat exhausted and smiles

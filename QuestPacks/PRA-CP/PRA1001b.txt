@@ -372,25 +372,41 @@ woman, tending to the flowers placed there.
 She looks up in surprise as you approach.
 
 Message:  1316
-She turns from you in visible distress. You notice some guards coming over.
+She turns from you in visible distress.
+You notice some guards coming over.
 
 Message:  1315
 The graveyard is deserted. Time to get to work.
 
 Message:  1314
-You leave her to her grief. You will need to return later when she is gone. Perhaps in a few hours.
+You leave her to her grief. You will need to return
+later when she is gone. Perhaps in a few hours.
 
 Message:  1310
 She looks horrified when you tell her.
 
 Message:  1317
-It takes a while to dig deep enough, but you uncover the dessicated corpse and use a knife to remove a second of bowel. Then you fill the grave in again.
+It takes a while to dig deep enough, but you uncover the
+dessicated corpse and use a knife to remove a section of
+bowel which you place in a jar.
+Then you fill the grave in again.
 
 Message:  1318
-This is the place. The second victim fled here. I'll find his remains inside somewhere. 
+This is the place. The second victim fled here.
+I'll find his remains inside somewhere. 
+
+Message:  1319
+This is the second victim. Looks like the denizens of
+this place have largely left the corpse alone.
+You wonder why.
+
+Message:  1320
+The bowel appears intact. You use the knife to cut
+some off into a jar.
 
 Message: 1311
-Upon leaving the crypt you are approached by a rough looking adventuring party.
+Upon leaving the crypt you are approached by a rough
+looking adventuring party.
 
 Message: 1312
 <ce>_evoker_ takes the jar from you and places it on his
@@ -403,7 +419,8 @@ Item _letter_ letter used 1201
 Item _deathnotice_ letter used 1202
 Item _guysample_ werewolf_blood
 Item _gravesample_ werewolf_blood
-Item _cryptsample werewolf_blood
+Item _cryptsample_ werewolf_blood
+Item _2ndvic_ dead_body
 
 -- Cast
 Person _questgiver_ group Questor male
@@ -425,6 +442,7 @@ Clock _notify_ 00:01 00:02
 Clock _dead_ 7.00:00 10.00:00
 
 variable _atgrave_
+variable _atcrypt_
 variable _sam1_
 variable _sam2_
 
@@ -516,11 +534,25 @@ _firstcorpse_ task:
     give pc _gravesample_ notify 1317
     setvar _sam1_
 
-_secondsample_ task:
+_incrypt_ task:
     when _atcrypt_
-    place npc _2ndvic_ at _crypt_
-    kill npc _2ndvic_
+    place item _2ndvic_ at _crypt_
     say 1318
+
+_secondcorpse_ task:
+    have _2ndvic_ set _secondsample_
+
+_secondsample_ task:
+    say 1319
+    give pc _cryptsample_ notify 1320
+    take _2ndvic_ from pc
+    setvar _sam2_
+
+_ret1samp_ task:
+
+_ret2samp_ task:
+
+_retsamples_ task:
 
 _dead_ task:
     give pc _deathnotice_ notify 1302
