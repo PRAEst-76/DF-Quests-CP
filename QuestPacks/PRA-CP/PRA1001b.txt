@@ -32,7 +32,8 @@ Thanks for your help %pcn
 
 -- Logs
 Message:  1050
-I have received a leeter from a priest called
+%qdt:
+I have received a letter from a priest called
 _priest_ at _temple_ in __temple_.
 It seems _questgiver_, who had an unfortunate and
 surprising incident when he had me pull his finger a
@@ -40,28 +41,40 @@ number of weeks ago, is under his care.
 He wishes me to come see him as soon as possible.
 
 Message:  1051
+%qdt:
 _questgiver_ has been decimated by his condition.
 _priest_ believes it's a curse and has sent me with
 some kind of sample to bring to an Evoker called
 _evoker_ in _tmg_ in __tmg_.
 
 Message:  1052
-_evoker_ is going to attempt to divine the source of 
-the curse, however requires me to retrieve samples
-from two previous victims of a similar curse.
-One is buried in _grave_ in ____grave_.
+%qdt:
+_evoker_ is going to attempt to divine the
+source of  the curse, however requires me to retrieve
+samples from two previous victims of a similar curse.
+One is buried in ___grave_ in ____grave_.
 The other is apparently in some ancient crypt called
-_crypt_ in ____crypt_.
+___crypt_ in ____crypt_.
 
 Message:  1053
+%qdt:
 The victim's wife was at the graveside. She seemed upset
 so I decided to leave her alone and come back later when
 she has gone, perhaps at night.
 
 Message:  1054
+%qdt:
 The victim's wife was at the graveside. I explained
 everything to her and she reluctantly agreed to me
 taking the sample from her husband's corpse.
+
+Message:  1055
+%qdt:
+I have retrieved the sample from the second victim
+whose body I found in ___crypt_.
+
+Message:  1056
+Now to return both samples to _evoker_ in _tmg_ in ___tmg_.
 
 -- Dialogue
 Message: 1101
@@ -151,8 +164,9 @@ sense of familial duty...
 unless he was killed by the denizens such places usually
 contain."
 <ce>
-"Go to _crypt_, find his body and obtain the sample.
-Otherwise who knows how long divining the source might take."
+"Go to ___crypt_, find his body and obtain the sample.
+Otherwise who knows how long divining the source
+might take."
 
 Message:  1112
 "Are you still here?"
@@ -499,7 +513,7 @@ _atmages_ task:
 
 _mourner_ task:
     daily from 07:00 to 19:00
-    place npc _wife_ at _grave_
+--    place npc _wife_ at _grave_
 
 _firstsample_ task:
     when _atgrave_ and _mourner_
@@ -546,7 +560,10 @@ _secondsample_ task:
     say 1319
     give pc _cryptsample_ notify 1320
     take _2ndvic_ from pc
+    log 1055 4
     setvar _sam2_
+
+_abmush_ task:
 
 _ret1samp_ task:
 
