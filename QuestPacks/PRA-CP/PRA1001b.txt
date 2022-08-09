@@ -13,10 +13,8 @@ AcceptQuest:  [1002]
 _priest_ wants me to visit him and _questgiver_ at _temple_
 
 QuestFail:  [1003]
-Oh no. He's dead.
 
 QuestComplete:  [1004]
-Well. That's that.
 
 RumorsDuringQuest:  [1005]
 I hear _questgiver_ is very ill. Perhaps it's something he ate?
@@ -34,27 +32,31 @@ Thanks for your help %pcn
 Message:  1050
 %qdt:
 I have received a letter from a priest called
-_priest_ at _temple_ in __temple_.
+_priest_ at _temple_
+in __temple_.
 It seems _questgiver_, who had an unfortunate and
-surprising incident when he had me pull his finger a
-number of weeks ago, is under his care.
+surprising incident when he had me pull his finger for
+a joke a number of weeks ago, is under his care.
 He wishes me to come see him as soon as possible.
 
 Message:  1051
 %qdt:
 _questgiver_ has been decimated by his condition.
-_priest_ believes it's a curse and has sent me with
-some kind of sample to bring to an Evoker called
-_evoker_ in _tmg_ in __tmg_.
+_priest_ believes it's a curse and has sent
+me with some kind of sample to bring to an Evoker
+called _evoker_ in _tmg_
+in __tmg_.
 
 Message:  1052
 %qdt:
 _evoker_ is going to attempt to divine the
-source of  the curse, however requires me to retrieve
-samples from two previous victims of a similar curse.
+source of  the curse, however %g now requires me to
+retrieve samples from two previous victims of a
+similar curse.
+<ce>
 One is buried in ___grave_ in ____grave_.
-The other is apparently in some ancient crypt called
-___crypt_ in ____crypt_.
+The other is apparently in some ancient crypt in a place
+called ___crypt_ in ____crypt_.
 
 Message:  1053
 %qdt:
@@ -68,6 +70,12 @@ The victim's wife was at the graveside. I explained
 everything to her and she reluctantly agreed to me
 taking the sample from her husband's corpse.
 
+Message:  1060
+%qdt:
+The victim's wife was at the graveside. I explained
+everything to her and she was horrified and set her
+guards on me. Maybe I should come back later?
+
 Message:  1055
 %qdt:
 I have retrieved the sample from the second victim
@@ -75,6 +83,19 @@ whose body I found in ___crypt_.
 
 Message:  1056
 Now to return both samples to _evoker_ in _tmg_ in ___tmg_.
+
+Message:  1057
+_evoker_ is going to work on a cure. He will need some time.
+I should come back tomorrow.
+
+Message:  1058
+_evoker_ has created a talisman which should
+remove the curse somehow. I should get it back to
+_priest_ at _temple_ in __temple_
+
+Message:  1059
+_questgiver_ is dying. _priest_ has
+placed the talisman on him. We just need to wait now.
 
 -- Dialogue
 Message: 1101
@@ -95,11 +116,13 @@ or former lover."
 Message:  1103
 "Each emergence leaves him more and more weakened.
 There is only do much we can do here at the temple,
-however the evoker, _evoker_, at _tmg_ in
-__tmg_ may be able to help with a treatment
-for the curse.
+however the evoker, _evoker_, at _tmg_
+in __tmg_ may be able to help with a
+treatment for the curse.
+<ce>
 They will apparently require a sample of the emergence
 sac to divinate it's nature.
+<ce>
 I will prepare the sample which you must take them
 without delay."
 
@@ -118,8 +141,10 @@ Mages often care little for the lives of normal people."
 
 Message:  1106
 "Ah yes, you are from _temple_...
+<ce>
 You have the sample we requested? Good. I can set to
 divining the kind of curse used.
+<ce>
 I believe there have been two other cases of this
 recently."
 
@@ -172,43 +197,49 @@ Message:  1112
 "Are you still here?"
 
 Message:  1113
-Who are you? Why are you here? Did you know my husband?
+"Who are you? Why are you here? Did you know my husband?"
 <ce>
 <ce>Tell her the truth?
 
 Message:  1114
-"They are trying to find a cure? Why? My husband is dead. How can it help him now?"
+"They are trying to find a cure? Why? My husband is
+dead. How can it help him now?"
 
 Message:  1115
-Others? Oh no. Who would do this?
-<ce>
-What do you need of me?
+"Others? Oh no. Who would do this?
+What do you need of me?"
 <ce>
 <ce>Tell her what you need to do as sensitively as you can?
 
 Message:  1119
-Then why are you harrasing me at my husband's graveside
-if there is nothing you can do?!
-Begone from me!
+"Then why are you harrasing me at my husband's graveside
+if there is nothing you can do?! Begone from me!"
 
 Message:  1116
-What?! No! That...
-<ce>
-You... Do... Do what you must!
+"What?! No! That..."
+"You... Do... Do what you must!
 Please ensure no-one else suffers as he did.
-Just see that you leave is grave as it was.
+Just see that you leave his grave as it was."
 
 Message:  1117
-He was a good man. He didn't deserve this. The children think he is away in Skyrim on business. I'm not ready to tell them.
-Please. I don't mean to be rude, but I wish to be alone with my husband.
+"He was a good man. He didn't deserve this.
+The children think he is away in Skyrim on business.
+I'm not ready to tell them.
+Please. I don't mean to be rude,
+but I wish to be alone with my husband."
 
 Message:  1118
-What?! No! That...
-<ce>
-No, that is monsterous! I will not allow it.
+"What?! No! That..."
+"No, that is monsterous! I will not allow it.
 Get away from me!
 Not! Allow!
-Guards! Guards!!
+Guards! Guards!!"
+
+Message:  1125
+"Move along buddy! Leave the lady alone."
+
+Message:  1126
+"Halt!"
 
 Message: 1120
 "Well, what do we have here? A %ra, from the crypt?"
@@ -219,10 +250,10 @@ Like that jar. Bet that's something important. Give us it!"
 Give them the sample?
 
 Message: 1122
-Great. Thanks. A smart %ra, who'd have known?
+"Great. Thanks. A smart %ra, who'd have known?"
 <ce>
-Gonna need the rest of your stuff too.
-Nothing personal, we're just greedy like that.
+"Gonna need the rest of your stuff too.
+Nothing personal, we're just greedy like that."
 
 Message: 1121
 "Ooh. You know, that's not fair. We planned this raid weeks ago.
@@ -271,7 +302,7 @@ this is unlike any curse I have seen before. I will need
 to write a journal for the council on this when
 time allows."
 
-Message:1151
+Message: 1151
 "However, I believe I have created a cure. I have infused
 this amulet with a powerful curse removal spell focused
 on the energies from the samples you supplied. If the
@@ -322,9 +353,17 @@ I will take it to them.
 It may save a life yet."
 
 Message: 1165
-"I shall report any results to _evoker_ as I'm sure they requested.
-Here is payment for the work you have done, for _temple_
-and poor _questgiver_.
+"I shall report any results to _evoker_ as I'm sure
+they requested."
+
+Message:  1166
+The temple does not have much to spare, however I feel
+you have earned this gold for all you have done.
+We may not have helped _questgiver_ but I'm sure
+all you have done will have helped others.
+I can assure you of that.
+
+Message:  1167
 Goodbye %pcf. I hope you never have to encounter such foulness
 again, but if you do, you will know where to find me."
 
@@ -367,124 +406,155 @@ I wish you good journeys.
 
 -- Notifications
 Message:  1301
-A messenger appears as if out of nowhere and silently
-holds out a letter addressed to you.
-Without awaiting approval or a gratuity he dissapears
-almost as quickly.
+<ce>A messenger appears as if out of nowhere and silently
+<ce>holds out a letter addressed to you.
+<ce>
+<ce>Without awaiting approval or a gratuity he dissapears
+<ce>almost as quickly.
 
-Message:  1313
-Seems _questgiver_ is in a bad way. _priest_ wants me
-to go to _temple_ in __temple_ immediately.
+Message:  1321
+<ce>Seems _questgiver_ is in a bad way.
+<ce>_priest_ wants me to go to
+<ce>_temple_ in __temple_ immediately.
 
 Message:  1302
-You look up and the silent messenger is before you.
-He barely nods and then dissapears, almost as if by magic.
-Looking down you realise you hold a letter.
+<ce>You look up and the silent messenger is before you.
+<ce>They barely nods, then dissapears. Almost as if by magic.
+<ce>Looking down you realise you hold a letter.
 
 Message:  1303
-You look at the small figure asleep in the bed.
-The man is noticeably more emaciated than he was when you
-last saw him. The humour has gone from his face, which is
-of a grey pallor. His eyes are dark and sunken. He looks
-at least 20 years older, despite it being a matter of weeks.
-He shakes in his slumber like a brittle tree in a storm.
+<ce>You look at the small figure asleep in the bed.
+<ce>The man is noticeably more emaciated than he was when you
+<ce>last saw him. The humour has gone from his face, which is
+<ce>of a grey pallor. His eyes are dark and sunken. He looks
+<ce>at least 20 years older, despite it being a matter of weeks.
+<ce>He shakes in his slumber like a brittle tree in a storm.
 
 Message: 1304
-The man stirs then his eyes open and he starts to moan.
+<ce>The man stirs then his eyes open and he starts to moan.
 <ce>
 "Ohhh. Ohhh nooo! Nooooo!"
 
 Message: 1305
-The priest tries to hold _questgiver_ down while inserting
-a wooden spoon between his teeth.
+<ce>The priest tries to hold _questgiver_ down while inserting
+<ce>a wooden spoon between his teeth.
+<ce>
 "Quickly. Deal with that comes! I'll try to keep him calm."
 
 Message:  1306
-The foul creature is dead. _questgiver_ is
-unconscious again. His breathing ragged.
+<ce>The foul creature is dead. _questgiver_ is
+<ce>unconscious again. His breathing ragged.
 
 Message:  1307
-The priest carefull uses a flat knife to scrape some of
-the homunculous' birth sac from the bed into a jar. He
-carefully seals it with a cork, wraps it in a cloth,
-ties some twine around it and hands it to you.
+<ce>The priest carefull uses a flat knife to scrape some of
+<ce>the homunculous' birth sac from the bed into a jar. He
+<ce>carefully seals it with a cork, wraps it in a cloth,
+<ce>ties some twine around it and hands it to you.
 
 Message:  1308
-The evoker takes the jar from you and sets it carefully
-on a table behind him. He then proceeds to carefully
-ignore it and continues talking.
+<ce>The evoker takes the jar from you and sets it carefully
+<ce>on a table behind him. He then proceeds to carefully
+<ce>ignore it and continues talking.
 
 Message:  1309
-Arriving at the grave of the first victim you notice a
-woman, tending to the flowers placed there.
-She looks up in surprise as you approach.
+<ce>Arriving at the grave of the first victim you notice a
+<ce>woman, tending to the flowers placed there.
+<ce>She looks up in surprise as you approach.
 
 Message:  1316
-She turns from you in visible distress.
-You notice some guards coming over.
+<ce>She turns from you in visible distress.
+<ce>You notice some guards coming over.
 
 Message:  1315
-The graveyard is deserted. Time to get to work.
+<ce>The graveyard is deserted. Time to get to work.
 
 Message:  1314
-You leave her to her grief. You will need to return
-later when she is gone. Perhaps in a few hours.
+<ce>You leave her to her grief. You will need to return
+<ce>later when she is gone. Perhaps in a few hours.
 
 Message:  1310
-She looks horrified when you tell her.
+<ce>She looks horrified when you tell her.
+
+Message:  1327
+<ce>Looks like some of the residents are upset that you
+<ce>are wandering around at night.
+
+Message:  1328
+<ce>The graveyard tenants have been put back to bed.
 
 Message:  1317
-It takes a while to dig deep enough, but you uncover the
-dessicated corpse and use a knife to remove a section of
-bowel which you place in a jar.
-Then you fill the grave in again.
+<ce>It takes a while to dig deep enough, but you uncover the
+<ce>dessicated corpse and use a knife to remove a section of
+<ce>bowel which you place in a jar.
+<ce>Then you fill the grave in again.
 
 Message:  1318
-This is the place. The second victim fled here.
-I'll find his remains inside somewhere. 
+<ce>This is the place. The second victim fled here.
+<ce>I'll find his remains inside somewhere. 
 
 Message:  1319
-This is the second victim. Looks like the denizens of
-this place have largely left the corpse alone.
-You wonder why.
+<ce>This is the second victim. Looks like the denizens of
+<ce>this place have largely left the corpse alone.
+<ce>You wonder why.
 
 Message:  1320
-The bowel appears intact. You use the knife to cut
-some off into a jar.
+<ce>The bowel appears intact. You use the knife to cut
+<ce>some off into a jar.
+
+Message:  1324
+<ce>Now to get the sample back to _evoker_
 
 Message: 1311
-Upon leaving the crypt you are approached by a rough
-looking adventuring party.
+<ce>Upon leaving the crypt you are approached by a rough
+<ce>looking adventuring party.
+
+Message:  1326
+<ce>You had the jar to the _partyt_.
+<ce>All that work for nothing.
 
 Message: 1312
 <ce>_evoker_ takes the jar from you and places it on his
 <ce>table next to the other.
 <ce>You wonder if he's actually done anything with it.
 
+Message:  1323
+<ce>I should give him time to work and come back this
+<ce>time tomorrow.
+
 Message: 1313
 <ce>Offer them some money to leave you alone?
+
+Message:  1322
+<ce>I've upset her and now some guards are here.
+<ce>Probably best to leave her alone and come back later
+<ce>when they've all gone.
+
+Message:  1325
+<ce>I should check on _evoker_. Time is running out for _questgiver_
 
 QBN:
 -- Props
 Item _letter_ letter used 1201
 Item _deathnotice_ letter used 1202
-Item _guysample_ werewolf_blood
-Item _gravesample_ werewolf_blood
-Item _cryptsample_ werewolf_blood
+Item _guysample_ organs
+Item _gravesample_ organs
+Item _cryptsample_ organs
 Item _2ndvic_ dead_body
 Item _talisman_ talisman
+Item _reward_ gold
 
 -- Cast
 Person _questgiver_ group Questor male
 Person _priest_ faction Healers male
 Person _evoker_ faction The_Mages_Guild male
-Person _wife_ group Resident1 female
 
 -- Antagonists
 Foe _explusion_ is Imp
+Foe _zomb_ is 2 Zombie
+Foe _guards_ is 2 Warrior
 Foe _partyt_ is Thief
-Foe _partyw is warrior
-Foe _partym_ is mage
+Foe _partyw_ is Warrior
+Foe _partym_ is Mage
 
 -- Locations
 Place _temple_ remote temple
@@ -494,6 +564,9 @@ Place _crypt_ remote dungeon0
 
 -- Timers
 Clock _notify_ 00:01 00:02
+Clock _gravelife_ 00:02 00:05
+Clock _divining_ 18:00 24:00
+Clock _waiting_ 18:00 24:00
 Clock _dead_ 7.00:00 10.00:00
 Clock _deathnote_ 14.00:00 21.00:00
 
@@ -501,12 +574,16 @@ variable _atgrave_
 variable _atcrypt_
 variable _sam1_
 variable _sam2_
+variable _next_
+variable _done_
+variable _cure_
 
 --	Quest start-up:
     start timer _notify_
     pc at _grave_ set _atgrave_
     pc at _crypt_ set _atcrypt_
-    _letter_ used saying 1313 do _letterlog_
+    hide npc _questgiver_
+    _letter_ used saying 1321 do _letterlog_
     
 _notify_ task:    
     give pc _letter_ notify 1301
@@ -534,7 +611,7 @@ _nolongerfunny_ task:
     say 1306
     say 1103
     say 1307
-    give pc _guysample_ notify 1104
+    get item _guysample_ saying 1104
     say 1105
     place npc _evoker_ at _tmg_
     log 1051 1
@@ -545,18 +622,27 @@ _evokerclicked_ task:
 _atmages_ task:
     when _evokerclicked_ and not _sam1_ and not _sam2_
     say 1106
-    say 1308
+    take _guysample_ from pc saying 1308
     say 1107
     say 1108
     say 1109
     say 1110
     say 1111
     say 1112
+    reveal _grave_
+    reveal _crypt_
     log 1052 2
+    clear _evokerclicked_
 
 _mourner_ task:
     daily from 07:00 to 19:00
 --    place npc _wife_ at _grave_
+
+_nice_ task:
+    when attribute Personality is at least 50
+
+_words_ task:
+    when skill Etiquette is at least 30
 
 _firstsample_ task:
     when _atgrave_ and _mourner_
@@ -569,12 +655,27 @@ _nohub_ task:
 
 _exhume_ task:
     say 1310
+
+_yesexhume_ task:
+    when _exhume_ and _nice_ and _words_    
     say 1116
     log 1054 3
+    start task _firstcorpse_
+
+_noexhume_ task:
+    when _exhume_ and not _nice_ and not _words_    
+    say 1118
+    create foe _guards_ every 0 minutes 1 times with 100% success
+    say 1126
+    log 1060 3
 
 _nothing_ task:
     say 1119
     say 1316
+    create foe _guards_ every 1 minutes 1 times with 100% success
+    restrain foe _guards_
+    say 1125
+    say 1322
     log 1053 3
 
 _yeshub_ task:
@@ -585,10 +686,17 @@ _yeshub_ task:
 _nowife_ task:
      when _atgrave_ and not _mourner_
      say 1315
-     start task _firstcorpse_
+     start timer _gravelife_
+
+_gravelife_ task:
+    create foe _zomb_ every 0 minutes 1 times with 100% success msg 1327
+
+_graveclean_ task:
+    killed 1 _zomb_ saying 1328
+    start task _firstcorpse_
 
 _firstcorpse_ task:
-    give pc _gravesample_ notify 1317
+    get item _gravesample_ saying 1317
     setvar _sam1_
 
 _incrypt_ task:
@@ -596,26 +704,23 @@ _incrypt_ task:
     place item _2ndvic_ at _crypt_
     say 1318
 
-_secondcorpse_ task:
-    have _2ndvic_ set _secondsample_
-
 _secondsample_ task:
-    say 1319
-    give pc _cryptsample_ notify 1320
+    clicked item _2ndvic_ say 1319
+    get item _cryptsample_ saying 1320
     take _2ndvic_ from pc
     log 1055 4
     setvar _sam2_
 
-_abmush_ task:
+_ambush_ task:
     when not _atcrypt_ and _sam2_
     say 1311
-    prompt 1130 yes _givejar_ no _keepjar_
+    prompt 1120 yes _givejar_ no _keepjar_
 
 _givejar_ task:
+    take _cryptsample_ from pc saying 1326
+    give item _cryptsample_ to _partyt_
     say 1122
-    take item _cryptsample_ from pc
     start task _baddies_
-    give _cryptsample_ to _partyt_
 
 _keepjar_ task:
     say 1121
@@ -641,41 +746,65 @@ _ret1samp_ task:
     say 1131
     take _cryptsample_ from pc
     take _gravesample_ from pc
+    setvar _next_
+    clear _evokerclicked_
 
 _retsamples_ task:
-    when _sam1_ and _sam2_ and _evokerclicked_
+    when _sam1_ and _sam2_ and _next_ and _evokerclicked_
     say 1140
     say 1141
     take _cryptsample_ from pc
     take _gravesample_ from pc
+    say 1323
+    log 1057 6
     start timer _divining_
+    clear _evokerclicked_
+
+_bothsamples_ task:
+    when _sam1_ and _sam2_
+    say 1324
+    log 1056 5
 
 _divining_ task:
+    setvar _done_
+    say 1325
+
+_curemade_ task:
+    when _done_ and _evokerclicked_
     say 1150
-    say 1151
+    get item _talisman_ saying 1151
     say 1152
-    give _talisman_to pc
+    log 1058 6
 
 _gotcure_ task:
-    when have _talisman_
+    have _talisman_ set _cure_
 
 _returntopriest_ task:
-    when _priestclicked_ and not _dead_ and _gotcure_
+    when _priestclicked_ and not _dead_ and _cure_
     take _talisman_ from pc
     say 1162
+    log 1059 7
+    start timer _waiting_
+
+_waiting_ task:
+
+_nocure_ task:
+    when _priestclicked_ and _waiting_
     say 1163
     say 1164
     say 1165
-    start quest PRA1001c
+    give pc _reward_ notify 1166
+    say 1167
     end quest
 
 _returntopriestlate_ task:
-    when _priestclicked_ and _dead_ and _gotcure_
+    when _priestclicked_ and _dead_ and _cure_
     take _talisman_ from pc
     say 1160
     say 1161
     say 1165
-    start quest PRA1001c
+    give pc _reward_ notify 1166
+    say 1167
     end quest
 
 _dead_ task:

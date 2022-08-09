@@ -820,9 +820,6 @@ Message:  1313
 <ce>              Do you wish to try to soothe the child with
 a song?
 
-Message:  1316
-<ce>                You sing the child an old %ra lullaby.
-
 Message:  1314
 <ce>You sing the child an old %ra lullaby.
 <ce>Your dulcent tones seem to settle him.
@@ -837,9 +834,6 @@ Message:  1307
 
 Message:  1308
 <ce>            Actually it looks like it's just an old lady.
-
-Message:  1303
-<ce>                        The child spots a cat.
 
 Message:  1317
 <ce>The child spots a cat and tries to chase
@@ -1028,10 +1022,6 @@ Message:  1323
 Message:  1349
 <ce>                Are you sure you want to leave the kid there?
 
-Message:  1356
-<ce>Got him! Now to get him home safely,
-_father_ will probably be on my tail.
-
 Message:  1324
 <ce>             The child is safe, however _father_ is dead.
 <ce>            It looks like he was injured but got the child
@@ -1076,7 +1066,6 @@ Foe _mummad_ is Thief
 Foe _cult_ is 3 Nightblade
 Foe _knights_ is 2 Knight
 Foe _brokermad_ is Thief
-Foe _guard_ is 1 Warrior
 
 Item _statue_ totem
 Item _note_ letter used 1201
@@ -1137,10 +1126,6 @@ variable _dadwantsbaby_
     dialog link for person _father_
     dialog link for person _friend_
     dialog link for person _sister_
-    create npc at _house_
-    create npc at _culthome_
-    create npc at _sishouse_
-    create npc at _temple_
     place npc _friend_ at _house_
     place npc _questgiver_ at _house_
     place npc _father_ at _culthome_
@@ -1160,7 +1145,6 @@ variable _dadwantsbaby_
 
 _cry_ task:
     say 1302
-    play sound cryingkid.wav every 0 minutes 10 times
     prompt 1313 yes _sing_ no _dontsing_
 
 _sing_ task:

@@ -260,10 +260,6 @@ Message: 1043
 Alas. I expected as much. My servant will show
 you out. I can find another, better, to the task.
 
-Message: 1044
-Alas. I expected as much. You have the stink of
-the Mages Guild about you.
-
 Message:  1045
 Halt! Graverobber! You dare desecrate this young
 woman?! You will lie in a paupers grave of your
