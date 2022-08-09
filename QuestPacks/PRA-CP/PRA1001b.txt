@@ -215,6 +215,14 @@ Message: 1120
 "We were going to rob that crypt. It was our plan.
 How abouts you just hand over what you've found down there.
 Like that jar. Bet that's something important. Give us it!"
+<ce>
+Give them the sample?
+
+Message: 1122
+Great. Thanks. A smart %ra, who'd have known?
+<ce>
+Gonna need the rest of your stuff too.
+Nothing personal, we're just greedy like that.
 
 Message: 1121
 "Ooh. You know, that's not fair. We planned this raid weeks ago.
@@ -223,71 +231,97 @@ This is our crypt. We got dressed up and everything this morning.
 Was up from cock-crow wrapping them up nice in parchment paper.
 You really owe us."
 
-Message: 1122
+Message: 1123
 "Nah. Sod that. How about we takes everything?
 Guys, let's upend this fool and see what falls out!"
 
-Message: 1123
+Message: 1124
 "I'm sad that you've made this so diffuclt.
 Guys, let's upend this fool and see what falls out!"
 
-Message: 1124
+Message: 1130
 "Ah. You have returned. You have the... excellent.
 I'll get to work right away, of course, this would
 be even quicker if I had the other sample.
 Hint, hint!"
 
-Message: 1125
+Message: 1131
 "I know what you are thinking. I have started
 divining the initial specimen. I just like to
 keep things tidy. Some of my colleagues work
 in chaos. Not me. I like to remain focused."
 "Now get me that last sample."
 
-Message: 1126
-"Welcome back. Now, the final sample. You were able to retrieve it?"
+Message: 1140
+"Ah, the final sample. You were able to retrieve it?"
 "Excellent, most excellent. With all three specimens I should be
 able to triangulate the source of the curse."
 
-Message: 1127
+Message: 1141
 "This will take some time. I know we do not have that so spare so
 I will be as expedient as my craft allows."
 "Please, return tomorrow at this time. I should have some 
 information for you then, but not before.
 I'm sure you can busy yourself in the interim."
 
-Message: 1128
+Message: 1150
 "I have... done all I can. This has not been easy.
 The source of the curse has been elusive. I'll admit,
 this is unlike any curse I have seen before. I will need
 to write a journal for the council on this when
 time allows."
+
+Message:1151
 "However, I believe I have created a cure. I have infused
 this amulet with a powerful curse removal spell focused
 on the energies from the samples you supplied. If the
 victim wears this it should drive the curse from them."
 
-Message: 1129
+Message: 1152
 "Please let me know if this works. I mean... I have no doubt
 that it will, but... you know? The journal? I could get a
 grant for further research."
 
-Message: 1130
+Message: 1160
 "%pcf. I fear I do not have good news. _questgiver_
-succumbed yesterday. I was to write you with the news but
-did not get the time due to clerical praparations.
+succumbed during the night. I was to write you with
+the news but did not get the time due to clerical
+praparations.
 I fear even had you arrived sooner it may have still
 been too late. This foul curse took such a toll upon 
 his body that he would have perished eventually."
 
-Message: 1131
+Message: 1161
 "You have the... ah. Yes. I see. A talisman. If I may
-take it from you? I ride for the coast. There have
+take it from you? I soon ride for the coast. There have
 been reports of a possibly similar case there involving
 a child. I will take the item to them. Perhaps it may
 save a life yet."
 
-Message: 1132
+Message: 1162
+"%pcf! You have returned. Do you have..?"
+<ce>
+"A talisman. And they said this should allevite the
+curse?"
+<ce>
+"We shall try, though I fear _questgiver_
+has been weakened greatly by his ordeal.
+
+Message: 1163
+"%pcf. I fear I do not have good news.
+_questgiver_ succumbed during the night.
+However he had no further attacks and passed
+peacefully in his sleep, so at least the talisman
+allowed him that final respite."
+
+Message: 1164
+"I shall take it and soon ride for the coast.
+There have been reports of a possibly similar case
+there involving a child.
+I will take it to them.
+It may save a life yet."
+
+Message: 1165
 "I shall report any results to _evoker_ as I'm sure they requested.
 Here is payment for the work you have done, for _temple_
 and poor _questgiver_.
@@ -427,6 +461,9 @@ Message: 1312
 <ce>table next to the other.
 <ce>You wonder if he's actually done anything with it.
 
+Message: 1313
+<ce>Offer them some money to leave you alone?
+
 QBN:
 -- Props
 Item _letter_ letter used 1201
@@ -435,6 +472,7 @@ Item _guysample_ werewolf_blood
 Item _gravesample_ werewolf_blood
 Item _cryptsample_ werewolf_blood
 Item _2ndvic_ dead_body
+Item _talisman_ talisman
 
 -- Cast
 Person _questgiver_ group Questor male
@@ -444,6 +482,9 @@ Person _wife_ group Resident1 female
 
 -- Antagonists
 Foe _explusion_ is Imp
+Foe _partyt_ is Thief
+Foe _partyw is warrior
+Foe _partym_ is mage
 
 -- Locations
 Place _temple_ remote temple
@@ -454,6 +495,7 @@ Place _crypt_ remote dungeon0
 -- Timers
 Clock _notify_ 00:01 00:02
 Clock _dead_ 7.00:00 10.00:00
+Clock _deathnote_ 14.00:00 21.00:00
 
 variable _atgrave_
 variable _atcrypt_
@@ -469,7 +511,7 @@ variable _sam2_
 _notify_ task:    
     give pc _letter_ notify 1301
     place npc _priest_ at _temple_
-    start timer _dead_
+    start timer _deathnote_
 
 _letterlog_ task:
     log 1050 0
@@ -479,6 +521,7 @@ _priestclicked_ task:
 
 _incare_ task:
     when _priestclicked_
+    start timer _dead_
     say 1101
     say 1303
     say 1102
@@ -564,13 +607,79 @@ _secondsample_ task:
     setvar _sam2_
 
 _abmush_ task:
+    when not _atcrypt_ and _sam2_
+    say 1311
+    prompt 1130 yes _givejar_ no _keepjar_
+
+_givejar_ task:
+    say 1122
+    take item _cryptsample_ from pc
+    start task _baddies_
+    give _cryptsample_ to _partyt_
+
+_keepjar_ task:
+    say 1121
+    prompt 1313 yes _offergold_ no _comeslags_
+
+_offergold_ task:
+    say 1123
+    start task _baddies_
+
+_comeslags_ task:
+    say 1124
+    start task _baddies_
+
+_baddies_ task:
+    create foe _partyt_ every 0 minutes 1 times with 100% success
+    create foe _partyw_ every 0 minutes 1 times with 100% success
+    create foe _partym_ every 0 minutes 1 times with 100% success
 
 _ret1samp_ task:
-
-_ret2samp_ task:
+    when _sam1_ or _sam2_ and _evokerclicked_
+    say 1130
+    say 1312
+    say 1131
+    take _cryptsample_ from pc
+    take _gravesample_ from pc
 
 _retsamples_ task:
+    when _sam1_ and _sam2_ and _evokerclicked_
+    say 1140
+    say 1141
+    take _cryptsample_ from pc
+    take _gravesample_ from pc
+    start timer _divining_
+
+_divining_ task:
+    say 1150
+    say 1151
+    say 1152
+    give _talisman_to pc
+
+_gotcure_ task:
+    when have _talisman_
+
+_returntopriest_ task:
+    when _priestclicked_ and not _dead_ and _gotcure_
+    take _talisman_ from pc
+    say 1162
+    say 1163
+    say 1164
+    say 1165
+    start quest PRA1001c
+    end quest
+
+_returntopriestlate_ task:
+    when _priestclicked_ and _dead_ and _gotcure_
+    take _talisman_ from pc
+    say 1160
+    say 1161
+    say 1165
+    start quest PRA1001c
+    end quest
 
 _dead_ task:
+
+_deathnote_ task:
     give pc _deathnotice_ notify 1302
     end quest
