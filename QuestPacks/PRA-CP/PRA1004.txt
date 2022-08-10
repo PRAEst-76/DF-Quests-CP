@@ -1463,6 +1463,7 @@ _cultgrab_ task:
     start task _kidnap_
 
 _kidnap_ task:
+    if player within 5 units of foe _cult_
     unset _havebaby_
     drop _child_ face
     unset _dadwantsbaby_

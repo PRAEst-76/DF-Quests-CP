@@ -25,14 +25,13 @@ QuestFail:  [1003]
 <ce>You failed to kill _enemy_ before it caused a ruckus.
 
 QuestComplete:  [1004]
-_questgiver_ looks somewhat exhausted and smiles
-at you sheepishly.
+_questgiver_ looks confused and exhausted,
+but attempts to smile at you sheepishly.
 <ce>
 "I'm very sorry. My little joke very much...
 backfired... on me there, somewhat."
 <ce>
-_questgiver_ attempts a smile, and waves %g3
-hand, as if attempting to wave away the
+He waves his hand, as if attempting to wave away the
 whole sorry experience.
 <ce>
 "You know, you're all right, %pcf.
@@ -64,21 +63,20 @@ Message:  1021
 _questgiver_ suddenly looks pained, grimices and emits an
 even more violent eruption from %g3 rump.
 <ce>
-"Aaagh! Oh no!"
+He doubles over, "Aaah! Oh no! What..?"
 
 Message:  1025
-A look of horror crosses %g3 visage and another
+A look of horror crosses %g3 face and another
 series of noisy parps erupts, followed by the
 sound of tearing cloth and a suddenly a foul
 creature emerges from %g3 behind.
 <ce>
-At this %g attempts to recover himself despite his ordeal
-<ce>
-"Ahh! By %god's name! What... what was that?!"
+He attempts to recover himself, "Ahh! In %god's name...
+what... what was that?!"
 <ce>
 Then %g points at the _enemy_ that has appeared and yells,
 <ce>
-"Quickly kill it!"
+"That... that came out of me?! Quickly kill it!"
 
 Message:  1022
 A grubby urchin approaches you and asks if you
@@ -155,7 +153,7 @@ Person _questgiver_ group Questor male
 Clock _coward_ 03:00
 Clock _note_ 21:00
 
-Foe _enemy_ is Imp
+Foe _enemy_ is 1 Imp
 
 --	Quest start-up:
     start timer _coward_
