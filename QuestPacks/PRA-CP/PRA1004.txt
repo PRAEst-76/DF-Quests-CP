@@ -172,9 +172,9 @@ willingly. I'll need to think about how to handle this.
 
 Message:  1039
 %qdt:
-Found the kid at _culthome_ with his "father"
-and his friends. They asked me to leave and said
-the child will have a better life there.
+Found the kid at _culthome_ with his
+"father" and his friends. They asked me to leave
+and said the child will have a better life there.
 
 Message:  1049
 Can I just leave the child there? They seem
@@ -509,11 +509,12 @@ It very much seems that she's not going to
 willingly tell you what you need to know.
 
 Message:  1135
-_father_ stands before you defiantly. "I know why
-you are here, %ra. She sent you to find us!
-I am surprised she cares enough to make the
-effort, but she is a drunken sot and harlot, not
-fit to be a mother or much else for that matter."
+_father_ stands before you defiantly.
+"I know why you are here, %ra. She sent you to
+find us! I am surprised she cares enough to make
+the effort, but she is a drunken sot and harlot,
+not fit to be a mother or much else for that
+matter."
 <ce>
 He shakes his head, "However, that is irrelevant
 now. The child is safe here with his father, I
@@ -908,10 +909,10 @@ Message:  1332
 <ce>           some kind of meat on a stick. Not ideal, but you
 <ce>             doubt the kid will eat your travel rations.
 <ce>
-<ce>                               Buy one?
+<ce>                               Buy one (5g)?
 
 Message:  1359
-<ce>Do you want to order him something from the kitchens?
+<ce>Do you want to order him something from the kitchens (19g)?
 
 Message:  1333
 <ce>           The kid wants a red one. Those look quite spicy,
@@ -956,6 +957,9 @@ Message:  1346
 <ce>                               ground.
 <ce>
 <ce>                     He's throwing a tantrum.
+
+Message:  1356
+<ce>It seems you can't afford that right now.
 
 Message:  1305
 <ce>                        The child has pooped.
@@ -1074,8 +1078,6 @@ Item _claim_ letter used 1202
 Item _deathletter_ letter used 1207
 Item _wantednotice_ letter used 1208
 Item _reward_ gold
-Item _meal_ gold range 15 to 30
-Item _snack_ gold range 3 to 6
 
 Clock _cry_ 00:15 00:45
 Clock _olddear_ 00:05 00:15
@@ -1319,7 +1321,14 @@ _roomservice_ task:
     prompt 1359 yes _fancymeal_ no _tantrum_
 
 _buy_ task:
+    pay 5 gold do _meatstick_ otherwise do _nofood_
+
+_meatstick_ task:
     prompt 1333 yes _redsnack_ no _noredsnack_
+
+_nofood_ task:
+    say 1356
+    start task _tantrum_
 
 _tantrum_ task:
     say 1337
@@ -1348,8 +1357,10 @@ _deadharpy_ task:
     start timer _poop_
 
 _fancymeal_ task:
+    pay 18 gold do _fancydish_ otherwise do _nofood_
+
+_fancydish_ task:
     say 1360
-    take _meal_ from pc
     stop timer _hangry_
     stop timer _tantrum_
     clear _feed_
@@ -1357,7 +1368,6 @@ _fancymeal_ task:
 
 _redsnack_ task:
     say 1334
-    take _snack_ from pc
     stop timer _hangry_
     stop timer _tantrum_
     clear _feed_
@@ -1455,15 +1465,25 @@ _goons_ task:
     send _cult_ every 30 minutes with 50% success
     change foe _cult_ infighting false
 
-_cultinjured_ task:
-    injured _cult_
-
 _cultgrab_ task:
-    when _dadwantsbaby_ and _cultinjured_ and not _fast_
+    if player within 5 units of foe _cult_
+
+_dadgrab_ task:
+    if player within 5 units of foe _dadmad_
+
+_cultnotgrab_ task:
+    if player not within 5 units of foe _cult_
+    unset _cultgrab_
+
+_dadnotgrab_ task:
+    if player not within 5 units of foe _dadmad_
+    unset _dadgrab_
+
+_kidnapkid_ task:
+    when _dadwantsbaby_ and not _fast_ and _cultgrab_ or _dadgrab_
     start task _kidnap_
 
 _kidnap_ task:
-    if player within 5 units of foe _cult_
     unset _havebaby_
     drop _child_ face
     unset _dadwantsbaby_
@@ -1483,12 +1503,9 @@ _returns_ task:
 
 _accident_ task:
     rumor mill 1212
-    place npc _questgiver_ at _temple_
     hide npc _questgiver_
     restore npc _friend_
-    drop _questgiver_ as questor
     restore npc _priest_
-    add _priest_ as questor
     start timer _death_
 
 _qgclicked_ task:
@@ -1518,7 +1535,6 @@ _badnews_ task:
     when _friendclicked_ and _accident_
     say 1104
     log 1045 step 9
-    place npc _priest_ at _temple_
 
 _returnswithbaby_ task:
     when _qgclicked_ and _havebaby_
@@ -1596,7 +1612,8 @@ _thecult_ task:
     when _atcult_ and _withdad_ and not _warned_
     setvar _warning_
     say 1138
-    create foe _cult_ every 0 minutes 0 times with 100% success
+    place npc _child_ at _culthome_
+    create foe _cult_ every 0 minutes 1 times with 100% success
     restrain foe _cult_
 
 _thefather_ task:
@@ -1616,6 +1633,16 @@ _leftcult_ task:
 _trespasser_ task:
     when _atcult_ and _warned_ and not _fled_
     start task _trespass_
+
+_gotkid_ task:
+    when _childclicked_ and _withdad_
+    hide npc _child_
+    add _child_ face
+    unset _withdad_
+    setvar _havebaby_
+    setvar _dadwantsbaby_
+    start task _trespass_
+    clear _childclicked_
 
 _trespass_ task:
     say 1136
@@ -1672,7 +1699,7 @@ _thepriest_ task:
     clear _priestclicked_
 
 _backwithmother_ task:
-    when _priestclicked_ and _havebaby_ and not _death_
+    when _priestclicked_ and not _death_ and _havebaby_ or _rescued_
     drop _child_ face
     say 1141
     start task _safe_

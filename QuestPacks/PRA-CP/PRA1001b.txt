@@ -82,7 +82,8 @@ I have retrieved the sample from the second victim
 whose body I found in ___crypt_.
 
 Message:  1056
-Now to return both samples to _evoker_ in _tmg_ in ___tmg_.
+Now to return both samples to _evoker_
+in _tmg_ in ___tmg_.
 
 Message:  1057
 _evoker_ is going to work on a cure. He will need some time.
@@ -502,7 +503,7 @@ Message:  1320
 <ce>some off into a jar.
 
 Message:  1324
-<ce>Now to get the sample back to _evoker_
+<ce>Now to get the samples back to _evoker_ in ___tmg_
 
 Message: 1311
 <ce>Upon leaving the crypt you are approached by a rough
@@ -585,8 +586,8 @@ variable _cure_
     hide npc _questgiver_
     _letter_ used saying 1321 do _letterlog_
     
-_notify_ task:    
-    give pc _letter_ notify 1301
+_notify_ task:
+    get item _letter_ saying 1301
     place npc _priest_ at _temple_
     start timer _deathnote_
 
@@ -713,6 +714,7 @@ _secondsample_ task:
 
 _ambush_ task:
     when not _atcrypt_ and _sam2_
+    start task _party_
     say 1311
     prompt 1120 yes _givejar_ no _keepjar_
 
@@ -734,23 +736,42 @@ _comeslags_ task:
     say 1124
     start task _baddies_
 
-_baddies_ task:
+_party_ task:
     create foe _partyt_ every 0 minutes 1 times with 100% success
     create foe _partyw_ every 0 minutes 1 times with 100% success
     create foe _partym_ every 0 minutes 1 times with 100% success
+    change foe _partyt_ infighting false
+    change foe _partyw_ infighting false
+    change foe _partym_ infighting false
+    restrain foe _partyt_
+    restrain foe _partyw_
+    restrain foe _partym_
+
+_baddies_ task:
+    enemies makehostile
 
 _ret1samp_ task:
-    when _sam1_ or _sam2_ and _evokerclicked_
+    when _sam1_ and _evokerclicked_ and not _next_
+    say 1130
+    say 1312
+    say 1131
+    take _gravesample_ from pc
+    unset _sam1_
+    setvar _next_
+    clear _evokerclicked_
+
+_ret2samp_ task:
+    when _sam2_ and _evokerclicked_ and not _next_
     say 1130
     say 1312
     say 1131
     take _cryptsample_ from pc
-    take _gravesample_ from pc
+    unset _sam2_
     setvar _next_
     clear _evokerclicked_
 
 _retsamples_ task:
-    when _sam1_ and _sam2_ and _next_ and _evokerclicked_
+    when _next_ and _evokerclicked_ and _sam1_ or _sam2_
     say 1140
     say 1141
     take _cryptsample_ from pc
