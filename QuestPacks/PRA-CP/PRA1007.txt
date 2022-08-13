@@ -68,14 +68,14 @@ approaches.
 
 Message:  1052
 %oth! What did you say to
-_questgiver_?!
+%g2?!
 <ce>
-You know what? It doesn't matter! He was doing
-well until some bloody %ra went and set him off
-again.
+You know what? It doesn't matter! _questgiver_
+was doing well until some bloody %ra went and set
+%g2 off again.
 <ce>
-Well, go on. Go and find him before he hurts
-himself or gets lost in a dungeon or something.
+Well, go on! Go and find %g2 before %g hurts
+%g2self or gets lost in a dungeon or something.
 
 Message:  1053
 Try asking around town if anyone has seen %g2,
@@ -92,7 +92,7 @@ of a lie down.
 Message: 1055
 _questgiver_? Yes, %g was here. Wouldn't leave.
 Hid under the table saying a %ra was trying
-"inner-act" with him. Crazy if you ask me.
+"inner-act" with %g2. Crazy if you ask me.
 <ce>
 Ran off towards _local2_'s house at
 _res_. Glad to be shot of %g2.
@@ -102,7 +102,7 @@ Yes. _questgiver_ was here. Hiding in the corner
 there.
 <ce>
 Was here all night in fact. I offered %g2 some
-food but he just muttered about _remtav_
+food but %g just muttered about _remtav_
 in __remtav_.
 <ce>
 You might want to check there.
@@ -116,7 +116,7 @@ tell you about _questgiver_ directly.
 
 Message:  1058
 I'm sorry, you've just missed %g. Hid out in
-corner. Left without paying his bill I hear.
+corner. Left without paying %g3 bill I hear.
 Seemed agitated.
 <ce>
 Talked about _dun_. That's not a nice place.
@@ -137,7 +137,7 @@ I spoke to the Healer, _doctor_ from
 __temple_ and they have something new
 to try.
 <ce>
-Maybe bring him there?
+Maybe bring %g2 there?
 
 Message:  1062
 %oth, you look like that worg, %n. Is that me?
@@ -452,17 +452,19 @@ _rescue_ task:
     add _questgiver_ face
     log 1156 step 5
 
-_friend_ task:
+_friendclicked_ task:
     clicked npc _local0_
-    setvar _friendclicked_
+
+_stunned_ task:
+    when _subdued_ or _rescued_
 
 _clearfriend_ task:
-    when _friendclicked_ and not _subdued_ or not _rescued_
+    when _friendclicked_ and not _stunned_
     say 1057
-    clear _friendclicked_ _friend_ _clearfriend_
+    clear _friendclicked_ _clearfriend_
 
 _got_ task:
-    when _friendclicked_ and _rescued_ or _subdued_
+    when _friendclicked_ and _stunned_
     say 1061
     place npc _doctor_ at _temple_
     log 1157 step 6
@@ -471,7 +473,7 @@ _doc_ task:
     clicked npc _doctor_
 
 _treatment_ task:
-    when _rescued_ or _subdued_ and _doc_ 
+    when _stunned_ and _doc_ 
     say 1063
     say 1064
     setvar _treated_

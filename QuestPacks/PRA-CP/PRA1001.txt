@@ -88,18 +88,20 @@ into your hands then runs off into the distance.
 Message:  1023
 %pcn!
 <ce>
-                                                %qdt
+                            %qdt
 <ce>
-That _enemy_ made a complete mess here. I had to pay
-for a mercenary to deal with it out of my own pocket!
-I'm not made of money you know?!
+Remember me? That poor sod whose finger you pulled?
+Well, that _enemy_ made a complete mess here.
+I had to pay for a mercenary to deal with it out of
+my own pocket! I'm not made of money you know?!
 <ce>
 You were the one that pulled the finger, so this was
 your doing. I'm not going to ask for recompense as
 your kind never take responsiblity for the messes
-you make, but %oth, I'm going to tell everyone here
-including %t %nrn, that you are an irresponsible
-braggard and a coward.
+you make, but %oth, I'm going to
+tell everyone here including our %t, %nrn,
+that you are an irresponsible braggard and a
+coward.
 <ce>
 In the name of %god I say, A coward!
 <ce>
