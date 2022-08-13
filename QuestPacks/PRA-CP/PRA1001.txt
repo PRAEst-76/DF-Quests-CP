@@ -4,35 +4,37 @@ DisplayName: The Finger of Doom
 QRC:
 
 QuestorOffer:  [1000]
-_questgiver_ holds out %g3 hand with %g3 index digit extended.
+_questgiver_ holds out %g3 hand with %g3 index digit
+extended.
 <ce>
 "Hey %pcf. Pull my finger! Go on. Pull it!"
 
 RefuseQuest:  [1001]
-_questgiver_ lowers %g3 hand with a pained expression.
+_questgiver_ lowers %g3 hand with a pained
+expression.
 <ce>
 "%oth! Will no-one pull my finger?!"
 
 AcceptQuest:  [1002]
 You reach out and gingerly pull _questgiver_'s
-finger. Upon doing so %g3's face becomes strained
-and %g emits a loud trump from %g3 posterior.
-Then %g smiles at you.
+finger. Upon doing so %g3's face becomes strained and
+%g emits a loud trump from %g3 posterior. Then %g
+smiles and winks at you.
 <ce>
-"Ahhhh... Heh heh, I needed that."
+"Ahhhh... Heh heh, I needed that." he chuckles to himself.
 
 QuestFail:  [1003]
 <ce>You failed to kill _enemy_ before it caused a ruckus.
 
 QuestComplete:  [1004]
-_questgiver_ looks confused and exhausted,
-but attempts to smile at you sheepishly.
+_questgiver_ looks confused and exhausted, but attempts
+to smile at you sheepishly.
 <ce>
-"I'm very sorry. My little joke very much...
-backfired... on me there, somewhat."
+"I'm very sorry. My little joke very much... backfired...
+on me there, somewhat."
 <ce>
-He waves his hand, as if attempting to wave away the
-whole sorry experience.
+He waves his hand, as if attempting to wave away the whole
+sorry experience.
 <ce>
 "You know, you're all right, %pcf.
 Here, have a drink on me."
@@ -56,64 +58,61 @@ Thanks again for your help with my... little incident, %pcf.
 I trust that my, erm, issue... is still just between us?
 
 Message:  1020
-You have dealt with _questgiver_'s accidental
-nether summons.
+You have dealt with _questgiver_'s accidental nether
+summons.
 
 Message:  1021
-_questgiver_ suddenly looks pained, grimices and emits an
-even more violent eruption from %g3 rump.
+He suddenly looks pained, grimices and emits an even
+more violent eruption from %g3 rump.
+<ce>
+"Oh sorry. Appears there was mo..."
 <ce>
 He doubles over, "Aaah! Oh no! What..?"
 
 Message:  1025
-A look of horror crosses %g3 face and another
-series of noisy parps erupts, followed by the
-sound of tearing cloth and a suddenly a foul
-creature emerges from %g3 behind.
+A look of horror crosses his face and another series
+of noisy parps erupt. Then the sound of tearing cloth
+and suddenly a foul creature emerges from his behind.
 <ce>
 He attempts to recover himself, "Ahh! In %god's name...
 what... what was that?!"
 <ce>
-Then %g points at the _enemy_ that has appeared and yells,
-<ce>
+Then he points at the spawn that has appeared and yells,
 "That... that came out of me?! Quickly kill it!"
 
 Message:  1022
-A grubby urchin approaches you and asks if you
-are %pcn, but before you can respond he shoves a
-crumpled note into your hands then runs off into
-the distance.
+A grubby urchin approaches you and asks if you are %pcn,
+but before you can respond he shoves a crumpled note
+into your hands then runs off into the distance.
 
 Message:  1023
 %pcn!
 <ce>
                                                 %qdt
 <ce>
-That _enemy_ made a complete mess here. I had to
-pay for a mercenary to deal with it out of my
-own pocket! I'm not made of money you know?!
+That _enemy_ made a complete mess here. I had to pay
+for a mercenary to deal with it out of my own pocket!
+I'm not made of money you know?!
 <ce>
-You were the one that pulled the finger, so this
-was your doing. I'm not going to ask for
-recompense as your kind never take responsiblity
-for the messes you make, but %oth,
-I'm going to tell everyone here including
-%t %nrn, that you are an
-irresponsible braggard and a coward.
+You were the one that pulled the finger, so this was
+your doing. I'm not going to ask for recompense as
+your kind never take responsiblity for the messes
+you make, but %oth, I'm going to tell everyone here
+including %t %nrn, that you are an irresponsible
+braggard and a coward.
 <ce>
 In the name of %god I say, A coward!
 <ce>
 <ce>
-                                                    _questgiver_
-                                                    __questgiver_
-                                                    ___questgiver_
+                                _questgiver_
+                                 __questgiver_
+                                  ___questgiver_
 
 Message:  1024
-"Though it's probably best if you don't pull any
-more fingers in future though, eh? And maybe don't
-mention this embarrasing situation to anyone.
-<ce>
-Please?"
+"Though it's probably best if you don't pull any more
+fingers in future though, eh? And..." he looks down,
+"maybe don't mention this embarrasing situation to
+anyone. Please?"
 
 Message:  1026
 That _enemy_ made a complete mess here. I had to
@@ -133,10 +132,10 @@ In the name of %god I say, A coward!
 Message:  1030
 %qdt
 _questgiver_ asked me to pull %g3 finger, which I
-did, upon which an _enemy_ tore it's way out of
-%g3 pantaloons.
-I guess I'll need to deal with that
-along with everything else.
+did, upon which an _enemy_ tore it's way out of %g3
+pantaloons.
+I guess I'll need to deal with that along with
+everything else.
 
 Message:  1031
 %qdt

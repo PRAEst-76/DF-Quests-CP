@@ -76,6 +76,11 @@ The victim's wife was at the graveside. I explained
 everything to her and she was horrified and set her
 guards on me. Maybe I should come back later?
 
+Message:  1061
+%qdt:
+Via some nocturnal gravedigging, I have retrieved the
+sample from the first victim's corpse in the graveyeard.
+
 Message:  1055
 %qdt:
 I have retrieved the sample from the second victim
@@ -117,49 +122,45 @@ or former lover."
 Message:  1103
 "Each emergence leaves him more and more weakened.
 There is only do much we can do here at the temple,
-however the evoker, _evoker_, at _tmg_
-in __tmg_ may be able to help with a
-treatment for the curse.
+however I have been in corrispondence with the evoker,
+_evoker_, at _tmg_ in __tmg_
+who may be able to help with a treatment for the curse."
 <ce>
-They will apparently require a sample of the emergence
-sac to divinate it's nature.
-<ce>
-I will prepare the sample which you must take them
-without delay."
+"They will apparently require a sample of the emergence
+sac to divinate it's nature. I will prepare the sample
+which you must take them without delay."
 
 Message:  1104
-"Here is the sample. It is as fresh as possible.
-I have sealed it in a jar. Do not lose this as I
-would rather he not have to go through this again."
+"Here is the sample. It is as fresh as possible. I have
+sealed it in a jar. Do not lose this as I would rather
+he not have to go through this again."
 
 Message:  1105
-"Please. Hurry to the evoker, _evoker_.
-Do not become sidetracked. The mages can be wily and
-try to lure you into other tasks and concerns.
-Please focus on determining the nature of the curse.
-For _questgiver_'s sake. Hurry _evoker_ too.
-Mages often care little for the lives of normal people."
+"Please. Hurry to the evoker, _evoker_ and do
+not become sidetracked. The mages can be wily and try
+to lure you into other tasks and concerns."
+<ce>
+"Please focus on determining the nature of the curse.
+And for _questgiver_'s sake, hurry the mage too.
+They often care little for the lives of normal people."
 
 Message:  1106
-"Ah yes, you are from _temple_...
+"Ah yes, you are from _temple_..."
 <ce>
-You have the sample we requested? Good. I can set to
-divining the kind of curse used.
-<ce>
-I believe there have been two other cases of this
-recently."
+"You have the sample we requested? Good. I can set to
+divining the kind of curse used. I believe there have
+been two other cases of this recently."
 
 Message:  1107
 "The priest did not know this? I would have thought the
 temples would be aware? I imagine they perhaps found
 such demises so abhorrent to their frail sensitivies
-that they deemed it prudent not to discuss them.
-<ce>
-To us this is fascinating, of concern no doubt,
-but fascinating nontheless.
+that they deemed it prudent not to discuss them. To us
+this is fascinating, of concern no doubt, but
+fascinating nontheless."
 
 Message:  1108
-"Demises? Deaths, yes."
+"Demises, I said? Deaths, yes."
 <ce>
 "I fear the victims have both perished as a result of
 the curse. We didn't pay much heed to it at first,
@@ -186,13 +187,12 @@ Message:  1111
 "The second victim however left for his ancient family
 crypt when realising the full extent of his situation
 and presumably took his own life there out of some
-sense of familial duty...
-unless he was killed by the denizens such places usually
-contain."
+sense of familial duty... unless he was killed by the
+denizens such places usually contain."
 <ce>
-"Go to ___crypt_, find his body and obtain the sample.
-Otherwise who knows how long divining the source
-might take."
+"Go to ___crypt_, find his body and obtain the
+sample. Otherwise who knows how long divining the
+source might take."
 
 Message:  1112
 "Are you still here?"
@@ -244,6 +244,7 @@ Message:  1126
 
 Message: 1120
 "Well, what do we have here? A %ra, from the crypt?"
+<ce>
 "We were going to rob that crypt. It was our plan.
 How abouts you just hand over what you've found down there.
 Like that jar. Bet that's something important. Give us it!"
@@ -371,39 +372,46 @@ again, but if you do, you will know where to find me."
 -- Corrispondence
 Message:  1201
 Dear %pcf,
-My name is _priest_ at _temple_ in
-__temple_.
+My name is _priest_ at _temple_
+in __temple_.
 I am writing to you as you previously assisted a man
 here called _questgiver_ with a personal problem.
-I sadly have to inform you that his condition has
-severely worsened and he is now in our care.
-He does not wish the nature of his illness to become
-widely known and as such has requested your assistance
-in helping us treat him. He has added that he can
-renumerate you for your time if it helps.
-If you can assist us in our investigation into his
-ailment I would be very appreciative but advise you
-to make haste to us here in the temple as we fear
-that any worsening in his condition may be fatal.
+<ce>
+I sadly have to inform you that his condition has severely
+worsened and he is now in our care. He does not wish the
+nature of his illness to become widely known and as such
+has requested your assistance in helping us treat him.
+He has added that he can renumerate you for your time if
+that helps.
+<ce>
+If you can assist us in our investigation into his ailment
+I would be very appreciative but advise you to make haste
+to us here in the temple as we fear that any worsening in
+his condition may be fatal.
 <ce>
                             Gods bless.
                             _priest_
+                             _temple_
+                              __temple_
 
 Message:  1202
 Dear %pcf,
-I'm afraid _questgiver_ died this evening.
+I am unfortunately the bearer of bad news. I'm afraid
+_questgiver_ died this evening.
+<ce>
 We kept him as comfortable as we could but I cannot lie
-and say his death was not unpleasant.
-He suffered greatly.
+and say his death was not unpleasant. He suffered greatly.
+<ce>
 I hope that your visit to the mages was productive, but
 alas can do nothing to help my patient, who at least is
-beyond suffering now.
-Perhaps any research the envoker was able to perform may
-help with any future cases, of which I hope there is none.
-I wish you good journeys.
+beyond suffering now. Perhaps any research the envoker
+was able to perform may help with any future cases, of
+which I hope there is none. I wish you good journeys.
 <ce>
                             Gods bless.
                             _priest_
+                             _temple_
+                              __temple_
 
 -- Notifications
 Message:  1301
@@ -537,9 +545,9 @@ QBN:
 -- Props
 Item _letter_ letter used 1201
 Item _deathnotice_ letter used 1202
-Item _guysample_ organs
-Item _gravesample_ organs
-Item _cryptsample_ organs
+Item _guysample_ small_sack
+Item _gravesample_ small_sack
+Item _cryptsample_ small_sack
 Item _2ndvic_ dead_body
 Item _talisman_ talisman
 Item _reward_ gold
@@ -558,13 +566,14 @@ Foe _partyw_ is Warrior
 Foe _partym_ is Mage
 
 -- Locations
-Place _temple_ remote temple
+Place _temple_ local temple
 Place _tmg_ remote magery
 Place _grave_ remote graveyard
 Place _crypt_ remote dungeon0
 
 -- Timers
-Clock _notify_ 00:01 00:02
+Clock _notify_ 12.00:05 24.00:10
+Clock _graveside_ 00:01 00:05
 Clock _gravelife_ 00:02 00:05
 Clock _divining_ 18:00 24:00
 Clock _waiting_ 18:00 24:00
@@ -572,9 +581,11 @@ Clock _dead_ 7.00:00 10.00:00
 Clock _deathnote_ 14.00:00 21.00:00
 
 variable _atgrave_
+variable _graveside_
 variable _atcrypt_
 variable _sam1_
 variable _sam2_
+variable _allsamples_
 variable _next_
 variable _done_
 variable _cure_
@@ -616,6 +627,7 @@ _nolongerfunny_ task:
     say 1105
     place npc _evoker_ at _tmg_
     log 1051 1
+    clear _priestclicked_
 
 _evokerclicked_ task:
     clicked npc _evoker_
@@ -645,8 +657,12 @@ _nice_ task:
 _words_ task:
     when skill Etiquette is at least 30
 
-_firstsample_ task:
-    when _atgrave_ and _mourner_
+_firstcorpse_ task:
+    when _atgrave_
+    start timer _graveside_
+
+_gravewife_ task:
+    when _graveside_ and _mourner_
     say 1309
     prompt 1113 yes _nohub_ no _yeshub_
 
@@ -685,7 +701,7 @@ _yeshub_ task:
     log 1053 3
 
 _nowife_ task:
-     when _atgrave_ and not _mourner_
+     when _graveside_ and not _mourner_
      say 1315
      start timer _gravelife_
 
@@ -694,9 +710,10 @@ _gravelife_ task:
 
 _graveclean_ task:
     killed 1 _zomb_ saying 1328
-    start task _firstcorpse_
+    log 1061 step 3
+    start task _firstsample_
 
-_firstcorpse_ task:
+_firstsample_ task:
     get item _gravesample_ saying 1317
     setvar _sam1_
 
@@ -748,7 +765,9 @@ _party_ task:
     restrain foe _partym_
 
 _baddies_ task:
-    enemies makehostile
+    unrestrain foe _partym_
+    unrestrain foe _partyt_
+    unrestrain foe _partyw_
 
 _ret1samp_ task:
     when _sam1_ and _evokerclicked_ and not _next_
@@ -771,7 +790,7 @@ _ret2samp_ task:
     clear _evokerclicked_
 
 _retsamples_ task:
-    when _next_ and _evokerclicked_ and _sam1_ or _sam2_
+    when _next_ and _evokerclicked_ and _allsamples_
     say 1140
     say 1141
     take _cryptsample_ from pc
@@ -780,9 +799,11 @@ _retsamples_ task:
     log 1057 6
     start timer _divining_
     clear _evokerclicked_
+    clear _allsamples_
 
 _bothsamples_ task:
-    when _sam1_ and _sam2_
+    when _firstsample_ and _secondsample_
+    setvar _allsamples_
     say 1324
     log 1056 5
 
@@ -805,6 +826,7 @@ _returntopriest_ task:
     take _talisman_ from pc
     say 1162
     log 1059 7
+    clear _priestclicked_
     start timer _waiting_
 
 _waiting_ task:
