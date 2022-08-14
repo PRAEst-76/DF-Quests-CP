@@ -3,6 +3,18 @@ DisplayName: In Every Dream Home... a dad
 -- Message panels
 QRC:
 
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+
 Message:  1035
 Excuse me %hnr. Can I help you?
 
@@ -78,6 +90,8 @@ Message: 1043
 Alas. I expected as much. My servant will show
 you out. I can find another, better, to the task.
 
+Message:  1044
+"Take this gold for your expenses."
 
 QBN:
 Place _grave_ remote graveyard
@@ -107,11 +121,11 @@ _thedad_ task:
     say 1040
     prompt 1041 yes _yesdad_ no _nodad_
 
+_yesdad_ task:
+    say 1042
+    give pc nothing
+    end quest
+
 _nodad_ task:
     say 1043
     end quest
-
-_yesdad_ task:
-    say 1042
-    end quest
-    

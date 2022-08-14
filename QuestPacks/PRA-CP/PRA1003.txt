@@ -568,6 +568,9 @@ expect to see or hear from you again.
 QBN:
 Item _stipend_ gold range 30 to 50
 Item _reward_ gold_bar
+Item _remains_ large_sack
+Item _altar_ lodestone
+Item _heart_ daedra_heart
 Item _bonemoney_ gold
 Item _deathnotice_ letter used 1201
 Item _deathnotice2_ letter used 1202
@@ -601,10 +604,6 @@ Place _dadhome_ remote wealthyhome
 Place _grave_ remote graveyard
 Place _lab_ remote dungeon9
 Place _othergrave_ remote graveyard
-
-Item _remains_ large_sack
-Item _altar_ lodestone
-Item _heart_ daedra_heart
 
 Foe _guards_ is 2 Warrior
 Foe _mum_ is 1 Spellsword
