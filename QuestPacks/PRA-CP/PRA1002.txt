@@ -41,7 +41,7 @@ I may call upon you again if the vermin
 dare threaten our town.
 
 RumorsDuringQuest:  [1005]
-Did you know _questgiver calls himself The Ratcatcher General? What a stupid title.
+Did you know _questgiver_ calls himself The Ratcatcher General? What a stupid title.
 
 Message: 1021
 This is the place, it stinks of _rats_ spoor!
@@ -158,7 +158,7 @@ Clock _destroyed2_ 00:10 00:20
 Clock _destroyed3_ 00:15 00:30
 Clock _plague_ 01:00 03:00
 
-Foe _rats_ is 2 Giant_rat
+Foe _rats_ is 3 Giant_rat
 Foe _morerats_ is 4 Giant_rat
 
 Item _lure_ large_sack
@@ -236,15 +236,15 @@ _3done_ task:
 
 _spawn1_ task:
 	when _inside1_ and not _1done_ and not _abandoned_
-    create foe _rats_ every 2 minutes indefinitely with 60% success
+    create foe _rats_ every 5 minutes indefinitely with 60% success
 
 _spawn2_ task:
 	when _inside2_ and not _2done_ and not _abandoned_
-    create foe _rats_ every 2 minutes indefinitely with 75% success
+    create foe _rats_ every 4 minutes indefinitely with 75% success
 
 _spawn3_ task:
 	when _inside3_ and not _3done_ and not _abandoned_
-    create foe _rats_ every 2 minutes indefinitely with 90% success
+    create foe _rats_ every 3 minutes indefinitely with 90% success
 
 _inside_ task:
     when _inside1_ or _inside2_ or _inside3_
@@ -262,7 +262,7 @@ _coward_ task:
     stop timer _timer_
     log 1104 step 4 
     start timer _plague_
-    create foe _rats_ every 6 minutes indefinitely with 50% success
+    create foe _rats_ every 10 minutes indefinitely with 50% success
     unset _inside_
 
 _qgclicked_ task:
@@ -273,17 +273,17 @@ _timer_ task:
 
 _nest1_ task:
     when not _1done_ and not _abandoned_ and not _destroyed1_ and _inside1_
-    create foe _morerats_ every 1 minutes indefinitely with 60% success msg 1022
+    create foe _morerats_ every 2 minutes indefinitely with 60% success msg 1022
     start timer _destroyed1_
 
 _nest2_ task:
     when not _2done_ and not _abandoned_ and not _destroyed2_ and _inside2_
-    create foe _morerats_ every 1 minutes indefinitely with 75% success msg 1022
+    create foe _morerats_ every 2 minutes indefinitely with 75% success msg 1022
     start timer _destroyed2_
 
 _nest3_ task:
     when not _alldone_ and not _abandoned_ and not _destroyed3_ and _inside3_
-    create foe _morerats_ every 1 minutes indefinitely with 90% success msg 1022
+    create foe _morerats_ every 2 minutes indefinitely with 90% success msg 1022
     start timer _destroyed3_
 
 _destroyed1_ task:

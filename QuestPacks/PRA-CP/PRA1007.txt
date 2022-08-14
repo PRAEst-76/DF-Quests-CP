@@ -63,31 +63,28 @@ Message:  1051
 _questgiver_ has just scurried out the door.
 No guards appear to be coming.
 <ce>
-You notice a local who glares at you and
-approaches.
+You notice a local who glares at you and approaches.
 
 Message:  1052
-%oth! What did you say to
-%g2?!
+"%oth! What did you say to %g2?!"
 <ce>
-You know what? It doesn't matter! _questgiver_
+"You know what? It doesn't matter! _questgiver_
 was doing well until some bloody %ra went and set
-%g2 off again.
+%g2 off again."
 <ce>
-Well, go on! Go and find %g2 before %g hurts
-%g2self or gets lost in a dungeon or something.
+"Well, go on! Go and find %g2 before %g hurts %g2self
+or gets lost in a dungeon or something."
 
 Message:  1053
-Try asking around town if anyone has seen %g2,
-or they know anything of note.
+"Try asking around town if anyone has seen %g2,
+or they know anything of note."
 <ce>
-Just bring %g2 back to me at _house_
-when you find %g2. Ask for _local0_.
+"Just bring %g2 to me at _house_
+when you find %g2. Ask for _local0_."
 <ce>
-If _questgiver_'s still in an agitated state you
-may have to... subdue %g2.
-I'd say %g probably just needs a bit
-of a lie down.
+"If _questgiver_'s still in an agitated state
+you may have to... subdue %g2. I'd say %g probably
+needs a bit of a lie down."
 
 Message: 1055
 _questgiver_? Yes, %g was here. Wouldn't leave.
@@ -245,7 +242,7 @@ _questgiver_ has some issues. I filed a report but it got closed.
 <--->
 _questgiver_ once told me that I looked rough because someone called Ninelan forgot about me. What a weird thing to say.
 <--->
-_questgiver_ has some insects inside %g2. So %g says. Crazy talk.
+_questgiver_ has some creepy crawlies inside %g2. So %g says. Crazy talk.
 
 Message: 1202
 _local0_ is a decent sort. Always looking out for that poor _questgiver_. Lives at _house_ in __house_.
@@ -305,7 +302,7 @@ Place _temple_ remote temple
 Item _deathnotice_ letter used 1250
 Item _reward_ gold
 
-Foe _lunatic_ is Monk
+Foe _lunatic_ is Warrior
 
 Clock _fled_ 01:00 12:00
 Clock _fled1_ 5:00 1.00:00
@@ -327,7 +324,6 @@ variable _location3_
 variable _location4_
 variable _rescued_
 variable _treated_
-variable _friendclicked_
 
 --	Quest start-up:
     say 1050
@@ -371,7 +367,9 @@ _runrabbit_ task:
     say 1059
     hide npc _questgiver_
     say 1304
-    create foe _lunatic_ every 0 minutes 1 times with 100% success
+    place foe _lunatic_ at _store_
+    place foe _lunatic_ at _res_
+    place foe _lunatic_ at _remtav_
 
 _subdued_ task:
     injured _lunatic_

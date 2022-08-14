@@ -1,0 +1,49 @@
+Quest: PRA1003farm
+DisplayName: In Every Dream Home... a farm
+-- Message panels
+QRC:
+
+Message:  1027
+"Who are you? It matters not. Who sent you? It matters not."
+<ce>
+"My beloved... is gone. All is gone."
+<ce>
+"Please leave me. I wish to be alone."
+
+Message:  1028
+The maid of the house stops you and whispers,
+"Please, %hnr. I must speak to you outside."
+
+Message:  1033
+<ce>The poor man wouldn't speak to me, maybe someone
+<ce>else here will?
+
+QBN:
+
+Place _farmhouse_ local house
+
+Person _widower_ group Resident1 male
+
+Clock _maidhere_ 00:01
+
+variable _infarmhouse_
+
+--	Quest start-up:
+    place npc _widower_ at _farmhouse_
+    pc at _farmhouse_ set _infarmhouse_
+
+_widowerclicked_ task:
+    clicked npc _widower_
+
+_thewidower_ task:
+    when _widowerclicked_
+    say 1027
+    say 1033
+    start timer _maidhere_
+
+_maidhere_ task:
+    say 1028
+
+_lefthouse_ task:
+    when _maidhere_ and not _infarmhouse_     
+    end quest

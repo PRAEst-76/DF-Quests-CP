@@ -34,13 +34,13 @@ Only a few hours. No longer. Honest. I will meet
 you at my home, once my business has concluded."
 <ce>
 She turns to leave, "I shall be at _house_
-in __house_ in around six hours. No longer. I
-promise. Maybe twelve..."
+in around six hours. No longer. I promise. Maybe twelve..."
 <ce>
-"I shall return in no less than a day. Please
-take care of my beautiful boy! I love you."
+The woman heads for the door, "I shall return in no less
+than a day. Please take care of my beautiful boy!
+I love you."
 <ce>
-"See you tomorrow!" and with that she is gone.
+"See you tomorrow, %pcf!" and with that she is gone.
 
 QuestFail:  [1003]
 <ce>                You failed to take care of the child.
@@ -836,6 +836,9 @@ Message:  1307
 Message:  1308
 <ce>            Actually it looks like it's just an old lady.
 
+Message:  1316
+The old lady gives you a few coins to buy the kid a treat.
+
 Message:  1317
 <ce>The child spots a cat and tries to chase
 <ce>after it, luckily you manage to keep a hold
@@ -1072,6 +1075,7 @@ Foe _knights_ is 2 Knight
 Foe _brokermad_ is Thief
 
 Item _statue_ totem
+Item _pocketmoney_ gold range 3 to 6
 Item _note_ letter used 1201
 Item _invoice_ letter used 1209
 Item _claim_ letter used 1202
@@ -1199,6 +1203,7 @@ _olddear4_ task:
     say 1117
     add dialog for person _father_
     say 1118
+    get item _pocketmoney_ saying 1316
     say 1119
     start timer _cat_
 
