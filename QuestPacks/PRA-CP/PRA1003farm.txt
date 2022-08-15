@@ -3,12 +3,25 @@ DisplayName: In Every Dream Home... a farm
 -- Message panels
 QRC:
 
+Message:  1026
+"Oh, the lady sent you?! In that case he is inside."
+<ce>
+The tired looking man gestures hastily towards the
+farm building.
+<ce>
+"Please try to talk him out of his doom! He was a
+good man... IS a good man, and did not deserve
+any of this. This farm is dying without him."
+
 Message:  1027
-"Who are you? It matters not. Who sent you? It matters not."
+You find the widower slumped in an old chair,
+staring at a cold fireplace, "Who are you?
+Who sent you? Her mother, father? It matters not..."
 <ce>
 "My beloved... is gone. All is gone."
 <ce>
-"Please leave me. I wish to be alone."
+He waves you away feebily, "Please leave me be.
+I wish to be alone. Get out."
 
 Message:  1028
 The maid of the house stops you and whispers,
@@ -22,21 +35,16 @@ QBN:
 
 Place _farmhouse_ local house
 
-Person _widower_ group Resident1 male
-
 Clock _maidhere_ 00:01
 
 variable _infarmhouse_
 
 --	Quest start-up:
-    place npc _widower_ at _farmhouse_
     pc at _farmhouse_ set _infarmhouse_
-
-_widowerclicked_ task:
-    clicked npc _widower_
+    say 1026
 
 _thewidower_ task:
-    when _widowerclicked_
+    when _infarmhouse_
     say 1027
     say 1033
     start timer _maidhere_

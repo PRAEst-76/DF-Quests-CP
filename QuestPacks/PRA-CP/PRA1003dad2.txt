@@ -1,0 +1,77 @@
+Quest: PRA1003dad2
+DisplayName: In Every Dream Home... another dad
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+That wizard is just a crazy old man.
+<-->
+Stay away from _dadhouse_. I hear noises. Bad noises.
+
+Message:  1046
+"You return. You have the... yes. My daughter."
+<ce>
+He takes the bundle from you.
+<ce>
+"How small she seems. Like when... No matter. The
+deed is done. This family thanks you, or they
+will thank you when our daughter is back with
+us once more."
+
+Message:  1047
+"There is but one more step. I shall prepare her
+remains. If you wish to help me see this through
+and return my beautiful daughter to this world
+and her beloved then return this time tomorrow."
+<ce>
+"I shall tell you what needs to be done then.
+For now, take this small payment for your deeds
+thus far and go and rest at the local inn.
+You have earned it, and more my friend."
+
+Message:  1048
+"You return once more. Good. I was concerned you
+would have been reluctant to help any further.
+I'll admit this is a diffcult task, for you and
+for us. But a necessary one."
+
+QBN:
+Place _dadhouse_ local house
+
+Clock _rested_ 1.00:00
+Clock _coward_ 5.00:00 10.00:00
+
+Item _gratuity_ gold range 50 to 100
+
+variable _indadhouse_
+variable _rested_
+
+--	Quest start-up:
+    pc at _dadhouse_ set _indadhouse_
+
+_dadshome_ task:
+    when _indadhouse_
+    say 1046
+    give pc _gratuity_ notify 1047
+    start timer _rested_
+    start timer _coward_
+
+_continue_ task:
+    when _rested_ and _indadhouse_
+    stop timer _coward_
+    say 1048
+    give pc nothing 
+    end quest
+
+_coward_ task:
+    end quest

@@ -16,116 +16,114 @@ QuestComplete:  [1004]
 RumorsDuringQuest:  [1005]
 
 Message:  1035
-Excuse me %hnr. Can I help you?
+You are stopped at the door by a grim looking butler,
+"Excuse me %hnr. Can I help you?"
 
 Message:  1036
-Ah yes, you are here from the farm. Terrible
-business. Just terrible.
+You inform him of your business.
 <ce>
-Please. His Lordship is inside. You may go
-through.
+"Ah yes, you are here from the farm. Terrible
+situation. Just terrible!"
 <ce>
-He is grieving, as you understand, so please be
-mindful.
+He waves you through, "Please. His Lordship is inside.
+You may go and speak to him."
+<ce>
+"He is grieving, as you understand, so please be
+mindful."
 
 Message:  1037
-So the maid sent you?
+The father is an imposing man, stood before the fireplace.
 <ce>
-She is a good sort, that one.
+"So the maid sent you? She is a good sort, that one."
 <ce>
-My son-in-law is in a bad place, we all are, but
-his loss has felled him.
+He looks into the flames, "My son-in-law is in a bad
+place, as are we all... but his loss has felled him."
 <ce>
-He knows not why his beloved would leave him so.
+"He knows not why his beloved would leave him so.
 She was a troubled girl, in her youth, but happy
-she was, with him. We had hoped for
-grandchildren.
+she was with him. We had hoped for grandchildren..."
 <ce>
-Alas, we shall never see them now.
+He closes his eyes, "Alas, we shall never see them now."
 
 Message:  1038
-They talked of my solution?
+"They talked of my solution?" he raises an eyebrow.
 <ce>
-Surely they expect money. But the farm as it is
+"Surely they expect money. But the farm as it is
 would be just a bottomless pit for me to toss my
-wealth into. I may as cast it to Oblivion.
+wealth into. I may as cast it to Oblivion."
 <ce>
-No. I have a better solution. One that helps us
-all. My son, the farm, my... wife.
+He finally turns to you, "No. I have a better
+solution. One that helps us all. My son, the farm,
+my... wife."
 <ce>
-And my beautiful daughter.
+"And my beautiful daughter."
 
 Message:  1039
-I am a mage of considerable power and means,
-%pcf.
+He raises himself to his full height,
+"I am a mage of considerable power and means,
+%pcf."
 <ce>
-There are magics the Mages Guild dare not speak
+"There are magics the Mages Guild dare not speak
 of. For they are fearful of the power. This is a
-truth.
+truth."
 <ce>
-I can bring my daughter back to this world %pcf.
-Back to us and the farm. I have that power.
+"I can bring my daughter back to this world %pcf.
+Back to us and the farm! I have that power!"
 
 Message:  1040
-Her mother will hear none of this and my son will
-hear nothing at all in his current state.
+"Her mother will hear none of this and my son will
+hear nothing at all in his current state."
 <ce>
-I will need you to go to the crypt where my
-daugher is interred and bring me back her remains.
+"I will need you to go to the crypt where my
+daugher is interred and bring me back her remains."
 <ce>
-This... is dirty work, but it is for my family.
+"This... is dirty work, but it is for my family.
 I am confident I can do this and you know I can
 reward you beyond the reward of seeing a family
-together again.
+together again."
 
 Message:  1041
-Can you do this for me? For us?
+"Can you do this for me? For us?"
 
-Message: 1042
-Good! So go now to ___grave_ and bring my little
-girl back to me. Time is of the essence, so do
-not tarry in your task.
+Message:  1042
+"Good! Good!"
+<ce>
+He shows you a map, "Her grave is here. Go and bring
+my little girl back to me. Time is of the essence, so
+do not tarry in your task. Let none stand in your way."
 
 Message: 1043
-Alas. I expected as much. My servant will show
-you out. I can find another, better, to the task.
-
-Message:  1044
-"Take this gold for your expenses."
+"Alas. I expected as much. My servant will show
+you out. I can find another, better, to the task."
 
 QBN:
-Place _grave_ remote graveyard
-Place _dadhouse_ local house
-
-Person _father_ group Noble male
+Place _dadhouse_ local house2
 
 variable _indadhouse_
 
+Clock _thedad_ 00:01
+
 --	Quest start-up:
     pc at _dadhouse_ set _indadhouse_
-    place npc _father_ at _dadhouse_
 
 _dadshome_ task:
     when _indadhouse_
     say 1035
     say 1036
-
-_fatherclicked_ task:
-    clicked npc _father_
+    start timer _thedad_
 
 _thedad_ task:
-    when _fatherclicked_ 
     say 1037
     say 1038
     say 1039
     say 1040
-    prompt 1041 yes _yesdad_ no _nodad_
+    prompt 1041 yes _yes_ no _no_
 
-_yesdad_ task:
+_yes_ task:
     say 1042
     give pc nothing
     end quest
 
-_nodad_ task:
+_no_ task:
     say 1043
     end quest

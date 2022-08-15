@@ -1,0 +1,47 @@
+Quest: PRA1003grave
+DisplayName: In Every Dream Home... a grave
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+
+Message: 1010
+I'm here, now to find the girls tomb.
+
+Message: 1011
+I've collected her remains in a sack.
+Now to get them back to her father.
+
+QBN:
+
+--Place _tomb_ local anywhere
+
+Item _remains_ large_sack
+
+Clock _searching_ 00:01
+
+variable _intomb_
+variable _searching_
+
+--	Quest start-up:
+--    place item _remains_ at _tomb_
+--    pc at _tomb_ set _intomb_
+    say 1010
+    start timer _searching_
+
+_remains_ task:
+    when _searching_
+--  when _intomb_
+--    clicked item _remains_ say 1011
+    get item _remains_ saying 1011
+    end quest
