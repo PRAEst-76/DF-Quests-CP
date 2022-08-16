@@ -1,0 +1,279 @@
+Quest: PRA1002b
+DisplayName: Rage of the Ratcatcher
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:   [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+
+--Logs
+Message:  1050
+%qdt:
+I have received a letter from _questgiver_, the self-styled
+Ratcatcher General. It's barely legible, but it seems %g
+wants me to meet %g2 at _tav_ in __tav_
+to discuss a 'special task'.
+
+Message:  1051
+%qdt:
+I found _questgiver_ in _tav_ worse for wear.
+There was a small altercation and I've had to take him
+to his rooms to sleep it off. I should go by in the morning and see if he's making any more sense then.
+
+Message:  1100
+<ce>A messenger approaches and hands you a letter.
+
+Message:  1101
+<ce>This badly written letter is from The Ratcatcher General,
+<ce>looks like he is at _tav_ in __tav_ and needs your help
+<ce>again.
+
+Message:  1102
+As you enter a voice rings out, "There %g is!
+%pcf! My old buddy-in-arms!"
+<ce>
+It's _questgiver_, the self-styled Ratcacher General.
+And %g is obviously very, very drunk.
+<ce>
+"%pcf! Over here! Wait til you lads see what they can do!"
+"%pcf! Destroy that table!"
+
+Message:  1103
+"Sit down _questgiver_, before you fall down!" yells
+the barman.
+<ce>
+"You a friend of %g3? Fool's been drinking for days.
+Making a right mess here %g has. You're here now.
+Deal with %g2."
+
+Message:  1104
+The Ratchacher spins on %g2 heel and points %g3 finger
+at the place the barman would have been if he had been
+somewhere else entirely.
+<ce>
+"You don't... never speak to %pcf like that! Never!
+%pcf is my comrade! We slew many beasts together..."
+
+Message:  1105
+A shabby man sitting near the door responds,
+"You killed many rats, mate. My dog does that
+and he's got a gammy leg and can't see."
+
+Message:  1106
+"You know nothing of our quarry %mn! Nothing!"
+yells the Ratcatcher in general direction of the man.
+"Come on! Come with us now! See what we face!
+You'll fill your old britches quick enough!"
+
+Message:  1107
+The barman addresses you again with more urgency,
+"Seriously %ra, shut %g2 up or get %g2 out."
+
+Message:  1108
+"C'mon.... All of you. I'll show you the horrors
+that skulk in your homes when you slumber.
+Eating the fingers of babes."
+<ce>
+<ce>Make %g2 shut up?
+
+Message:  1109
+You put your hand on %g3 shoulder and %g1 spins around,
+loses %g3 balance and lands on the floor, tries to get
+up, fails miserably, then goes to sleep like a crumpled
+up corpse.
+
+Message:  1110
+The barman claps his hands together, "Right. Well that's
+%g2 shut up. Get %g2 to %g3 room %ra. When %g1 wakes up
+in the morning, get %g2 the hells out. You can have
+%g3 gear once %g3 tab is paid ...and it's not pretty."
+
+Message:  1111
+"Rats are smarter than you think. Smarter than all of
+you!"
+<ce>
+The barman booms at you, "%ra!"
+
+Message:  1112
+A large man sitting at a table nearby slams down his
+tankard and stands up, "You're not smarter than my
+fist Ratmuncher!"
+<ce>
+He takes a swing at the Ratcatcher who accidentally
+sways out of the way and the fist hits you instead.
+
+Message:  1113
+The fight over you look around to see where the
+_questgiver_ is and find %g2 passed out in the corner.
+You would think %g2 dead if it wasn't for %g2 snoring
+like an elderly bear
+
+Message:  1114
+You should probably take %g2 to %g3 rooms to sleep it off.
+
+Message:  1115
+_questgiver_ weighs more than %g looks.
+
+Message:  1116
+You dump _questgiver_ in %g3 room on the bed.
+In %g3 sleep %g mumbles something a king, farts and
+rolls over.
+<ce>
+Best give %g2 time to sleep it off.
+
+Message:  1117
+I should maybe check on _questgiver_.
+
+Message:  1118
+"Oh, hello _questgiver_. You got my letter then?
+Good. I was wondering when you would show up."
+
+Message:  1119
+_questgiver_ is still snoring. Occasionally he whimpers
+and cries out for someone called _wife_.
+<ce>
+Probably best give him another few hours.
+
+Message: 1201
+Hi %pcf,
+<ce>
+tis me righting you the ratcatcher genral you might 
+remeeber we done a clean of the properties here in
+___questgiver_ i am sure you are busy with your things
+and all but I could use your assistance been working few
+towns lately and it as been heavy work much heavyer than
+usual i know i know iam no youngster but something is not
+right about the rats we done in behaviour has been off they
+semm more aggresive and almost targetted i do not belive in
+no rat king nonsense, but I have been in this game long
+enough to recognise when things just are not right.
+<ce>
+sos i culd use your help again if you can meet me at
+_tav_ got a special task for us
+<ce>
+do not be late they have happy hour
+
+Message:  1202
+Dad,
+<ce>
+Mum showed me the letter you wrote her. Just don't.
+She's got a new life now. Away from the filth that
+follows you. Leave her alone. Leave me alone.
+You'll never change. We know that now. We gave you
+all the chances we could.
+<ce>
+I've told her to burn any further letters she receives
+with your awful tell-tale writing on them. Neither me
+nor her want you in our lives anymore. Leave us alone!
+<ce>
+Goodbye dad. I love you, but I never want to see or
+hear from you again.
+<ce>
+                                Your daughter,
+                                    _daughter_
+QBN:
+Item _letter_ letter used 1201
+Item _letter2_ letter used 1202
+Item rcsleep dead_body
+Item _reward_ gold
+
+Clock _delivery_ 00:01
+Clock _awake_ 10:00 1.00:00
+Clock _check_ 1:00
+
+Foe _thug_ is Barbarian
+
+Person _questgiver_ group Questor male
+Person _daughter_ group Resident1 female
+Person _wife_ group Resident2 female
+
+Place _tav_ local tavern
+Place _dun_ remote dungeon
+
+variable _attav_
+variable _sleeper_
+variable _check_
+
+--	Quest start-up:
+	start timer _delivery_
+    pc at _tav_ set _attav_
+    _letter_ used do _letterread_
+    have rcsleep set _sleeper_
+
+_delivery_ task:
+    get item _letter_ saying 1100
+    place npc _questgiver_ at _tav_
+    place item _letter2_ at _tav_
+
+_letterread_ task:
+    say 1101
+    log 1050 1
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_drunk_ task:
+    player within 4 units of item _letter2_
+    say 1102
+    say 1103
+    say 1104
+    say 1105
+    say 1106
+    say 1107
+    prompt 1108 yes _sleep_ no _fight_
+
+_sleep_ task:
+    say 1109
+
+_over_ task:
+    when _thugdone_ or _sleep_
+    hide npc _questgiver_
+    place item rcsleep at _tav_
+    say 1110
+    say 1114
+
+_fight_ task:
+    say 1111
+    say 1112
+    place foe _thug_ at _tav_
+
+_thugdone_ task:
+    killed _thug_
+    say 1113
+
+_tobed_ task:
+    when _sleeper_
+    add _questgiver_ face
+    say 1115
+
+_inbed_ task:
+    dropped rcsleep at _tav_ saying 1116
+    drop _questgiver_ face
+    log 1051 2
+    start timer _awake_
+    start timer _check_
+
+_notcorpse_ task:
+    player within 2 units of item rcsleep
+
+_notawake_ task:
+    when _inbed_ and _check_ and _notcorpse_ and not _awake_
+    say 1119
+
+_awake_ task:
+    say 1117
+    place item rcsleep at _dun_
+    place npc _questgiver_ at _tav_
+
+_thetask_ task:
+    when _qgclicked_ and _awake_
+    say 1118
