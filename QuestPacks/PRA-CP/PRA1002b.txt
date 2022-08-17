@@ -27,7 +27,20 @@ Message:  1051
 %qdt:
 I found _questgiver_ in _tav_ worse for wear.
 There was a small altercation and I've had to take him
-to his rooms to sleep it off. I should go by in the morning and see if he's making any more sense then.
+to his rooms to sleep it off. I should go by in the morning
+and see if he's making any more sense then.
+
+Message: 1052
+%qdt:
+_questgiver_ can't do anything until his bar tab has
+been paid at _tav_. He owes _bartab_ gold.
+I may have to pay it for him.
+
+Message: 1053
+%qdt:
+_questgiver_ thinks the rats are behaving strangely.
+He wants us to catch one of the horde and take it to
+_mages_ in __mages_ where they will perform some tests.
 
 Message:  1100
 <ce>A messenger approaches and hands you a letter.
@@ -134,8 +147,145 @@ Message:  1117
 I should maybe check on _questgiver_.
 
 Message:  1118
-"Oh, hello _questgiver_. You got my letter then?
-Good. I was wondering when you would show up."
+"Oh, hello _questgiver_. You got my letter then? Good. I was wondering when you would show up. I was almost getting my things ready to leave. Slight problem there though. My... host, took my gear while I was indesposed and won't return it until I settle up with him. Sad fact is, I don't have that kind of gold. Perhaps you could have a word with him for me? Maybe talk him round?"
+
+Message: 1120
+I suppose you've come for _questgiver_'s gear? As I told you last night, he gets it back when he's settled the tab. Which is _bartab_.
+<ce>Try to talk the barman down?
+
+Message: 1121
+No doing. He caused damage during his stay. Both to the furniture and my tavern's reputation. Do you think everyone wants to hear the ins and outs of killing rats every night? I'd almost swear he was planted here by the competition.
+He gets his rat killing stuff back when I get _bartab_ in my hand. Either from him or from you.
+<ce>Pay his tab?
+
+Message: 1122
+Look. I've nothing against the guy. I feel sorry for him, really. No-one cares for rat-catchers, but it's a necessary job. I want him out of here as much as you do. I've got a business to run.
+Tell you what, I'll take _smalltab_. Call it even.
+<ce>Pay the reduced tab?
+
+Message: 1123
+Look. I want him out, he's caused chaos since he's been here. If he's not offending the customers with stories about killin' rats, he's depressing them with stories about how his killin' rats drove away his missus...
+Tell you what. Do a little favour for me and I'll wipe the tab and let you have his gear? It's nothing dangerous or illegal, really.
+Deal?
+
+Message: 1124
+Ok, well I tried to be reasonable. I need that tab covered IN FULL within the week, or I sell his gear to recoup my losses. It won't, but it'll get rid of the smell.
+Oh, and he's not to come back here again.
+
+Message: 1125
+I can't do ratcatching without my gear %pcf. Can't even make the money without being able to catch rats. No idea how I can get that within a week.
+
+Message: 1126
+I'll make it up to you %pcf, I promise.
+Anyway, I got a job for us. Hamlet, major issue with
+these vindictive rats. Going to need to try something
+different this time. Going to need to take one of these
+buggers alive. Got a mage friend who owes me for clearing
+his guild a while ago. He's going to cast some magicks
+on the thing and see what evil is driving it.
+Some evil is driving these things now. I swear.
+
+Message: 1127
+Same as before. You take the bait, draw the rats,
+I'm going to try to grab one and bag it. Might take
+a few attempts because they don't like going in the bag.
+
+Message: 1128
+OK. Got one. Festy bugger. I'll take back the bait, you
+take the ratbag.
+
+Message: 1129
+Dammit. He got out.
+
+Message: 1130
+Let's try that again.
+
+Message: 1131
+_questgiver_! Look here everyone. The great Ratchatcher General is back!
+
+Message: 1132
+Ok, yeah. I rememeber. I said I'd help you look into this rat plague as a favour for helping us with our rat problem.
+Do you see where I'm going with this? Maybe the scrabbling in the walls or the incesant squeaking might help.
+
+Message: 1133
+Ok %pcf, looks like things are getting worse. We need to clear this place again. I don't know why they are here again. I cleared this place weeks ago. I swear. They usually don't return this quickly.
+
+Message: 1134
+Well, thanks _questgiver_. You've dealt with our rat problem. Again. Howe can we ever repay you... etc.
+Where's the live one we needed?
+
+Message: 1135
+This place was swarming with the buggers. Why did you need me to bring one when you could have just picked one up off the floor.
+
+Message: 1136
+We're mages, _questgiver_, not Ratcatchers. Wouldn't want to step on your toes and have the full weight of the Ratcatchers Guild ontop of us.
+
+Message: 1137
+Ok, enough smarm. Here's your bagged rat. See if you can find out what magics is riving these things.
+
+Message: 1138
+have you ever thought that maybe they've just set up a rival guild. Maybe you should speak to The Rat King?
+
+Message: 1139
+Shut up about The Rat King. There's no such thing as a rat king.
+
+Message: 1140
+Just because you haven't seen one doesn't mean they don't exist.
+
+Message: 1141
+Just do your magicks on the rat and let me know what you find. It won't be no rat king. Probably something one of you lot did messing about with things that your noses don't belong in.
+
+Message: 1142
+Don't have time for that _questgiver_, with all the jobs the likes of you dump on us then somehow manage to blame us for.
+
+Message: 1143
+Two attacks in... what? A month? I know I brag but once I clear a house it stays cleared, usually for years. I killed all your rats. These ones... they came after. Like they was wanting something.
+
+Message: 1144
+I'm as curious as you Ratcatcher. You may be barely human and smell like a latrine, but you are good at what you do. Give me a week.
+
+Message: 1145
+%pcf! Ratcatcher! Quickly come to _mages_. They've been attacked again.
+
+Message: 1146
+Quickly %pcf, to the _mages_. This is not normal.
+
+Messages: 1147
+They came out of no-where. Ran amok. Then they found your specimen and killed it. It was like an assassination.
+
+Messages: 1148
+Damn! Please tell me you were able to run tests on it before...
+
+Message: 1149
+Yes. Thouroughly and more during the attack. These rats are not magically enhanced. They are just normal, smelly, vicious, diseased giant rats that are somehow gathering in warlike tribes.
+
+Message: 1150
+Enough sarcasm. What did you find?!
+
+Message: 1151
+No sarcasm Ratcatcher. Furthermore these rat attacks seem to be following you. Haven't you noticed? They go where you are. Or where you are heading. If yhere were rat attacks on this scale all over the province we'd know about it. You are drawing the rats Ratcatcher. You and your friend. I know not why, but I would quite appreciate if you got out of our town and didn't return.
+
+Message: 1152
+What? This is not my doing! I kill rats...
+
+Message: 1153
+and they hate you for it. Ever think that maybe you've just killed so many of them that those that remain have decided to deal with you to save themselves?
+Regardless. This is your problem. And yours only. Please leave. Take your friend and your foul accoutrements and don't darken our guild or town again.
+
+Message: 1154
+%pcf... I think I need to stop and think. I do my best thinking in the tavern. Lets go to the tavern.
+
+Message: 1155
+Ratcatcher!
+
+Message: 1156
+Yeah, we know your game. Bet he's carrying them in a bag and releasing them then comes round thinking he can just waltz in and 'save' us. Get out.
+
+Message: 1157
+Ratcatcher! I think it might be for the best if you and your friend left town. Don't you? For your own good you understand. People aren't too happy with you right now. Can't blame them.
+
+Message: 1158
+I didn't... %pcf? You know me. I wouldn't. Ratcatching is my life. I wouldn't bsmirch the name of my craft. You must belive me!
 
 Message:  1119
 _questgiver_ is still snoring. Occasionally he whimpers
@@ -191,6 +341,7 @@ Clock _awake_ 10:00 1.00:00
 Clock _check_ 1:00
 
 Foe _thug_ is Barbarian
+Foe _rats_ is 2 Giant_rat
 
 Person _questgiver_ group Questor male
 Person _daughter_ group Resident1 female
@@ -198,6 +349,8 @@ Person _wife_ group Resident2 female
 
 Place _tav_ local tavern
 Place _dun_ remote dungeon
+Place _hamlet_remote Hamlet
+Place _mages_ local magery
 
 variable _attav_
 variable _sleeper_
