@@ -36,12 +36,18 @@ _questgiver_ can't do anything until his bar tab has
 been paid at _tav_. He owes _bartab_ gold.
 I may have to pay it for him.
 
-Message: 1053
+Message:  1053
+%qdt:
+I've helped _questgiver_ settle his bartab. Now we can get down
+to business.
+
+Message: 1054
 %qdt:
 _questgiver_ thinks the rats are behaving strangely.
 He wants us to catch one of the horde and take it to
 _mages_ in __mages_ where they will perform some tests.
 
+-- Dialogues
 Message:  1100
 <ce>A messenger approaches and hands you a letter.
 
@@ -51,13 +57,13 @@ Message:  1101
 <ce>again.
 
 Message:  1102
-As you enter a voice rings out, "There %g is!
+As you enter a voice rings out, "There %pg is!
 %pcf! My old buddy-in-arms!"
 <ce>
 It's _questgiver_, the self-styled Ratcacher General.
 And %g is obviously very, very drunk.
 <ce>
-"%pcf! Over here! Wait til you lads see what they can do!"
+"%pcf! Over here! Wait til you lads see what %pg can do!"
 "%pcf! Destroy that table!"
 
 Message:  1103
@@ -69,9 +75,9 @@ Making a right mess here %g has. You're here now.
 Deal with %g2."
 
 Message:  1104
-The Ratchacher spins on %g2 heel and points %g3 finger
-at the place the barman would have been if he had been
-somewhere else entirely.
+The Ratchacher spins on %g3 heel and points %g3 finger
+at the place the barman would have been if the barman
+had been somewhere else entirely.
 <ce>
 "You don't... never speak to %pcf like that! Never!
 %pcf is my comrade! We slew many beasts together..."
@@ -147,33 +153,97 @@ Message:  1117
 I should maybe check on _questgiver_.
 
 Message:  1118
-"Oh, hello _questgiver_. You got my letter then? Good. I was wondering when you would show up. I was almost getting my things ready to leave. Slight problem there though. My... host, took my gear while I was indesposed and won't return it until I settle up with him. Sad fact is, I don't have that kind of gold. Perhaps you could have a word with him for me? Maybe talk him round?"
+"Oh, hello %pcf. You got my letter then? Good.
+I was wondering when you would show up. I was almost
+getting my things ready to leave."
+
+Message:  1162
+"Slight problem there though. My... host, a lovely man
+here called _barkeep_ took my gear while I was...
+indesposed and won't return it until I settle up with
+him. Sad fact is, I don't have that kind of gold right
+now.
+<ce>
+Perhaps you could have a word with him for me?
+Maybe talk him round? Oh, speak of the demon..."
 
 Message: 1120
-I suppose you've come for _questgiver_'s gear? As I told you last night, he gets it back when he's settled the tab. Which is _bartab_.
+"I suppose you've come for _questgiver_'s gear?
+As I told you last night, he gets it back when he's
+settled the tab. Which is 150g."
+<ce>
 <ce>Try to talk the barman down?
 
 Message: 1121
-No doing. He caused damage during his stay. Both to the furniture and my tavern's reputation. Do you think everyone wants to hear the ins and outs of killing rats every night? I'd almost swear he was planted here by the competition.
-He gets his rat killing stuff back when I get _bartab_ in my hand. Either from him or from you.
+"No doing. He caused damage during his stay. Both to the
+furniture and my tavern's reputation. Do you think
+everyone wants to hear the ins and outs of killing rats
+every night? I'd almost swear he was planted here by the
+competition."
+<ce>
+"He gets his rat killing stuff back when I get 150g
+in my hand. Either from him or from you."
+<ce>
 <ce>Pay his tab?
 
 Message: 1122
-Look. I've nothing against the guy. I feel sorry for him, really. No-one cares for rat-catchers, but it's a necessary job. I want him out of here as much as you do. I've got a business to run.
-Tell you what, I'll take _smalltab_. Call it even.
+"Look. I've nothing against the guy. I feel sorry for
+him, really. No-one cares for rat-catchers, but it's a
+necessary job. I want him out of here as much as you do.
+I've got a business to run."
+<ce>
+"Tell you what, I'll take 75g. Call it even."
+<ce>
 <ce>Pay the reduced tab?
 
 Message: 1123
-Look. I want him out, he's caused chaos since he's been here. If he's not offending the customers with stories about killin' rats, he's depressing them with stories about how his killin' rats drove away his missus...
-Tell you what. Do a little favour for me and I'll wipe the tab and let you have his gear? It's nothing dangerous or illegal, really.
-Deal?
+Look. I want him out, he's caused chaos since he's been here.
+If he's not offending the customers with stories about killin'
+rats, he's depressing them with stories about how his killin'
+rats drove away his missus..."
+<ce>
+"Tell you what. Do a little favour for me and I'll wipe the tab
+and let you have his gear? It's nothing dangerous or illegal,
+really. Deal?"
+
+Message:  1165
+Are you ready to pay up?
+
+Message:  1163
+Ok. Here's what I need you to do. I've got some clothes here.
+I want you to take them to _othertav_ and leave them in one
+of the back rooms. Simple. Like I said. No risk. Then you
+get _questgiver_'s gear.
+
+Message:  1164
+Ok. Ok. So there's a bit of skullduggery here. Clothes
+belong to a lady I... know. When her husband finds them
+there, and he will, he's going to think the proprieor
+is doing his missus. He'll be livid with him.
+
+Message:  1159
+<ce>You don't have enough gold.
+
+Message:  1160
+Right. Here's his stuff. He's not welcome back here again.
 
 Message: 1124
-Ok, well I tried to be reasonable. I need that tab covered IN FULL within the week, or I sell his gear to recoup my losses. It won't, but it'll get rid of the smell.
-Oh, and he's not to come back here again.
+"Ok, well I tried to be reasonable. I need that tab covered
+IN FULL within the week, or I sell his gear to recoup my losses.
+It won't, but it'll get rid of the smell."
+<ce>
+"Oh, and he's not to come back here again."
+
+Message:  1161
+Well, _barkeep_ will have sold or dumped my stuff by now.
+That's me out of the game.
+Been nice knowing you _questgiver_ but I'm off to live
+under a bridge.
 
 Message: 1125
-I can't do ratcatching without my gear %pcf. Can't even make the money without being able to catch rats. No idea how I can get that within a week.
+I can't do ratcatching without my gear %pcf. Can't even
+make the money without being able to catch rats.
+No idea how I can get that within a week.
 
 Message: 1126
 I'll make it up to you %pcf, I promise.
@@ -250,10 +320,10 @@ Message: 1145
 Message: 1146
 Quickly %pcf, to the _mages_. This is not normal.
 
-Messages: 1147
+Message: 1147
 They came out of no-where. Ran amok. Then they found your specimen and killed it. It was like an assassination.
 
-Messages: 1148
+Message: 1148
 Damn! Please tell me you were able to run tests on it before...
 
 Message: 1149
@@ -334,27 +404,32 @@ QBN:
 Item _letter_ letter used 1201
 Item _letter2_ letter used 1202
 Item rcsleep dead_body
-Item _reward_ gold
+Item _bartab_ gold range 100 to 200
+Item _smalltab_ gold range 50 to 100
+Item _bait_ small_sack
+Item _evidence_ womens_clothing
 
 Clock _delivery_ 00:01
-Clock _awake_ 10:00 1.00:00
-Clock _check_ 1:00
+Clock _awake_ 08:00 12:00
+Clock _check_ 3:00
+Clock _destitute_ 7.00:00
 
 Foe _thug_ is Barbarian
 Foe _rats_ is 2 Giant_rat
 
 Person _questgiver_ group Questor male
+Person _barkeep_ group Innkeeper male
 Person _daughter_ group Resident1 female
 Person _wife_ group Resident2 female
 
 Place _tav_ local tavern
-Place _dun_ remote dungeon
-Place _hamlet_remote Hamlet
+Place _othertav_ local tavern
 Place _mages_ local magery
 
 variable _attav_
 variable _sleeper_
 variable _check_
+variable _overdue_
 
 --	Quest start-up:
 	start timer _delivery_
@@ -362,14 +437,22 @@ variable _check_
     _letter_ used do _letterread_
     have rcsleep set _sleeper_
 
+_merc_ task:
+    when skill Mercantile is at least 25
+
+_smart_ task:
+    when attribute Intelligence is at least 60
+
 _delivery_ task:
     get item _letter_ saying 1100
     place npc _questgiver_ at _tav_
+    place npc _barkeep_ at _tav_
     place item _letter2_ at _tav_
+    hide npc _barkeep_
 
 _letterread_ task:
     say 1101
-    log 1050 1
+    log 1050 0
 
 _qgclicked_ task:
     clicked npc _questgiver_
@@ -397,7 +480,7 @@ _over_ task:
 _fight_ task:
     say 1111
     say 1112
-    place foe _thug_ at _tav_
+    create foe _thug_ every 0 minutes 1 times with 100% success
 
 _thugdone_ task:
     killed _thug_
@@ -411,7 +494,7 @@ _tobed_ task:
 _inbed_ task:
     dropped rcsleep at _tav_ saying 1116
     drop _questgiver_ face
-    log 1051 2
+    log 1051 1
     start timer _awake_
     start timer _check_
 
@@ -424,9 +507,82 @@ _notawake_ task:
 
 _awake_ task:
     say 1117
-    place item rcsleep at _dun_
-    place npc _questgiver_ at _tav_
+    restore npc _questgiver_
 
 _thetask_ task:
     when _qgclicked_ and _awake_
     say 1118
+    hide npc _questgiver_
+    add _questgiver_ face
+    say 1162
+    restore npc _barkeep_
+    log 1052 2
+
+_clickedbarkeep_ task:
+    clicked npc _barkeep_
+
+_settling_ task:
+    when _clickedbarkeep_
+    prompt 1120 yes _haggle_ no _favour_
+
+_haggle_ task:
+
+_reduced_ task:
+    when _haggle_ and _merc_
+    prompt 1122 yes _payred_ no _favour_
+
+_nodice_ task:
+    when _haggle_ and not _merc_
+    prompt 1121 yes _paytab_ no _nodeal_
+
+_paytab_ task:
+    take _bartab_ from pc
+    start task _stuff_
+
+_payred_ task:
+    take _smalltab_ from pc
+    start task _stuff_
+
+_favour_ task:
+    prompt 1123 yes _deal_ no _nodeal_
+
+_deal_ task:
+    say 1163
+    get item _evidence_
+
+_moreinfo_ task:
+    when _deal_ and _smart_
+    say 1164
+
+_toopoor_ task:
+    say 1159
+    start task _nodeal_
+
+_nodeal_ task:
+    say 1124
+    say 1125
+    clear _clickedbarkeep_
+    setvar _overdue_
+    start timer _destitute_
+
+_destitute_ task:
+    say 1161
+    drop _questgiver_ face
+    end quest
+
+_payfull_ task:
+    when _clickedbarkeep_ and _overdue_
+    prompt 1165 yes _payup_ no _notpay_
+
+_payup_ task:
+    take _bartab_ from pc    
+    start task _stuff_
+
+_notpay_ task:
+    clear _clickedbarkeep_
+
+_stuff_ task:
+    get item _bait_ saying 1160
+    stop timer _destitute_
+    log 1053 3
+    hide npc _barkeep_
