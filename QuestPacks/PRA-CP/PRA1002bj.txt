@@ -1,0 +1,209 @@
+Quest: PRA1002bj
+DisplayName: Rage of the Ratcatcher / job
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:   [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+<ce>You left the rats to overun __tav_.
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+Can't move for rats at the moment.
+<--->
+Got that Ratcatcher guy to clear a few rats from my cellar. Paid him good money. Now they are everywhere.
+<--->
+Rats got into my underwear drawer last week. Me arse is freezing now.
+<--->
+Won't someone please think of the children!!!
+<--->
+Damn these rats! Damn that ratcatcher!
+
+Message:  1101
+"Right %pcf. Buggers are everywhere here, but let's
+head to _tav_ so we can corner them.
+We can probably get a drink afterwards on the house."
+
+Message: 1102
+"Same as before. You take the bait, draw the rats,
+I'm going to try to grab one and bag it. Might take
+a few attempts because they don't like going in the bag."
+
+Message: 1103
+"Here's the bait. I'll grab the rat."
+
+Message: 1104
+"You know the drill."
+
+Message: 1110
+"OK. Got one. Festy bugger. I'll take back the bait, you
+take the ratbag. Now to get it back to The Mages Guild
+before he manages to chew his way out of that bag."
+
+Message:  1113
+The burly approaches with a small sack of gold,
+"Thanks again Ratcatcher. Hopefully we won't need your
+services again for a while."
+He kicks at a dead rat with his foot, "These buggers are
+bad for business."
+
+Message: 1111
+"Right. Got another one. He's struggling. I'll take back
+the bait again, you take the ratbag. Now let's head to
+The Mages Guild before he manages to chew his way out
+again."
+
+Message:  1114
+The lady of the house climbs off the table and rummages
+in her pinny for some coin, "Here's your gold. Now am I
+supposed to clean this mess up myself then?"
+
+Message: 1112
+"Got him. I'll take the bait. You... no, maybe I should
+keep the ratbag. Let's just get back to The Mages Guild
+again before we lose him."
+
+Message:  1115
+The owner throws a small bag of coin on the ground at
+your feet and grunts.
+
+Message: 1120
+<ce>The rat escaped from the bag.
+
+Message: 1130
+"Ok. Let's try that again. We'll to to _house_.
+
+Message:  1131
+"He got out again! What are you doing %pcf!
+We'll try _store_"
+
+Message: 1132
+"%pcf! Try to keep the rat in the bloody bag!"
+
+QBN:
+
+Place _tav_ local tavern
+Place _house_ local house
+Place _store_ local shop
+
+Item _bait_ small_sack
+Item _ratsack_ large_sack
+Item _tavgold_ gold
+Item _housegold_ gold
+Item _storegold_ gold
+
+Clock _fetch1_ 00:05 00:15
+Clock _fetch2_ 00:05 00:15
+Clock _fetch3_ 00:05 00:15
+Clock _coward_ 5.00:00 7.00:00
+
+Foe _rats_ is 2 Giant_rat
+
+variable _gotrat_
+variable _donetav_
+variable _donehouse_
+variable _donestore_
+
+--	Quest start-up:
+    start timer _coward_
+    say 1101
+    create foe _rats_ every 5 minutes indefinitely with 70% success
+    pc at _tav_ set _attav_
+    pc at _house_ set _athouse_
+    pc at _store_ set _atstore_
+    have _ratsack_ set _gotrat_
+
+_agi1_ task:
+    when attribute Agility is at least 70
+
+_agi2_ task:
+    when attribute Agility is at least 50
+
+_agi3_ task:
+    when attribute Agility is at least 30
+
+_attav_ task:
+    say 1102
+    get item _bait_
+    start timer _fetch1_
+    start task _tavrats_
+
+_tavrats_ task:
+    create foe _rats_ every 2 minutes indefinitely with 70% success
+
+_athouse_ task:
+    say 1103
+    get item _bait_
+    start timer _fetch2_
+    start task _houserats_
+
+_houserats_ task:
+    create foe _rats_ every 2 minutes indefinitely with 80% success
+
+_atstore_ task:
+    say 1104
+    get item _bait_
+    start timer _fetch3_
+    start task _storerats_
+
+_storerats_ task:
+    create foe _rats_ every 2 minutes indefinitely with 90% success
+
+_fetch1_ task:
+    clear _tavrats_
+    say 1110
+    take _bait_ from pc
+    get item _tavgold_ saying 1113
+    setvar _donetav_
+    get item _ratsack_
+
+_fetch2_ task:
+    clear _houserats_
+    say 1111
+    take _bait_ from pc
+    get item _housegold_ saying 1114
+    setvar _donehouse_
+    get item _ratsack_
+
+_fetch3_ task:
+    clear _storerats_
+    say 1112
+    take _bait_ from pc
+    get item _storegold_ saying 1115
+    setvar _donestore_
+    give pc nothing
+    end quest
+
+_outside_ task:
+    when not _attav_ and not _athouse_ and not _atstore_
+
+_done1_ task:
+    when _outside_ and _gotrat_ and _donetav_ and _agi1_
+    give pc nothing
+    end quest
+
+_done2_ task:
+    when _outside_ and _gotrat_ and _donehouse_ and _agi2_
+    give pc nothing
+    end quest
+
+_lost1_ task:
+    when _outside_ and _gotrat_ and _donetav_ and not _agi1_
+    take _ratsack_ from pc
+    say 1120
+    say 1130
+
+_lost2_ task:
+    when _outside_ and _gotrat_ and _lost1_ and not _agi2_
+    take _ratsack_ from pc
+    say 1120
+    say 1131
+
+_coward_ task:
+    end quest

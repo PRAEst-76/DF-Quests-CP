@@ -8,12 +8,63 @@ QuestorOffer:  [1000]
 RefuseQuest:   [1001]
 
 AcceptQuest:  [1002]
+<ce>Gotta find that ratcatcher!
 
 QuestFail:  [1003]
+<ce>Looks like _questgiver_'s career in Ratcatching is over.
 
 QuestComplete:  [1004]
+<ce>Is this the end for The Ratcatcher General?
 
 RumorsDuringQuest:  [1005]
+The rat problem seems to get worse when that Ratcatcher is in town. Just sayin'.
+<--->
+Ratcatcher says there is no such thing as a Rat King.
+<--->
+My cousin had rats but the Ratcatcher killed them.
+<--->
+I heard the Ratcatcher eats the rats. His wife left him when she found out.
+
+Message:  1010
+His home is the road he says. I hear it's 'cause his wife kicked him out 'cause he smells like rodent.
+<--->
+My brother says he releases the rats first then comes round to 'catch' 'em and charge folk.
+<--->
+If you don't pay him he takes your kids. Someone told me.
+<--->
+He's decent enough, bit rough around the edges.
+
+Message:  1011
+Owns _tav_ but doesn't run it. Just counts the money.
+<--->
+The ladies seem to be fond of him. Can't think why. Other than his gold.
+<--->
+I've heard he's got a collection of trophies from his conquests. Some say he just steals them from washing lines at night.
+
+Message:  1012
+You don't want to talk to that one. The Dark Brotherhood would kill for a knife as sharp as his tongue.
+<--->
+He smells like an old woman who fell in a rosebush.
+<--->
+Another one of those frock wearing freaks up at the horror farm. That's what my dad calls it.
+<--->
+Always got his nose in a book that one. I don't think he's reading them, he just likes to sniff the pages.
+<--->
+Was icy a few years back and me and some lads saw him slip and fall on his arse. We laughed so hard, but the look he gave us haunts me to this day.
+
+Message:  1013
+Nice girl. Haven't seen her or her mum around for a long time though.
+<--->
+Oh. She used to help the old Ratcatcher out. May have been his kid. Haven't seen her in a long time, now I think of it. Hope she wasn't eaten.
+<--->
+I remember her. Smart girl. I guess she went off to better things.
+
+Message:  1014
+Oh. The old Ratcatcher's wife. I think she left him for a wealthy man from abroad.
+<--->
+That snooty cow. Had airs, but we all rmemember she married a man who caught rats. And she knew it.
+<--->
+The Ratcatcher's wife. Heard she caught the old man with a girl young enough to be his daughter.
 
 --Logs
 Message:  1050
@@ -36,6 +87,12 @@ _questgiver_ can't do anything until his bar tab has
 been paid at _tav_. He owes _bartab_ gold.
 I may have to pay it for him.
 
+Message:  1059
+%qdt:
+The owner of _tav_, _barkeep_, says he'll
+settle the debts for _questgiver_ if I do him a favour.
+Says it's simple and above board...
+
 Message:  1053
 %qdt:
 I've helped _questgiver_ settle his bartab. Now we can get down
@@ -43,9 +100,35 @@ to business.
 
 Message: 1054
 %qdt:
-_questgiver_ thinks the rats are behaving strangely.
-He wants us to catch one of the horde and take it to
-_mages_ in __mages_ where they will perform some tests.
+_questgiver_ thinks the rats are behaving strangely. He
+wants us to catch one of the horde at a place called
+___hamlet_ and take it to _mages_ in
+__mages_ where they will perform some tests.
+
+Message:  1055
+%qdt:
+We've got a rat in a bag, now to get it back to
+_mages_ in __mages_ so they can run tests.
+
+Message:  1056
+%qdt:
+_mages_ had been attacked by rats again. We had to
+kill them. They will reluctantly run the test, but it
+will take a week. I guess I should get on with other
+things in the meantime.
+
+Message:  1057
+%qdt:
+_mages_ has been attacked again. They contacted us
+and told us to return straight away.
+
+Message:  1058
+%qdt:
+The tests by _sarcmage_ at _mages_ showed no
+magical cause behind the rats. They implied The
+Ratcatcher General was causing the rat attacks himself,
+conscuously or unconsciously. He is understandably
+shaken and wants to go to a tavern.
 
 -- Dialogues
 Message:  1100
@@ -57,22 +140,22 @@ Message:  1101
 <ce>again.
 
 Message:  1102
-As you enter a voice rings out, "There %pg is!
-%pcf! My old buddy-in-arms!"
+As you enter a voice rings out, "There %pg is! %pcf!
+My old buddy-in-arms!"
 <ce>
-It's _questgiver_, the self-styled Ratcacher General.
+It's _questgiver_, the self-styled Ratcatcher General.
 And %g is obviously very, very drunk.
 <ce>
-"%pcf! Over here! Wait til you lads see what %pg can do!"
-"%pcf! Destroy that table!"
+"%pcf! Over here! Wait 'til you lads see what %pg can do!"
+"Hey %pcf! Destroy that table!"
 
 Message:  1103
-"Sit down _questgiver_, before you fall down!" yells
-the barman.
+"Sit down _questgiver_, before you fall down!"
+yells the barman.
 <ce>
 "You a friend of %g3? Fool's been drinking for days.
-Making a right mess here %g has. You're here now.
-Deal with %g2."
+Making a right mess here %g has. You're here now. Deal
+with %g2."
 
 Message:  1104
 The Ratchacher spins on %g3 heel and points %g3 finger
@@ -84,13 +167,13 @@ had been somewhere else entirely.
 
 Message:  1105
 A shabby man sitting near the door responds,
-"You killed many rats, mate. My dog does that
-and he's got a gammy leg and can't see."
+"You killed many rats, mate. My dog does that and he's
+got a gammy leg and can't see 'owt."
 
 Message:  1106
-"You know nothing of our quarry %mn! Nothing!"
-yells the Ratcatcher in general direction of the man.
-"Come on! Come with us now! See what we face!
+"You know nothing of our quarry %mn!
+Nothing!" the Ratcatcher yells in the man's vague
+direction. "Come on! Come with us now! See what we face!
 You'll fill your old britches quick enough!"
 
 Message:  1107
@@ -98,9 +181,9 @@ The barman addresses you again with more urgency,
 "Seriously %ra, shut %g2 up or get %g2 out."
 
 Message:  1108
-"C'mon.... All of you. I'll show you the horrors
-that skulk in your homes when you slumber.
-Eating the fingers of babes."
+"C'mon.... All of you. Let's go face our quarry. I'll
+show you the horrors that skulk in your homes when you
+slumber! Nibbling the fingers of your babes!"
 <ce>
 <ce>Make %g2 shut up?
 
@@ -140,7 +223,8 @@ Message:  1114
 You should probably take %g2 to %g3 rooms to sleep it off.
 
 Message:  1115
-_questgiver_ weighs more than %g looks.
+_questgiver_ is limp like a corpse and weighs more than
+%g looks.
 
 Message:  1116
 You dump _questgiver_ in %g3 room on the bed.
@@ -156,23 +240,28 @@ Message:  1118
 "Oh, hello %pcf. You got my letter then? Good.
 I was wondering when you would show up. I was almost
 getting my things ready to leave."
+<ce>
+Obviously he doesn't have any recollection of the
+previous day, probably for the best.
 
 Message:  1162
 "Slight problem there though. My... host, a lovely man
-here called _barkeep_ took my gear while I was...
-indesposed and won't return it until I settle up with
-him. Sad fact is, I don't have that kind of gold right
-now.
+here called _barkeep_ took my gear while
+I was... indesposed and won't return it until I settle
+up with him. Sad fact is, I don't have that kind of
+gold right now."
 <ce>
-Perhaps you could have a word with him for me?
-Maybe talk him round? Oh, speak of the demon..."
+"Perhaps you could have a word with him for me?
+Maybe talk him round?"
+<ce>
+"Oh, speak of the demon..."
 
 Message: 1120
 "I suppose you've come for _questgiver_'s gear?
-As I told you last night, he gets it back when he's
-settled the tab. Which is 150g."
+As you were told last night, he gets it back when he's
+settled the tab. Which is _bartab_ gold."
 <ce>
-<ce>Try to talk the barman down?
+<ce>Try to talk the landlord down?
 
 Message: 1121
 "No doing. He caused damage during his stay. Both to the
@@ -181,7 +270,7 @@ everyone wants to hear the ins and outs of killing rats
 every night? I'd almost swear he was planted here by the
 competition."
 <ce>
-"He gets his rat killing stuff back when I get 150g
+"He gets his rat killing stuff back when I get _bartab_ gold
 in my hand. Either from him or from you."
 <ce>
 <ce>Pay his tab?
@@ -207,62 +296,59 @@ and let you have his gear? It's nothing dangerous or illegal,
 really. Deal?"
 
 Message:  1165
-Are you ready to pay up?
+"Are you ready to pay up?"
 
-Message:  1163
-Ok. Here's what I need you to do. I've got some clothes here.
-I want you to take them to _othertav_ and leave them in one
-of the back rooms. Simple. Like I said. No risk. Then you
-get _questgiver_'s gear.
+Message:  1171
+"Ha! Great work %pcf! Great work! I'll see the fallout
+from these schenanigans soon enough."
 
-Message:  1164
-Ok. Ok. So there's a bit of skullduggery here. Clothes
-belong to a lady I... know. When her husband finds them
-there, and he will, he's going to think the proprieor
-is doing his missus. He'll be livid with him.
-
-Message:  1159
-<ce>You don't have enough gold.
+Message: 1172
+"I gave you a simple task. Not simple enough it seems."
 
 Message:  1160
-Right. Here's his stuff. He's not welcome back here again.
+"Right! Here's his stuff. Glad to be shot of the stinking
+stuff. Now take him and get out. He's not welcome back
+here again."
 
 Message: 1124
-"Ok, well I tried to be reasonable. I need that tab covered
-IN FULL within the week, or I sell his gear to recoup my losses.
-It won't, but it'll get rid of the smell."
+"Ok, well I tried to be reasonable. I need that tab
+covered IN FULL within the week, or I sell his gear to
+recoup my losses. Not that it will."
 <ce>
 "Oh, and he's not to come back here again."
 
 Message:  1161
-Well, _barkeep_ will have sold or dumped my stuff by now.
+"Well, _barkeep_ will have sold or dumped my stuff by now.
 That's me out of the game.
 Been nice knowing you _questgiver_ but I'm off to live
-under a bridge.
+under a bridge."
 
 Message: 1125
-I can't do ratcatching without my gear %pcf. Can't even
+"I can't do ratcatching without my gear %pcf. Can't even
 make the money without being able to catch rats.
-No idea how I can get that within a week.
+No idea how we can get our hands on that amount of gold
+within a week."
 
 Message: 1126
-I'll make it up to you %pcf, I promise.
-Anyway, I got a job for us. Hamlet, major issue with
-these vindictive rats. Going to need to try something
-different this time. Going to need to take one of these
-buggers alive. Got a mage friend who owes me for clearing
-his guild a while ago. He's going to cast some magicks
-on the thing and see what evil is driving it.
-Some evil is driving these things now. I swear.
+"I'll make it up to you %pcf, I promise. Anyway,
+I got a job for us. Place called ___hamlet_, major
+issue with these vindictive rats. Going to need to try
+something different this time. Going to take one of these
+buggers alive. Got a mage friend who owes me for
+clearing his guild a while ago. He's going to cast some
+magicks on the thing and see what evil is driving it.
+Some evil is driving these things now. I swear."
 
 Message: 1127
-Same as before. You take the bait, draw the rats,
+"Same as before. You take the bait, draw the rats,
 I'm going to try to grab one and bag it. Might take
-a few attempts because they don't like going in the bag.
+a few attempts because they don't like going in the bag."
 
 Message: 1128
-OK. Got one. Festy bugger. I'll take back the bait, you
-take the ratbag.
+"OK. Got one. Festy bugger. I'll take back the bait, you
+take the ratbag. Now to get it back to _sarcmage_
+at _mages_ in __mages_ before he manages to chew his way
+out of that bag."
 
 Message: 1129
 Dammit. He got out.
@@ -271,91 +357,225 @@ Message: 1130
 Let's try that again.
 
 Message: 1131
-_questgiver_! Look here everyone. The great Ratchatcher General is back!
+_questgiver_! Look here everyone. The great Ratchatcher
+General is back!
 
 Message: 1132
-Ok, yeah. I rememeber. I said I'd help you look into this rat plague as a favour for helping us with our rat problem.
-Do you see where I'm going with this? Maybe the scrabbling in the walls or the incesant squeaking might help.
+"Ok, yeah. I rememeber. I said I'd help you look into
+this rat plague as a favour for helping us with our rat
+problem."
+<ce>
+"Do you see where I'm going with this? Maybe the
+scrabbling in the walls or the incesant squeaking might
+help."
 
 Message: 1133
-Ok %pcf, looks like things are getting worse. We need to clear this place again. I don't know why they are here again. I cleared this place weeks ago. I swear. They usually don't return this quickly.
+"Yes _sarcmage_ I hear you."
+The Ratcatcher turns to you, "Ok %pcf, looks like
+things are getting worse. We need to clear this place
+again. I don't know why the creatures have returned so
+soon. I cleared this place weeks ago. I swear. They
+usually don't return this quickly."
 
 Message: 1134
-Well, thanks _questgiver_. You've dealt with our rat problem. Again. Howe can we ever repay you... etc.
-Where's the live one we needed?
+"Well, thanks _questgiver_... You've dealt with our rat
+problem. Again. How on Nirn can we ever repay you...
+again... etc..." he tosses an almost impossibly small
+bag of gold to the Ratcatcher who catches it
+absentmindedly. You wonder if it even holds enough gold
+to cover the cost of the bag.
+<ce>
+"Where's the live one we needed?" he snaps.
 
 Message: 1135
-This place was swarming with the buggers. Why did you need me to bring one when you could have just picked one up off the floor.
+The Ratcatcher snaps back, "This place was swarming with
+the buggers! Why did you need me to drag one half-way
+across ____mages_ when you could have just picked
+one up off the floor?!"
 
 Message: 1136
-We're mages, _questgiver_, not Ratcatchers. Wouldn't want to step on your toes and have the full weight of the Ratcatchers Guild ontop of us.
+"We're mages, _questgiver_, not Ratcatchers! Wouldn't
+want to step on your toes and have the full weight of
+the Ratcatchers Guild ontop of us."
 
 Message: 1137
-Ok, enough smarm. Here's your bagged rat. See if you can find out what magics is riving these things.
+"Ok, enough sarcasm, _sarcmage_. Here's your bagged
+rat. See if you can find out what magicks is driving
+these things."
 
 Message: 1138
-have you ever thought that maybe they've just set up a rival guild. Maybe you should speak to The Rat King?
+"Have you ever thought that maybe they've just set up a
+rival guild? Maybe you should speak to The Rat King and
+work out a job share arrangement?"
 
 Message: 1139
-Shut up about The Rat King. There's no such thing as a rat king.
+"Shut up about The Rat King! There's no such thing as a
+rat king!"
 
 Message: 1140
-Just because you haven't seen one doesn't mean they don't exist.
+"Just because you haven't seen one doesn't mean they
+don't exist. I've never seen the lady that cleans out
+our latrines, but I'm sure she exists."
 
 Message: 1141
-Just do your magicks on the rat and let me know what you find. It won't be no rat king. Probably something one of you lot did messing about with things that your noses don't belong in.
+"Look, just do your magicks on the rat and let me know
+what you find. It won't be no rat king. Probably
+something one of you lot did messing about with things
+that your noses don't belong in."
 
 Message: 1142
-Don't have time for that _questgiver_, with all the jobs the likes of you dump on us then somehow manage to blame us for.
+"Don't have time for things like that, believe it or not 
+_questgiver_... with all the problems the likes of you
+dump on us to fix yet somehow manage to blame us for."
 
 Message: 1143
-Two attacks in... what? A month? I know I brag but once I clear a house it stays cleared, usually for years. I killed all your rats. These ones... they came after. Like they was wanting something.
+"Two attacks in... what? A month? I know I brag but once
+I clear a house it stays cleared, usually for years. I
+killed all your rats. These ones... they came after.
+Like they was wanting something."
 
 Message: 1144
-I'm as curious as you Ratcatcher. You may be barely human and smell like a latrine, but you are good at what you do. Give me a week.
+"I'm as curious as you Ratcatcher. You may be barely
+human and smell like horsewinkle, but you are good at
+what you do. Give me a week."
+
+Message:  1166
+"Right. I expect a lot of information on that rat a week
+from now _sarcmage_!"
 
 Message: 1145
-%pcf! Ratcatcher! Quickly come to _mages_. They've been attacked again.
+You feel a strange tingling in the back of your head,
+along with it you hear a voice.
+"%pcf! Ratcatcher! Quickly come to _mages_. They've been attacked again."
 
-Message: 1146
-Quickly %pcf, to the _mages_. This is not normal.
+Message:  1146
+"%pcf! Did you hear that too? I think it's a psychic
+message from _mages_. We should go there straight away.
+This is not normal. They only do that kind of thing in
+a real crisis!"
 
 Message: 1147
-They came out of no-where. Ran amok. Then they found your specimen and killed it. It was like an assassination.
+"They came out of no-where. Ran amok. Then they found
+your specimen and killed it. It was like an
+assassination."
 
 Message: 1148
-Damn! Please tell me you were able to run tests on it before...
+"Damn! Please tell me you were able to run tests on it
+before..."
 
 Message: 1149
-Yes. Thouroughly and more during the attack. These rats are not magically enhanced. They are just normal, smelly, vicious, diseased giant rats that are somehow gathering in warlike tribes.
+"Yes, yes. Thoroughly and more during the attack. These
+rats are not magically enhanced. They are just normal,
+smelly, vicious, diseased giant rats that are somehow
+gathering in warbands and attacking selective groups
+across the province."
 
 Message: 1150
-Enough sarcasm. What did you find?!
+"Enough sarcasm. What did you find?!"
 
 Message: 1151
-No sarcasm Ratcatcher. Furthermore these rat attacks seem to be following you. Haven't you noticed? They go where you are. Or where you are heading. If yhere were rat attacks on this scale all over the province we'd know about it. You are drawing the rats Ratcatcher. You and your friend. I know not why, but I would quite appreciate if you got out of our town and didn't return.
+"No sarcasm Ratcatcher. Furthermore these rat attacks
+seem to be based around the location of one particular
+target. You."
+
+Message:  1167
+"What? That's madness."
+
+Message:  1168
+"Haven't you noticed? They go where you are. Or where
+you are heading. Or where you have been. If there were
+rat attacks on this scale all over the province we'd
+know about it. You are drawing the rats Ratcatcher.
+You and your friend. I know not why, but I would quite
+appreciate if you got out of our town and didn't return."
 
 Message: 1152
-What? This is not my doing! I kill rats...
+"What? This is not my doing! I kill rats..."
 
 Message: 1153
-and they hate you for it. Ever think that maybe you've just killed so many of them that those that remain have decided to deal with you to save themselves?
-Regardless. This is your problem. And yours only. Please leave. Take your friend and your foul accoutrements and don't darken our guild or town again.
+"And they hate you for it. Ever think that maybe you've
+just killed so many of them that those that remain have
+decided to deal with you to save themselves? You are the
+one that drones on about how smart they are. Maybe
+you've just managed to kill all the stupid ones and
+those that are left are the ones sart enough to outsmart
+you, Ratcatcher."
+
+Message:  1169
+"You... you're talking nonsense _sarcmage_! Rats aren't
+that organised. I've hunted the all my life, I'd know
+if they were capable of..."
+
+Message:  1170
+"Regardless. This is your problem. And yours only.
+Please leave. Take your friend and your foul
+bag of accoutrements and don't darken our guild or town
+again. Goodbye."
 
 Message: 1154
-%pcf... I think I need to stop and think. I do my best thinking in the tavern. Lets go to the tavern.
+"%pcf... I think I need to stop and think. I do my best
+thinking in the tavern. Let's go to the tavern. Please."
 
 Message: 1155
-Ratcatcher!
+"Ratcatcher!"
 
 Message: 1156
-Yeah, we know your game. Bet he's carrying them in a bag and releasing them then comes round thinking he can just waltz in and 'save' us. Get out.
+"Yeah, we know your game. Bet he's carrying them in a bag
+and releasing them then comes round thinking he can just
+waltz in and 'save' us. Get out."
 
 Message: 1157
-Ratcatcher! I think it might be for the best if you and your friend left town. Don't you? For your own good you understand. People aren't too happy with you right now. Can't blame them.
+"Ratcatcher! I think it might be for the best if you and
+your friend left town. Don't you? For your own good you
+understand. People aren't too happy with you right now.
+Can't blame them. You have an hour to leave otherwise
+you'll be put in jail for your own good."
 
 Message: 1158
-I didn't... %pcf? You know me. I wouldn't. Ratcatching is my life. I wouldn't bsmirch the name of my craft. You must belive me!
+"I didn't... %pcf? You know me. I wouldn't. Ratcatching
+is my life. I wouldn't besmirch the name of my craft.
+You must believe me!"
+
+Message:  1163
+"I don't know what's happening %pcf. We can't even get
+a drink in this place anymore. I think we best leave
+until thinks die down or I can figure out what is going
+on with these rats."
+<ce>Leave town?
+
+Message: 1164
+"They keep coming %pcf! It is me they want. You should go. Save yourself. They want me dead. Go, save yourself. This is not your fight. It was never your fight. Go!"
+<ce>Leave the Ratcatcher to his fate?
+
+Message:  1173
+The Ratcatcher fights back tears as you decide to remain
+with him until the end, "Thank you %pcf. You are the
+truest friend an old Ratcatcher could have. Let's leave
+our stains on these bastards memories!"
+
+Message:  1175
+"%pcf... This one... this one has something on it.
+Can you... can you see what it is?"
+
+Message:  1174
+"Goodbye %pcf!" as you run you don't look back as the
+Ratcatcher is overrun by his lifelong prey.
+
+Message:  1176
+The Ratcatcher says nothing as you show him the note. He
+turns away and stares into the distance for some time.
+
+Message:  1177
+"%pcf. I... I need to go and figure things out. Alone.
+You have been a good friend, but... this is my fight.
+And I'm tired. I don't know what do do. I think I need to
+leave. Go away. Think. I've... I've lost too much and in
+the end I'm just a guy who catches rats. I'm not smart.
+This game has become too complex. I can't play anymore."
+
+Message: 1178
+"Goodbye %pcf. Maybe we'll meet again. Maybe not. Please
+take this. It's all I have worth anything."
 
 Message:  1119
 _questgiver_ is still snoring. Occasionally he whimpers
@@ -381,6 +601,9 @@ sos i culd use your help again if you can meet me at
 _tav_ got a special task for us
 <ce>
 do not be late they have happy hour
+<ce>
+                _questgiver_
+                    the ratcacher genral
 
 Message:  1202
 Dad,
@@ -400,30 +623,54 @@ hear from you again.
 <ce>
                                 Your daughter,
                                     _daughter_
+
+Message: 1205
+RAT CATCHUR
+<ce>
+NO MY RAGE NOW. NO MY POWER. RAT CATCHER YOU WILL FALL.
+WE WILL DESTROY YOU. LIKE WE DESTROY THOSE BEFORE.
+WE SAVE YOU FOR LAS. WE SAVOR YOU ENDING.
+WE SAVE YOU FOR LAS.
+<ce>
+RAT KING
+
 QBN:
+
 Item _letter_ letter used 1201
 Item _letter2_ letter used 1202
 Item rcsleep dead_body
 Item _bartab_ gold range 100 to 200
 Item _smalltab_ gold range 50 to 100
 Item _bait_ small_sack
-Item _evidence_ womens_clothing
+Item _ratsack_ large_sack
+Item _magegold_ gold range 30 to 60
+Item _rknote_ letter used 1205
+Item _reward_ magic_item
 
-Clock _delivery_ 00:01
+Clock _delivery_ 00:05
 Clock _awake_ 08:00 12:00
 Clock _check_ 3:00
 Clock _destitute_ 7.00:00
+Clock _gotone_ 00:10 00:30
+Clock _rattest_ 7.00:00
+Clock _ratattack_ 3.00:00 6.12:00
+Clock _guards_ 00:01 00:03
+Clock _wanted_ 01:00
+Clock _messenger_ 00:05
 
 Foe _thug_ is Barbarian
 Foe _rats_ is 2 Giant_rat
+Foe _rat_ is Giant_rat
+Foe _messrat_ is Giant_rat
 
-Person _questgiver_ group Questor male
-Person _barkeep_ group Innkeeper male
-Person _daughter_ group Resident1 female
-Person _wife_ group Resident2 female
+Person _questgiver_ group Questor male anyInfo 1010
+Person _barkeep_ group Innkeeper male anyInfo 1011
+Person _sarcmage_ group Spellcaster male anyInfo 1012
+Person _daughter_ group Resident1 female anyInfo 1013
+Person _wife_ group Resident2 female anyInfo 1014
 
 Place _tav_ local tavern
-Place _othertav_ local tavern
+Place _hamlet_ remote hamlet
 Place _mages_ local magery
 
 variable _attav_
@@ -436,6 +683,12 @@ variable _overdue_
     pc at _tav_ set _attav_
     _letter_ used do _letterread_
     have rcsleep set _sleeper_
+    _rknote_ used do _thenote_
+    dialog link for person _questgiver_
+    dialog link for person _daughter_
+    dialog link for person _wife_
+    dialog link for person _sarcmage_
+    dialog link for person _barkeep_
 
 _merc_ task:
     when skill Mercantile is at least 25
@@ -533,7 +786,7 @@ _reduced_ task:
 
 _nodice_ task:
     when _haggle_ and not _merc_
-    prompt 1121 yes _paytab_ no _nodeal_
+    prompt 1121 yes _paytab_ no _favour_
 
 _paytab_ task:
     take _bartab_ from pc
@@ -547,15 +800,22 @@ _favour_ task:
     prompt 1123 yes _deal_ no _nodeal_
 
 _deal_ task:
-    say 1163
-    get item _evidence_
+    log 1059 3
+    run quest PRA1002bd then _donedeal_ or _brokendeal_
+    clear _clickedbarkeep_
 
-_moreinfo_ task:
-    when _deal_ and _smart_
-    say 1164
+_donedeal_ task:
 
-_toopoor_ task:
-    say 1159
+_brokendeal_ task:
+
+_bkwin_ task:
+    when _clickedbarkeep_ and _donedeal_
+    say 1171
+    start task _stuff_
+
+_bkfail_ task:
+    when _clickedbarkeep_ and _brokendeal_
+    say 1172
     start task _nodeal_
 
 _nodeal_ task:
@@ -573,6 +833,7 @@ _destitute_ task:
 _payfull_ task:
     when _clickedbarkeep_ and _overdue_
     prompt 1165 yes _payup_ no _notpay_
+    clear _clickedbarkeep_
 
 _payup_ task:
     take _bartab_ from pc    
@@ -586,3 +847,122 @@ _stuff_ task:
     stop timer _destitute_
     log 1053 3
     hide npc _barkeep_
+
+_tobusiness_ task:
+    when _stuff_ and not _attav_
+    take _bait_ from pc
+    say 1126
+    log 1054 4
+
+_2job_ task:
+    when pc enters hamlet
+    run quest PRA1002bj then _baggedrat_ or _coward_
+
+_coward_ task:
+    end quest
+
+_baggedrat_ task:
+    get item _ratsack_
+    log 1055 5
+    place npc _sarcmage_ at _mages_
+    place foe _rats_ at _mages_
+
+_atmages_ task:
+    when _baggedrat_ and _atmages_
+    say 1131
+    say 1132
+    say 1133
+    create foe _rats_ every 2 minutes indefinitely with 80% success
+
+_magerats_ task:
+    killed 10 _rats_
+    get item _magegold_ saying 1134
+    say 1135
+    say 1136
+    say 1137
+    say 1139
+    say 1140
+    say 1141
+    say 1142
+    say 1143
+    say 1144
+    say 1166
+    log 1056 6
+    start timer _rattest_
+    start timer _ratattack_
+
+_ratattack_ task:
+    stop timer _rattest_
+    say 1145
+    say 1146
+    log 1057 7
+
+_backmages_ task:
+    say 1147
+    say 1148
+    say 1149
+    say 1150
+    say 1151
+    say 1167
+    say 1168
+    say 1152
+    say 1153
+    say 1169
+    say 1170
+
+_outside_ task:
+    when not _atmages_ and _backmages_
+    say 1154
+    log 1058 8
+
+_tavattack_ task:
+    when _attav_ and _outside_
+    say 1155
+    say 1156
+
+_streetattack_ task:
+    when _tavattack_ and not _attav_
+    say 1158
+    start timer _guards_
+
+_guards_ task:
+    say 1157
+    start timer _wanted_
+    prompt 1163 yes _leave_ no _stay_
+
+_stay_ task:
+    create foe _rat_ every 10 minutes indefinitely with 60% success
+
+_leave_ task:
+    teleport pc to __mages_
+    create foe _rat_ every 2 minutes indefinitely with 80% success
+
+_attrition_ task:
+    killed 10 _rat_
+    prompt 1164 yes _quit_ no _theend_
+
+_theend_ task:
+    clear _leave_
+    start timer _messenger_
+    say 1173
+
+_wanted_ task:
+    setplayercrime Vagrancy
+
+_messenger_ task:
+    create foe _messrat_ every 0 minutes 1 times with 100% success
+    give item _rknote_ to _messrat_
+    restrain foe _messrat_
+    say 1175
+
+_thenote_ task:
+    say 1176
+    say 1177
+    say 1178
+    give pc _reward_
+    end quest
+
+_quit_ task:
+    say 1174
+    start quest PRA1002c
+    end quest

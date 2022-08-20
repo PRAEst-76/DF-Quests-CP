@@ -1,0 +1,95 @@
+Quest: PRA1002bd
+DisplayName: A Deal in Trivialities
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:   [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+You've left it too late to plant the women's clothes. Best find the money for _questgiver_'s gear.
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+%fn has been spending a lot of time around __questgiver_
+<--->
+I hear the owner of __questgiver_ has been sampling more than the beer in his cellar.
+
+Message: 1100
+%qdt:
+The Ratcatcher has run up a nasty tab at the inn.
+_questgiver_ says he'll clear the debt if I do a
+favour for him. I need to take some lady's
+'garments' to _othertav_ and leave them in a
+back room. This needs to be done within =toolate_ day.
+
+Message:  1163
+_questgiver_ gets uncomfortably close and drops
+his voice to a hoarse whisper, "Ok. Here's what I
+need you to do; I've got here a _evidence_. I want
+you to take it and drop it in the back room of
+_othertav_ before this time tomorrow."
+<ce>
+He coughs and his voice returns to normal, "Simple.
+Like I said. No risk. Then you get his gear."
+
+Message:  1164
+He realises you seem skeptical, "Ok. Ok. So there's
+a little bit of skullduggery going on here. The
+_evidence_ belongs to a lady I... am aquanted with,
+if you get my meaning. When her husband finds them
+there, and he will... he's going to think the
+proprietor is doing his missus. He'll be livid with
+him!"
+
+Message:  1165
+<ce>Ok. This is the place. Now to drop the _evidence_
+<ce>in one of the back rooms.
+
+Message:  1166
+<ce>Ok. That's the... items, left where you were asked.
+<ce>Time to go back to _questgiver_.
+
+QBN:
+Item _evidence_ item class 12 subclass 0
+
+Person _questgiver_ group Questor male
+Person _barkeep_ group Innkeeper male
+Person _rival_ group Innkeeper male
+
+Place _tav_ local tavern
+Place _othertav_ local tavern
+
+Clock _toolate_ 1.00:00
+
+variable _atothertav_
+
+--	Quest start-up:
+	start timer _toolate_
+    say 1163
+    get item _evidence_
+    pc at _othertav_ set _atothertav_
+    log 1100 0
+
+_smart_ task:
+    when attribute Intelligence is at least 60
+
+_moreinfo_ task:
+    when _smart_
+    say 1164
+
+_location_ task:
+    when _atothertav_
+    say 1165
+
+_planting_ task:
+    dropped _evidence_ at _othertav_ saying 1166
+    give pc nothing
+    end quest
+
+_toolate_ task:
+    end quest

@@ -1,0 +1,132 @@
+Quest: PRA1002c
+DisplayName: The Last Ratcatcher
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:   [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+<ce>Looks like _questgiver_'s career in Ratcatching is over.
+
+QuestComplete:  [1004]
+<ce>Is this the end for The Ratcatcher General?
+
+RumorsDuringQuest:  [1005]
+
+Message:  1010
+His home is the road he says. I hear it's 'cause his wife kicked him out 'cause he smells like rodent.
+<--->
+My brother says he releases the rats first then comes round to 'catch' 'em and charge folk.
+<--->
+If you don't pay him he takes your kids. Someone told me.
+<--->
+He's decent enough, bit rough around the edges.
+
+Message:  1011
+Owns _tav_ but doesn't run it. Just counts the money.
+<--->
+The ladies seem to be fond of him. Can't think why. Other than his gold.
+<--->
+I've heard he's got a collection of trophies from his conquests. Some say he just steals them from washing lines at night.
+
+Message:  1012
+You don't want to talk to that one. The Dark Brotherhood would kill for a knife as sharp as his tongue.
+<--->
+He smells like an old woman who fell in a rosebush.
+<--->
+Another one of those frock wearing freaks up at the horror farm. That's what my dad calls it.
+<--->
+Always got his nose in a book that one. I don't think he's reading them, he just likes to sniff the pages.
+<--->
+Was icy a few years back and me and some lads saw him slip and fall on his arse. We laughed so hard, but the look he gave us haunts me to this day.
+
+Message:  1013
+Nice girl. Haven't seen her or her mum around for a long time though.
+<--->
+Oh. She used to help the old Ratcatcher out. May have been his kid. Haven't seen her in a long time, now I think of it. Hope she wasn't eaten.
+<--->
+I remember her. Smart girl. I guess she went off to better things.
+
+Message:  1014
+Oh. The old Ratcatcher's wife. I think she left him for a wealthy man from abroad.
+<--->
+That snooty cow. Had airs, but we all rmemember she married a man who caught rats. And she knew it.
+
+Message:  1100
+<ce>A messenger approaches and hands you a letter.
+
+Message:  1101
+"%pcf! Good you are here. We need to save my daughter _daughter_ at _daughhome_ in __daughhome_
+My wife _wife_ at _wifehome_ in __wifehome_
+My buddy _mastercatcher_ at _masterhome_ in __masterhome_ in ___masterhome_
+My other buddy _ratcatcher2_ at _rc2home_ in __rc2home_ in ___rc2home_
+My other other buddy _ratcatcher3_ at _rc3home_ in __rc3home_ in ___rc3home_
+Then kill _sidekick_ at _ratdun_ in __ratdun_ in ___ratdun_ 
+Simple?
+
+Message:  1201
+%pcf!
+its your ol buddy the ratcatcher.
+i need your help one last time.
+please meet me in _library_ in __library_
+i know i know but i dont drink no more
+i need the clear head
+please come
+this is important
+come soon
+                    the ratcatcher
+
+QBN:
+
+Item _letter_ letter used 1201
+Item _thing_ magic_item
+
+Clock _delivery_ 1.00:00
+
+Foe _rats_ is 2 Giant_rat
+Foe _rat_ is Giant_rat
+Foe _messrat_ is Giant_rat
+Foe _ratking_ is witch
+
+Person _questgiver_ group Questor male anyInfo 1010
+Person _barkeep_ group Innkeeper male anyInfo 1011
+Person _sarcmage_ group Spellcaster male anyInfo 1012
+Person _daughter_ group Resident1 female anyInfo 1013
+Person _wife_ group Resident2 female anyInfo 1014
+Person _sidekick_ group Spellcaster female
+Person _twat_ group Noble male
+Person _mastercatcher_ group Resident1 male
+Person _ratcatcher2_ group Resident2 male
+Person _ratcatcher3_ group Resident3 male
+
+Place _library_ local library
+Place _daughhome_ remote house
+Place _wifehome_ remote house
+Place _rc2home_ remote poorhome
+Place _rc3home_ remote farmhome
+Place _masterhome_ remote ruin
+Place _ratdun_ remote dungeon
+
+--	Quest start-up:
+	start timer _delivery_
+
+_delivery_ task:
+    get item _letter_ saying 1100
+    add _questgiver_ face
+    place npc _questgiver_ at _library_
+    place npc _daughter_ at _daughhome_
+    place npc _wife_ at _wifehome_
+    place npc _twat_ at _wifehome_
+    place npc _mastercatcher_ at _masterhome_
+    place npc _ratcatcher2_ at _rc2home_
+    place npc _ratcatcher3_ at _rc3home_
+    place foe _ratking_ at _ratdun_
+
+_rkdead_ task:
+    killed _ratking_
+    give pc _thing_
+    end quest
