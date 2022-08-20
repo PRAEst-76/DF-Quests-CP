@@ -8,7 +8,6 @@ QuestorOffer:  [1000]
 RefuseQuest:   [1001]
 
 AcceptQuest:  [1002]
-<ce>Gotta find that ratcatcher!
 
 QuestFail:  [1003]
 <ce>Looks like _questgiver_'s career in Ratcatching is over.
@@ -286,7 +285,7 @@ I've got a business to run."
 <ce>Pay the reduced tab?
 
 Message: 1123
-Look. I want him out, he's caused chaos since he's been here.
+"Look. I want him out, he's caused chaos since he's been here.
 If he's not offending the customers with stories about killin'
 rats, he's depressing them with stories about how his killin'
 rats drove away his missus..."
@@ -357,8 +356,8 @@ Message: 1130
 Let's try that again.
 
 Message: 1131
-_questgiver_! Look here everyone. The great Ratchatcher
-General is back!
+"_questgiver_! Look here everyone. The great Ratchatcher
+General is back!"
 
 Message: 1132
 "Ok, yeah. I rememeber. I said I'd help you look into
