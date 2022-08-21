@@ -1108,7 +1108,6 @@ variable _damncat_
 variable _spicymeatball_
 variable _pooped_
 variable _chasing_
-variable _nanny_
 variable _atcult_
 variable _havebaby_
 variable _withdad_
@@ -1388,7 +1387,9 @@ _poop_ task:
     prompt 1310 yes _change_ no _ratattack_
 
 _change_ task:
-    setvar _nanny_
+
+_nanny_ task:
+    when _med_ and _agi_ and _luc_
 
 _med_ task:
     when skill Medical is at least 15
@@ -1400,7 +1401,7 @@ _luc_ task:
     when attribute Luck is at least 50
 
 _failedchange_ task:
-    when _pooped_ and _change_ and not _nanny_
+    when _change_ and not _nanny_
     say 1312
     start timer _ratattack_
 
@@ -1415,7 +1416,7 @@ _uberats_ task:
     cast Fortitude spell on _rat_
 
 _changed_ task:
-    when _poop_ and _change_ and _nanny_ and _med_ and _agi_ and _luc_
+    when _change_ and _nanny_
     stop timer _ratattack_
     say 1311
     start timer _dad_

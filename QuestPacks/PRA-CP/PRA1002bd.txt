@@ -58,10 +58,7 @@ QBN:
 Item _evidence_ item class 12 subclass 0
 
 Person _questgiver_ group Questor male
-Person _barkeep_ group Innkeeper male
-Person _rival_ group Innkeeper male
 
-Place _tav_ local tavern
 Place _othertav_ local tavern
 
 Clock _toolate_ 1.00:00

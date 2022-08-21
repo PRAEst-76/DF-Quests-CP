@@ -10,7 +10,8 @@ RefuseQuest:   [1001]
 AcceptQuest:  [1002]
 
 QuestFail:  [1003]
-<ce>You left the rats to overun __tav_.
+<ce>You left the rats to overun __tav_. It's probably
+<ce>best if you didn't come back here.
 
 QuestComplete:  [1004]
 
@@ -24,6 +25,14 @@ Rats got into my underwear drawer last week. Me arse is freezing now.
 Won't someone please think of the children!!!
 <--->
 Damn these rats! Damn that ratcatcher!
+
+RumorsPostfailure:  [1006]
+Horrible what happened at __tav_. This is why we need more good ratcatchers.
+<--->
+That old ratcatcher bit off more than he could chew at __tav_.
+
+RumorsPostsuccess:  [1007]
+I hear __tav_ is now mostly rat-free. Good work there.
 
 Message:  1101
 "Right %pcf. Buggers are everywhere here, but let's
@@ -47,9 +56,10 @@ take the ratbag. Now to get it back to The Mages Guild
 before he manages to chew his way out of that bag."
 
 Message:  1113
-The burly approaches with a small sack of gold,
+The burly inkeep approaches with a small sack of gold,
 "Thanks again Ratcatcher. Hopefully we won't need your
 services again for a while."
+<ce>
 He kicks at a dead rat with his foot, "These buggers are
 bad for business."
 
@@ -84,7 +94,17 @@ Message:  1131
 We'll try _store_"
 
 Message: 1132
-"%pcf! Try to keep the rat in the bloody bag!"
+"%pcf! Get back here!"
+<ce>
+<ce>Are you really going to leave the Ratcatcher alone with
+his arch enemy?
+
+Message: 1133
+"%pcf! Help me!" you hear the Ratcatcher yell.
+
+Message: 1134
+You hear a final blood-curdling scream. The Ratcatcher
+has finally met his match.
 
 QBN:
 
@@ -101,7 +121,9 @@ Item _storegold_ gold
 Clock _fetch1_ 00:05 00:15
 Clock _fetch2_ 00:05 00:15
 Clock _fetch3_ 00:05 00:15
-Clock _coward_ 5.00:00 7.00:00
+Clock _coward_ 00:02 00:05
+Clock _badfriend_ 00:05 00:10
+Clock _failure_ 5.00:00 7.00:00
 
 Foe _rats_ is 2 Giant_rat
 
@@ -109,15 +131,20 @@ variable _gotrat_
 variable _donetav_
 variable _donehouse_
 variable _donestore_
+variable _working_
 
 --	Quest start-up:
-    start timer _coward_
+    start timer _failure_
     say 1101
-    create foe _rats_ every 5 minutes indefinitely with 70% success
+    start task _streetspawn_
     pc at _tav_ set _attav_
     pc at _house_ set _athouse_
     pc at _store_ set _atstore_
     have _ratsack_ set _gotrat_
+    have _bait_ set _working_
+
+_streetspawn_ task:
+    create foe _rats_ every 5 minutes indefinitely with 70% success
 
 _agi1_ task:
     when attribute Agility is at least 70
@@ -135,7 +162,7 @@ _attav_ task:
     start task _tavrats_
 
 _tavrats_ task:
-    create foe _rats_ every 2 minutes indefinitely with 70% success
+    create foe _rats_ every 5 minutes indefinitely with 70% success
 
 _athouse_ task:
     say 1103
@@ -144,7 +171,7 @@ _athouse_ task:
     start task _houserats_
 
 _houserats_ task:
-    create foe _rats_ every 2 minutes indefinitely with 80% success
+    create foe _rats_ every 4 minutes indefinitely with 80% success
 
 _atstore_ task:
     say 1104
@@ -153,12 +180,13 @@ _atstore_ task:
     start task _storerats_
 
 _storerats_ task:
-    create foe _rats_ every 2 minutes indefinitely with 90% success
+    create foe _rats_ every 3 minutes indefinitely with 90% success
 
 _fetch1_ task:
     clear _tavrats_
     say 1110
     take _bait_ from pc
+    clear _working_
     get item _tavgold_ saying 1113
     setvar _donetav_
     get item _ratsack_
@@ -167,6 +195,7 @@ _fetch2_ task:
     clear _houserats_
     say 1111
     take _bait_ from pc
+    clear _working_
     get item _housegold_ saying 1114
     setvar _donehouse_
     get item _ratsack_
@@ -175,6 +204,7 @@ _fetch3_ task:
     clear _storerats_
     say 1112
     take _bait_ from pc
+    clear _working_
     get item _storegold_ saying 1115
     setvar _donestore_
     give pc nothing
@@ -182,6 +212,25 @@ _fetch3_ task:
 
 _outside_ task:
     when not _attav_ and not _athouse_ and not _atstore_
+
+_retreat_ task:
+    when _outside_ and _working_
+    say 1132
+    start timer _coward_
+
+_coward_ task:
+    say 1133
+    start timer _badfriend_
+
+_badfriend_ task:
+    say 1134
+    spawncityguards immediate
+    start task _failure_
+
+_back_ task:
+    when _retreat_ and _working_ and not _outside_
+    stop timer _coward_
+    stop timer _badfriend_
 
 _done1_ task:
     when _outside_ and _gotrat_ and _donetav_ and _agi1_
@@ -205,5 +254,5 @@ _lost2_ task:
     say 1120
     say 1131
 
-_coward_ task:
+_failure_ task:
     end quest
