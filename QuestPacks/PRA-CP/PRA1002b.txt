@@ -72,8 +72,9 @@ I've received a badly written letter that seems to
 be from my old friend _questgiver_, who calls himself
 The Ratcatcher General.
 <ce>
-He wants me to meet him in __tav_ within
- =ignore_ days to discuss the growing rat problem.
+He wants me to meet him in _tav_
+in __tav_ within =ignore_ days to discuss
+the growing rat problem.
 
 Message:  1051
 %qdt:
@@ -139,21 +140,13 @@ conscuously or unconsciously. He is understandably
 shaken and wants to go to a tavern.
 
 -- Dialogues
-Message:  1100
-<ce>This is __tav_ Now to find _questgiver_,
-<ce>AKA The Ratcatcher General.
-
-Message:  1101
-<ce>From what you remember of him, it might be worth
-<ce>checking the taverns first.
-
 Message:  1192
 <ce>A messenger approaches and hands you a letter.
 
 Message:  1193
 <ce>This badly written letter is from The Ratcatcher
-<ce>General, looks like he is somewhere in
-<ce>__tav_ in ____tav_ and needs your help again.
+<ce>General, looks like he is at _tav_
+in __tav_ and needs your help again.
 
 Message:  1194
 <ce>I think the Ratcatcher General will have gave up
@@ -816,11 +809,6 @@ variable _overdue_
     dialog link for person _sarcmage_
     dialog link for person _barkeep_
 
---_intown_ task:
---    when _attown_ and ___questgiver_
---    say 1100
---    start timer _sodhim_
-
 _delivery_ task:
     get item _letter_ saying 1192
     start timer _ignore_
@@ -832,14 +820,6 @@ _letterread_ task:
 _ignore_ task:
     say 1194
     end quest
-
---_location_ task:
---    when _smart_ and _intown_
---    say 1101
-
---_sodhim_ task:
---    say 1191
---    end quest
 
 _merc_ task:
     when skill Mercantile is at least 25
