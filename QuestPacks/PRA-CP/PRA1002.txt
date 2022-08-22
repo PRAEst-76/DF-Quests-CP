@@ -4,7 +4,7 @@ DisplayName: The Ratcatcher General
 QRC:
 
 QuestorOffer:  [1000]
-You there %hnr! You seem like a capable
+"You there %hnr! You seem like a capable
 adventurer. I am _questgiver_, they call
 me The Ratcatcher General. I'm the best
 Ratcatcher in %reg. Ask anyone. It pains me
@@ -13,80 +13,107 @@ plague of rats in %cn and I'm struggling to
 deal with them. I need you to keep the rats under
 control while I poison their nests in three buildings.
 Will you help? I will give you a sizable share of
-the bounty. What say you, %pcf?
+the bounty. What say you, %pcf?"
 
 RefuseQuest:   [1001]
-I don't blame you %pcf. Ratcatching is hard and
+"I don't blame you %pcf. Ratcatching is hard and
 dirty work that often goes un-appreciated by
 folk around here. I'll await another brave
-adventurer.
-Good travels my friend.
+adventurer."
+<ce>
+"Good travels my friend."
 
 AcceptQuest:  [1002]
-Good. We must make with haste for the first location,
-_rathouse1_.
-We need to clear them all within =timer_ days or the
-rats will overrun %cn.
+"Good. We must make with haste for the first location,
+_rathouse1_."
+<ce>
+"We need to clear them all within =timer_ days or the
+rats will overrun %cn."
 
 QuestFail:  [1003]
-It's too late. The rats are out of control.
-Flee for the hills!
+"It's too late. The rats are out of control.
+Flee for the hills!"
 
 QuestComplete:  [1004]
-A great service we did today, %pcf. A great
-service!
-Here is your share of the bounty and have a drink
-on me. You earned it. We made a good team.
-I may call upon you again if the vermin
-dare threaten our town.
+"A great service we did today, %pcf! A great
+service!"
+<ce>
+"Here is your share of the bounty and have a drink on
+me. You earned it. We made a good team. I may call upon
+you again if that vermin dare threaten our lands."
 
 RumorsDuringQuest:  [1005]
 Did you know _questgiver_ calls himself The Ratcatcher General? What a stupid title.
+<--->
+People are saying __questgiver_ is a breedin' ground for rats. Well at least someone is gettin' some breedin'.
+
+RumorsPostfailure:  [1006]
+The old Ratcatcher died doing what he loved; killin' rats.
+<--->
+I heard the Ratcatcher's latest apprentice abandoned him to be eaten alive by the beasts.
+
+RumorsPostsuccess:  [1007]
+Haven't seen many rats lately.
+<--->
+If they sang songs about killing rats they'd sing 'em about _questgiver_ but they don't, 'cause that would be stupid.
+<--->
+Awful what happened to the rats. Lovely creatures. Who would do such a thing?
+<--->
+That Ratcatcher is a legend in the world rat catching.
 
 Message: 1021
-This is the place, it stinks of _rats_ spoor!
+"This is the place, it stinks of _rats_ spoor!"
 <ce>
-Take this bag of bait, it's a special mixture
+"Take this bag of bait, it's a special mixture
 of mine. Mostly rotting bones and dried fishguts
 with some secret ingredients I add to give it
 potency. Trade secrets I'm afraid, but it'll keep
 the rats on you and, more importantly, off me
-while I find their nest.
+while I find their nest."
 <ce>
-They are likely to get mighty feisty once I start
-messing with it, so be careful! And good luck!
+"They are likely to get mighty feisty once I start
+messing with it, so be careful! And good luck!"
 
 Message: 1022
-Ok. I've found the nest. Get ready, they'll get
-ornery now!
+"Ok. I've found the nest. Get ready, they'll get
+ornery now!"
 
 Message: 1023
-Ok. Here we are. Here is the bait.
-Kill the rats, I'll do the nest.
+"Ok. Here we are. Here is the bait.
+Kill the rats, I'll do the nest."
 
 Message: 1024
-Right. Here's the bait. You know the drill.
-We can get drunk after this.
+"Right. Here's the bait. You know the drill.
+We can get drunk after this."
 
 Message:  1025
-That's it! The first nest is dealt with. The rest of
+"That's it! The first nest is dealt with. The rest of
 the rats should be easy work, then we can go onto the
-next, which is _rathouse2_.
+next, which is _rathouse2_."
 <ce>
-Be swift.
+"Be swift."
 <ce>
-I'll take the bag of bait back, otherwise you'll
-have hungry _rats_ chasing you for days.
+"I'll take the bag of bait back, otherwise you'll
+have hungry _rats_ chasing you for days."
 
 Message: 1026
-Right. Second batch of nests dealt with.
-I'll take the bait back.
-Mop up any stragglers and then we need to
-head for _rathouse3_. It's the last.
+"Right. Second batch of nests dealt with. I'll take the
+bait back. Mop up any stragglers and then we need to
+head for _rathouse3_. It's the last."
 
 Message: 1027
-All done my friend. Any rats that are left just
-don't know they are dead yet. Let's go to the tavern.
+"All done my friend. Any rats that are left just
+don't know they are dead yet."
+<ce>
+"Let's go to _pub_."
+
+Message:  1028
+The Ratcatcher sprints into the tavern like a foal into
+a spring meadow. You should catch up with him before he
+spends your share at the bar.
+
+Message:  1029
+"Cheers %pcf! Here's to a good days work!"
 
 Message: 1030
 You've left _questgiver_ to %g3 fate. Without
@@ -129,7 +156,7 @@ _rathouse3_
 
 Message:  1105
 We have dealt with all the infested houses.
-_questgiver_ says we can go to the pub to
+_questgiver_ says we can go to _pub_ to
 celebrate.
 
 Message: 1104
@@ -151,6 +178,7 @@ Person _questgiver_ group Questor male
 Place _rathouse1_ local house
 Place _rathouse2_ local house
 Place _rathouse3_ local shop
+Place _pub_ local tavern
 
 Clock _timer_ 1.00:00 0 flag 17 range 0 2
 Clock _nest1_ 00:15 00:30
@@ -184,7 +212,7 @@ variable _winchester_
     pc at _rathouse1_ set _inside1_
     pc at _rathouse2_ set _inside2_
     pc at _rathouse3_ set _inside3_
-    pc at any tavern set _winchester_
+    pc at _pub_ set _winchester_
 
 _firstjob_ task:
     when _inside1_
@@ -208,22 +236,33 @@ _thirdjob_ task:
     drop _questgiver_ face
     start timer _nest3_
 
-_pcgetsgold_ task:
+_drinks_ task:
 	when _alldone_ and _winchester_ and not _inside_ and not _abandoned_
-	give pc _reward_ 
+    place npc _questgiver_ at _pub_
+    drop _questgiver_ face
+    say 1028
+    clear _qgclicked_
+
+_pcgetsgold_ task:
+    when _qgclicked_ and _drinks_
+    start quest PRA1002b
+    say 1029
+	give pc _reward_
 	end quest 
 
 _1done_ task:
     when _destroyed1_ and not _abandoned_ and _inside1_
     unset _working_
+    clear _spawn1_
     say 1025
     take _lure_ from pc
     add _questgiver_ face
     log 1102 step 2
 
-_2done_task:
+_2done_ task:
     when _destroyed2_ and not _abandoned_ and _inside2_
     unset _working_
+    clear _spawn2_
     say 1026
     take _lure_ from pc
     add _questgiver_ face
@@ -232,6 +271,7 @@ _2done_task:
 _3done_ task:
     when _destroyed3_ and not _abandoned_ and _inside3_
     unset _working_
+    clear _spawn3_
     say 1027
     take _lure_ from pc
     add _questgiver_ face

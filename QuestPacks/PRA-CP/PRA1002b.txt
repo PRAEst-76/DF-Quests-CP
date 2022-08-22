@@ -68,10 +68,12 @@ The Ratcatcher's wife. Heard she caught the old man with a girl young enough to 
 --Logs
 Message:  1050
 %qdt:
-I have received a letter from _questgiver_, the
-self-styled Ratcatcher General. It's barely legible,
-but it seems %g wants me to meet %g2 at _tav_
-in __tav_ to discuss a 'special task'.
+I've received a badly written letter that seems to
+be from my old friend _questgiver_, who calls himself
+The Ratcatcher General.
+<ce>
+He wants me to meet him in __tav_ within
+ =ignore_ days to discuss the growing rat problem.
 
 Message:  1051
 %qdt:
@@ -88,8 +90,10 @@ I may have to pay it for him.
 
 Message:  1059
 %qdt:
-The owner of _tav_, _barkeep_, says he'll
-settle the debts for _questgiver_ if I do him a favour.
+The owner of _tav_, _barkeep_,
+says he'll settle the debts for _questgiver_
+if I do him a favour.
+<ce>
 Says it's simple and above board...
 
 Message:  1053
@@ -108,6 +112,11 @@ Message:  1055
 %qdt:
 We've got a rat in a bag, now to get it back to
 _mages_ in __mages_ so they can run tests.
+
+Message:  1060
+%qdt:
+We lost the rat, have to do that all over again at
+_hamlet2_.
 
 Message:  1056
 %qdt:
@@ -131,12 +140,27 @@ shaken and wants to go to a tavern.
 
 -- Dialogues
 Message:  1100
-<ce>A messenger approaches and hands you a letter.
+<ce>This is __tav_ Now to find _questgiver_,
+<ce>AKA The Ratcatcher General.
 
 Message:  1101
+<ce>From what you remember of him, it might be worth
+<ce>checking the taverns first.
+
+Message:  1192
+<ce>A messenger approaches and hands you a letter.
+
+Message:  1193
 <ce>This badly written letter is from The Ratcatcher
-<ce>General, looks like he is at _tav_ in __tav_
-<ce>and needs your help again.
+<ce>General, looks like he is somewhere in
+<ce>__tav_ in ____tav_ and needs your help again.
+
+Message:  1194
+<ce>I think the Ratcatcher General will have gave up
+<ce>on me by now.
+
+Message:  1191
+<ce>Forgot all about The Ratcatcher General. Oh well.
 
 Message:  1102
 As you enter a voice rings out, "There %pg is! %pcf!
@@ -219,7 +243,7 @@ You would think %g2 dead if it wasn't for %g2 snoring
 like an elderly bear
 
 Message:  1114
-You should probably take %g2 to %g3 rooms to sleep it off.
+You should probably take %g2 to a bed here to sleep it off.
 
 Message:  1115
 _questgiver_ is limp like a corpse and weighs more than
@@ -339,9 +363,12 @@ magicks on the thing and see what evil is driving it.
 Some evil is driving these things now. I swear."
 
 Message: 1127
-"Same as before. You take the bait, draw the rats,
-I'm going to try to grab one and bag it. Might take
-a few attempts because they don't like going in the bag."
+"That rat in the bag? It's dead. We'll need to get
+another. Head to _hamlet2_."
+<--->
+"Dammit. the rat escaped. We'll need to get another
+one. We really dn't have time for this %pcf.
+Go to _hamlet2_"
 
 Message: 1128
 "OK. Got one. Festy bugger. I'll take back the bait, you
@@ -653,8 +680,8 @@ Message: 1201
 Hi %pcf,
 <ce>
 tis me righting you the ratcatcher genral you might 
-remeeber we done a clean of the properties here in
-___questgiver_ i am sure you are busy with your things
+remeeber we done a clean of some properties here in
+____questgiver_ i am sure you are busy with your things
 and all but I could use your assistance been working few
 towns lately and it as been heavy work much heavyer than
 usual i know i know iam no youngster but something is not
@@ -662,10 +689,10 @@ right about the rats we done in behaviour has been off
 they semm more aggresive and almost targetted i do not
 belive in no rat king nonsense, but I have been in this
 game long enough to recognise when things just are not
-rite.
+rite
 <ce>
-sos i culd use your help again if you can meet me at
-_tav_ in __tav_ got a special task for us
+sos i culd use your help again if you can meet me in
+__tav_ within =ignore_ days got a special task for us
 <ce>
 do not be late they have happy hour
 <ce>
@@ -726,12 +753,14 @@ Item _magegold_ gold range 30 to 60
 Item _rknote_ letter used 1205
 Item _reward_ magic_item
 
-Clock _delivery_ 00:05
-Clock _ignore_ 7.00:00 14.00:00
-Clock _awake_ 08:00 12:00
+Clock _delivery_ 01:00
+Clock _ignore_ 14.00:00 28.00:00
+Clock _sodhim_ 5.00:00 7.00:00
+Clock _awake_ 08:00 18:00
 Clock _check_ 3:00
 Clock _destitute_ 7.00:00
 Clock _hurry_ 7.00:00 14.00:00
+Clock _lostrat_ 7.00:00 14.00:00
 Clock _jobfailed_ 7.00:00 14.00:00
 Clock _tavnest_ 00:05 00:20
 Clock _nestdestroyed_ 00:05 00:20
@@ -756,21 +785,28 @@ Person _wife_ group Resident2 female anyInfo 1014
 
 Place _tav_ remote tavern
 Place _hamlet_ remote hamlet
+Place _hamlet2_ remote hamlet
 Place _mages_ remote magery
 
+variable _attown_
 variable _attav_
 variable _atmages_
 variable _atham_
+variable _atham2_
 variable _sleeper_
 variable _check_
 variable _overdue_
 
 --	Quest start-up:
 	start timer _delivery_
+    _letter_ used do _letterread_
+    place npc _questgiver_ at _tav_
+    place npc _barkeep_ at _tav_
+    place item _letter2_ at _tav_
+    hide npc _barkeep_
     pc at _tav_ set _attav_
     pc at _mages_ set _atmages_
     pc at _hamlet_ set _atham_
-    _letter_ used do _letterread_
     have rcsleep set _sleeper_
     _rknote_ used do _thenote_
     _hamlnote_ used do _hamnote_
@@ -780,30 +816,42 @@ variable _overdue_
     dialog link for person _sarcmage_
     dialog link for person _barkeep_
 
+--_intown_ task:
+--    when _attown_ and ___questgiver_
+--    say 1100
+--    start timer _sodhim_
+
+_delivery_ task:
+    get item _letter_ saying 1192
+    start timer _ignore_
+
+_letterread_ task:
+    say 1193
+    log 1050 0
+
+_ignore_ task:
+    say 1194
+    end quest
+
+--_location_ task:
+--    when _smart_ and _intown_
+--    say 1101
+
+--_sodhim_ task:
+--    say 1191
+--    end quest
+
 _merc_ task:
     when skill Mercantile is at least 25
 
 _smart_ task:
     when attribute Intelligence is at least 60
 
-_delivery_ task:
-    get item _letter_ saying 1100
-    place npc _questgiver_ at _tav_
-    place npc _barkeep_ at _tav_
-    place item _letter2_ at _tav_
-    hide npc _barkeep_
-    start timer _ignore_
-
-_letterread_ task:
-    say 1101
-    log 1050 0
-
 _qgclicked_ task:
     clicked npc _questgiver_
 
 _drunk_ task:
     player within 4 units of item _letter2_
-    stop timer _ignore_
     say 1102
     say 1103
     say 1104
@@ -971,8 +1019,20 @@ _coward_ task:
 _baggedrat_ task:
     get item _ratsack_
     log 1055 5
+    start timer _lostrat_
     place npc _sarcmage_ at _mages_
     place foe _mrats_ at _mages_
+
+_lostrat_ task:
+    say 1127
+    start timer _hurry_ 
+
+_2job2_ task:
+    log 1060 5
+    when _atham2_
+    stop timer _hurry_
+    stop timer _jobfailed_
+   run quest PRA1002bj then _baggedrat_ or _coward_
 
 _clickedsarcmage_ task:
     clicked npc _sarcmage_
@@ -982,6 +1042,7 @@ _mg_ task:
     say 1131
     say 1132
     say 1133
+    start task _mageattack_
 
 _mageattack_ task:    
     create foe _mrats_ every 2 minutes indefinitely with 80% success
