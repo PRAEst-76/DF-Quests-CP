@@ -582,7 +582,15 @@ Ratcatcher is overrun by his lifelong prey.
 
 Message:  1176
 The Ratcatcher says nothing as you show him the note. He
-turns away and stares into the distance for some time.
+turns away and stares into the distance for some time,
+before turning back to you.
+<ce>
+"I need a drink %pcf. Let's go to _othertav_.
+I'm not barred there yet."
+
+Message:  1195
+The Ratcatcher immediately goes and buys himself a
+large drink.
 
 Message:  1177
 "%pcf. I... I need to go and figure things out. Alone.
@@ -780,12 +788,14 @@ Place _tav_ remote tavern
 Place _hamlet_ remote hamlet
 Place _hamlet2_ remote hamlet
 Place _mages_ remote magery
+Place _othertav_ remote tavern
 
 variable _attown_
 variable _attav_
 variable _atmages_
 variable _atham_
 variable _atham2_
+variable _atothertav_
 variable _sleeper_
 variable _check_
 variable _overdue_
@@ -800,6 +810,7 @@ variable _overdue_
     pc at _tav_ set _attav_
     pc at _mages_ set _atmages_
     pc at _hamlet_ set _atham_
+    pc at _othertav_ set _atothertav_
     have rcsleep set _sleeper_
     _rknote_ used do _thenote_
     _hamlnote_ used do _hamnote_
@@ -1163,12 +1174,21 @@ _messenger_ task:
 
 _thenote_ task:
     say 1176
+    place npc _questgiver_ at _othertav_
+
+_lastdrink_ task:
+    when _atothertav_ and _thenote_
+    say 1195
+    clear _qgclicked_
+
+_goodbye_ task:
+    when _qgclicked_ and _lastdrink_
     say 1177
+    start quest PRA1002c
     say 1178
     give pc _reward_
     end quest
 
 _quit_ task:
     say 1174
-    start quest PRA1002c
     end quest
