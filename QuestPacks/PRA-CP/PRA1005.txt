@@ -1,0 +1,375 @@
+Quest: PRA1005
+DisplayName: Disputed Territory
+-- Message Panels
+QRC:
+
+QuestorOffer:  [1000]
+I've got a task for a worthy adventurer should
+that be you. My family keep has been taken by
+undead. I  mean to go there and take it back.
+
+RefuseQuest:   [1001]
+Hmph. Another coward. Well go on then. I'm sure
+someone has rats for you to kill.
+
+AcceptQuest:  [1002]
+Good. I was wondering when someone would show some
+guts. We need to make for _keep_
+in ___keep_. Slay the undead filth living
+therein and reclaim it for my family.
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+
+Message:  1030
+%qdt:
+_questgiver_ has employed me to take him to his
+family keep, ___keep_ and slay the
+undead there so he can reclaim it.
+
+Message:  1031
+%qdt:
+In a surprising turn of events, the lich in
+_crypt_ is _questgiver_'s brother
+_brother_. They now both want me to help
+them to seek out their father to end the dispute.
+
+Message:  1100
+Ok %pcn. We are here. Watch the shadows.
+There is a lich here. It leads these creatures.
+We must slay it quickly.
+
+Message:  1101
+There %pcn! There is the lich. Quickly. End it!
+
+Message:  1102
+Foolish mortals. You dare intrude on the domain of...
+<ce>
+_questgiver_? What are you doing here?
+
+Message:  1103
+Now %pcf! Ignore it's pratter!
+
+Message:  1104
+What are you doing _questgiver_? Who is this %pct?
+What are you doing in my keep?
+
+Message:  1105
+This is not your keep _brother_! It's mine.
+I want you gone!
+
+Message:  1106
+Father left it to me when he died! It's mine by
+right, as the eldest!
+
+Message:  1107
+Yes! And when you died it passed to me.
+
+Message:  1108
+I'm still here _questgiver_! This is still
+my keep!
+
+Message:  1109
+You are dead. Legally you can't own anything!
+<ce>
+Kill him %pcf!
+
+Message:  1110
+Stay your hand %pcf! This is my keep and
+my stupid little brother has lead you here on
+false pretences to claim it. Our father left it
+to me. I was the favoured son.
+<ce>
+<ce>Kill the lich?
+
+Message:  1111
+No. Father loved me best. He always said so.
+He'd be horrified to see what you've become!
+
+Message:  1112
+Well. Why don't we ask him?
+
+Message:  1113
+What? We can't. He's dead.
+
+Message:  1114
+As you were at pains to point out, so am I,
+and yet here you are talking to me.
+<ce>
+His ghost haunts ___crypt_. We go there.
+We ask him who get's the keep. If he says it's
+yours then I'll take my people away.
+
+Message:  1115
+Your 'people'? This ridiculous %pcf!
+End this scarecrow and we can put our feet up.
+
+Message:  1116
+Always the coward _questgiver_.
+Too cowardly to come here alone. To cowardly to
+face the possibility father didn't love you like
+he loved me!
+
+Message:  1117
+%pcf!
+<ce>
+<ce>Kill _brother_?
+
+Message:  1118
+Let's go. Truce until we learn the truth?
+
+Message:  1119
+Fine, but you will be the one crying to mother.
+
+Message:  1120
+Mother is dead, but fine.
+<ce>
+%pcf. We head for ___crypt_.
+Let my brother learn the truth, as harsh as it
+may be, then you can take him back to whatever
+hovel you found him in.
+
+Message:  1121
+Who dares disturb the resting place of...
+
+Message:  1122
+Father! It's us!
+
+Message:  1123
+Oh boys! Don't I get a moments peace even in death
+from you idiots!
+
+Message:  1124
+The family keep, father. Who gets it? Me or
+_brother_?
+
+Message:  1125
+You left it to me! _questgiver_ has been
+nothing but a dissapointment to you, you told me
+yourself...
+
+Message:  1126
+Oh. That bloody ruin. I hated that place. I left
+it to rack and ruin. It belongs to the earth it
+soiled.
+
+Message:  1127
+Who father! Which one of us gets it?
+
+Message:  1128
+I don't care! I just want to be left alone.
+Ask your mother. It was hers to begin with.
+
+Message:  1129
+What? Mother is dead!
+
+Message:  1130
+No she isn't. _mother_!
+
+Message:  1131
+Who summons me?
+
+Message:  1132
+We do. Your sons. Father says you own _keep_?
+Which one of us gets it when you die?
+
+Message:  1133
+I don't care for your mortal squabbles!
+
+Message:  1134
+Actually, I'm not mortal anymore?
+
+Message:  1135
+I care not! Begone before I destroy you all!
+
+Message:  1136
+<ce>Slip away?
+
+Message:  1137
+Where are you going?
+
+Message: 1138
+One us has to have it. You have to choose!
+
+Message:  1139
+I choose what I should have chosen long ago.
+To destroy you!
+
+Message:  1140
+Mummy! Please!
+
+Message:  1141
+This is your fault!
+
+Message:  1150
+My brother is dead. _keep_ is mine now.
+Let's head back to __questgiver_
+so I can arrange some men to come and fix the
+place up a bit... and perhaps see if these
+tapestries can be repaired.
+
+Message:  1151
+Well done %pcf. Here. Have this. You've earned it.
+
+Message:  1180
+I can assume we aren't going to clear
+___crypt_? Useless %ra! I don't need you.
+
+Message:  1181
+%ra! You have dithered too much. We will go alone.
+You will rot here!
+
+QBN:
+
+Person _questgiver_ group Resident1
+Person _brother_ faction The_Necromancers
+
+Place _keep_ remote dungeon11
+Place _crypt_ remote dungeon0
+
+Item _gold_ gold
+Item _thing_ magic_item
+
+Foe _bloke_ is Werewolf
+Foe _lich_ is Lich
+Foe _skel_ is Skeletal_warrior
+Foe _zomb_ is Zombie
+Foe _dad_ is Ghost
+Foe _mother_ is Daedra_seducer
+
+Clock _coward_
+Clock _coward2_
+
+variable _atkeep_
+variable _atcrypt_
+variable _back_
+
+--	Quest start-up:
+	start timer _coward_
+    hide npc _questgiver_
+    add _questgiver_ face
+	log 1030 step 0
+    pc at _keep_ set _atkeep_
+    pc at _crypt_ set _atcrypt_
+    pc at __questgiver_ set _back_
+
+_inkeep_ task:
+    when _atkeep_
+    say 1100
+    place foe _lich_ at _keep_
+
+_thelich_ task:
+    player within 4 units of foe _lich_
+    restrain foe _lich_
+    stop timer _coward_
+    say 1101
+    say 1102
+    say 1103
+    say 1104
+    say 1105
+    say 1106
+    say 1107
+    say 1108
+    say 1109
+    prompt 1110 yes _nolich_ no _thelich2_
+
+_thelich2_ task:
+    say 1111
+    say 1112
+    say 1113
+    say 1114
+    say 1115
+    say 1116
+    prompt 1117 yes _nolich_ no _thelich3_
+
+_thelich3_ task:
+    say 1118
+    say 1119
+    say 1120
+    remove foe _lich_
+    add foe _lich_ face
+    log 1031 1
+    start timer _coward2_
+
+_nolich_ task:
+    unrestrain foe _lich_
+    create foe _skel_ every 1 minutes indefinitely with 70% success
+    create foe _zomb_ every 1 minutes indefinitely with 70% success
+
+_deadlich_ task:
+    killed _lich_
+    clear _nolich_
+    say 1150
+
+_thecrypt_ task:
+    when _atcrypt_
+    place foe _dad_ at _crypt_
+
+_ghostdad_ task:
+    player within 4 units of foe _dad_
+    restrain foe _dad_
+    stop timer _coward2_
+    say 1121
+    say 1122
+    say 1123
+    say 1124
+    say 1125
+    say 1126
+    say 1127
+    say 1128
+    say 1129
+    say 1130
+    place foe _mother_ at _crypt_
+    say 1131
+    say 1132
+    say 1133
+    say 1134
+    say 1135
+    prompt 1136 yes _slip_ no _listen_
+
+_listen_ task:
+    say 1138
+    say 1139
+    say 1140
+    say 1141
+    place foe _lich_ at _crypt_
+    place foe _bloke_ at _crypt_
+    unrestrain foe _dad_
+
+_slip_ task:
+    say 1137
+    place foe _lich_ at _crypt_
+    place foe _bloke_ at _crypt_
+    unrestrain foe _dad_
+
+_alldead_ task:
+    killed _dad_
+    killed _lich_
+    killed _mother_
+    killed _bloke_
+    give pc nothing
+    end quest
+
+_coward_ task:
+    say 1180
+    drop _questgiver_ face
+    create foe _bloke_ every 0 minutes 1 times with 100% success
+    end quest
+
+_coward2_ task:
+    say 1181
+    drop _questgiver_ face
+    drop foe _lich_ face
+    create foe _bloke_ every 0 minutes 1 times with 100% success
+    create foe _lich_ every 0 minutes 1 times with 100% success
+    end quest
+
+_done_ task:
+    when _back_ and _deadlich_
+    give pc _gold_
+    give pc _thing_
+    say 1151
+    end quest

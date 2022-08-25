@@ -16,6 +16,9 @@ QuestComplete:  [1004]
 <ce>Is this the end for The Ratcatcher General?
 
 RumorsDuringQuest:  [1005]
+Heard that dodgy ratcatcher is in town. I thought they'd driven him out of ____library_ after they found out what he was doing?
+<--->
+I can't believe that ratcatcher was a crook. He seemed like such a nice guy.
 
 Message:  1010
 His home is the road he says. I hear it's 'cause his wife kicked him out 'cause he smells like rodent.
@@ -60,13 +63,19 @@ Message:  1100
 <ce>A messenger approaches and hands you a letter.
 
 Message:  1101
-"%pcf! Good you are here. We need to save my daughter _daughter_ at _daughhome_ in __daughhome_
-My wife _wife_ at _wifehome_ in __wifehome_
-My buddy _mastercatcher_ at _masterhome_ in __masterhome_ in ___masterhome_
-My other buddy _ratcatcher2_ at _rc2home_ in __rc2home_ in ___rc2home_
-My other other buddy _ratcatcher3_ at _rc3home_ in __rc3home_ in ___rc3home_
-Then kill _sidekick_ at _ratdun_ in __ratdun_ in ___ratdun_ 
-Simple?
+"%pcf! Good you are here. We need to save my
+daughter _daughter_ at _daughhome_
+in __daughhome_
+My wife _wife_ at _wifehome_
+in __wifehome_
+My buddy _mastercatcher_ at _masterhome_
+in __masterhome_ in ___masterhome_
+My other buddy _ratcatcher2_ at _rc2home_
+in __rc2home_ in ___rc2home_
+My other other buddy _ratcatcher3_ at _rc3home_
+in __rc3home_ in ___rc3home_
+Then kill _sidekick_ in __ratdun_ in ___ratdun_ 
+Simple?"
 
 Message:  1201
 %pcf!
@@ -74,12 +83,34 @@ its your ol buddy the ratcatcher.
 i need your help one last time.
 please meet me in _library_ in
 __library_
-i know i know but i dont drink no more
+i know i know its a libry but i dont drink no more
 i need the clear head
 please come
 this is important
 come soon
+                    _questgiver_
                         the ratcatcher
+
+Message:  1300
+%qdt:
+I've received a letter from _questgiver_
+asking me to meet him in _library_ in
+__library_ as soon as possible.
+
+Message:  1301
+%qdt:
+He says we have to save his
+daughter _daughter_ at _daughhome_
+in __daughhome_
+His wife _wife_ at _wifehome_
+in __wifehome_
+His buddy _mastercatcher_ at _masterhome_
+in __masterhome_ in ___masterhome_
+His other buddy _ratcatcher2_ at _rc2home_
+in __rc2home_ in ___rc2home_
+His other other buddy _ratcatcher3_ at _rc3home_
+in __rc3home_ in ___rc3home_
+Then kill _sidekick_ in __ratdun_ in ___ratdun_ 
 
 QBN:
 
@@ -114,9 +145,14 @@ Place _ratdun_ remote dungeon
 
 --	Quest start-up:
 	start timer _delivery_
+    _letter_ used do _letterread_
 
 _delivery_ task:
+    place npc _questgiver_ at _library_
     get item _letter_ saying 1100
+
+_letterread_ task:
+    log 1300 0
 
 _rcclicked_ task:
     clicked npc _questgiver_
@@ -124,11 +160,12 @@ _rcclicked_ task:
 _start_ task:
     when _rcclicked_
     say 1101
+    log 1301 1
     start task _off_
 
 _off_ task:
     add _questgiver_ face
-    place npc _questgiver_ at _library_
+    hide npc _questgiver_
     place npc _daughter_ at _daughhome_
     place npc _wife_ at _wifehome_
     place npc _twat_ at _wifehome_
