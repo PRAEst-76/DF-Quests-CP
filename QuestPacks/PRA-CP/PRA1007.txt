@@ -36,14 +36,14 @@ _questgiver_ has had another one of %g3 turns.
 <--->
 Apparently some %ra spooked _questgiver_. Some people have no shame.
 <--->
-Some nutter is hiding under a table in _store_ and they can't get %g2 to come out.
+Some nutter is hiding under a table in __questgiver_ ___questgiver_ and they can't get %g2 to come out.
 
 --More Rumors
 Message: 1011
 A figure was seen sneaking out the back door of __store_'s _store_. Slunk off towards _res_ in __res_.
 
 Message: 1012
-I saw _questgiver_ leaving _res_ a short while ago. Looking furtive was %g. Seemed to head towards _remtav_ in __remtav_.
+I saw _questgiver_ leaving __questgiver_ ___questgiver_ a short while ago. Looking furtive was %g. Seemed to head towards _remtav_ in __remtav_.
 
 Message: 1013
 My brother said he saw someone riding hell for leather out of __remtav_, heading towards _dun_.
@@ -91,16 +91,20 @@ _questgiver_? Yes, %g was here. Wouldn't leave.
 Hid under the table saying a %ra was trying
 "inner-act" with %g2. Crazy if you ask me.
 <ce>
-Ran off towards __questgiver_. Glad to be shot of %g2.
-
-Message:  1056
+Ran off towards __questgiver_ ___questgiver_. Glad to be shot of %g2.
+<--->
 Yes. _questgiver_ was here. Hiding in the corner
 there.
 <ce>
 Was here all night in fact. I offered %g2 some
-food but %g just muttered about __questgiver_.
+food but %g just muttered about __questgiver_ ___questgiver_.
 <ce>
 You might want to check there.
+<--->
+I'm sorry, you've just missed %g. Hid out in
+corner. Seemed agitated.
+<ce>
+Talked about __questgiver_ ___questgiver_.
 
 Message:  1057
 You still haven't found _questgiver_? As you can
@@ -108,13 +112,6 @@ see %g hasn't shown up here.
 <ce>
 Try asking if anyone has any news, if they can't
 tell you about _questgiver_ directly.
-
-Message:  1058
-I'm sorry, you've just missed %g. Hid out in
-corner. Left without paying %g3 bill I hear.
-Seemed agitated.
-<ce>
-Talked about __questgiver_.
 
 Message:  1059
 No! It's you. What do you want from me? Leave me
@@ -128,11 +125,10 @@ _local0_ sent you? Oh thank you. Please take me home!
 
 Message:  1061
 Glad you brought _questgiver_ back. %pcf.
-I spoke to the Healer, _doctor_ from
-__temple_ and they have something new
-to try.
-<ce>
-Maybe bring %g2 there?
+Can you bring %g2 to __temple?
+I spoke to the Healer, _doctor_ at
+_temple_ there and they have a
+new treatment they want to try.
 
 Message:  1062
 %oth, you look like that worg, %n. Is that me?
@@ -158,7 +154,7 @@ This should cover your expenses.
 --Logs
 Message:  1150
 %qdt:
-_questgiver_ of ___questgiver_ suddenly
+_questgiver_ of __tav_ suddenly
 accused me of theft before calling the guards
 and running out of the building screaming.
 <ce>
@@ -241,10 +237,15 @@ _questgiver_ has some issues. I filed a report but it got closed.
 _questgiver_ once told me that I looked rough because someone called Ninelan forgot about me. What a weird thing to say.
 <--->
 _questgiver_ has some creepy crawlies inside %g2. So %g says. Crazy talk.
+<--->
+He goes to _res_ sometimes when he's having a bad day.
+<--->
+_questgiver_? Good friends with _local4_ I believe.
+<--->
+Seen him sipping cider at _tav_. Probably shouldn't be when he's taking the tinctures.
 
 Message: 1202
 _local0_ is a decent sort. Always looking out for that poor _questgiver_. Lives at _house_ in __house_.
-
 
 Message:  1250
 %pcf
@@ -257,27 +258,27 @@ Be careful what you say to people in future, eh?
 <ce>
                             _local0_
                             __local0_
-                            ___local0_
                             ____local0_
 
+-- Messages
 Message:  1300
 A scruffy boy with a runny nose hands you a letter. Stares at you for a bit. Then wanders off.
 
 Message:  1301
-Damn. %g's awake again.
+Damn. %g's awake again. Quickly knock him out?
 
 Message:  1302
 _questgiver_ is unconscious. Time to get him home.
 
 Message: 1303
-There he is! There is _questgiver_!
+He's done a runner. Better get after him.
 
 Message: 1304
 _questgiver_ appears to almost instantly
 vanish before your eyes only to be replaced by
 a raving lunatic who attacks desperately.
 <ce>
-Metaphorically, of course.
+Metaphorically speaking, of course.
 
 Message: 1305
 _questgiver_ has passed out again thankfully.
@@ -287,14 +288,16 @@ Person _questgiver_ group Questor male anyInfo 1201
 Person _local0_ group Resident2 anyInfo 1202
 Person _local1_ group Resident1
 Person _local2_ group Resident2
-Person _local3_ group Resident1
+Person _local3_ group Resident3
+Person _local4_ group Resident4
 Person _doctor_ group Cleric
 
-Place _store_ local generalstore rumors 1011
-Place _res_ local house rumors 1012
+Place _store_ local generalstore
+Place _res_ local house
+Place _res2_ local house
 Place _house_ local house
-Place _tav_ local tavern rumors 1013
-Place _dun_ remote dungeon rumors 1014
+Place _tav_ local tavern
+Place _dun_ remote dungeon
 Place _temple_ remote temple
 
 Item _deathnotice_ letter used 1250
@@ -302,10 +305,8 @@ Item _reward_ gold
 
 Foe _lunatic_ is Warrior
 
-Clock _fledstore_
-Clock _fledhouse_
-Clock _fledtav_
-Clock _fled_
+Clock _gone_ 00:01
+Clock _fled_ 06:00 1.00:00
 Clock _chase_ 00:05 01:00
 Clock _awake_ 03:00 12:00
 Clock _dead_ 7.00:00 10.00:00
@@ -332,9 +333,14 @@ variable _treated_
     pc at _dun_ set _atdun_
     dialog link for location _store_ person _questgiver_
     dialog link for location _res_ person _questgiver_
+    dialog link for location _res2_ person _questgiver_
     dialog link for location _tav_ person _questgiver_
     dialog link for location _dun_ person _questgiver_
     log 1150 step 0
+    hide npc _questgiver_
+    start timer _gone_
+
+_gone_ task:
     play sound door_slam every 0 minutes 1 times
     say 1051
     say 1052
@@ -344,102 +350,102 @@ variable _treated_
     place npc _local1_ at _store_
     place npc _local2_ at _res_
     place npc _local3_ at _tav_
-    hide npc _local1_
-    hide npc _local2_
-    hide npc _local3_
+    place npc _local4_ at _res2_
+    start task _fled_
 
-_hiding_ task:
-    pick one of _tohouse_ _tostore_ _totav_ _todun_
+_fled_ task:
+    pick one of _tores_ _tostore_ _totav_ _tores2_
+
+_tores_ task:
+    restore npc _local1_
+    hide npc _local2_
+    restore npc _local3_
+    restore npc _local4_
+    place npc _questgiver_ at _res_
+    start timer _fled_
+
+_tores2_ task:
+    restore npc _local1_
+    restore npc _local2_
+    restore npc _local3_
+    hide npc _local4_
+    place npc _questgiver_ at _res_
+    start timer _fled_
 
 _tostore_ task:
+    hide npc _local1_
+    restore npc _local2_
+    restore npc _local3_
+    restore npc _local4_
     place npc _questgiver_ at _store_
-    setvar _hidingstore_
+    start timer _fled_
 
-_chase_ task:
-    say 1303
-    start task _loony_
+_totav_ task:
+    restore npc _local1_
+    restore npc _local2_
+    hide npc _local3_
+    restore npc _local4_
+    place npc _questgiver_ at _tav_
+    start timer _fled_
 
-_rabbiting_ task:
+_todun_ task:
+    when _tores_ and _totav_ and _tores2_ and _tostore_
+    place npc _questgiver_ at _dun_
+    start timer _dead_
+
+_panic_ task:
     when _qgclicked_ and not _hidingdun_
-    stop timer _chase_
-    start task _loony_
-
-_loony_ task:
     say 1059
+    stop timer _fled_
+    clear _fled_ _awake_
     hide npc _questgiver_
+    pick one of _fight_ _flight_
+
+_fight_ task:
     say 1304
     create foe _lunatic_ every 0 minutes 1 times with 100% success
-    clear _hidingstore_ _hidingres_ _hidingtav_
+    clear _qgclicked_
+
+_flight_ task:
+    say 1303
+    start task _fled_
+    clear _qgclicked_
 
 _subdued_ task:
     injured _lunatic_
     say 1302
-    stop timer _fledstore_
-    stop timer _fledhouse_
-    stop timer _fledtav_
-    stop timer _chase_
     remove foe _lunatic_
     add _questgiver_ face
     log 1170 step 4
     start timer _awake_
-    clear _loony_
-    clear _rabbiting_
+    clear _panic_ _fight_ _flight_
 
 _awake_ task:
     clear _subdued_
-    say 1301
-    prompt 1062 yes _loony_ no _norabbit_
+    say 1062
+    prompt 1301 yes _gotosleep_ no _panic_
 
-_norabbit_ task:
+_gotosleep_ task:
+    play sound fist_smack_high 0 1
     say 1305
     setvar _subdued_
+    clear _awake_
     start timer _awake_
-
-_tores_ task:
-    hide npc _local1_
-    setvar _atres_
-    start timer _fled_
-    place npc _questgiver_ at _res_
-    add dialog for location _store_
-    log 1152 step 2
 
 _clickedlocal1_ task:
     clicked npc _local1_ say 1055
 
-_fledhouse_ task:
-    restore npc _local2_
-    setvar _attav_
-    start timer _fledtav_
-    place npc _questgiver_ at _tav_
-    add dialog for location _res_
-    log 1153 step 2
-
 _clickedlocal2_ task:
-    clicked npc _local2_ say 1056
-
-_fledtav_ task:
-    restore npc _local3_
-    hide npc _questgiver_
-    setvar _atdun_
-    start timer _dead_
-    place npc _questgiver_ at _dun_
-    add dialog for location _remtav_
-    reveal _dun_
-    log 1154 step 4
+    clicked npc _local2_ say 1055
 
 _clickedlocal3_ task:
-    clicked npc _local3_ say 1058
+    clicked npc _local3_ say 1055
 
-_outside_ task:
-    when _atwild_
-    start timer _chase_
-
-_indun_ task:
-    when _location4_
-    add dialog for location _dun_
+_clickedlocal4_ task:
+    clicked npc _local4_ say 1055
 
 _rescue_ task:
-    when _qgclicked_ and _location4_
+    when _qgclicked_ and _atdun_
     say 1060
     stop timer _dead_
     setvar _rescued_
@@ -470,7 +476,6 @@ _treatment_ task:
     when _stunned_ and _doc_ 
     say 1063
     say 1064
-    setvar _treated_
 
 _dead_ task:
     start timer _letter_
@@ -481,7 +486,7 @@ _letter_ task:
     end quest
 
 _pcgetsgold_ task:
-    when _treated_
+    when _treatment_
     change repute with _doctor_ by +10
     give pc _reward_
     end quest
