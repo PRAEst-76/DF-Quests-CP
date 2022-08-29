@@ -15,7 +15,7 @@ QuestComplete:  [1004]
 
 RumorsDuringQuest:  [1005]
 That wizard is just a crazy old man.
-<-->
+<--->
 Stay away from _dadhouse_. I hear noises. Bad noises.
 
 Message:  1046

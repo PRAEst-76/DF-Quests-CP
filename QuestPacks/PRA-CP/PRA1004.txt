@@ -1223,7 +1223,7 @@ _catchased_ task:
     say 1318
     setvar _damncat_
     drop _child_ face
-    play sound meow_loud every 0 minutes 1 times
+    play sound meow_soft every 0 minutes 1 times
     clear _havebaby_
 
 _chasingkid_ task:
@@ -1655,7 +1655,7 @@ _trespass_ task:
     unrestrain foe _cult_
     hide npc _father_
     place foe _dadmad2_ at _culthome_
-    create foe _cult_ every 1 minutes 2 times with 90% success
+    create foe _cult_ every 0 minutes 2 times with 90% success
 
 _dadinjured2_ task:
     injured _dadmad2_
@@ -1705,7 +1705,7 @@ _thepriest_ task:
     clear _priestclicked_
 
 _backwithmother_ task:
-    when _priestclicked_ and not _death_ and _havebaby_ or _rescued_
+    when _priestclicked_ and not _death_ and _havebaby_
     drop _child_ face
     say 1141
     start task _safe_

@@ -1,5 +1,5 @@
 Quest: PRA1003dadhome
-DisplayName: In Every Dream Home... a dad
+DisplayName: Of Grave Concern
 -- Message panels
 QRC:
 
@@ -12,8 +12,50 @@ AcceptQuest:  [1002]
 QuestFail:  [1003]
 
 QuestComplete:  [1004]
+"Here is some small payment for what you have done
+so far. Now let us meet outside for our onward
+journey. We have much work to do."
 
 RumorsDuringQuest:  [1005]
+I heard weird sounds coming from _dadhouse_ sometimes. Some evil goes on there I'd wager.
+<--->
+This isn't a bad place to live, though it would be better if it wasn't for that creepy wizard at _dadhouse_.
+<--->
+Don't drink the water. The nobles puts stuff in it to control our minds.
+<--->
+Met a Khajiit once. Said some weird stuff. Then licked his own knees.
+<--->
+Avoid _father_. That wizard is just a crazy old man.
+<--->
+Stay away from _dadhouse_. I hear noises. Bad noises.
+
+Message: 1011
+I heard he was kicked out of the Mages Guild for bad practice.
+<--->
+Noisy skeltons in that closet. That's all I'm saying.
+
+Message:  1015
+That's _father_'s place. You don't want to go there.
+<--->
+_father_ lives there with his collection of regrets.
+
+Message:  1012
+<ce>You need to hurry to ___grave_.
+<ce>_father_ does not strike you as a patient man
+
+Message: 1013
+You are at the gravesite, now to find where
+the girl is buried.
+
+Message: 1014
+<ce>You've collected her remains in a sack.
+<ce>Now to get them back to _father_.
+
+Message:  1045
+Some guards suddenly appear from behind a wall,
+"Halt! Graverobber! You dare desecrate this young
+woman?! You will lie in a paupers grave of your
+own for this!"
 
 Message:  1035
 You are stopped at the door by a grim looking butler,
@@ -32,7 +74,8 @@ You may go and speak to him."
 mindful."
 
 Message:  1037
-The father is an imposing man, stood before the fireplace.
+_father_ is an imposing man, stood before the
+fireplace.
 <ce>
 "So the maid sent you? She is a good sort, that one."
 <ce>
@@ -88,7 +131,7 @@ Message:  1041
 Message:  1042
 "Good! Good!"
 <ce>
-He shows you a map, "Her grave is here. Go and bring
+"Her grave is at ___grave_. Go and bring
 my little girl back to me. Time is of the essence, so
 do not tarry in your task. Let none stand in your way."
 
@@ -96,23 +139,163 @@ Message: 1043
 "Alas. I expected as much. My servant will show
 you out. I can find another, better, to the task."
 
+Message:  1044
+<ce>You spot some people near a grave, they seem to have
+<ce>have dug up a corpse and are carrying it to a cart.
+
+Message:  1049
+"Who in Oblivion are you? We've been tasked with
+removing this girls corpse to protect it from
+graverobbers. I can only assume that's you. So..."
+<ce>They draw their weapons without further conversation.
+
+Message:  1046
+"You return. You have the... yes. My daughter."
+<ce>
+He takes the bundle from you.
+<ce>
+"How small she seems. Like when... No matter. The
+deed is done. This family thanks you, or they
+will thank you when our daughter is back with
+us once more."
+
+Message:  1047
+"There is but one more step. I shall prepare her
+remains. If you wish to help me see this through
+and return my beautiful daughter to this world
+and her beloved then return this time tomorrow."
+<ce>
+"I shall tell you what needs to be done then.
+For now, take this small payment for your deeds
+thus far and go and rest at the local inn.
+You have earned it, and more my friend."
+
+Message:  1048
+"You return once more. Good. I was concerned you
+would have been reluctant to help any further.
+I'll admit this is a diffcult task, for you and
+for us. But a necessary one."
+
+
+-- Logs
+Message:  1104
+%qdt:
+_father_ of ___dadhouse_ wants to
+bring his daughter back from the dead. He seems
+to think he can do it. He wants me to collect her
+remains from her grave at __grave_
+and bring them back to him.
+
+Message:  1105
+%qdt:
+I retrived the girls remains, but they were guarded
+for some reason. Now to get them back to her father.
+
+Message: 1107
+%qdt:
+The father wanted me to dig up his daughter for
+some necromantic ritual. I told him I wished no
+part in it. I guess that's that.
+
+Message:  1106
+%qdt:
+I've returned the remains to the father. What he
+plans to do with them is unclear. He told me to
+return at the same time tomorrow. I guess I shall
+find out then.
+
+Message: 1151
+A page stops you and hands you a letter with a
+noble seal. He does not make eye contact or await
+a gratuity.
+
+Message: 1155
+%pcf! You took my daughters remains from
+her tomb but did not return them to me.
+I will take them from your corpse!
+
+Message: 1156
+You hear something. Someone.
+
+Message: 1157
+%pcf?
+<ce>
+I'm afraid you have something that doesn't belong
+to you. And knowledge is the most valuable thing
+there is.
+<ce>
+Nothing personal.
+
+Message: 1158
+Looks like _father_ didn't want you walking
+away knowing what he was planning. You may have
+made a powerful enemy.
+
+Message: 1203
+%pcf
+                                %qdat
+I am somewhat dissapointed, but not surprised
+that you did not return to me at ___dadhouse_
+as I requested. Our task was a heavy one and
+I suspected you did not have the gumption for
+such work.
+<ce>
+No matter. I have procured the services of a
+mercenary to do that which you could not.
+You are no longer required. I expect the
+monies paid to you thus far should cover your
+expenses while assisting our family.
+I bear you no ill will in this, however I do not
+expect to see or hear from you again.
+<ce>
+                        _father_
+
 QBN:
-Place _dadhouse_ local house2
+Person _father_ group Noble male anyInfo 1011
+
+Place _dadhouse_ local house2 anyInfo 1015
+Place _grave_ remote graveyard
+
+Item _remains_ large_sack
+Item _bonemoney_ gold
+Item _gratuity_ gold range 50 to 100
+Item _nogumption_ letter used 1203
+
+Foe _guards_ is 2 Warrior
+Foe _grobb1_ is Rogue
+Foe _grobb2_ is Spellsword
+Foe _dad_ is 1 Sorcerer
+Foe _dadguard_ is 2 Skeletal_warrior
+
+Clock _graverobbers_ 00:04 00:06
+Clock _whereremains_ 6.00:00 9.00:00 
+Clock _silence_ 1.00:00
+Clock _dadletter_ 4.00:00 6.00:00
+Clock _rested_ 1.00:00
 
 variable _indadhouse_
-
-Clock _thedad_ 00:01
+variable _backwithremains_
+variable _ingrave_
+variable _graverobber_
 
 --	Quest start-up:
     pc at _dadhouse_ set _indadhouse_
+    pc at _grave_ set _ingrave_
+    place npc _father_ at _dadhouse_
+    have _remains_ set _graverobber_
+    _nogumption_ used do _read_
+    add dialog for location _dadhouse_ person _father_
 
 _dadshome_ task:
     when _indadhouse_
     say 1035
     say 1036
-    start timer _thedad_
+
+_dadclicked_ task:
+    clicked npc _father_
 
 _thedad_ task:
+    when _dadclicked_ and not _backwithremains_
     say 1037
     say 1038
     say 1039
@@ -121,9 +304,88 @@ _thedad_ task:
 
 _yes_ task:
     say 1042
-    give pc nothing
-    end quest
+    reveal _grave_
+    log 1104 step 0
+    start timer _dadletter_
 
 _no_ task:
     say 1043
+    start timer _silence_
+    log 1107 step 0
+
+_gravesite_ task:
+    when _ingrave_
+    say 1013
+    start timer _graverobbers_
+
+_graverobbers_ task:
+    say 1044
+    create foe _grobb1_ every 0 minutes 1 times with 100% success
+    create foe _grobb2_ every 0 minutes 1 times with 100% success
+    restrain foe _grobb1_
+    restrain foe _grobb2_
+    change foe _grobb1_ infighting false
+    change foe _grobb2_ infighting false
+    give item _remains_ to _grobb2_
+
+_grobb1clicked_ task:
+    clicked foe _grobb1_
+
+_grobb2clicked_ task:
+    clicked foe _grobb2_
+
+_gravefight_ task:
+    when _grobb1clicked_ or _grobb2clicked_
+    say 1049
+    unrestrain foe _grobb1_
+    unrestrain foe _grobb2_
+    enemies makehostile
+    log 1105 1
+
+_thegirl_ task:
+    clicked item _remains_ say 1014
+    stop timer _dadletter_
+    start timer _whereremains_
+    clear _dadclicked_
+
+_whereremains_ task:
+    say 1155
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    cast Shield spell on _dad_
     end quest
+
+_backwremains_ task:
+    when _dadclicked_ and _graverobber_
+    stop timer _whereremains_
+    say 1046
+    take _remains_ from pc
+    say 1047
+    get item _bonemoney_
+    log 1106 step 2
+    start timer _rested_
+    start timer _dadletter_
+
+_rested_ task:
+    clear _dadclicked_
+
+_dadshome2_ task:
+    when _dadclicked_ and _rested_
+    say 1048
+    give pc _gratuity_
+    hide npc _father_
+    end quest
+
+_dadletter_ task:
+    give pc _nogumption_ notify 1151
+    change repute with _father_ by -5
+
+_read_ task:
+    end quest
+
+_silence_ task:
+    say 1156
+    say 1157
+    create foe _dad_ every 0 minutes 1 times with 100% success
+    create foe _dadguard_ every 0 minutes 1 times with 100% success
+    end quest saying 1158

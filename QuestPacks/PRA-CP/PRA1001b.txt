@@ -17,10 +17,11 @@ QuestFail:  [1003]
 QuestComplete:  [1004]
 
 RumorsDuringQuest:  [1005]
-I hear _questgiver_ is very ill. Perhaps it's something he ate?
+_questgiver_ had an embarrasing accident in the market. They had to call the guards.
 
 RumorsPostfailure:  [1006]
 _questgiver_ apparently died from eating sausages.
+
 
 RumorsPostsuccess:  [1007]
 _questgiver_ died. Temple tried to help, but it was too late.
@@ -428,7 +429,7 @@ Message:  1321
 
 Message:  1302
 <ce>You look up and the silent messenger is before you.
-<ce>They barely nods, then dissapears. Almost as if by magic.
+<ce>They barely nod, then dissapears. Almost as if by magic.
 <ce>Looking down you realise you hold a letter.
 
 Message:  1303
@@ -541,6 +542,14 @@ Message:  1322
 Message:  1325
 <ce>I should check on _evoker_. Time is running out for _questgiver_
 
+-- Rumours
+Message: 1400
+I hear _questgiver_ is very ill. Perhaps it's something he ate?
+<--->
+I never liked _questgiver_, but I wouldn't wish that on anyone.
+<--->
+Did you hear about the guy who gave birth to a daedra in the Bank of ____questgiver_?
+
 QBN:
 -- Props
 Item _letter_ letter used 1201
@@ -596,11 +605,13 @@ variable _cure_
     pc at _crypt_ set _atcrypt_
     hide npc _questgiver_
     _letter_ used saying 1321 do _letterlog_
+    _deathnotice_ used do _thedeath_
     
 _notify_ task:
     get item _letter_ saying 1301
     place npc _priest_ at _temple_
     start timer _deathnote_
+    rumor mill 1400
 
 _letterlog_ task:
     log 1050 0
@@ -853,5 +864,7 @@ _returntopriestlate_ task:
 _dead_ task:
 
 _deathnote_ task:
-    give pc _deathnotice_ notify 1302
+    get item _deathnotice_ saying 1302
+
+_thedeath_ task:
     end quest

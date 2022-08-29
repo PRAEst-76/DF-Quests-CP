@@ -57,9 +57,9 @@ Haven't seen many rats lately.
 <--->
 If they sang songs about killing rats they'd sing 'em about _questgiver_ but they don't, 'cause that would be stupid.
 <--->
-Awful what happened to the rats. Lovely creatures. Who would do such a thing?
+Awful what happened to all the rats in ___questgiver_. Lovely creatures. Who would do such a thing?
 <--->
-That Ratcatcher is a legend in the world rat catching.
+That Ratcatcher is a legend in the world of rat catching.
 
 Message: 1021
 "This is the place, it stinks of _rats_ spoor!"
@@ -89,23 +89,31 @@ We can get drunk after this."
 Message:  1025
 "That's it! The first nest is dealt with. The rest of
 the rats should be easy work, then we can go onto the
-next, which is _rathouse2_."
+next place."
 <ce>
 "Be swift."
 <ce>
 "I'll take the bag of bait back, otherwise you'll
 have hungry _rats_ chasing you for days."
 
+Message:  1035
+"Ok. The second house we need to clear is _rathouse2_."
+
 Message: 1026
 "Right. Second batch of nests dealt with. I'll take the
 bait back. Mop up any stragglers and then we need to
-head for _rathouse3_. It's the last."
+head for the last place."
+
+Message:  1036
+Right, head for _rathouse3_. It's the last one.
+Then we can hit the tavern."
 
 Message: 1027
 "All done my friend. Any rats that are left just
 don't know they are dead yet."
-<ce>
-"Let's go to _pub_."
+
+Message:  1037
+"Well done %pcf! Let's go to _pub_ to get hammered."
 
 Message:  1028
 The Ratcatcher sprints into the tavern like a foal into
@@ -128,6 +136,19 @@ Message: 1031
 The stench must have mellowed somewhat now, as
 rats no longer seem to be following.
 
+Message:  1032
+The barman shouts, "Ratcatcher! Just the man. I was
+about to send one of the lads to look for you. We seem
+to have a little vermin problem. Sort 'em out and the
+drinks are free."
+
+Message:  1033
+The Ratcacher General tosses you the bait bag, "%pcf!
+You know what to do!"
+
+Message:  1034
+"Cushty! Nest done, %pcf. Now join me for the free drink!"
+
 Message:  1100
 %qdt:
 _questgiver_, who refers to %g2self as
@@ -137,11 +158,12 @@ I am to escort %g2 to three buildings here and
 slay rats while %g looks for the nests.
 <ce>
 We have =timer_ days before the rats are out of
-control in ___questgiver_.
+control.
 <ce>
 We start with _rathouse1_.
 
 Message: 1101
+%qdt:
 At _rathouse1_, _questgiver_ has given
 me a reeking bag to use as bait to draw the rats
 while %g looks for the nest.
@@ -151,13 +173,15 @@ The first house has been dealt with, now onto the
 next, which is _rathouse2_.
 
 Message: 1103
+%qdt:
 Onto the last place now, which he tells me is
 _rathouse3_
 
 Message:  1105
+%qdt:
 We have dealt with all the infested houses.
-_questgiver_ says we can go to _pub_ to
-celebrate.
+_questgiver_ wants us to go to _pub_
+to relax.
 
 Message: 1104
 %qdt:
@@ -183,10 +207,12 @@ Place _pub_ local tavern
 Clock _timer_ 1.00:00 0 flag 17 range 0 2
 Clock _nest1_ 00:15 00:30
 Clock _nest2_ 00:10 00:20
-Clock _nest3_ 00:5 00:10
+Clock _nest3_ 00:05 00:10
+Clock _tavnest_ 00:05 00:10
 Clock _destroyed1_ 00:05 00:10
 Clock _destroyed2_ 00:10 00:20
 Clock _destroyed3_ 00:15 00:30
+Clock _destroyedtav_ 00:10 00:20
 Clock _plague_ 01:00 03:00
 
 Foe _rats_ is 2 Giant_rat
@@ -206,9 +232,6 @@ variable _winchester_
     hide npc _questgiver_
     add _questgiver_ face
 	log 1100 step 0
-	place foe _rats_ at _rathouse1_
-    place foe _rats_ at _rathouse2_
-    place foe _rats_ at _rathouse3_
     pc at _rathouse1_ set _inside1_
     pc at _rathouse2_ set _inside2_
     pc at _rathouse3_ set _inside3_
@@ -216,6 +239,7 @@ variable _winchester_
 
 _firstjob_ task:
     when _inside1_
+    place foe _rats_ at _rathouse1_
     get item _lure_ saying 1021
     have _lure_ set _working_
     drop _questgiver_ face
@@ -224,6 +248,7 @@ _firstjob_ task:
 
 _secondjob_ task:
     when _inside2_
+    place foe _rats_ at _rathouse2_
     get item _lure_ saying 1023
     have _lure_ set _working_
     drop _questgiver_ face
@@ -231,24 +256,21 @@ _secondjob_ task:
 
 _thirdjob_ task:
     when _inside3_
+    place foe _rats_ at _rathouse3_
     get item _lure_ saying 1024
     have _lure_ set _working_
     drop _questgiver_ face
     start timer _nest3_
 
 _drinks_ task:
-	when _alldone_ and _winchester_ and not _inside_ and not _abandoned_
-    place npc _questgiver_ at _pub_
+	when _alldone_ and _winchester_ and not _tavdone_
+    place foe _rats_ at _pub_
     drop _questgiver_ face
     say 1028
-    clear _qgclicked_
-
-_pcgetsgold_ task:
-    when _qgclicked_ and _drinks_
-    start quest PRA1002b
-    say 1029
-	give pc _reward_
-	end quest 
+    say 1032
+    get item _lure_ saying 1033
+    have _lure_ set _working_
+    start timer _tavnest_
 
 _1done_ task:
     when _destroyed1_ and not _abandoned_ and _inside1_
@@ -257,6 +279,10 @@ _1done_ task:
     say 1025
     take _lure_ from pc
     add _questgiver_ face
+
+_next1_ task:
+    when _destroyed1_ and not _abandoned_ and not _inside1_
+    say 1035
     log 1102 step 2
 
 _2done_ task:
@@ -266,6 +292,10 @@ _2done_ task:
     say 1026
     take _lure_ from pc
     add _questgiver_ face
+
+_next2_ task:
+    when _destroyed2_ and not _abandoned_ and not _inside2_
+    say 1036
     log 1103 step 3
 
 _3done_ task:
@@ -275,7 +305,20 @@ _3done_ task:
     say 1027
     take _lure_ from pc
     add _questgiver_ face
+
+_next3_ task:
+    when _destroyed3_ and not _abandoned_ and not _inside3_
+    say 1037
     log 1105 step 4 
+
+_tavdone_ task:
+    when _destroyedtav_ and not _abandoned_
+    unset _working_
+    clear _tavspawn_
+    say 1034
+    place npc _questgiver_ at _pub_
+    take _lure_ from pc
+    clear _qgclicked_
 
 _spawn1_ task:
 	when _inside1_ and not _1done_ and not _abandoned_
@@ -289,8 +332,12 @@ _spawn3_ task:
 	when _inside3_ and not _3done_ and not _abandoned_
     create foe _rats_ every 3 minutes indefinitely with 90% success
 
+_tavspawn_ task:
+	when _winchester_ and not _tavdone_ and not _abandoned_
+    create foe _rats_ every 3 minutes indefinitely with 90% success
+
 _inside_ task:
-    when _inside1_ or _inside2_ or _inside3_
+    when _inside1_ or _inside2_ or _inside3_ or _winchester_
 
 _alldone_ task:
     when _destroyed1_ and _destroyed2_ and _destroyed3_
@@ -326,6 +373,17 @@ _nest3_ task:
     create foe _morerats_ every 2 minutes indefinitely with 90% success msg 1022
     start timer _destroyed3_
 
+_tavnest_ task:
+    create foe _morerats_ every 2 minutes indefinitely with 90% success msg 1022
+    start timer _destroyedtav_
+
+_pcgetsgold_ task:
+    when _qgclicked_ and _tavdone_
+    start quest PRA1002b
+    say 1029
+	give pc _reward_
+	end quest 
+
 _destroyed1_ task:
     clear _nest1_
 
@@ -334,6 +392,9 @@ _destroyed2_ task:
 
 _destroyed3_ task:
     clear _nest3_
+
+_destroyedtav_ task:
+    clear _tavnest_
 
 _plague_ task:
     end quest saying 1031

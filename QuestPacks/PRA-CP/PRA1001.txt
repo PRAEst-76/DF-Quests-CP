@@ -31,13 +31,13 @@ _questgiver_ looks confused and exhausted, but attempts
 to smile at you sheepishly.
 <ce>
 "I'm very sorry. My little joke very much... backfired...
-on me there, somewhat."
+on me there, somewhat... erm."
 <ce>
 He waves his hand, as if attempting to wave away the whole
 sorry experience.
 <ce>
-"You know, you're all right, %pcf.
-Here, have a drink on me."
+"You know, you're all right, %pcf. Here, have a drink
+on me."
 
 RumorsDuringQuest:  [1005]
 That _questgiver_ is always asking people to pull %g3 finger.
@@ -59,26 +59,28 @@ I trust that my, erm, issue... is still just between us?
 
 Message:  1020
 You have dealt with _questgiver_'s accidental nether
-summons.
+summons. You should go back and see if he's ok.
 
 Message:  1021
 He suddenly looks pained, grimices and emits an even
 more violent eruption from %g3 rump.
 <ce>
-"Oh sorry. Appears there was mo..."
+"Oh sorry. It apears there was mo..."
 <ce>
 He doubles over, "Aaah! Oh no! What..?"
 
 Message:  1025
 A look of horror crosses his face and another series
-of noisy parps erupt. Then the sound of tearing cloth
-and suddenly a foul creature emerges from his behind.
+of noisy parps erupt from his hidequarters, followed
+quickly by the sound of tearing cloth and a foul
+creature emerges from his behind.
 <ce>
 He attempts to recover himself, "Ahh! In %god's name...
 what... what was that?!"
 <ce>
-Then he points at the spawn that has appeared and yells,
-"That... that came out of me?! Quickly kill it!"
+Then he points towards the spawn that has appeared
+and yells, "That... that came out of me?! Quickly
+kill it!"
 
 Message:  1022
 A grubby urchin approaches you and asks if you are %pcn,
@@ -113,8 +115,8 @@ In the name of %god I say, A coward!
 Message:  1024
 "Though it's probably best if you don't pull any more
 fingers in future though, eh? And..." he looks down,
-"maybe don't mention this embarrasing situation to
-anyone. Please?"
+hiding his shame, "maybe don't mention this embarrasing
+situation to anyone. Please?"
 
 Message:  1026
 That _enemy_ made a complete mess here. I had to

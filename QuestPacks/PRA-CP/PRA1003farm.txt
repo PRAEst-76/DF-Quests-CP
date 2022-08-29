@@ -33,6 +33,9 @@ Message:  1033
 
 QBN:
 
+Person _widower_ group Resident4 male
+Person _maid_ group Resident4 female
+
 Place _farmhouse_ local house
 
 Clock _maidhere_ 00:01
@@ -41,16 +44,28 @@ variable _infarmhouse_
 
 --	Quest start-up:
     pc at _farmhouse_ set _infarmhouse_
+    place npc _widower_ at _farmhouse_
     say 1026
 
+_widowerclicked_ task:
+    clicked npc _widower_
+
 _thewidower_ task:
-    when _infarmhouse_
+--    when _infarmhouse_
+    when _widowerclicked_
     say 1027
     say 1033
-    start timer _maidhere_
+    hide npc _widower_
+--    start timer _maidhere_
+    place npc _maid_ at _farmhouse_
+
+_maidclicked_ task:
+    clicked npc _maid_
 
 _maidhere_ task:
+    when _maidclicked_
     say 1028
+    hide npc _maid_
 
 _lefthouse_ task:
     when _maidhere_ and not _infarmhouse_     

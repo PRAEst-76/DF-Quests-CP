@@ -91,16 +91,14 @@ _questgiver_? Yes, %g was here. Wouldn't leave.
 Hid under the table saying a %ra was trying
 "inner-act" with %g2. Crazy if you ask me.
 <ce>
-Ran off towards _local2_'s house at
-_res_. Glad to be shot of %g2.
+Ran off towards __questgiver_. Glad to be shot of %g2.
 
 Message:  1056
 Yes. _questgiver_ was here. Hiding in the corner
 there.
 <ce>
 Was here all night in fact. I offered %g2 some
-food but %g just muttered about _remtav_
-in __remtav_.
+food but %g just muttered about __questgiver_.
 <ce>
 You might want to check there.
 
@@ -116,7 +114,7 @@ I'm sorry, you've just missed %g. Hid out in
 corner. Left without paying %g3 bill I hear.
 Seemed agitated.
 <ce>
-Talked about _dun_. That's not a nice place.
+Talked about __questgiver_.
 
 Message:  1059
 No! It's you. What do you want from me? Leave me
@@ -183,20 +181,20 @@ has run off to.
 
 Message:  1152
 %qdt:
-_questgiver_ was at _store_ but apparently isn't
+_questgiver_ was at __questgiver_ but apparently isn't
 there anymore. I guess I need to ask around
 again, see if anyone has seen %g2.
 
 Message:  1153
 %qdt:
-_questgiver_ was here at _res_ but has left.
+_questgiver_ was here at __questgiver_ but has left.
 Who knows where. I guess I could ask people.
 
 Message:  1154
 %qdt:
-Missed %g2 at _remtav_, but apparently
+Missed %g2, but apparently
 _questgiver_ was heard mumbling something
-about _dun_. I best find them
+about __questgiver_. I best find them
 before they get hurt.
 
 Message:  1170
@@ -275,9 +273,9 @@ Message: 1303
 There he is! There is _questgiver_!
 
 Message: 1304
-_questgiver_ almost instantaneously appears to
+_questgiver_ appears to almost instantly
 vanish before your eyes only to be replaced by
-a raving _lunatic_ who attacks desperately.
+a raving lunatic who attacks desperately.
 <ce>
 Metaphorically, of course.
 
@@ -295,7 +293,7 @@ Person _doctor_ group Cleric
 Place _store_ local generalstore rumors 1011
 Place _res_ local house rumors 1012
 Place _house_ local house
-Place _remtav_ remote tavern rumors 1013
+Place _tav_ local tavern rumors 1013
 Place _dun_ remote dungeon rumors 1014
 Place _temple_ remote temple
 
@@ -304,136 +302,133 @@ Item _reward_ gold
 
 Foe _lunatic_ is Warrior
 
-Clock _fled_ 01:00 12:00
-Clock _fled1_ 5:00 1.00:00
-Clock _fled2_ 3.00:00 5.00:00
+Clock _fledstore_
+Clock _fledhouse_
+Clock _fledtav_
+Clock _fled_
 Clock _chase_ 00:05 01:00
 Clock _awake_ 03:00 12:00
 Clock _dead_ 7.00:00 10.00:00
 Clock _letter_ 3.00:00 5.00:00
 
+variable _crazy_
+variable _hidingstore_
+variable _hidingtav_
+variable _hidingres_
+variable _hidingdun_
+variable _atwild_
 variable _atstore_
 variable _attav_
 variable _atres_
 variable _atdun_
-variable _atwild_
-variable _rabbiting_
-variable _location1_
-variable _location2_
-variable _location3_
-variable _location4_
 variable _rescued_
 variable _treated_
 
 --	Quest start-up:
     say 1050
-    pc at _store_ set _location1_
-    pc at _remtav_ set _location2_
-    pc at _res_ set _location3_
-    pc at _dun_ set _location4_
+    pc at _store_ set _atstore_
+    pc at _tav_ set _attav_
+    pc at _res_ set _atres_
+    pc at _dun_ set _atdun_
     dialog link for location _store_ person _questgiver_
     dialog link for location _res_ person _questgiver_
-    dialog link for location _remtav_ person _questgiver_
+    dialog link for location _tav_ person _questgiver_
     dialog link for location _dun_ person _questgiver_
     log 1150 step 0
     play sound door_slam every 0 minutes 1 times
-    hide npc _questgiver_
     say 1051
     say 1052
     say 1053
     log 1151 step 1
     place npc _local0_ at _house_
-    start timer _fled_
-    setvar _atstore_
+    place npc _local1_ at _store_
+    place npc _local2_ at _res_
+    place npc _local3_ at _tav_
+    hide npc _local1_
+    hide npc _local2_
+    hide npc _local3_
+
+_hiding_ task:
+    pick one of _tohouse_ _tostore_ _totav_ _todun_
+
+_tostore_ task:
     place npc _questgiver_ at _store_
+    setvar _hidingstore_
 
-_leaving_ task:
-    when pc exits city
-    setvar _atwild_
+_chase_ task:
+    say 1303
+    start task _loony_
 
-_civ_ task:
-    when _location1_ or _location2_ or _location3_ or _location4_
-    clear _atwild_
+_rabbiting_ task:
+    when _qgclicked_ and not _hidingdun_
     stop timer _chase_
+    start task _loony_
 
-_found_ task:
-    clicked npc _questgiver_
-    setvar _rabbiting_
-
-_runrabbit_ task:
-    clear _atstore_ _atres_ _attav_
-    when _rabbiting_
-    stop timer _chase_
+_loony_ task:
     say 1059
     hide npc _questgiver_
     say 1304
-    place foe _lunatic_ at _store_
-    place foe _lunatic_ at _res_
-    place foe _lunatic_ at _remtav_
+    create foe _lunatic_ every 0 minutes 1 times with 100% success
+    clear _hidingstore_ _hidingres_ _hidingtav_
 
 _subdued_ task:
     injured _lunatic_
     say 1302
-    stop timer _fled_
-    stop timer _fled1_
-    stop timer _fled2_
+    stop timer _fledstore_
+    stop timer _fledhouse_
+    stop timer _fledtav_
     stop timer _chase_
     remove foe _lunatic_
     add _questgiver_ face
     log 1170 step 4
     start timer _awake_
+    clear _loony_
     clear _rabbiting_
 
 _awake_ task:
     clear _subdued_
     say 1301
-    prompt 1062 yes _rabbitagain_ no _norabbit_
-
-_rabbitagain_ task:
-    setvar _rabbiting_
+    prompt 1062 yes _loony_ no _norabbit_
 
 _norabbit_ task:
     say 1305
     setvar _subdued_
     start timer _awake_
-    clear _rabbiting_
 
-_fled_ task:
-    hide npc _questgiver_
-    place npc _local1_ at _store_
-    clicked npc _local1_ say 1055
+_tores_ task:
+    hide npc _local1_
     setvar _atres_
-    start timer _fled1_
+    start timer _fled_
     place npc _questgiver_ at _res_
     add dialog for location _store_
     log 1152 step 2
 
-_chase_ task:
-    say 1303
-    setvar _rabbiting_
+_clickedlocal1_ task:
+    clicked npc _local1_ say 1055
 
-_fled1_ task:
-    hide npc _questgiver_
-    place npc _local2_ at _res_
-    clicked npc _local1_ say 1056
+_fledhouse_ task:
+    restore npc _local2_
     setvar _attav_
-    setvar _atwild_
-    start timer _fled2_
-    place npc _questgiver_ at _remtav_
+    start timer _fledtav_
+    place npc _questgiver_ at _tav_
     add dialog for location _res_
     log 1153 step 2
 
-_fled2_ task:
+_clickedlocal2_ task:
+    clicked npc _local2_ say 1056
+
+_fledtav_ task:
+    restore npc _local3_
     hide npc _questgiver_
-    place npc _local3_ at _remtav_
-    clicked npc _local3_ say 1058
     setvar _atdun_
-    setvar _atwild_
     start timer _dead_
     place npc _questgiver_ at _dun_
     add dialog for location _remtav_
     reveal _dun_
     log 1154 step 4
+
+_clickedlocal3_ task:
+    clicked npc _local3_ say 1058
 
 _outside_ task:
     when _atwild_
@@ -444,7 +439,8 @@ _indun_ task:
     add dialog for location _dun_
 
 _rescue_ task:
-    clicked npc _questgiver_ say 1060
+    when _qgclicked_ and _location4_
+    say 1060
     stop timer _dead_
     setvar _rescued_
     add _questgiver_ face
@@ -492,7 +488,3 @@ _pcgetsgold_ task:
 
 _qgclicked_ task:
     clicked npc _questgiver_
-
-_clearclick_ task:
-    when _qgclicked_ and not _treated_
-    clear _qgclicked_ _clearclick_

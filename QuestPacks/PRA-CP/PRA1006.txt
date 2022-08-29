@@ -1,0 +1,58 @@
+Quest: PRA1006
+DisplayName: Missing Child
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+%t! You seem to be a capable %pct. I need help
+badly. It's our boy, %t. He's gone missing. Run
+away from home we fear. We need someone to find
+him. At least make sure he's ok.
+
+RefuseQuest:  [1001]
+What should we do. No-one will help us!
+
+AcceptQuest:  [1002]
+Thank you! Thank you %t. His name is _boy_. He's
+always been a sensitive child. We were maybe too
+hard on him. Thought we could toughen him up. We
+didn't think he'd run away. We're so worried. He's
+not strong. We don't know where he may have gone
+to. He doesn't have many friends. Maybe you could
+ask around. See if anyone knows of him.
+<ce>
+Please hurry!
+
+QuestFail:  [1003]
+Our poor boy. He wasn't cut out for this harsh world.
+Thank you for trying to bring him home to us.
+This will be a bleak winter.
+
+QuestComplete:  [1004]
+Thank you! Thank you %t! You don't know how much
+this means to us! You have reunited this family again!
+We'll take care of him. Support him, in anything he chooses.
+
+RumorsDuringQuest:  [1005]
+
+RumorsPostfailure:  [1006]
+
+RumorsPostsuccess:  [1007]
+
+QuestorPostsuccess:  [1008]
+
+QuestorPostFailure:   [1009]
+
+QBN:
+
+-- Cast
+    Person _questgiver_ group Questor
+    Person _boy_ faction Children male
+    Person _child1_ faction Children
+
+-- Locations
+    Place _library_ local library
+
+--	Quest start-up:
+    place _child1_ at _library_
+

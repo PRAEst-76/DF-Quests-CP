@@ -754,7 +754,7 @@ Item _magegold_ gold range 30 to 60
 Item _rknote_ letter used 1205
 Item _reward_ magic_item
 
-Clock _delivery_ 01:00
+Clock _delivery_ 10.00:00 20.00:00
 Clock _ignore_ 14.00:00 28.00:00
 Clock _sodhim_ 5.00:00 7.00:00
 Clock _awake_ 08:00 18:00
