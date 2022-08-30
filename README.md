@@ -13,9 +13,9 @@ I'll add quests to this over time. What is here now is hopefully just the start.
 
 ### To install:
 
-Copy the PRAEst76 directory and all it's contents into your Daggerfall Unity game folder under
+Copy the folders and all their contents into your Daggerfall Unity game folder under
 ```
-DaggerfallUnity_Data\StreamingAssets\QuestPacks\
+DaggerfallUnity_Data\StreamingAssets\
 ```
 ### To uninstall:
 
