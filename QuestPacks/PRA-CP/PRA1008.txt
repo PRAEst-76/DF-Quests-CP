@@ -1,0 +1,235 @@
+Quest: PRA1008
+DisplayName: The Prophecy
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+"Adventurer! I have a quest of utmost urgency I need a
+worthy hand to take up. It involves fighting evil and
+if you fail the world may be lost. Should that kind of
+thing interest you at all "
+
+RefuseQuest:  [1001]
+"The begone. Coward."
+
+AcceptQuest:  [1002]
+"Good. I am glad to have found someone who recognises
+a worthy cause and does not baulk at danger.
+Before we proceed you must first understand the threat
+we now face."
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+I've never heard of a Kagrath, but they sound scary. I hope there is none around here.
+<--->
+%mn's son went off to save the world. Never seen again. Adventuring is a mugs game.
+
+RumorsPostfailure:  [1006]
+
+RumorsPostsuccess:  [1007]
+
+QuestorPostsuccess:  [1008]
+
+QuestorPostFailure:   [1009]
+
+Message:  1015
+"Tell me, have you read _bookofkagrath_? Do you know
+the terrible bloody history of these ancient peoples?"
+
+Message:  1016
+"Hmm. The history is not well known. Only few scolars
+have bothered to research it and it is not oft
+found in libraries. I hope you do not mind if I test
+your knowledge?"
+<ce>
+"Tell me if the following is true or false. Ahem..." 
+
+Message:  1017
+"The Chosen came from the east"
+
+Message: 1018
+"The Aldmeri drove the Kagrath into the sea."
+
+Message:  1019
+The Chosen's name was %mn
+
+Message: 1020
+He sighs and holds out an old book to you,
+"This book, _bookofkagrath_ will explain.
+It is important to read it, and know the history.
+Once you understand the weight of our task return
+and speak to me."
+
+Message:  1021
+"So now you know the history, you should know
+that a daedric cult has apparently found the resting
+place of the first of these Kagrath kings, Kahfciel,
+and they plan to raise him. They are fools and know
+not the evil they will unleash upon these lands!"
+
+Message:  1022
+"They must be stopped. Go to _tav_ in
+__tav_ and find one of their number, they are
+known to frequent there, they will have a map to
+the grave. Get it from them by whatever means you
+deem fit."
+
+Message:  1023
+"What do you want %ra? I'm busy."
+
+Message:  1024
+"You want what? I'm not telling you nothing!
+Now get lost!"
+<ce>
+<ce>Beat it out of him?
+
+Message:  1025
+Ok, ok! Look. I got to live. These people... if they knew.
+I just want to get out of this ok. Go back to my
+family. I can sell you the map. Then I can get away.
+<ce>
+<ce>Buy the map?
+
+Message:  1026
+"No money. No map. Now bog off %ra.
+You scare away the birds."
+
+Message:  1027
+"No, wait! It's not supposed to go this way!"
+
+Message:  1028
+The map shows the way to ___grave_.
+That'll be where they are planning to raise this dead
+ancient king.
+
+Message:  1029
+You are at the purported grave of Kahfciel.
+
+-- Logs
+Message:  1200
+%qdt:
+I've been tasked by _questgiver_ to prevent the
+return of some ancient evil. I first need to find
+out where the ancient evil is buried and that
+requires me to go to some dive called _tav_ in
+__tav_ and get a map from some lowlife.
+
+Message:  1201
+%qdt:
+_questgiver_ has given me a book called
+_bookofkagrath_. He says I should read it
+and get back to him, then he will tell me what I
+need to do.
+
+Message:  1202
+%qdt:
+I needed to slap the guy around, but he said he'd
+sell me the map.
+
+Message:  1203
+%qdt:
+The guy wouldn't give me the map.
+
+Message:  1204
+%qdt:
+I got the map. The grave is at ___grave_.
+
+QBN:
+
+-- Cast
+Person _questgiver_ group Questor
+Person _mapguy_ faction The_Thieves_Guild
+
+-- Locations
+Place _tav_ remote tavern
+Place _grave_ remote ruin
+
+-- Stuff
+Item _bookofkagrath_ book key 414304675
+Item _gravemap_ map
+Item _mapmoney_ gold range 100 to 300
+
+-- Enemies
+Foe _mapdude_ is Rogue
+Foe _Kahfciel_ is Zombie
+
+variable _atgrave_
+
+--	Quest start-up:
+    place npc _mapguy_ at _tav_
+    _bookofkagrath_ used do _bookread_
+    _gravemap_ used do _themap_
+    pc at _grave_ set _atgrave_
+    prompt 1015 yes _yes_ no _no_
+
+_yes_ task:
+    say 1016
+    start task _quiz1_
+
+_quiz1_ task:
+    prompt 1017 yes _no_ no _quiz2_
+
+_quiz2_ task:
+    prompt 1018 yes _no_ no _quiz3_
+
+_quiz3_ task:
+    prompt 1019 yes _no_ no _findthemap_
+
+_no_ task:
+    get item _bookofkagrath_ saying 1020
+    log 1201 0
+
+_bookread_ task:
+    clear _qgclicked_
+
+_qgclicked_ task:
+    clicked npc _questgiver_
+
+_findthemap_ task:
+    when _qgclicked_ and _bookread_
+    say 1021
+    say 1022
+    log 1200 0
+
+_mgclicked_ task:
+    clicked npc _mapguy_
+
+_getmap_ task:
+    when _mgclicked_
+    say 1023
+    prompt 1024 yes _beatdown_ no _nobeatdown_
+
+_beatdown_ task:
+    hide npc _mapguy_
+    place foe _mapdude_ at _tav_
+
+_nobeatdown_ task:
+    log 1203 1
+    clear _mgclicked_
+
+_beaten_ task:
+    injured _mapdude_
+    prompt 1025 yes _buymap_ no _nobuymap_
+    log 1202 1
+
+_buymap_ task:
+    remove foe _mapdude_
+    restore npc _mapguy_
+    take _mapmoney_ from pc
+    get item _gravemap_
+
+_nobuymap_ task:
+    say 1027
+    give item _gravemap_ to _mapdude_
+
+_themap_ task:
+    say 1028
+    reveal _grave_
+    log 1204 2
+
+_theritual_ task:
+    when _themap_ and _atgrave_
+    say 1029

@@ -21,7 +21,7 @@ not strong. We don't know where he may have gone
 to. He doesn't have many friends. Maybe you could
 ask around. See if anyone knows of him.
 <ce>
-Please hurry!
+Please hurry! We live at _house_ if you find him.
 
 QuestFail:  [1003]
 Our poor boy. He wasn't cut out for this harsh world.
@@ -34,6 +34,9 @@ this means to us! You have reunited this family again!
 We'll take care of him. Support him, in anything he chooses.
 
 RumorsDuringQuest:  [1005]
+Saw a kid in _library_ last week. In my day we played outside.
+<--->
+Saw a gang of kids push another kid into the river. It think one of them was _baddad_'s boy.
 
 RumorsPostfailure:  [1006]
 
@@ -43,16 +46,131 @@ QuestorPostsuccess:  [1008]
 
 QuestorPostFailure:   [1009]
 
-QBN:
+-- Rumours
+Message:  1020
+They are good people. Not well off, but good.
 
+Message:  1021
+I saw some other kids push him in the fountain once.
+<--->
+_boy_ is never out of that _library_. Should be out getting up to mischief like normal kids.
+
+Message:  1022
+_otherbully_? Yeah. He lives at _obhouse_.
+<--->
+I see that kid looking at flowers. Not normal.
+
+Message:  1050
+_boy_ was here, yeah. He's always here.
+He reads a lot. I don't read. I like to look at
+the pictures.
+He stole a book, don't tell the man. Said he was
+going to read it outside but some big kids took
+it and threw it away. He's not going to come back
+here without the book.
+They are at _tav_. Maybe you can go and beat 'em up?
+They might know where he went.
+
+Message:  1051
+What's your problem %ra?
+I know nothing about no _boy_.
+<ce>Threaten the brat?
+
+Message:  1052
+Ok. Ok. We pushed him around. Took his book.
+We threw it in the river. He said he's going to
+become a powerful mage and come back and send us
+to oblivion. So we threw him in the river.
+I think I saw _otherbully_ get the book out
+and take it home. Maybe it had naked ladies in it.
+
+Message:  1053
+Get lost %ra!
+
+Message:  1054
+Oh, _boy_ yeah. _bully_ and the other
+kids rough him up sometimes. He reads and stuff.
+Said he wanted to be a mage. That didn't help.
+_bully_'s dad hates mages. I think they
+did stuff to him. He's an angry guy. Drinks a lot.
+
+Message:  1055
+Oh. The book. _book_. Yeah. I read a bit.
+Don't tell the other kids! I mean, _boy_
+is ok, but he's embarrasing. Says stupid stuff.
+Look. I like _bully_, but %g's got problems.
+His dad is the main one. If you go and beat up
+his dad, I'll give you the book. He's a bad man,
+you'll be doing everyone a favour.
+
+Message:  1056
+What do you want %ra? Got a beef with me?
+
+Message:  1059
+Here's the book. He had some notes in it too.
+Tell the other kids I burned it. I don't want to
+go in the river like _boy_.
+
+-- Corrispondance
+Message:  1100
+I've been trying to use magic, but
+these books aren't useful. I need better ones.
+Proper magic ones like they have at mages guilds.
+There is a _mages_ in __mages_. I should go there.
+Maybe they'll let me join. 
+
+QBN:
 -- Cast
-    Person _questgiver_ group Questor
-    Person _boy_ faction Children male
-    Person _child1_ faction Children
+Person _questgiver_ group Questor anyInfo 1020
+Person _boy_ faction Children male anyInfo 1021
+Person _child1_ faction Children
+Person _bully_ faction Children male
+Person _otherbully_ faction Children male anyInfo 1022
 
 -- Locations
-    Place _library_ local library
+Place _library_ local library
+Place _house_ local house
+Place _tav_ local tavern
+Place _obhouse_ local house
+Place _mages_ remote magery
+
+-- Stuff
+Item _book_ book
+Item _note_ letter used 1100
 
 --	Quest start-up:
-    place _child1_ at _library_
+    place npc _child1_ at _library_
+    place npc _questgiver_ at _house_
+    place npc _otherbully_ at _obhouse_
 
+_child1clicked_ task:
+    clicked npc _child1_
+
+_libkid_ task:
+    when _child1clicked_
+    say 1050
+    place npc _bully_ at _tav_
+
+_bullyclicked_ task:
+    clicked npc _bully_
+
+_tavkid_ task:
+    when _bullyclicked_
+    prompt 1051 yes _threaten_ no _dontthreaten_
+
+_threaten_ task:
+    say 1052
+
+_dontthreaten_ task:
+    say 1053
+
+_otherbullyclicked_ task:
+    clicked npc _otherbully_
+
+_theotherbully_ task:
+    say 1054
+    say 1055
+    get item _book_ from _otherbully_
+    get item _note_ from _otherbully_
+
+_

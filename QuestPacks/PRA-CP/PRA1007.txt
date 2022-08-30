@@ -124,8 +124,8 @@ just want to go home.
 _local0_ sent you? Oh thank you. Please take me home!
 
 Message:  1061
-Glad you brought _questgiver_ back. %pcf.
-Can you bring %g2 to __temple?
+Glad you brought _questgiver_ back, %pcf.
+Can you bring %g2 to __temple_?
 I spoke to the Healer, _doctor_ at
 _temple_ there and they have a
 new treatment they want to try.
@@ -306,9 +306,9 @@ Item _reward_ gold
 Foe _lunatic_ is Warrior
 
 Clock _gone_ 00:01
-Clock _fled_ 06:00 1.00:00
+Clock _fled_ 03:00 1.00:00
 Clock _chase_ 00:05 01:00
-Clock _awake_ 03:00 12:00
+Clock _awake_ 01:00 12:00
 Clock _dead_ 7.00:00 10.00:00
 Clock _letter_ 3.00:00 5.00:00
 
@@ -426,7 +426,7 @@ _awake_ task:
     prompt 1301 yes _gotosleep_ no _panic_
 
 _gotosleep_ task:
-    play sound fist_smack_high 0 1
+    play sound fist_smack_high every 0 minutes 1 times
     say 1305
     setvar _subdued_
     clear _awake_

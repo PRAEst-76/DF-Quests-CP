@@ -10,8 +10,8 @@ PRA1002c, Commoners, P, 3, 1, The Last Ratcatcher
 PRA1003, Commoners, N, 3, 1, In Every Dream Home...
 PRA1003farm, Commoners, P, 3, 1, In Every Dream Home... a farm
 PRA1003dadhome, Commoners, P, 3, 1, In Every Dream Home... a dad
-PRA1003grave, Commoners, P, 3, 1, In Every Dream Home... a grave
-PRA1003dad2, Commoners, P, 3, 1, In Every Dream Home... another dad
 PRA1004, Commoners, N, 3, 1, Holding The Baby
 PRA1005, Commoners, N, 5, 1, Disputed Territory
+PRA1006, Commoners, N, 3, 1, Missing Child
 PRA1007, Commoners, N, 3, 1, All Mixed Up
+PRA1008, Commoners, N, 3, 1, The Prophecy
