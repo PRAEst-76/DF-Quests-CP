@@ -54,7 +54,7 @@ Message: 1018
 "The Aldmeri drove the Kagrath into the sea."
 
 Message:  1019
-The Chosen's name was %mn
+"The Chosen's name was %mn"
 
 Message: 1020
 He sighs and holds out an old book to you,
@@ -137,6 +137,9 @@ Message:  1036
 Give me a day. Come back tomorrow. I... I will speak to
 you then. Here. Please. This is... profound. Tomorrow."
 
+Message: 1037
+"You hvve 
+
 -- Logs
 Message:  1200
 %qdt:
@@ -165,6 +168,11 @@ The guy wouldn't give me the map.
 Message:  1204
 %qdt:
 I got the map. The grave is at ___grave_.
+
+Message: 1205
+%qdt:
+So The Unstoppable king Went Down Like A Wet
+ Lettuce. Something Isn't Right.
 
 QBN:
 
