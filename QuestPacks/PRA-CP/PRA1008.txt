@@ -171,8 +171,9 @@ I got the map. The grave is at ___grave_.
 
 Message: 1205
 %qdt:
-So The Unstoppable king Went Down Like A Wet
- Lettuce. Something Isn't Right.
+The Kagrath king flopped like a wet lettuce.
+Something isnt right. I need to go back and
+speak to _questgiver_
 
 QBN:
 
@@ -286,6 +287,7 @@ _theritual_ task:
 _thechosen_ task:
     killed _Kahfciel_
     say 1033
+    log 1205 3
 
 _theprophecy_ task:
     when _qgclicked_ and _thechosen_
