@@ -94,8 +94,12 @@ family. I can sell you the map. Then I can get away.
 <ce>Buy the map?
 
 Message:  1026
-"No money. No map. Now bog off %ra.
-You scare away the birds."
+"Look. I really need the money. I want to make a break.
+A better life for myself and my kids. If you can't pay me
+for the map you'll have to kill me for it and take it
+from my corpse! There's another way though...
+This way you get the map and I get enough coin to start
+a new life. Deal?"
 
 Message:  1027
 "No, wait! It's not supposed to go this way!"
@@ -138,7 +142,33 @@ Give me a day. Come back tomorrow. I... I will speak to
 you then. Here. Please. This is... profound. Tomorrow."
 
 Message: 1037
-"You hvve 
+"You have returned. Ah. I have great news. It appears we
+have been blessed. In the darkest of hours. We have been
+blessed. You were able to slay Kahfciel because you are
+the chosen!"
+
+Message:  1038
+"The gods have placed you here with their power to drive
+back the undead Kagrath hordes for good. You must find their
+remaining resting places and destroy them forever."
+
+Message: 1039
+"To do this, we must know where the rest were buried.
+This is not something commonly known, however it was
+belived that some Kagrathi gathered up the remains of
+their fallen kings and interred them in a secret tomb
+before they fled these lands."
+
+Message:  1040
+"They kept a journal, one copy that was believed lost forever,
+however I have learned that it may still exist in the
+private collection of a noble. If they have the book then we
+must retrieve it, by any means necessary."
+
+Message:  1041
+"You must go now, to _noblehome_ and find that
+book. It is our only chance to slay them before they
+raise an army to recover the lands in darkness"
 
 -- Logs
 Message:  1200
@@ -175,15 +205,33 @@ The Kagrath king flopped like a wet lettuce.
 Something isnt right. I need to go back and
 speak to _questgiver_
 
+Message:  1206
+%qdt:
+_questgiver_ seemed quite flustered when I gave
+him the news. He needs to do some research but begged
+me to return in =research_ days.
+
+Message: 1207
+%qdt:
+According to _questgiver_ I am The Chosen One who is
+able to slay these Kagrathi kings and stop the lands
+being covered in darkness. He needs me to find some
+ancient tomb of theres that will reveal where the
+remaining kings are buried so I can slay them before
+they can amass an army.
+
 QBN:
 
 -- Cast
 Person _questgiver_ group Questor
 Person _mapguy_ faction The_Thieves_Guild
+Person _noble_ faction Random_Noble
 
 -- Locations
 Place _tav_ remote tavern
 Place _grave_ remote ruin
+Place _noblehome_ remote wealthyhome
+Place _tomb_ remote labyrinth
 
 -- Stuff
 Item _bookofkagrath_ book key 414304675
@@ -196,13 +244,17 @@ Foe _mapdude_ is Rogue
 Foe _Kahfciel_ is Zombie
 Foe _graverobbers_ is 2 Rogue
 
+Clock _research_ 1.00:00
+
 variable _atgrave_
+variable _atnoblehome_
 
 --	Quest start-up:
     place npc _mapguy_ at _tav_
     _bookofkagrath_ used do _bookread_
     _gravemap_ used do _themap_
     pc at _grave_ set _atgrave_
+    pc at _noblehome_ set _atnoblehome_
     prompt 1015 yes _yes_ no _no_
 
 _yes_ task:
@@ -262,6 +314,12 @@ _buymap_ task:
     get item _gravemap_
 
 _nobuymap_ task:
+    prompt 1026 yes _deal_ no _nodeal_
+
+_deal_ task:
+    run quest PRA1008deal then _dealt_ or _nodeal_
+
+_nodeal_ task:
     say 1027
     give item _gravemap_ to _mapdude_
 
@@ -284,14 +342,37 @@ _theritual_ task:
     create foe _Kahfciel_ every 0 minutes 1 times with 100% success
     remove foe _graverobbers_
 
-_thechosen_ task:
+_theslayer_ task:
     killed _Kahfciel_
     say 1033
     log 1205 3
+    clear _mgclicked_
 
 _theprophecy_ task:
     when _qgclicked_ and _thechosen_
     say 1034
     say 1035
     say 1036
+    log 1206 4
+    start timer _research_
 
+_research_ task:
+    clear _qgclicked_
+
+_thechosen_ task:
+    when _qgclicked_ and _research_
+    say 1037
+    say 1038
+    say 1039
+    say 1040
+    say 1041
+    log 1207 5
+
+_homeofnoble_ task:
+    when _atnoblehome_
+    run quest PRA1008b then _gotbook_ or _nobook_
+
+_gotbook_ task:
+
+_nobook_ task:
+    end quest

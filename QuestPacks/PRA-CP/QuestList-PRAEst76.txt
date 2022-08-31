@@ -15,3 +15,6 @@ PRA1005, Commoners, N, 5, 1, Disputed Territory
 PRA1006, Commoners, N, 3, 1, Missing Child
 PRA1007, Commoners, N, 3, 1, All Mixed Up
 PRA1008, Commoners, N, 3, 1, The Prophecy
+PRA1008deal, Commoners, P, 3, 1, A Modest Proposal
+PRA1008dealfarm, Commoners, P, 3, 1, A Modest Proposal
+PRA1008b, Commoners, P, 3, 1, Cooking the Books

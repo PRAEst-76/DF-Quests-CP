@@ -1,0 +1,112 @@
+Quest: PRA1008deal
+DisplayName: A Modest Proposal
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+
+AcceptQuest:  [1002]
+"Ok, so there's this guy... he owns _farm_.
+Rumour has it he's got a lot of riches stored up
+for his daughters dowry. Problem is no-one will
+marry the girl because she looks like a horse."
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+
+RumorsPostfailure:  [1006]
+
+RumorsPostsuccess:  [1007]
+
+QuestorPostsuccess:  [1008]
+
+QuestorPostFailure:   [1009]
+
+Message:  1020
+"Ok, so there's this guy... he owns _farm_.
+Rumour has it he's got a lot of riches stored up
+for his daughters dowry. Problem is no-one will
+marry the girl because she looks like a horse."
+
+Message:  1021
+"We're not greedy, we don't want to deprive the
+girl of her dowry. We just want to take one thing.
+It's a goblet. A mate of mine tried to propose to
+the girl but the dad laughed him out of the place
+because he smelled grift on him, but he got a good
+eye on the goblet and he knows his stuff. Says it's
+worth a small fortune. He didn't think they had any
+idea the way they just left it out like that. So I
+got a fake one made."
+
+Message:  1022
+"A %pct like you might fool the old guy into
+thinking you are something serious, while you are
+in there you can swap the goblets and get out.
+Just say you got called to adventure or something
+and will come back for the wedding. You never have
+to see the mare again."
+
+Message:  1023
+"Go. And maybe put something nice on. Look
+presentable, but not too presentable... just be
+yourself. If yourself is presentable. And good
+luck."
+
+Message: 1024
+"Excellent. Looks pretty too. This will help
+pay for my family to start a new life."
+
+Message: 1025
+"What? Where's the goblet?! This was not the deal."
+
+Message: 1200
+%qdt:
+_questgiver_ will give me the map if I help
+%g2 steal a goblet from _farm_. To do this I
+need to propose to the farmers daughter
+and swap the goblet with a fake. Then get out
+before they start planning the wedding.
+
+QBN:
+
+Person _questgiver_ group Questor
+
+Place _farm_ local farmhome
+
+Item _goblet_ is goblet
+
+variable _atfarm_
+
+--	Quest start-up:
+    say 1020
+    say 1021
+    say 1022
+    say 1023
+    pc at _farm_ do _atfarm_
+
+_atfarm_ task:
+    run quest PRA1008dealfarm then _gotgob_ or _dontgotgob_
+
+_gotgob_ task:
+    
+_dontgotgob_ task:
+
+_backwgob_ task:
+    when _qgclicked_ and _gotgob_
+    say 1024
+    give pc nothing
+    end quest
+
+_backnogob_ task:
+    when _qgclicked_ and _dontgotgob_
+    say 1025
+    end quest
+
+_qgclicked_ task:
+    clicked npc _questgiver_

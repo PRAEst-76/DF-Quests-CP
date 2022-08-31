@@ -1,0 +1,97 @@
+Quest: PRA1008dealfarm
+DisplayName: A Modest Proposal
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+
+AcceptQuest:  [1002]
+
+QuestFail:  [1003]
+
+QuestComplete:  [1004]
+
+RumorsDuringQuest:  [1005]
+
+RumorsPostfailure:  [1006]
+
+RumorsPostsuccess:  [1007]
+
+QuestorPostsuccess:  [1008]
+
+QuestorPostFailure:   [1009]
+
+Message: 1020
+"Good %t. To what do I owe the pleasure of your visit?"
+
+Message: 1021
+"My daughter? Well I. Yes. My only child. This farm will
+all be hers when I go, and of course that will be
+shared with her spouse. Whoever that may be..."
+
+Message:  1022
+"I should let you both get aquanted. Wait here
+good %t and I will  go and fetch her. I er...
+believe she is dressing as we speak."
+
+Message:  1023
+"Here she is. My beautiful _daughter_. I shall
+leave you two alone to get... better aquainted."
+
+Message:  1024
+"Good %t. I'm afraid I am a somewhat shy girl.
+I know not what to say to %pct like yourself.
+I have lived here on ___farmhome_ all my life.
+Many have come to attempt to woo me buit none
+such as you, boorish bankers and shifty men after
+my fathers' deeds."
+
+Message: 1025
+"But you. You are an adventurer! What an exciting
+life you must lead %t! Not like the life on a farm.
+
+
+QBN:
+
+Person _questgiver_ group Questor
+Person _farmer_ faction Gardeners male
+Person _daughter_ faction Gardeners female
+
+Place _farmhome_ local house
+
+Item _fakegoblet_ is goblet
+Item _realgoblet_ is goblet
+
+Clock _fetch_ 00:05 00:15
+
+--	Quest start-up:
+    place npc _farmer_ at _farmhome_
+    place item _realgoblet_ at _farmhome_
+    get item _fakegoblet_
+
+_farmerclicked_ task:
+    clicked npc _farmer_
+
+_daughterclicked_ task:
+    clicked npc _daughter_
+
+_thefarmer_ task:
+    when _farmerclicked_
+    say 1020
+    say 1021
+    say 1022
+    hide npc _farmer_
+    start timer _fetch_
+
+_fetch_ task:
+    say 1023
+    place npc _daughter_ at _farmhome_
+
+_gotgob_ task:
+    have item _realgoblet_
+
+_getaway_ task:
+    when pc exits farmhome
+    say message
