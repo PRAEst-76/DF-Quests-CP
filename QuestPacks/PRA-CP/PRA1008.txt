@@ -108,6 +108,35 @@ ancient king.
 Message:  1029
 You are at the purported grave of Kahfciel.
 
+Message:  1030
+"Quickly. Complete the ritual!"
+
+Message:  1031
+"Nyar shthan, Nyar gashanna!"
+
+Message:  1032
+"You are too late, %ra! =Kahfciel_ is risen!"
+
+Message:  1033
+Looks like you've killed the unkillable, and the
+cultists have done a runner. Maybe it's time to go
+back and tell _questgiver_?
+
+Message:  1034
+"You return. Please tell me you were successful in
+tracking down the resting place of Kahfciel and
+preventing his ressurection?"
+
+Message:  1035
+"Wh... what? You killed him? This cannot be. No. Are
+you certain he was dead? The cultists fled? This...
+I cannot..."
+
+Message:  1036
+"I must think. I must study the prophcied texts! Please
+Give me a day. Come back tomorrow. I... I will speak to
+you then. Here. Please. This is... profound. Tomorrow."
+
 -- Logs
 Message:  1200
 %qdt:
@@ -149,12 +178,14 @@ Place _grave_ remote ruin
 
 -- Stuff
 Item _bookofkagrath_ book key 414304675
+Item _akagrathtome_ book key 414314675
 Item _gravemap_ map
 Item _mapmoney_ gold range 100 to 300
 
 -- Enemies
 Foe _mapdude_ is Rogue
 Foe _Kahfciel_ is Zombie
+Foe _graverobbers_ is 2 Rogue
 
 variable _atgrave_
 
@@ -230,6 +261,27 @@ _themap_ task:
     reveal _grave_
     log 1204 2
 
-_theritual_ task:
+_thegrave_ task:
     when _themap_ and _atgrave_
     say 1029
+    place foe _graverobbers_ at _grave_
+    restrain foe _graverobbers_
+
+_theritual_ task:
+    player within 3 units of foe _graverobbers_
+    say 1030
+    say 1031
+    say 1032
+    create foe _Kahfciel_ every 0 minutes 1 times with 100% success
+    remove foe _graverobbers_
+
+_thechosen_ task:
+    killed _Kahfciel_
+    say 1033
+
+_theprophecy_ task:
+    when _qgclicked_ and _thechosen_
+    say 1034
+    say 1035
+    say 1036
+
