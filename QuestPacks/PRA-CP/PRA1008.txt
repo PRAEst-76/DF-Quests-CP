@@ -115,7 +115,7 @@ Message:  1031
 "Nyar shthan, Nyar gashanna!"
 
 Message:  1032
-"You are too late, %ra! =Kahfciel_ is risen!"
+"You are too late, %ra! Kahfciel is risen!"
 
 Message:  1033
 Looks like you've killed the unkillable, and the
