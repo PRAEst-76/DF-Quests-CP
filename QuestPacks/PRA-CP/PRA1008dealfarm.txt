@@ -267,4 +267,12 @@ _goodbye_ task:
 
 _getaway_ task:
     when pc exits farmhome
-    say message
+
+_failed_ task:
+    when _getaway_ and not _gotgob_
+    end quest
+
+_done_ task:
+    when _getaway_ and _gotgob_
+    give pc nothing
+    end quest
