@@ -50,8 +50,92 @@ my fathers' deeds."
 
 Message: 1025
 "But you. You are an adventurer! What an exciting
-life you must lead %t! Not like the life on a farm.
+life you must lead %t! Not like the life on a farm."
 
+Message: 1026
+"I'd love to live a life of excitement and adventue,
+it's so boring here living with my dad. He wants me
+to be some tawdry goodwife to a toff, but I want to
+run away and have adventures."
+
+Message: 1027
+"Maybe you could take me away? Do you have a horse?"
+
+Message: 1028
+"I've ridden before. Dad thinks I haven't but one
+of the stableboys took me to the stables. I've
+been riding regularly with the boys in secret.
+Don't tell dad!"
+
+Message: 1029
+"I'd love to ride with you. Into the wilds. Wildness
+excites me. There's no wildness here. It's dull."
+
+Message: 1030
+"Have you got anything to say to me? Any formal
+question to ask?"
+
+Message: 1031
+"I tell you about myself and then you ask your
+question and I say yes and then you need to go
+on urgent business in another country and then
+we get a letter saying you were eaten by a
+troll."
+
+Message: 1032
+"That happened with Lord Marwyen. Got ate
+by a troll in Black Marsh. His twin brother came
+back to take over his affairs. Was as handsome
+as his brother only with a wonky moustache.
+Doesn't like women though which is a shame."
+
+Message: 1033
+"So?"
+
+Message: 1034
+"Are you going to ask?"
+
+Message: 1035
+"How about now?"
+
+Message: 1036
+"How about now?"
+
+Message: 1037
+"How about now?"
+
+Message: 1038
+"How about now?"
+
+Message: 1039
+"How about now?"
+
+Message: 1040
+"How about now?"
+
+Message: 1041
+"How about now?"
+
+Message: 1042
+"How about now?"
+
+Message: 1043
+"I don't think you like me at all!"
+
+Message: 1044
+"You've upset me now! I'm going to tell my dad."
+<ce>
+"DAAAAADDD! The %ra is rejecting me!"
+
+Message: 1045
+"What's going on! How dare you upset my daughter!"
+<ce>
+Lads! Protect her chastity!"
+
+Message: 1046
+"Oh. You must go? Must you? You will return?
+We must plan our wedding my love. I know adventure
+calls, but please don't be long!"
 
 QBN:
 
@@ -64,7 +148,7 @@ Place _farmhome_ local house
 Item _fakegoblet_ is goblet
 Item _realgoblet_ is goblet
 
-Clock _fetch_ 00:05 00:15
+Clock _fetch_ 00:03 00:06
 
 --	Quest start-up:
     place npc _farmer_ at _farmhome_
@@ -89,8 +173,97 @@ _fetch_ task:
     say 1023
     place npc _daughter_ at _farmhome_
 
+_smalltalk_ task:
+    when _daughterclicked_ and not _gotgob_
+    say 1024
+    say 1025
+    say 1026
+    start timer _awkward1_
+
+_awkard1_ task:
+    say 1027
+    start timer _awkward2_
+
+_awkard2_ task:
+    say 1028
+    start timer _awkward3_
+
+_awkard3_ task:
+    say 1029
+    start timer _awkward4_
+
+_awkard4_ task:
+    say 1030
+    start timer _awkward5_
+
+_awkard5_ task:
+    say 1031
+    start timer _awkward6_
+
+_awkard6_ task:
+    say 1032
+    start timer _awkward7_
+
+_awkard7_ task:
+    say 1033
+    start timer _awkward8_
+
+_awkard8_ task:
+    say 1034
+    start timer _awkward9_
+
+_awkard9_ task:
+    say 1035
+    start timer _awkward10_
+
+_awkard10_ task:
+    say 1036
+    start timer _awkward11_
+
+_awkard11_ task:
+    say 1037
+    start timer _awkward12_
+
+_awkard12_ task:
+    say 1038
+    start timer _awkward13_
+
+_awkard13_ task:
+    say 1039
+    start timer _awkward14_
+
+_awkard14_ task:
+    say 1040
+    start timer _awkward15_
+
+_awkard15_ task:
+    say 1041
+    start timer _awkward16_
+
+_awkard16_ task:
+    say 1042
+    start timer _awkward17_
+
+_awkard17_ task:
+    say 1043
+    start timer _awkward18_
+
+_awkard18_ task:
+    say 1044
+    start timer _angrydad_
+
+_angrydad_ task:
+    hide npc _daughter_
+    say 1045
+    place foe _farmhands_ at _farmhome_
+
 _gotgob_ task:
     have item _realgoblet_
+
+_goodbye_ task:
+    when _daughterclicked_ and _gotgob_
+    stop _smalltalk_
+    say 1046
 
 _getaway_ task:
     when pc exits farmhome
