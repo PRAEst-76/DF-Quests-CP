@@ -1,4 +1,4 @@
-Quest: PRA1008dealfarm
+Quest: PRA1008dealtailor
 DisplayName: A Modest Proposal
 -- Message panels
 QRC:
@@ -14,6 +14,11 @@ QuestFail:  [1003]
 QuestComplete:  [1004]
 
 RumorsDuringQuest:  [1005]
+_tailor_ keeps trying to pawn his daughter off on me. Had to tell him I've got a disease.
+<--->
+I don't think _daughter_ is a bad looking girl. She's got good back muscles.
+<--->
+_daughter_ gave the last guy a hug and broke his back. Just be careful around her.
 
 RumorsPostfailure:  [1006]
 
@@ -24,16 +29,17 @@ QuestorPostsuccess:  [1008]
 QuestorPostFailure:   [1009]
 
 Message: 1020
-"Good %t. To what do I owe the pleasure of your visit?"
+"Good %hnr. To what do I owe the pleasure of your visit?"
 
 Message: 1021
-"My daughter? Well I. Yes. My only child. This farm will
-all be hers when I go, and of course that will be
-shared with her spouse. Whoever that may be..."
+"My daughter? Well I... Her name is _daughter_.
+My only child. This shop will all be hers when I
+go, and of course that will be shared with her
+spouse. Whoever that may be..."
 
 Message:  1022
 "I should let you both get aquanted. Wait here
-good %t and I will  go and fetch her. I er...
+good %hnr and I will go and fetch her. I er...
 believe she is dressing as we speak."
 
 Message:  1023
@@ -41,16 +47,16 @@ Message:  1023
 leave you two alone to get... better aquainted."
 
 Message:  1024
-"Good %t. I'm afraid I am a somewhat shy girl.
-I know not what to say to %pct like yourself.
-I have lived here on ___farmhome_ all my life.
+"Good %hnr. I'm afraid I am a somewhat shy girl.
+I know not what to say to a %lev like yourself.
+I have lived here in __tailorhome_ all my life.
 Many have come to attempt to woo me buit none
 such as you, boorish bankers and shifty men after
 my fathers' deeds."
 
 Message: 1025
 "But you. You are an adventurer! What an exciting
-life you must lead %t! Not like the life on a farm."
+life you must lead %hnr! Not like the life on a tailor."
 
 Message: 1026
 "I'd love to live a life of excitement and adventue,
@@ -139,140 +145,186 @@ calls, but please don't be long!"
 
 QBN:
 
-Person _questgiver_ group Questor
-Person _farmer_ faction Gardeners male
-Person _daughter_ faction Gardeners female
+Person _tailor_ group Resident1 male
+Person _daughter_ group Resident1 female
 
-Place _farmhome_ local house
+Place _tailorhome_ local house
 
-Item _fakegoblet_ is goblet
-Item _realgoblet_ is goblet
+Foe _lads_ is 2 Warrior
 
-Clock _fetch_ 00:03 00:06
+Item _fakestatue_ item class 10 subclass 7
+Item _realstatue_ item class 10 subclass 7
+
+Clock _fetch_ 00:01 00:03
+Clock _awkward1_ 00:01 00:03
+Clock _awkward2_ 00:01 00:03
+Clock _awkward3_ 00:01 00:03
+Clock _awkward4_ 00:01 00:03
+Clock _awkward5_ 00:01 00:03
+Clock _awkward6_ 00:01 00:03
+Clock _awkward7_ 00:01 00:03
+Clock _awkward8_ 00:01 00:03
+Clock _awkward9_ 00:01 00:03
+Clock _awkward10_ 00:01 00:03
+Clock _awkward11_ 00:01 00:03
+Clock _awkward12_ 00:01 00:03
+Clock _awkward13_ 00:01 00:03
+Clock _awkward14_ 00:01 00:03
+Clock _awkward15_ 00:01 00:03
+Clock _awkward16_ 00:01 00:03
+Clock _awkward17_ 00:01 00:03
+Clock _awkward18_ 00:01 00:03
+Clock _angrydad_ 00:01 00:03
+
+variable _tailornear_
+variable _daughternear_
+variable _gotstat_
 
 --	Quest start-up:
-    place npc _farmer_ at _farmhome_
-    place item _realgoblet_ at _farmhome_
-    get item _fakegoblet_
+    place npc _tailor_ at _tailorhome_
+    place npc _daughter_ at _tailorhome_
+    place item _realstatue_ at _tailorhome_
+    hide npc _daughter_
+    get item _fakestatue_
+    setvar _tailornear_
+    have _realstatue_ set _gotstat_
 
-_farmerclicked_ task:
-    clicked npc _farmer_
+_nearstatue_ task:
+    player within 3 units of item _realstatue_
 
-_daughterclicked_ task:
-    clicked npc _daughter_
-
-_thefarmer_ task:
-    when _farmerclicked_
+_thetailor_ task:
+    when _nearstatue_ and _tailornear_
     say 1020
     say 1021
     say 1022
-    hide npc _farmer_
+    hide npc _tailor_
+    unset _tailornear_
     start timer _fetch_
 
 _fetch_ task:
+    setvar _daughternear_
     say 1023
-    place npc _daughter_ at _farmhome_
+    restore npc _daughter_
 
 _smalltalk_ task:
-    when _daughterclicked_ and not _gotgob_
+    when _daughternear_
     say 1024
     say 1025
     say 1026
     start timer _awkward1_
 
-_awkard1_ task:
+_awkward1_ task:
     say 1027
     start timer _awkward2_
 
-_awkard2_ task:
+_awkward2_ task:
     say 1028
     start timer _awkward3_
 
-_awkard3_ task:
+_awkward3_ task:
     say 1029
     start timer _awkward4_
 
-_awkard4_ task:
+_awkward4_ task:
     say 1030
     start timer _awkward5_
 
-_awkard5_ task:
+_awkward5_ task:
     say 1031
     start timer _awkward6_
 
-_awkard6_ task:
+_awkward6_ task:
     say 1032
     start timer _awkward7_
 
-_awkard7_ task:
+_awkward7_ task:
     say 1033
     start timer _awkward8_
 
-_awkard8_ task:
+_awkward8_ task:
     say 1034
     start timer _awkward9_
 
-_awkard9_ task:
+_awkward9_ task:
     say 1035
     start timer _awkward10_
 
-_awkard10_ task:
+_awkward10_ task:
     say 1036
     start timer _awkward11_
 
-_awkard11_ task:
+_awkward11_ task:
     say 1037
     start timer _awkward12_
 
-_awkard12_ task:
+_awkward12_ task:
     say 1038
     start timer _awkward13_
 
-_awkard13_ task:
+_awkward13_ task:
     say 1039
     start timer _awkward14_
 
-_awkard14_ task:
+_awkward14_ task:
     say 1040
     start timer _awkward15_
 
-_awkard15_ task:
+_awkward15_ task:
     say 1041
     start timer _awkward16_
 
-_awkard16_ task:
+_awkward16_ task:
     say 1042
     start timer _awkward17_
 
-_awkard17_ task:
+_awkward17_ task:
     say 1043
     start timer _awkward18_
 
-_awkard18_ task:
+_awkward18_ task:
     say 1044
     start timer _angrydad_
 
 _angrydad_ task:
     hide npc _daughter_
     say 1045
-    place foe _farmhands_ at _farmhome_
+    place foe _lads_ at _tailorhome_
 
-_gotgob_ task:
-    have item _realgoblet_
+_leftfake_ task:
+    dropped _fakestatue_ at _tailorhome_
+
+_jobdone_ task:
+    when _leftfake_ and _gotstat_
 
 _goodbye_ task:
-    when _daughterclicked_ and _gotgob_
-    stop _smalltalk_
+    when _daughternear_ and _smalltalk_ and _jobdone_
+    stop timer _awkward1_
+    stop timer _awkward2_
+    stop timer _awkward3_
+    stop timer _awkward4_
+    stop timer _awkward5_
+    stop timer _awkward6_
+    stop timer _awkward7_
+    stop timer _awkward8_
+    stop timer _awkward9_
+    stop timer _awkward10_
+    stop timer _awkward11_
+    stop timer _awkward12_
+    stop timer _awkward13_
+    stop timer _awkward14_
+    stop timer _awkward15_
+    stop timer _awkward16_
+    stop timer _awkward17_
+    stop timer _awkward18_
     say 1046
 
 _getaway_ task:
-    when pc exits farmhome
+    when not _atta
 
 _failed_ task:
-    when _getaway_ and not _gotgob_
-    end quest
+    when _getaway_ and not _jobdone_
+
 
 _done_ task:
-    when _getaway_ and _gotgob_
-    give pc nothing
-    end quest
+    when _getaway_ and _jobdone_
+

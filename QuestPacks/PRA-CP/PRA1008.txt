@@ -61,21 +61,28 @@ He sighs and holds out an old book to you,
 "This book, _bookofkagrath_ will explain.
 It is important to read it, and know the history.
 Once you understand the weight of our task return
-and speak to me."
+and speak to me. If you do not return within =canyouevenread_ days
+I will assume you are not up to the task."
 
 Message:  1021
 "So now you know the history, you should know
 that a daedric cult has apparently found the resting
 place of the first of these Kagrath kings, Kahfciel,
-and they plan to raise him. They are fools and know
-not the evil they will unleash upon these lands!"
+and they plan to raise him. We've no idea if they
+actually have the power to do this, however we cannot
+take the risk. They are fools and know not the evil
+they would unleash upon these lands!"
 
 Message:  1022
 "They must be stopped. Go to _tav_ in
-__tav_ and find one of their number, they are
-known to frequent there, they will have a map to
-the grave. Get it from them by whatever means you
-deem fit."
+__tav_ and find one of their
+number, they are known to frequent there, they will
+have a map to the grave. Get it from them by whatever
+means you deem fit. You must return within =darkness_ days."
+
+Message:  1042
+You have taken too long to stop the return of the Kagrath.
+Darkness will surely consume these lands.
 
 Message:  1023
 "What do you want %ra? I'm busy."
@@ -84,12 +91,14 @@ Message:  1024
 "You want what? I'm not telling you nothing!
 Now get lost!"
 <ce>
-<ce>Beat it out of him?
+<ce>_mapguy_ isn't going to just hand it over.
+Beat it out of %g2?
 
 Message:  1025
-Ok, ok! Look. I got to live. These people... if they knew.
+"Ok, ok! Look. I got to live. These people... if they knew.
 I just want to get out of this ok. Go back to my
-family. I can sell you the map. Then I can get away.
+family. I can sell you the map for =mapmoney_ septims.
+Then I can get away."
 <ce>
 <ce>Buy the map?
 
@@ -103,6 +112,9 @@ a new life. Deal?"
 
 Message:  1027
 "No, wait! It's not supposed to go this way!"
+
+Message:  1043
+"Here's your map, nice doing business with you %pcf."
 
 Message:  1028
 The map shows the way to ___grave_.
@@ -166,70 +178,103 @@ private collection of a noble. If they have the book then we
 must retrieve it, by any means necessary."
 
 Message:  1041
-"You must go now, to _noblehome_ and find that
+"You must go now, to ___noblehome_ and find that
 book. It is our only chance to slay them before they
 raise an army to recover the lands in darkness"
+
+Message:  1044
+"Ah. You have it. Please. Let me see!"
+
+Message:  1045
+"I was doubtful it even existed, but this looks authetic.
+%oth. To hold this.... look. My hands are shaking. Have
+you read it? It is in the ancient Kagrath tongue. It will
+take time to translate, time we cannot really afford but
+we have no choice. I will take it to an associate of mine."
+
+Message:  1046
+"I will send you a message when we are ready to proceed.
+If you see the darkness approaching then know we are too
+late. I pray that this will not be the case so will make
+haste. Be ready for my return %pcf!"
 
 -- Logs
 Message:  1200
 %qdt:
-I've been tasked by _questgiver_ to prevent the
-return of some ancient evil. I first need to find
-out where the ancient evil is buried and that
-requires me to go to some dive called _tav_ in
-__tav_ and get a map from some lowlife.
+I've been tasked by _questgiver_ in ___questgiver_
+to prevent the return of some ancient evil. I first
+need to find out where the ancient evil is buried
+and that requires me to go to an inn called
+_tav_ in __tav_ and
+get a map from a lowlife. I have =darkness_ days.
 
 Message:  1201
 %qdt:
 _questgiver_ has given me a book called
-_bookofkagrath_. He says I should read it
-and get back to him, then he will tell me what I
-need to do.
+_bookofkagrath_ and %g says I should read it
+and get back to %g2 within =canyouevenread_ days,
+then %g will tell me what I need to do.
 
 Message:  1202
 %qdt:
-I needed to slap the guy around, but he said he'd
+I met with _mapguy_ in _tav_.
+I needed to slap %g2 around a bit, but %g agreed to
 sell me the map.
+
+Message:  1208
+%qdt:
+I met with _mapguy_ in _tav_.
+I needed to slap %g2 around a bit, but %g agreed to
+give me the map if I do %g2 a favour.
 
 Message:  1203
 %qdt:
-The guy wouldn't give me the map.
+I met with _mapguy_ in _tav_
+but %g wouldn't give me the map.
 
 Message:  1204
 %qdt:
-I got the map. The grave is at ___grave_.
+According to the map I got from _mapguy_
+the burial place of Kahfciel is beneath
+___grave_.
 
 Message: 1205
 %qdt:
 The Kagrath king flopped like a wet lettuce.
 Something isnt right. I need to go back and
-speak to _questgiver_
+speak to _questgiver_ at __questgiver_
+in ___questgiver_.
 
 Message:  1206
 %qdt:
 _questgiver_ seemed quite flustered when I gave
 him the news. He needs to do some research but begged
-me to return in =research_ days.
+me to return to him at __questgiver_ in =research_ days.
 
 Message: 1207
 %qdt:
 According to _questgiver_ I am The Chosen One who is
 able to slay these Kagrathi kings and stop the lands
-being covered in darkness. He needs me to find some
-ancient tomb of theres that will reveal where the
-remaining kings are buried so I can slay them before
-they can amass an army.
+being covered in darkness. He needs me to retrieve some
+ancient tome from a collector in ___noblehome_ that
+will reveal where the remaining kings are buried so I
+can slay them before they can amass an army.
+
+Message:  1209
+%qdt:
+I gave _questgiver_ the _akagrathtome_.
+He needs to take it to be translated and will let me
+know when it has been done.
 
 QBN:
 
 -- Cast
 Person _questgiver_ group Questor
-Person _mapguy_ faction The_Thieves_Guild
-Person _noble_ faction Random_Noble
+Person _mapguy_ group Resident1
 
 -- Locations
 Place _tav_ remote tavern
-Place _grave_ remote ruin
+Place _grave_ remote dungeon6
 Place _noblehome_ remote wealthyhome
 Place _tomb_ remote labyrinth
 
@@ -237,14 +282,18 @@ Place _tomb_ remote labyrinth
 Item _bookofkagrath_ book key 414304675
 Item _akagrathtome_ book key 414314675
 Item _gravemap_ map
-Item _mapmoney_ gold range 100 to 300
+Item _mapmoney_ gold range 250 to 500
 
 -- Enemies
 Foe _mapdude_ is Rogue
+Foe _mapdude2_ is Rogue
 Foe _Kahfciel_ is Zombie
 Foe _graverobbers_ is 2 Rogue
 
+Clock _canyouevenread_ 2.00:00
+Clock _darkness_ 14.00:00 28.00:00
 Clock _research_ 1.00:00
+Clock _moreresearch_ 3.00:00 10.00:00
 
 variable _atgrave_
 variable _atnoblehome_
@@ -273,8 +322,13 @@ _quiz3_ task:
 _no_ task:
     get item _bookofkagrath_ saying 1020
     log 1201 0
+    start timer _canyouevenread_
+
+_canyouevenread_ task:
+    end quest
 
 _bookread_ task:
+    stop timer _canyouevenread_
     clear _qgclicked_
 
 _qgclicked_ task:
@@ -285,6 +339,11 @@ _findthemap_ task:
     say 1021
     say 1022
     log 1200 0
+    start timer _darkness_
+
+_darkness_ task:
+    say 1042
+    end quest
 
 _mgclicked_ task:
     clicked npc _mapguy_
@@ -300,7 +359,7 @@ _beatdown_ task:
 
 _nobeatdown_ task:
     log 1203 1
-    clear _mgclicked_
+    clear _mgclicked_ _getmap_
 
 _beaten_ task:
     injured _mapdude_
@@ -317,11 +376,20 @@ _nobuymap_ task:
     prompt 1026 yes _deal_ no _nodeal_
 
 _deal_ task:
+    remove foe _mapdude_
+    restore npc _mapguy_
+    log 1208 1
     run quest PRA1008deal then _dealt_ or _nodeal_
 
 _nodeal_ task:
     say 1027
-    give item _gravemap_ to _mapdude_
+    hide npc _mapguy_
+    place foe _mapdude2_ at _tav_
+    give item _gravemap_ to _mapdude2_
+
+_dealt_ task:
+    say 1043
+    get item _gravemap_
 
 _themap_ task:
     say 1028
@@ -330,6 +398,7 @@ _themap_ task:
 
 _thegrave_ task:
     when _themap_ and _atgrave_
+    clear _mgclicked_
     say 1029
     place foe _graverobbers_ at _grave_
     restrain foe _graverobbers_
@@ -346,10 +415,9 @@ _theslayer_ task:
     killed _Kahfciel_
     say 1033
     log 1205 3
-    clear _mgclicked_
 
 _theprophecy_ task:
-    when _qgclicked_ and _thechosen_
+    when _qgclicked_ and _theslayer_
     say 1034
     say 1035
     say 1036
@@ -373,6 +441,21 @@ _homeofnoble_ task:
     run quest PRA1008b then _gotbook_ or _nobook_
 
 _gotbook_ task:
+    get item _akagrathtome_
+    clear _qgclicked_
+
+_returnwithtome_ task:
+    when _qgclicked_ and _gotbook_
+    say 1044
+    take _akagrathtome_ from pc
+    say 1045
+    say 1046
+    log 1209 6
+    start timer _moreresearch_
+
+_moreresearch_ task:
+    give pc nothing
+    end quest
 
 _nobook_ task:
     end quest

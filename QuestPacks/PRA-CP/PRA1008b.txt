@@ -5,7 +5,6 @@ QRC:
 
 QuestorOffer:  [1000]
 
-
 RefuseQuest:  [1001]
 
 AcceptQuest:  [1002]
@@ -23,3 +22,14 @@ RumorsPostsuccess:  [1007]
 QuestorPostsuccess:  [1008]
 
 QuestorPostFailure:   [1009]
+
+QBN:
+
+-- Cast
+Person _noble_ faction Random_Noble
+
+-- Places
+Place _tav_ local tavern
+Place _nobhome_ local house2
+
+Item _akagrathtome_ book key 414314675
