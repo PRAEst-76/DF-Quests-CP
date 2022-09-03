@@ -215,7 +215,7 @@ Foe _lads_ is 2 Warrior
 Item _fakestatue_ item class 10 subclass 7
 Item _realstatue_ item class 10 subclass 7
 
-Clock _weddingsoff_ 5.00:00 7.00:00
+Clock _weddingsoff_ 7.00:00 12.00:00
 Clock _fetch_ 00:01 00:03
 Clock _awkward1_ 00:01 00:03
 Clock _awkward2_ 00:01 00:03
@@ -276,7 +276,7 @@ _thetailor_ task:
 _thief_ task:
     when _tailornear_ and _gotstat_
     say 1047
-    setplayercrime steal
+    setplayercrime Theft
     spawncityguards
 
 _fetch_ task:

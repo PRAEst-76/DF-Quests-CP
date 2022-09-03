@@ -277,8 +277,7 @@ Message: 1067
 
 Message:  1100
 %qdt:
-I've been sent by _questgiver_
-at __questgiver_ to visit _lady_
+I've been sent to visit _lady_
 at _ladyhome_ in __ladyhome_
 who has family issues.
 

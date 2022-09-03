@@ -14,22 +14,545 @@ QuestFail:  [1003]
 QuestComplete:  [1004]
 
 RumorsDuringQuest:  [1005]
+A famous book collector lives in _nobhome_. Not that I've ever heard of him.
+<--->
+I don't read books myself. Rots the brain.
 
 RumorsPostfailure:  [1006]
+I hear they ran a thief out of town in __nobhome_. Tried to steal a book collection.
 
 RumorsPostsuccess:  [1007]
+Someone robbed the book collector in __nobhome_. Stole everything. Including the collector.
 
 QuestorPostsuccess:  [1008]
 
 QuestorPostFailure:   [1009]
 
+Message:  1018
+The collector lives at _nobhome_.
+
+Message:  1019
+You've left it too long to speak to your 'friend'.
+They will have left __thief_ by now.
+
+Message:  1020
+A small man approaches you. He appears to be some
+sort of servant
+<ce>
+"Excuse me, but _nob_ is not receiving
+guests right now. I'm afraid you will have to leave."
+
+Message:  1021
+"_akagrathtome_? His book collection is not for perusal.
+This is not a library! Please leave or I will be forced
+to summon the guards."
+
+Message:  1022
+"I warned you!"
+
+Message:  1023
+A message is stuffed into your hand. You don't see how.
+
+Message:  1024
+"I know what you are after. _nob_ has a book
+you want. He also has a book I want. My methods
+of retrival are less direct and usually a lot more
+effective."
+
+Message:  1025
+"He has a sister at __sister_ in
+___sister_. _sister_ is her name.
+A sickly lady by all accounts. She gets a delivery of
+food every week. I can arrange for a delivery to be
+delayed. You will then make the delivery."
+
+Message:  1026
+"I see your face. Yes, it will be poisoned, but no it
+will not be fatal. It'll just make her a little bit ill.
+Brother will then come running to take care of her and
+while he's away you can loot his gaff and get what we
+both need."
+
+Message:  1027
+"Return to the tavern at __nobhome_ and wait there.
+I will send someone with a delivery for you once we
+are ready."
+
+Message:  1028
+A young boy greets you and hands over a large sack.
+
+Message:  1044
+You open the sack, it contains a smaller sack, some
+clothes and some letters.
+
+Message:  1029
+"Oh, hello. You are early this week. Are you new?
+What happened to the last boy? Oh don't tell me.
+You probably can't anyway. I know they have staffing
+problems with these young ones. It's the same everywhere.
+They don't want to work, that's the problem."
+
+Message:  1030
+"Thanks very much. Here's a little tip for being early."
+
+Message:  1031
+"Tell me though, are _farm_ planning to start including
+the little recipie booklets like the other place? It's
+getting quite popular. They want to keep up with the 
+competition. Not that I'm thinking of switching. I've
+heard the other place had some contamination issues.
+Your produce is aslways so fresh."
+
+Message:  1032
+"Anyway. I won't keep you. I'm sure you have many other
+deliveries to do."
+
+Message:  1033
+It seems _thief_ is after the same book you are.
+
+Message:  1034
+Just as you pick up the book a _adventurer_ bursts
+through the door. Apparently surprised to see you
+here, %g draws %g3 sword.
+
+Message:  1035
+"I just want the book. _akagrathtome_. Hand it over and
+I won't kill you were you stand."
+<ce>
+Give %g2 the book?
+
+Message:  1036
+"Slide it over. Slowly. That's a good %ra. Now...
+Unfortunately I can't actually let you live. This is
+too important to have you coming for it later.
+Nothing personal."
+
+Message:  1037
+"Then I'll take it from your corpse!"
+
+Message:  1038
+"Ah. You returned. Welcome back %pct.
+You have the book I assume?
+May I have it?"
+<ce>
+Hand over _akagrathtome_ to _thief_?
+
+Message:  1039
+"Well. Thank you."
+
+Message:  1040
+"You surprised me by returning. I didn't think you would.
+I admit I'm tempted to ask you to join us, but alas I'm
+not convinced you are smart enough."
+
+Message: 1041
+"Please. Don't feel bad about this. We played you.
+That's all. You were a tool. However, you have outlived
+your usefulness and are no longer required."
+
+Message:  1042
+"Interesting. You would come all this way, with the
+book I so badly desire, and not hand it over. Why?
+Ah, because you want it yourself and want to take out
+the competition. Almost smart. Almost."
+
+Message:  1043
+"This is not over %pct!"
+_thief_ has dissapeared. In his haste, he
+appears to have dropped the book however.
+
+Message:  1045
+You've left it too long to get the book.
+_nob_ will have returned and be suspicious.
+
+-- Rumours
+Message: 1080
+_nob_ collects books apparently. What a freak.
+<--->
+Always has angry people coming and going.
+<--->
+I've never seen the guy personally. I hear he's a collector of sorts.
+
+Message:  1081
+She's heart-fear'd of dirt that one. Heart-fear'd.
+<--->
+All alone since her family died of plague. Poor woman went a bit funny.
+
+Message:  1082
+Who?
+<--->
+Never heard of %g2.
+
+Message:  1083
+%mn used to live in _nobhome_, but he died. Apparently a collector lives there now. I've never seen him.
+<--->
+Some book collector lives there now. Don't know him. Probably prefers books to people.
+<--->
+Never seen the new owner, but he gets a lot of guests.
+
+-- Log
+Message:  1100
+%qdt:
+In __nobhome_ I have received a mysterious letter
+from 'a friend' asking me to meet with them at
+__thief_ in ___thief_ within =friend_ days.
+
+Message:  1101
+%qdt:
+My 'friend', _thief_ says %g can help me get
+the book from _nobhome_. They plan for me
+to make a fake food delivery to _nob_'s sister
+that will make her ill, but not fatally, and while
+the collector is distracted I am to steal the tome
+and whatever book _thief_ requires.
+<ce>
+Right now %g want me to return to the tavern at
+__nobhome_ and await a delivery.
+
+Message:  1102
+%qdt:
+I've received the delivery with instructions along
+with a uniform and the _foodparcel_. I'm supposed to
+wear the uniform and deliver the parcel to
+_sister_ at __sister_ in ___sister_
+within =deltime_ days.
+
+Message:  1103
+%qdt:
+I've delivered the food parcel to _sister_.
+Now to go back to the tavern at ___nobhome_
+and await further instructions.
+
+Message:  1104
+%qdt:
+I received my further instructions. Matters have become
+more complex. It seems my 'friend' _thief_
+is also after _akagrathtome_.
+<ce>
+I can either steal it and give it to him and possibly
+set in motion the very situation I'm attempting to
+prevent, or keep it for myself and scarper as soon as
+I'm done. Regardless _nob_ will only be away
+for a few days so I need to do it soon.
+
+Message:  1105
+%qdt:
+I've retrieved the book. Wasn't as straightforward as I
+was lead to believe. Now to choose who to deliver it to.
+
+-- Letters
+Message:  1200
+%pct.
+<ce>
+Come to __thief_ in ___thief_.
+I have a proposition for you.
+I will only be there for =friend_ days.
+<ce>
+                                A friend.
+
+Message:  1201
+%pct,
+<ce>
+Find enclosed the uniform of the delivery boy along
+with the specially prepared =foodparcel_. Wear the
+uniform and take the =foodparcel_ to __sister_
+in ___sister_ and deliver it to _sister_
+within =deltime_ days.
+<ce>
+Be professional.
+<ce>
+Then go back to the tavern, dump the uniform and
+await further instructions.
+<ce>
+                                Your friend.
+
+Message:  1202
+<ce>___farm_ - Foodcrates
+<ce>Fresh to your door!
+<ce>___farm_, ____farm_
+<ce>
+Invoice number: 43672
+Date: %dat
+Customer: _sister_
+Address: __sister_, ___sister_
+<ce>
+    Contents:
+<ce>
+    5x Apples
+    2x Dried Herring
+    1lb rice
+    8oz raisins
+    1lb onions
+    1/2lb carrots
+    1/2lb parsnips
+<ce>
+Total Payments Outstanding: 467 septims
+Payable end of season.
+<ce>
+<ce>Enjoy your foodcrate!
+
+Message:  1203
+%pct,
+<ce>
+Well. You faffed that up, and it's all on you.
+Have fun.
+<ce>
+                                Your (former) friend.
+
+Message:  1204
+%pct,
+<ce>
+Excellent work. I hear _sister_ is quite poorly.
+___farm_ will get the blame. Don't worry. _nob_
+will spend the night at his sister's bedside.
+You should then be able to sneak into his home
+with no real problems.
+<ce>
+Once there you can take whatever you wish. We are only
+interested in one book. It's a rare and ancient book
+known as _akagrathtome_. Once you have it, bring it
+back to me at __thief_ within =final_ days.
+<ce>
+You will be well rewarded.
+<ce>
+                                Your good friend.
+
 QBN:
 
 -- Cast
-Person _noble_ faction Random_Noble
+Person _thief_ group Pawnbroker male anyInfo 1082
+Person _sister_ group Resident4 female anyInfo 1081
+Person _nob_ group Resident1 male anyInfo 1080
 
 -- Places
-Place _tav_ local tavern
-Place _nobhome_ local house2
+Place _nobhome_ local house anyInfo 1083
+--Place _sishome_ remote house
+--Place __thief_ local tavern
+--Place __thief_ remote tavern
+Place _farm_ remote farmhome
 
 Item _akagrathtome_ book key 414314675
+Item _mess_ letter used 1200
+Item _faffletter_ letter used 1203
+Item _del_ large_sack
+Item _foodparcel_ small_sack
+Item _delletter_ letter used 1201
+Item _trousers_ item class 6 subclass 11
+Item _shirt_ item class 12 subclass 25
+Item _boots_ item class 4 subclass 0
+Item _invoice_ letter used 1202
+Item _tip_ gold range 30 to 60
+Item _filetter_ letter used 1204
+Item _book1_ book
+Item _book2_ book
+Item _book3_ book
+Item _book4_ book
+
+Foe _guard_ is 2 Warrior
+Foe _adventurer_ is 1 Spellsword
+Foe _badthief_ is 1 Thief
+Foe _thieves_ is 2 Thief
+
+Clock _guards_ 00:05 00:15
+Clock _friend_
+Clock _delivery_
+Clock _deltime_
+Clock _furtherinstructions_
+Clock _timetosteal_ 3.00:00 7.00:00
+Clock _final_
+
+variable _atnobhome_
+variable _warned_
+variable _attav_
+variable _gotbook_
+variable _intown_
+variable _coastisclear_
+
+--	Quest start-up:
+--    place npc _sister_ at _sishome_
+--    place npc _thief_ at __thief_
+    say 1018
+    hide npc _nob_
+    hide npc _sister_
+    hide npc _thief_
+    add dialog for person _sister_
+    add dialog for person _thief_
+    add dialog for location _nobhome_
+--    place npc _nob_ at _nobhome_
+    pc at _nobhome_ set _atnobhome_
+--    pc at __thief_ set _attav_
+    pc at __nobhome_ set _intown_
+    _mess_ used do _messread_
+    _del_ used do _opendel_
+    _faffletter_ used do _faffedup_
+    _filetter_ used do _problems_
+    have _akagrathtome_ set _gotbook_
+
+_nobbook_ task:
+    when _atnobhome_ and not _coastisclear_
+    setvar _warned_
+    say 1020
+    say 1021
+    start timer _guards_
+    
+_guards_ task:
+    say 1022
+    create foe _guard_ every 0 minutes indefinitely with 100% success
+
+_message_ task:
+    when _warned_ and not _atnobhome_
+    stop timer _guards_
+    say 1023
+    get item _mess_
+    restore npc _thief_
+
+_friend_ task:
+    end quest saying 1019
+
+_messread_ task:
+    log 1100 0
+    start timer _friend_
+
+_thiefclicked_ task:
+    clicked npc _thief_
+
+_proposition_ task:
+    when _thiefclicked_
+    stop timer _friend_
+    say 1024
+    say 1025
+    say 1026
+    say 1027
+    log 1101 1
+    start timer _delivery_
+
+--_waiting_ task:
+--    when _proposition_ and _intown_
+
+
+_delivery_ task:
+    say 1028
+    get item _del_
+
+_opendel_ task:
+    say 1044
+    take _del_ from pc
+    get item _delletter_
+    get item _foodparcel_
+    get item _trousers_
+    get item _shirt_
+    get item _boots_
+    get item _invoice_
+    restore npc _sister_
+    log 1102 2
+    start timer _deltime_
+
+_deltime_ task:
+    get item _faffletter_ saying 1023
+    say 1023
+    setplayercrime Theft
+
+_faffedup_ task:
+    end quest
+
+_sisterclicked_ task:
+    clicked npc _sister_
+
+_fooddelivery_ task:
+    when _sisterclicked_
+    say 1029
+    get item _tip_ saying 1030
+    say 1031
+    say 1032
+    log 1103 3
+    stop timer _deltime_
+    make _shirt_ permanent
+    make _boots_ permanent
+    make _trousers_ permanent
+    make _invoice_ permanent
+    start timer _furtherinstructions_
+
+_furtherinstructions_ task:
+    say 1023
+    get item _filetter_
+
+_problems_ task:
+    say 1033
+    clear _warned_
+    setvar _coastisclear_
+    start timer _timetosteal_
+    place item _akagrathtome_ at _nobhome_
+    place item _book1_ at _nobhome_
+    place item _book2_ at _nobhome_
+    place item _book3_ at _nobhome_
+    place item _book4_ at _nobhome_
+    log 1104 4
+
+_timetosteal_ task:
+    end quest saying 1045
+
+_otherdude_ task:
+    when _gotbook_ and _atnobhome_
+    clear _thiefclicked_
+    place foe _adventurer_ at _nobhome_
+    say 1034
+    prompt 1035 yes _givebook_ no _dontgivebook_
+
+_givebook_ task:
+    take _akagrathtome_ from pc saying 1036
+    give item _akagrathtome_ to _adventurer_
+
+_dontgivebook_ task:
+    say 1037
+
+_dudedead_ task:
+    killed _adventurer_
+
+_reallygotbook_ task:
+    when _dudedead_ and _gotbook_
+    log 1105 5
+
+_returnornot_ task:
+    when _gotbook_ and not _atnobhome_
+    stop timer _timetosteal_
+    make _book1_ permanent
+    make _book2_ permanent
+    make _book3_ permanent
+    make _book4_ permanent
+    start timer _final_
+
+_final_ task:
+    give pc nothing
+    end quest
+
+_returntothief_ task:
+    when _thiefclicked_ and _gotbook_
+    prompt 1038 yes _returnbook_ no _dontreturnbook_
+
+_returnbook_ task:
+    take _akagrathtome_ from pc
+    clear _gotbook_
+    say 1039
+    say 1040
+    say 1041
+    hide npc _thief_
+    place foe _badthief_ at __thief_
+    cast Shadow_Form spell on _badthief_
+    create foe _thieves_ every 0 minutes 1 times with 100% success
+
+_dontreturnbook_ task:
+    say 1042
+    hide npc _thief_
+    place foe _badthief_ at __thief_
+    cast Shadow_Form spell on _badthief_
+    create foe _thieves_ every 0 minutes 1 times with 100% success
+
+_injbadthief_ task:
+    injured _badthief_ saying 1043
+    remove foe _badthief_
+    place item _akagrathtome_ at __thief_
+
+_gottombagain_ task:
+    when _injbadthief_ and _gotbook_
+    give pc nothing
+    end quest

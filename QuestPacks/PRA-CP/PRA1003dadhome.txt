@@ -188,8 +188,9 @@ and bring them back to him.
 
 Message:  1105
 %qdt:
-I retrived the girls remains, but they were guarded
-for some reason. Now to get them back to her father.
+Some people had dug up the girl's grave and were taking
+her remains for some reason. I have retrieved them.
+Now to get them back to her father at ___dadhouse_.
 
 Message: 1107
 %qdt:
@@ -322,10 +323,12 @@ _graverobbers_ task:
     say 1044
     create foe _grobb1_ every 0 minutes 1 times with 100% success
     create foe _grobb2_ every 0 minutes 1 times with 100% success
-    restrain foe _grobb1_
-    restrain foe _grobb2_
     change foe _grobb1_ infighting false
     change foe _grobb2_ infighting false
+    change foe _grobb1_ team 20
+    change foe _grobb2_ team 20
+    restrain foe _grobb1_
+    restrain foe _grobb2_
     give item _remains_ to _grobb2_
 
 _grobb1clicked_ task:
@@ -340,12 +343,12 @@ _gravefight_ task:
     unrestrain foe _grobb1_
     unrestrain foe _grobb2_
     enemies makehostile
-    log 1105 1
 
 _thegirl_ task:
     clicked item _remains_ say 1014
     stop timer _dadletter_
     start timer _whereremains_
+    log 1105 1
     clear _dadclicked_
 
 _whereremains_ task:

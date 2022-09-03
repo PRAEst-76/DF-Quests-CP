@@ -67,7 +67,7 @@ I will assume you are not up to the task."
 Message:  1021
 "So now you know the history, you should know
 that a daedric cult has apparently found the resting
-place of the first of these Kagrath kings, Kahfciel,
+place of the first of these Kagrath kings, =Kahfciel_,
 and they plan to raise him. We've no idea if they
 actually have the power to do this, however we cannot
 take the risk. They are fools and know not the evil
@@ -291,7 +291,7 @@ Foe _Kahfciel_ is Zombie
 Foe _graverobbers_ is 2 Rogue
 
 Clock _canyouevenread_ 2.00:00
-Clock _darkness_ 14.00:00 28.00:00
+Clock _darkness_ 28.00:00 42.00:00
 Clock _research_ 1.00:00
 Clock _moreresearch_ 3.00:00 10.00:00
 
@@ -398,13 +398,13 @@ _themap_ task:
 
 _thegrave_ task:
     when _themap_ and _atgrave_
-    clear _mgclicked_
     say 1029
     place foe _graverobbers_ at _grave_
     restrain foe _graverobbers_
 
 _theritual_ task:
     player within 3 units of foe _graverobbers_
+    clear _qgclicked_
     say 1030
     say 1031
     say 1032
@@ -421,10 +421,12 @@ _theprophecy_ task:
     say 1034
     say 1035
     say 1036
+    hide npc _questgiver_
     log 1206 4
     start timer _research_
 
 _research_ task:
+    restore npc _questgiver_
     clear _qgclicked_
 
 _thechosen_ task:
