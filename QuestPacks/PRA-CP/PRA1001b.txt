@@ -403,6 +403,19 @@ _questgiver_ died this evening.
 We kept him as comfortable as we could but I cannot lie
 and say his death was not unpleasant. He suffered greatly.
 <ce>
+                            Gods bless.
+                            _priest_
+                             _temple_
+                              __temple_
+
+Message:  1203
+Dear %pcf,
+I am unfortunately the bearer of bad news. I'm afraid
+_questgiver_ died this evening.
+<ce>
+We kept him as comfortable as we could but I cannot lie
+and say his death was not unpleasant. He suffered greatly.
+<ce>
 I hope that your visit to the mages was productive, but
 alas can do nothing to help my patient, who at least is
 beyond suffering now. Perhaps any research the envoker
@@ -553,7 +566,8 @@ Did you hear about the guy who gave birth to a daedra in the Bank of ____questgi
 QBN:
 -- Props
 Item _letter_ letter used 1201
-Item _deathnotice_ letter used 1202
+Item _deathnotice1_ letter used 1202
+Item _deathnotice2_ letter used 1203
 Item _guysample_ small_sack
 Item _gravesample_ small_sack
 Item _cryptsample_ small_sack
@@ -587,7 +601,8 @@ Clock _gravelife_ 00:02 00:05
 Clock _divining_ 18:00 24:00
 Clock _waiting_ 18:00 24:00
 Clock _dead_ 7.00:00 10.00:00
-Clock _deathnote_ 14.00:00 21.00:00
+Clock _deathnote1_ 14.00:00 21.00:00
+Clock _deathnote2_ 5.00:00 7.00:00
 
 variable _atgrave_
 variable _graveside_
@@ -605,12 +620,13 @@ variable _cure_
     pc at _crypt_ set _atcrypt_
     hide npc _questgiver_
     _letter_ used saying 1321 do _letterlog_
-    _deathnotice_ used do _thedeath_
-    
+    _deathnotice1_ used do _thedeath_
+    _deathnotice2_ used do _thedeath_
+
 _notify_ task:
     get item _letter_ saying 1301
     place npc _priest_ at _temple_
-    start timer _deathnote_
+    start timer _deathnote1_
     rumor mill 1400
 
 _letterlog_ task:
@@ -631,6 +647,7 @@ _incare_ task:
 
 _nolongerfunny_ task:
     killed _explusion_
+    stop timer _deathnote1_
     say 1306
     say 1103
     say 1307
@@ -862,9 +879,13 @@ _returntopriestlate_ task:
     end quest
 
 _dead_ task:
+    start timer _deathnote2_
 
-_deathnote_ task:
-    get item _deathnotice_ saying 1302
+_deathnote1_ task:
+    get item _deathnotice1_ saying 1302
+
+_deathnote2_ task:
+    get item _deathnotice2_ saying 1302
 
 _thedeath_ task:
     end quest

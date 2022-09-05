@@ -28,8 +28,12 @@ I've never heard of a Kagrath, but they sound scary. I hope there is none around
 %mn's son went off to save the world. Never seen again. Adventuring is a mugs game.
 
 RumorsPostfailure:  [1006]
+%fn's boy says the end of the world is coming. Kid was never right after his trip abroad.
+<--->
+I hear the Kagrathi are soon going to attack and kill us all. Another week another apocalypse.
 
 RumorsPostsuccess:  [1007]
+I hear someone prevented an invasion or something. We never hear about these things at the time.
 
 QuestorPostsuccess:  [1008]
 
@@ -57,56 +61,57 @@ Message:  1019
 "The Chosen's name was %mn"
 
 Message: 1020
-He sighs and holds out an old book to you,
+He sighs and holds out an ancient looking book to you,
 "This book, _bookofkagrath_ will explain.
-It is important to read it, and know the history.
-Once you understand the weight of our task return
-and speak to me. If you do not return within =canyouevenread_ days
-I will assume you are not up to the task."
+It is important to read it, and know their history.
+Once you have updated your knowledge on these peoples
+return and speak to me. If you do not return within =canyouevenread_
+days I will assume you are not up to the task."
 
 Message:  1021
-"So now you know the history, you should know
-that a daedric cult has apparently found the resting
-place of the first of these Kagrath kings, =Kahfciel_,
-and they plan to raise him. We've no idea if they
-actually have the power to do this, however we cannot
-take the risk. They are fools and know not the evil
-they would unleash upon these lands!"
+"So now you know the history, you should know that a
+daedric cult has apparently found the resting place
+of the first of these Kagrath kings, =king1_, and
+they plan to raise him. We've no idea if they actually
+have the power to do this, however we cannot take the
+risk. They are fools and know not the evil they would
+unleash upon these lands!"
 
 Message:  1022
 "They must be stopped. Go to _tav_ in
-__tav_ and find one of their
-number, they are known to frequent there, they will
-have a map to the grave. Get it from them by whatever
-means you deem fit. You must return within =darkness_ days."
+__tav_ and find one of their number, they
+are known to frequent there, they will have a map
+to the grave. Get it from them by whatever means you
+deem fit. You must return within =darkness_ days."
 
 Message:  1042
 You have taken too long to stop the return of the Kagrath.
 Darkness will surely consume these lands.
 
 Message:  1023
-"What do you want %ra? I'm busy."
+"What do you want %ra? Don't you see I'm busy?"
 
 Message:  1024
-"You want what? I'm not telling you nothing!
-Now get lost!"
+"You want what? I don't know anything about no Keg-ratty!
+I'm just here waiting for my friends. I'm not telling
+you nothing! Now get lost!"
 <ce>
 <ce>_mapguy_ isn't going to just hand it over.
-Beat it out of %g2?
+<ce>Beat it out of %g2?
 
 Message:  1025
-"Ok, ok! Look. I got to live. These people... if they knew.
-I just want to get out of this ok. Go back to my
-family. I can sell you the map for =mapmoney_ septims.
-Then I can get away."
+"Ok, ok! Look. I got to live. These people... if they
+knew... Look. I just want to get out of this ok. Go back
+to my family. I can sell you the map for =mapmoney_ septims.
+Then I can make a clean break! Move far away!"
 <ce>
 <ce>Buy the map?
 
 Message:  1026
-"Look. I really need the money. I want to make a break.
+"Look. I really need the money. It's for my family, you see.
 A better life for myself and my kids. If you can't pay me
 for the map you'll have to kill me for it and take it
-from my corpse! There's another way though...
+from my corpse! But... but, there's another way...
 This way you get the map and I get enough coin to start
 a new life. Deal?"
 
@@ -122,16 +127,24 @@ That'll be where they are planning to raise this dead
 ancient king.
 
 Message:  1029
-You are at the purported grave of Kahfciel.
+You are at the purported grave of =king1_, one of
+the Kagrath kings..
 
 Message:  1030
-"Quickly. Complete the ritual!"
+You spot a couple of shady looking people ahead.
+They also manage to spot you.
+<ce>
+"Someone is coming! Quickly! Complete the ritual!"
 
 Message:  1031
+The other waves %g3 hands over the corpse.
 "Nyar shthan, Nyar gashanna!"
 
 Message:  1032
-"You are too late, %ra! Kahfciel is risen!"
+The corpse glows with a blue light and shudders,
+It rises to it's feet and shambles towards you.
+<ce>
+"You are too late, %ra! =king1_ is risen!"
 
 Message:  1033
 Looks like you've killed the unkillable, and the
@@ -140,10 +153,12 @@ back and tell _questgiver_?
 
 Message:  1034
 "You return. Please tell me you were successful in
-tracking down the resting place of Kahfciel and
+tracking down the resting place of =king1_ and
 preventing his ressurection?"
 
 Message:  1035
+_questgiver_ looks astonished.
+<ce>
 "Wh... what? You killed him? This cannot be. No. Are
 you certain he was dead? The cultists fled? This...
 I cannot..."
@@ -156,47 +171,595 @@ you then. Here. Please. This is... profound. Tomorrow."
 Message: 1037
 "You have returned. Ah. I have great news. It appears we
 have been blessed. In the darkest of hours. We have been
-blessed. You were able to slay Kahfciel because you are
+blessed!"
+<ce>
+"YOU were able to slay =king1_ only because you are
 the chosen!"
 
 Message:  1038
-"The gods have placed you here with their power to drive
-back the undead Kagrath hordes for good. You must find their
-remaining resting places and destroy them forever."
+"The divines have placed you here with their power to
+drive back the undead Kagrath hordes for good! You must
+find their remaining resting places and destroy them
+forever."
 
 Message: 1039
 "To do this, we must know where the rest were buried.
 This is not something commonly known, however it was
 belived that some Kagrathi gathered up the remains of
-their fallen kings and interred them in a secret tomb
+their fallen kings and interred them in a hidden tomb
 before they fled these lands."
 
 Message:  1040
-"They kept a journal, one copy that was believed lost forever,
+"Rumour has it that they kept a journal, handed down
+in secret though the generations since those days. I
+have never seen it, though I've searched for many years,
 however I have learned that it may still exist in the
-private collection of a noble. If they have the book then we
-must retrieve it, by any means necessary."
+private collection of an arrogant ____noblehome_
+noble. If they have the book then we must retrieve it,
+by any means necessary."
 
 Message:  1041
-"You must go now, to ___noblehome_ and find that
-book. It is our only chance to slay them before they
-raise an army to recover the lands in darkness"
+"You must go now, to the home of the collector in
+___noblehome_ and retrieve that book, if it exists.
+It is our only chance to slay them before they
+raise an army to recover the lands in darkness!"
 
 Message:  1044
 "Ah. You have it. Please. Let me see!"
 
 Message:  1045
 "I was doubtful it even existed, but this looks authetic.
-%oth. To hold this.... look. My hands are shaking. Have
-you read it? It is in the ancient Kagrath tongue. It will
-take time to translate, time we cannot really afford but
-we have no choice. I will take it to an associate of mine."
+%oth. To hold this.... look. My hands are
+shaking. Have you read it? It is in the ancient Kagrath
+tongue. It will take time to translate, time we cannot
+really afford but we have no choice. I will take it to
+an associate of mine."
 
 Message:  1046
 "I will send you a message when we are ready to proceed.
 If you see the darkness approaching then know we are too
 late. I pray that this will not be the case so will make
 haste. Be ready for my return %pcf!"
+
+Message:  1047
+"I am glad to see you my friend. We are closer than ever.
+Here is the translation. To summarise; the Kagrathi kings
+are interred beneath _tomb_.
+Pray we are not too late. Perhaps you can reach it before
+they are raised. If not, you will have a fight on your
+hands, but I am confident it is a fight you can win.
+For you are the Chosen one, sent by the divines to end
+this evil."
+
+Message:  1048
+"Go now. And may the power of the divines go with you.
+Should you fail, all of us will suffer! Good luck my
+friend!"
+
+Message:  1049
+This is it. This is _tomb_. Resting place
+of the kings of Kagrath according to _akagrathtome_.
+
+Message:  1050
+"Who is there? Another victim of 'prophecy'? Ha ha!"
+
+Message:  1051
+"What ho? A %ra, and a %lev! Another chop for the pot.
+And what a big pot this is! Join me in this stew."
+<ce>
+The man is bloodied and wide-eyed with fatigue, he has
+obviously been here some time and has lost his wits.
+
+Message:  1052
+"Oh ooh. Shhh. We must be quiet. They'll hear us. You'll
+hear us. We all hear us. Am I them? Are you? Not yet, but
+not long. For me. For you certainly"
+
+Message:  1053
+"Me? A am me. Who are you %ra? Where are my manners?
+I am _madventurer_ of %kno. Your name is unimportant.
+It won't be yours much longer. Been here too long I
+have. I don't think I'll ever leave. I want to be the
+last. Last of the poor saps sent to 'save the world'.
+I want to see all your faces."
+
+Message:  1054
+"Do you have a book for me? I'm collecting them. Many
+books have I. Many now. Not much variety though. And
+some are damaged. Not much value. Did the collector
+give you one? Or did you steal it? _akagrathtome_?
+Did you steal or buy _bookofkagrath_?"
+
+Message:  1055
+"Was it the old man who sent you? Did he shake as he
+told you of the weight of fate upon you? Or did he
+shake... with laughter! Ha Haa!"
+<ce>
+He doubles over laughing then reaches into the pile
+behind him and throws you some books.
+
+Message:  1056
+"Rare volumes! Unique! They probably stained them with
+tea and singed the edges with candles. Every one different
+works of art! I wipe my bottom with the pages every time
+I soil myself! That adds even more timeless character!"
+
+Message:  1057
+He holds a copy of _akagrathtome_ up towards you,
+"Let me read you some!"
+<ce>
+He thumbs roughly through the pages in an exaggerated
+fashion, "I especially like this stanza, if... if you
+don't mind?"
+
+Message:  1058
+Without awaiting an answer he immediately starts reciting
+in an overly dramatic voice,
+"Blibiddy blobbidy bloo, the cow did a poo,
+"Fleghrty floogety whae, the prophecy has gone astray!"
+<ce>
+He quickly holds his shaking hand to his mouth,
+"Oh ho! I may have accidentally ressurected ancient evil!
+Here they come!!!"
+
+Message:  1059
+"Oh. You naughty Chosen one! You slew the ancient kings!
+You are still playing the old role! Don't you understand!
+Your role has been recast. The actor awaits the stage.
+You must do the garb of the slain, the ancient kings!"
+
+Message:  1065
+"You were chosen. Now you are offal. Cattle. The bit
+part. To be reborn! From cast-off to king! Don't you
+understand! Chosen to be chosen. One of many playing
+the unique! The clue is in the name! Play your part!"
+
+Message:  1060
+"PLAY! YOUR! PART!"
+
+Message:  1061
+A lightening bolt surgest past you and hits _madventurer_,
+who jerks, stumbles and falls to the ground.
+"Aaah! Not fair..."
+
+Message:  1062
+A young mage has arrived,
+"%hnr! Hold your attack. I would speak to you."
+
+Message:  1063
+"I'm afraid I do not know who this dischevled man was,
+he seemed dangerous and insane and in places like this
+it is vital to take no chances. Let me introduce myself;
+I am _adventurer_ of _tmg_ in __tmg_. I am here on a
+quest of utmost importance to the safety of ____tmg_!"
+
+Message:  1064
+You hold up your hand to stop him. Then tell him about
+your own quest, then about _madventurer_ and show him
+the scattered books. His face falls.
+
+Message:  1066
+"Then... what, these... kings. This whole thing. My
+brother was right. He's a historian. He'd never heard
+of the Kagrath. I laughed at his lack of knowledge.
+He was right... he... it... it was all a play."
+
+Message:  1067
+"Wait... more come! On your guard!"
+
+Message:  1068
+"The Kings of the Kagrath. These are just adventurers.
+Like us. This one's even got a copy of the ruddy book!
+We get used and then sent down here to die and become
+fodder for the next poor saps. Probably after everything
+of value is stripped from our corpses!"
+
+Message:  1069
+"We have to work together. Get out of here and then make
+_fakeqgiver_ or whatever he calls himself pay!"
+
+Message:  1070
+You describe _questgiver_ to _adventurer_.
+<ce>
+"Said his name was _fakeqgiver_, but that's him
+alright. What a piece of work! I'm sure that thief
+and the book collector are in on it to. Something
+wasn't right there. I bet that sick woman wasn't
+even his mother!"
+
+Message:  1071
+"Let's get out of here, %pcf."
+
+Message:  1072
+You hear the sounds of more undead coming.
+
+Message:  1073
+"Wait! Wait! Wait!"
+<ce>
+The young mage stops and holds a hand to %g2 face,
+"I'm sorry. I must inform you, I get side-tracked.
+They don't consider me reliable at _tmg_ because
+of my poor memory. I get all the low-end jobs no-one
+else wants. I'm an idiot. That's what I am."
+
+Message:  1074
+"The point I'm making is... I was sent on a quest by
+_tmg_ to find a rare herb in some caves. I somehow ended
+up in an inn where that mollusc _fakeqgiver_
+suckered me. Anyway..."
+
+Message:  1075
+_adventurer_ sees the look on your face,
+"The point I'm making here is that they gave me a teleport
+scroll back to _tmg_ in __tmg_."
+<ce>
+Rummaging around in %g2 bag %g pulls out some parchments,
+"Actually because I'm such an ass I have two. We can just
+teleport back. Sorry." 
+
+Message:  1076
+"Are you ready to go now? Don't worry, I didn't create
+these. They are standard _tmg_ issue. They'll work."
+
+Message:  1077
+"Ok. If you think that's prudent... look. You take one.
+Use it when you think you are ready."
+
+Message:  1078
+"Ok. Let's go... Though they won't be happy with me for
+not getting those herbs from the cave. Hey. Maybe you
+could help me with that later?"
+
+Message:  1083
+"Ok. You ok? Do you need to throw up? No. Ok. We need
+to go see _bigmage_, %g must be told. Also you need to
+help explain more coherently than me and cover me for
+not doing that other thing. ok?"
+
+Message:  1079
+"Ahh, _adventurer_, there you are. Did you get lost
+again? %fn really needs those herbs. Get them up to
+her straight away!"
+<ce>
+He suddenly notices you. "Sorry, _adventurer_,
+who is this?"
+
+Message:  1080
+You explain yourself and the situation, and _adventurer_
+hands over copies of the books. The mage thumbs through
+them and looks concerned.
+<ce>
+"We've heard whispers of 'The Kagrath'. Were ignoring
+it as another stupid work of fiction being misinterpreted
+by the uneducated, but if this is being used to entrap..."
+
+Message:  1081
+He suddenly looks grave.
+<ce>
+"A few of our acolytes have gone missing over the past few weeks,
+like _adventurer_ here I just assumed they got waylaid
+by their own curiosity, but..."
+
+Message:  1082
+"I've heard The Fighters Guild have mislaid a few of their
+number recently too."
+<ce>
+"You two. Go and get cleaned up and rested. Meet me back
+here on the morrow. I will speak to my opposite number
+amongst the meatshields. This will need to be dealt with."
+
+Message:  1084
+"Oh, _adventurer_... I can assume you haven't got the
+herbs yet? %fn won't be please. Won't be pleased at all."
+
+Message:  1085
+"We should head back to _tmg_. They are probably ready
+for us now. _bigmage_ gets snappy when we tarry."
+
+Message:  1086
+"%pcn. Might I remind you that we have to meet with
+_bigmage_. He's going to be really mardy with us given
+the situation."
+
+Message:  1087
+"Enough %pcf! If you aren't heading back to _tmg_
+then we are done. We'll handle this alone."
+
+Message:  1088
+"%pcn. _adventurer_. I spoke with _bigfighter_
+from The Fighters Guild. We've agreed that this vile
+trap must be dealt with, swiftly. There is no point
+retracing your steps as our criminal friends will have
+moved on no doubt."
+
+Message:  1089
+"However we have studied their books and from them
+we have gleaned vital information. If not from the
+gibberish written wtihin, but the books themselves.
+The quality of paper, though damaged from their
+attempts at falsifying their age, is from only one
+press we are aware of in the region."
+
+Message:  1090
+"They are located at _printers_ in __printers_. Go
+there and... speak to them. Firmly. Locate their
+customer. End their scheme."
+
+Message:  1091
+"And _adventurer_. Don't come back until you've got
+those herbs. We're also not giving you any more
+teleport scrolls. A goat appeared here last week.
+Don't try to deny that wasn't your scroll!"
+
+Message:  1092
+"%hnr. How may I help you? Would you like to place
+an order?"
+<ce>
+You show him the books and ask them who they printed
+them for.
+
+Message:  1093
+"Oh dear. These have... not been very well cared for.
+I'm afraid rebinding won't really help in this
+situation."
+<ce>
+"I am sorry. We don't share customer information.
+We pride ourselves on discretion and satisfaction."
+
+Message:  1094
+You push the point, placing your hand on your weapon as
+a gesture.
+
+Message:  1095
+"Ah. I see. This is highly irregular, but I'll see what
+I can do. Excuse me a moment and I will check our files."
+<ce>
+The man leaves for the back room.
+
+Message:  1096
+He returns. With a pair of large gentlemen.
+<ce>
+"Ahem. =lg1_? =lg2_?
+Please show these two the door. And perhaps some some
+of our beautiful countryside. Up close."
+
+Message:  1097
+"Ok. Ok. I can see you are serious individuals.
+Discretion and satisfaction be damned. Look, I...
+I printed those books for someone called _scammer_.
+I'm not sure where %g was from exactly as %g
+collected most of them in person, but we delivered
+some additional work to a place called _hovel_."
+
+Message:  1098
+"That's all I know. I swear!"
+
+Message:  1099
+An angry old man approaches you waving,
+"Hey you! %ra! What are you doing here?
+This is my land. I've had enough of you outsiders!"
+
+Message:  1102
+"I rented this place to a couple of city folk.
+Smooth as a tots rump they were. Paid me for a month
+in advance then nothing. Left this place a mess.
+I'm out hundreds of septims. No more city folk!
+Be off with you!"
+
+Message:  1103
+"I don't know who they were. Paid me with one
+of them credit letters. That's no use to me.
+When am I going to be in The Bank of ____bank_?
+I've never even been to __bank_"
+
+Message:  1104
+"Yeah. Says The Bank of ____bank_. __bank_.
+Go and speak to them. Ask them how am I going to get
+my money? Credit letters. Bah!"
+
+Message:  1107
+"You can have it if you give me the _rent_ it's worth."
+
+Message:  1108
+"Right. Here you go. Maybe you can do something with
+it in __bank_. No use to me. I prefer good old
+fashioned coins. Now, off with you both!"
+
+Message:  1109
+"Bah"
+<ce>
+The old man turns to leave.
+
+Message:  1110
+"Wait!" cries _adventurer_.
+<ce>
+"That's probably important, %pcf! I'll pay him for it."
+
+Message:  1111
+"I don't care who pays. As long as I gets me coin!"
+
+Message:  1105
+"They won't just tell us who they issued this letter of
+credit to, we should probably come at night when they
+are closed and check around.
+Yeah. I'm suggesting a bank robbery, but only for
+information. Seriously."
+
+Message:  1106
+"Ok. Let's look around. Be quiet, but be quick!
+And don't steal anything %pcf!."
+<ce>
+"I'm in enough trouble as it is."
+
+Message:  1112
+"Ok, this looks like the records for the issued credit
+over the quarter..."
+
+Message:  1115
+"Ok, found the date... matching the amounts issued..."
+<ce>
+"Give me a few moments..."
+
+Message:  1114
+"Ah.."
+<ce>
+"Here we go. _scammer_..."
+<ce>
+"Address is listed as _scamhome_ in __scamhome_!"
+
+Message:  1113
+"Might be bogus, %pcf, but it's worth checking out."
+<ce>
+"Now put that box back where you found it and let's
+get out of here."
+
+Message:  1116
+"%oth! We've been rumbled %pcf. Run for it!"
+
+Message:  1117
+"Ah. My dear friends %pcf and... I forgot your name.
+Sorry. So glad you have come back. Did you manage
+to stop the return of the Kagrathi Kings?"
+<ce>
+"I'm sorry. Probably no reason to continue with this.
+I mean, you are both a couple of idiots, but still.."
+
+Message:  1118
+"No hard feelings eh? I'm sure you can appreciate the
+lengths we went to in order to lure you in. Quite
+elaborate you must admit. Took a lot of work on our
+part. Month of planning and investment. Those books
+weren't cheap you know, but I'll admit we came out on
+top."
+
+Message:  1119
+"I won't insult your meagre intelligence by trying to
+suggest you could get in on our little enterprise. We
+mean to kill you both. You should have died in that
+hole with the other morons and joined us as mindless
+servants, but well. Here will be fine."
+
+Message:  1120
+A portal suddenly opens.
+
+Message:  1123
+Now you find yourself back in _tmg_, along with
+_adventurer_ and _questgiver_, AKA _scammer_.
+
+Message:  1121
+"Welcome back. I'll take that locator stone back
+_adventurer_. Those things are expensive,
+and we don't trust you with expensive things.
+Thank you."
+
+Message:  1122
+"=bm_ will escort _questgiver_ or
+_scammer_ or whatever their name is,
+to the dungeon. We will deal with %g2 later.
+Necromancy is one of the most serious crimes in
+____tmg_ and I feel %g3 punishment and those of his
+accomplices will be... fitting. It's been a while
+since we had a good meaty trial."
+
+Message:  1124
+"You both have done a great service. We have some
+cleanup to do at _scamhome_. Maybe we can recover
+some of what they stole, but I doubt any of our
+missing acolytes will be of use to us in their 
+current state."
+
+Message:  1125
+"For now, I can offer thanks, but we will take seriously
+any losses you have incurred during this debacle and
+forward onto you compensation taken from the guilty
+party. I'd like to also think you will have earned
+much wisdom from this experience."
+
+Message:  1127
+"Ok %pcf. This has been... fun, but I'm going to the
+tavern. I'd still appreciate your help with finding
+that herb if you are up for it?"
+
+Message:  1126
+A runner appears and hands you a letter.
+
+Message:  1129
+"Ah. %pcn. Here is your gold. Be careful
+with it from now on.
+
+Message:  1130
+"I have nothing to say to you %ra! You were and
+are an idiot."
+
+Message:  1150
+What's a cog-wrap?
+<--->
+I know that book. My brother uses a copy to prop up his kitchen table. He won't part with it less his eggs fall on the floor.
+<--->
+Never heard of it? Is it spicy?
+
+Message:  1151
+_questgiver_? I don't know the name. Owe you money does %g?
+<--->
+Who?
+<--->
+_questgiver_? The name doesn't ring a bell? Is %g a bell ringer? PRobably not a very good one in that case.
+
+Message:  1152
+_printer_? Is that %g2 that does books? Prints them? I can't afford books. I can't read. 
+
+Message: 1153
+_fakeqgiver_ told %fn that her boy was something special. Kid got ate by a _king7_.
+
+Message:  1154
+Owner has been trying to sell that place for years. I wouldn't use it as a latrine, though I hear some have.
+
+-- Corrispondence
+Message:  1100
+%pcn,
+<ce>
+I have the translation. Please return to me at
+__questgiver_ in ___questgiver_ as soon as possible.
+<ce>
+                            _questgiver_
+
+Message:  1101
+...and on that night we headed eastwards. We gathered up the
+remains of =king2_ and =king3_. Slain as they were by the
+mob of these primative hut dwellers, their bodies left to 
+rot under the sun. With great reverence we placed them upon
+our cart and hurried under the light of the moons to the
+next battlefield. Singing our hymns under our breath and
+cursing this land and all that crawled upon it...
+<ce>
+...at last we spied the place of interment. Weeping that
+we could not carry our kings back with us, we carried their
+bodies into the chamber...
+<ce>
+...annointed with oils, their organs treated and placed
+within the sacred jars...
+<ce>
+...of the sacred ritual to be performed on the night when
+our moon is in position, the elders have hidden the texts
+with those who will await the day when our kings shall
+return to gather at the _tomb_...
+
+Message:  1128
+Dear %pcn,
+<ce>
+Please bring this letter and yourself to _tmg_
+in order to collect your compension from the recent
+incident at _scamhome_.
+<ce>
+Compensation has been worked out as =reward_ septims.
+<ce>
+Please collect this within =charity_ days otherwise the
+funds will be deemed as unwanted and given to charity.
+<ce>
+                                _bursar_
+                                _tmg_
+                                __tmg_
+                                ____tmg_
 
 -- Logs
 Message:  1200
@@ -232,11 +795,19 @@ Message:  1203
 I met with _mapguy_ in _tav_
 but %g wouldn't give me the map.
 
+Message:  1210
+%qdt:
+I got the map from _mapguy_. I should probably
+read it and see where ___grave_ is.
+
 Message:  1204
 %qdt:
-According to the map I got from _mapguy_
-the burial place of Kahfciel is beneath
+According to the map you got from _mapguy_
+the burial place of =king1_ is beneath
 ___grave_.
+<ce>
+Looks like the map was made on the back of an
+old map. You should probably look at it again.
 
 Message: 1205
 %qdt:
@@ -269,41 +840,105 @@ know when it has been done.
 QBN:
 
 -- Cast
-Person _questgiver_ group Questor
+Person _questgiver_ group Questor male anyInfo 1151
 Person _mapguy_ group Resident1
+Person _madventurer_ faction The_Fighters_Guild male
+Person _adventurer_ faction The_Mages_Guild
+Person _fakeqgiver_ group Resident2 anyInfo 1153
+Person _bigmage_ faction The_Mages_Guild
+Person _bigfighter_ faction The_Fighters_Guild
+Person _printer_ group Tailor anyInfo 1152
+Person _scammer_ group Pawnbroker male
+Person _bursar_ faction The_Mages_Guild
 
 -- Locations
 Place _tav_ remote tavern
 Place _grave_ remote dungeon6
 Place _noblehome_ remote wealthyhome
-Place _tomb_ remote labyrinth
+Place _tomb_ remote dungeon0
+Place _tmg_ remote magery
+Place _printers_ remote house
+Place _hovel_ remote poorhome anyInfo 1154
+Place _bank_ remote bank
+Place _scamhome_ remote house
 
 -- Stuff
-Item _bookofkagrath_ book key 414304675
-Item _akagrathtome_ book key 414314675
+Item _bookofkagrath_ book key 414304675 anyInfo 1150
+Item _akagrathtome_ book key 414314675 anyInfo 1150
 Item _gravemap_ map
 Item _mapmoney_ gold range 250 to 500
+Item _transnote_ letter used 1100
+Item _trans_ letter used 1101
+Item _telescroll_ item class 9 subclass 5
+Item _rent_ gold range 50 to 150
+Item _creditletter_ item class 27 subclass 2
+Item _file_ item class 1 subclass 8
+Item _reward_ gold range 3000 to 5000
 
 -- Enemies
 Foe _mapdude_ is Rogue
 Foe _mapdude2_ is Rogue
-Foe _Kahfciel_ is Zombie
-Foe _graverobbers_ is 2 Rogue
+Foe _graverobber1_ is Nightblade
+Foe _graverobber2_ is Nightblade
+Foe _king1_ is Zombie
+Foe _king2_ is Zombie
+Foe _king3_ is Zombie
+Foe _king4_ is Zombie
+Foe _king5_ is Zombie
+Foe _king6_ is Zombie
+Foe _king7_ is Zombie
+Foe _madman_ is Warrior
+Foe _lg1_ is Barbarian
+Foe _lg2_ is Barbarian
+Foe _guard_ is Warrior
+Foe _bm_ is Battle_mage
 
 Clock _canyouevenread_ 2.00:00
 Clock _darkness_ 28.00:00 42.00:00
 Clock _research_ 1.00:00
 Clock _moreresearch_ 3.00:00 10.00:00
+Clock _escape_ 00:04 00:12
+Clock _randr_ 08:00 
+Clock _reminder_ 08:00
+Clock _sodoff_ 08:00
+Clock _largemen_ 00:01 00:03
+Clock _rumbled_ 01:00 03:00
+Clock _reenforcements_ 00:05 00:10
+Clock _backtotmg_ 00:01 00:05
+Clock _runner_ 3.00:00 5.00:00
+Clock _charity_ 30.00:00
 
+variable _gotmap_
 variable _atgrave_
 variable _atnoblehome_
+variable _attomb_
+variable _athovel_
+variable _atbank_
+variable _gotbook_
+variable _gottome_
+variable _attmg_
+variable _randr_
+variable _gotfiles_
 
 --	Quest start-up:
+    hide npc _fakeqgiver_
+    hide npc _scammer_
     place npc _mapguy_ at _tav_
     _bookofkagrath_ used do _bookread_
     _gravemap_ used do _themap_
+    _telescroll_ used do _tomagery_
     pc at _grave_ set _atgrave_
     pc at _noblehome_ set _atnoblehome_
+    pc at _tomb_ set _attomb_
+    pc at _tmg_ set _attmg_
+    pc at _hovel_ set _athovel_
+    pc at _bank_ set _atbank_
+    have _gravemap_ set _gotmap_
+    have _akagrathtome_ set _gottome_
+    have _bookofkagrath_ set _gotbook_
+    have _file_ set _gotfiles_
+    add dialog for item _akagrathtome_
+    add dialog for item _bookofkagrath_
     prompt 1015 yes _yes_ no _no_
 
 _yes_ task:
@@ -336,6 +971,7 @@ _qgclicked_ task:
 
 _findthemap_ task:
     when _qgclicked_ and _bookread_
+    make _bookofkagrath_ permanent
     say 1021
     say 1022
     log 1200 0
@@ -391,6 +1027,10 @@ _dealt_ task:
     say 1043
     get item _gravemap_
 
+_mapgot_ task:
+    when _gotmap_
+    log 1210 2
+
 _themap_ task:
     say 1028
     reveal _grave_
@@ -399,20 +1039,31 @@ _themap_ task:
 _thegrave_ task:
     when _themap_ and _atgrave_
     say 1029
-    place foe _graverobbers_ at _grave_
-    restrain foe _graverobbers_
+    place foe _graverobber1_ at _grave_
+    place foe _graverobber2_ at _grave_
+    restrain foe _graverobber1_
+    restrain foe _graverobber2_
+
+_runner1 task:
+    injured _graverobber1_
+    remove foe _graverobber1_
+
+_runner2_ task:
+    injured _graverobber2_
+    remove foe _graverobber2_
 
 _theritual_ task:
-    player within 3 units of foe _graverobbers_
+    player within 5 units of foe _graverobber1_
     clear _qgclicked_
     say 1030
     say 1031
     say 1032
-    create foe _Kahfciel_ every 0 minutes 1 times with 100% success
-    remove foe _graverobbers_
+    create foe _king1_ every 0 minutes 1 times with 100% success
 
 _theslayer_ task:
-    killed _Kahfciel_
+    killed _king1_
+    remove foe _graverobber1_
+    remove foe _graverobber2_
     say 1033
     log 1205 3
 
@@ -440,14 +1091,15 @@ _thechosen_ task:
 
 _homeofnoble_ task:
     when _atnoblehome_
-    run quest PRA1008b then _gotbook_ or _nobook_
+    run quest PRA1008b then _book_ or _nobook_
 
-_gotbook_ task:
+_book_ task:
+    restore npc _questgiver_
     get item _akagrathtome_
     clear _qgclicked_
 
 _returnwithtome_ task:
-    when _qgclicked_ and _gotbook_
+    when _qgclicked_ and _gottome_
     say 1044
     take _akagrathtome_ from pc
     say 1045
@@ -456,6 +1108,305 @@ _returnwithtome_ task:
     start timer _moreresearch_
 
 _moreresearch_ task:
+    get item _transnote_
+
+_thetranslation_ task:
+    when _qgclicked_ and _moreresearch_
+    get item _trans_ saying 1047
+    say 1048
+
+_finalbattle_ task:
+    when _attomb_
+    say 1049
+    place npc _madventurer_ at _tomb_
+    place item _bookofkagrath_ at _tomb_
+
+_rubbish_ task:
+    when _gotbook_ or _gottome_ and _attomb_
+    make _bookofkagrath_ permanent
+    make _akagrathtome_ permanent
+    clear _rubbish_
+
+_meetthemadman_ task:
+    player within 4 units of item _bookofkagrath_
+    say 1050
+
+_madventurerclicked_ task:
+    clicked npc _madventurer_
+
+_danceofthemad_ task:
+    when _madventurerclicked_
+    say 1051
+    say 1052
+    say 1053
+    say 1054
+    say 1055
+    say 1056
+    say 1057
+    say 1058
+    start task _kingattack_
+
+_kingattack_ task:
+    play sound Zombie_1 every 0 minutes 1 times
+    give item _bookofkagrath_ to _king3_
+    give item _akagrathtome_ to _king3_
+    give item _bookofkagrath_ to _king5_
+    give item _akagrathtome_ to _king5_
+    create foe _king3_ every 0 minutes 1 times with 100% success
+    create foe _king5_ every 1 minutes 1 times with 100% success
+
+_deadking3_ task:
+    killed _king3_
+
+_deadking5_ task:
+    killed _king5_
+
+_kingrise_ task:
+    when _deadking3_ and _deadking5_ and not _adventurerclicked_
+    say 1059
+    say 1065
+    hide npc _madventurer_
+    create foe _madman_ every 0 minutes 1 times with 100% success
+    say 1060
+
+_cure_ task:
+    injured _madman_ saying 1061
+    cast Lightning spell on _madman_
+    kill foe _madman_
+    place npc _adventurer_ at _tomb_
+    say 1062
+
+_adventurerclicked_ task:
+    clicked npc _adventurer_
+
+_kingslayer_ task:
+    when _adventurerclicked_
+    say 1063
+    say 1064
+    say 1066
+    add _adventurer_ face saying 1067
+    clear _kingattack_ _deadking3_ _deadking5_
+    start task _kingattack_
+    cast Fireball spell on _king3_
+
+_theplay_ task:
+    when _deadking3_ and _deadking5_ and _adventurerclicked_
+    say 1068
+    say 1069
+    say 1070
+    say 1071
+    start timer _escape_
+
+_escape_ task:
+    play sound Zombie_1 every 0 minutes 1 times
+    say 1072
+    say 1073
+    say 1074
+    say 1075
+    prompt 1076 yes _tomagery_ no _wait_
+
+_tomagery_ task:
+    say 1078
+    teleport pc to _tmg_
+
+_wait_ task:
+    get item _telescroll_ saying 1077
+    create foe _king3_ every 6 minutes 5 times with 100% success
+    create foe _king5_ every 7 minutes 5 times with 100% success
+    give item _bookofkagrath_ to _king3_
+    give item _akagrathtome_ to _king3_
+    give item _bookofkagrath_ to _king5_
+    give item _akagrathtome_ to _king5_
+
+_mages_ task:
+    when _attmg_
+    place npc _bigmage_ at _tmg_
+    say 1083
+
+_bigmageclicked_ task:
+    clicked npc _bigmage_
+
+_explain_ task:
+    when _bigmageclicked_
+    say 1079
+    say 1080
+    say 1081
+    say 1082
+    say 1083
+    say 1084
+    start timer _randr_
+
+_morning_ task:
+    daily from 07:00 to 12:00
+
+_night_ task:
+    daily from 20:00 to 08:00
+
+_timetogo_ task:
+    when _randr_ and _morning_
+    say 1085
+    place npc _bigfighter_ at _tmg_
+    start timer _reminder_
+
+_reminder_ task:
+    say 1086
+    start timer _sodoff_
+
+_sodoff_ task:
+    end quest saying 1087
+
+_dealwiththings_ task:
+    when _bigmageclicked_ and _randr_
+    stop timer _reminder_
+    stop timer _sodoff_
+    say 1088
+    say 1089
+    say 1090
+    say 1091
+    place npc _printer_ at _printers_
+
+_printerclicked_ task:
+    clicked npc _printer_
+
+_pressthepoint_ task:
+    when _printerclicked_
+    say 1092
+    say 1093
+    say 1094
+    say 1095
+    hide npc _printer_
+    start timer _largemen_
+
+_largemen_ task:
+    create foe _lg1_ every 0 minutes 1 times with 100% success msg 1096
+    create foe _lg2_ every 0 minutes 1 times with 100% success
+    cast Lightning spell on _lg1_
+    cast Fireball spell on _lg2_
+
+_lg1dead_ task:
+    killed _lg1_
+
+_lg2dead_ task:
+    killed _lg2_
+
+_interrogation_ task:
+    when _lg1dead_ and _lg2dead_
+    say 1097
+    clear _printerclicked_
+
+_more_ task:
+    when _printerclicked_ and _interrogation_
+    say 1098
+
+_deliveryaddress_ task:
+    when _athovel_
+    say 1099
+    say 1102
+    say 1103
+    say 1104
+    prompt 1107 yes _payrent_ no _dontpay_
+
+_payrent_ task:
+    take _rent_ from pc saying 1108
+    get item _creditletter_
+
+_dontpay_ task:
+    say 1109
+    say 1110
+    say 1111
+    get item _creditletter_
+
+_daybank_ task:
+    when not _night_ and _atbank_
+    say 1105
+
+_nightbank_ task:
+    when _night_ and _atbank_
+    place item _file_ at _bank_
+    say 1106
+    start timer _rumbled_
+
+_filesystem_ task:
+    when _atbank_ and _gotfiles_
+    say 1112
+    say 1115
+    say 1114
+    say 1113
+    place npc _questgiver_ at _scamhome_
+
+_rumbled_ task:
+    play sound halt every 0 minutes 1 times
+    say 1116
+    create foe _guard_ every 0 minutes 1 times with 100% success
+    setplayercrime Theft
+
+_out_ task:
+    when _filesystem_ and not _atbank_
+    stop timer _rumbled_
+    
+_facethemusic_ task:
+    when _qgclicked_ and _filesystem_
+    say 1117
+    say 1118
+    say 1119
+    place foe _graverobber1_ at _scamhome_
+    place foe _graverobber2_ at _scamhome_
+    create foe _king6_ every 2 minutes indefinitely with nn% success
+    start timer _reenforcements_
+
+_reenforcements_ task:
+    play sound magic_fizzle every 0 minutes 1 times
+    say 1120
+    create foe _guard_ every 0 minutes 1 times with 100% success
+    create foe _guard_ every 0 minutes 1 times with 100% success
+    create foe _bm_ every 0 minutes 1 times with 100% success
+    create foe _bm_ every 0 minutes 1 times with 100% success
+    restrain foe _guard_
+    restrain foe _bm_
+    start timer _backtotmg_
+
+_backtotmg_ task:
+    teleport pc to _tmg_
+    place npc _questgiver_ at _tmg_
+    say 1123
+    clear _qgclicked_
+
+_nothingtosay_ task:
+    when _qgclicked_ and _backtotmg_
+    say 1130
+
+_deneument_ task:
+    when _bigmageclicked_ and _backtotmg_
+    say 1121
+    say 1122
+    hide npc _questgiver_
+    say 1124
+    say 1125
+    drop _adventurer_ face
+    place npc _adventurer_ at _tmg_
+    start timer _runner_
+
+_topub_ task:
+    when _adventurerclicked_ and _deneument_
+    say 1127
+    hide npc _adventurer_
+    hide npc _bigmage_
+    hide npc _bigfighter_
+
+_runner_ task:
+    say 1126
+    place npc _bursar_ at _tmg_
+    start timer _charity_
+
+_bursarclicked_ task:
+    clicked npc _bursar_
+
+_money_ task:
+    when _bursarclicked_
+    give pc _reward_ notify 1129
+    end quest
+
+_charity_ task:
     give pc nothing
     end quest
 

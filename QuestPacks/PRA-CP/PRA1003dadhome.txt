@@ -211,21 +211,21 @@ noble seal. He does not make eye contact or await
 a gratuity.
 
 Message: 1155
-%pcf! You took my daughters remains from
+"%pcf! You took my daughters remains from
 her tomb but did not return them to me.
-I will take them from your corpse!
+I will take them from your corpse!"
 
 Message: 1156
 You hear something. Someone.
 
 Message: 1157
-%pcf?
+"%pcf?"
 <ce>
-I'm afraid you have something that doesn't belong
-to you. And knowledge is the most valuable thing
-there is.
+"I'm afraid you have something valuable that doesn't
+belong to you... and knowledge is the most valuable
+thing there is."
 <ce>
-Nothing personal.
+"Nothing personal."
 
 Message: 1158
 Looks like _father_ didn't want you walking

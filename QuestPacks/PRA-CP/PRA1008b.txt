@@ -29,7 +29,7 @@ QuestorPostsuccess:  [1008]
 QuestorPostFailure:   [1009]
 
 Message:  1018
-The collector lives at _nobhome_.
+Now to find that collector. You should ask around.
 
 Message:  1019
 You've left it too long to speak to your 'friend'.
@@ -54,10 +54,10 @@ Message:  1023
 A message is stuffed into your hand. You don't see how.
 
 Message:  1024
-"I know what you are after. _nob_ has a book
-you want. He also has a book I want. My methods
-of retrival are less direct and usually a lot more
-effective."
+"I know what you are after. _nob_ has
+a book you want. He also has a book I want. My
+methods of retrival are less direct and usually a
+lot more effective."
 
 Message:  1025
 "He has a sister at __sister_ in
@@ -68,7 +68,7 @@ delayed. You will then make the delivery."
 
 Message:  1026
 "I see your face. Yes, it will be poisoned, but no it
-will not be fatal. It'll just make her a little bit ill.
+will not be fatal. It'll just make her a ill for a time.
 Brother will then come running to take care of her and
 while he's away you can loot his gaff and get what we
 both need."
@@ -101,7 +101,7 @@ the little recipie booklets like the other place? It's
 getting quite popular. They want to keep up with the 
 competition. Not that I'm thinking of switching. I've
 heard the other place had some contamination issues.
-Your produce is aslways so fresh."
+Your produce is always so fresh."
 
 Message:  1032
 "Anyway. I won't keep you. I'm sure you have many other
@@ -109,6 +109,7 @@ deliveries to do."
 
 Message:  1033
 It seems _thief_ is after the same book you are.
+This will complicate matters.
 
 Message:  1034
 Just as you pick up the book a _adventurer_ bursts
@@ -164,6 +165,11 @@ appears to have dropped the book however.
 Message:  1045
 You've left it too long to get the book.
 _nob_ will have returned and be suspicious.
+
+Message:  1046
+"Hey %ra. You got the book? We better go see the boss in
+__thief_ straight away. You coming?"
+
 
 -- Rumours
 Message: 1080
@@ -303,10 +309,10 @@ Message:  1204
 %pct,
 <ce>
 Excellent work. I hear _sister_ is quite poorly.
-___farm_ will get the blame. Don't worry. _nob_
-will spend the night at his sister's bedside.
-You should then be able to sneak into his home
-with no real problems.
+Don't worry, ___farm_ will get the blame.
+_nob_ will spend the night at his sister's
+bedside. You should then be able to sneak into his
+home with no real problems.
 <ce>
 Once there you can take whatever you wish. We are only
 interested in one book. It's a rare and ancient book
@@ -359,6 +365,7 @@ Clock _delivery_
 Clock _deltime_
 Clock _furtherinstructions_
 Clock _timetosteal_ 3.00:00 7.00:00
+Clock _goon_ 6.00:00 12.00:00
 Clock _final_
 
 variable _atnobhome_
@@ -378,6 +385,9 @@ variable _coastisclear_
     add dialog for person _sister_
     add dialog for person _thief_
     add dialog for location _nobhome_
+    dialog link for person _sister_
+    dialog link for person _thief_
+    dialog link for location _nobhome_ person _nob_
 --    place npc _nob_ at _nobhome_
     pc at _nobhome_ set _atnobhome_
 --    pc at __thief_ set _attav_
@@ -461,6 +471,8 @@ _sisterclicked_ task:
 _fooddelivery_ task:
     when _sisterclicked_
     say 1029
+    take _foodparcel_ from pc
+    take _invoice_ from pc
     get item _tip_ saying 1030
     say 1031
     say 1032
@@ -469,7 +481,6 @@ _fooddelivery_ task:
     make _shirt_ permanent
     make _boots_ permanent
     make _trousers_ permanent
-    make _invoice_ permanent
     start timer _furtherinstructions_
 
 _furtherinstructions_ task:
@@ -510,7 +521,6 @@ _dudedead_ task:
 
 _reallygotbook_ task:
     when _dudedead_ and _gotbook_
-    log 1105 5
 
 _returnornot_ task:
     when _gotbook_ and not _atnobhome_
@@ -519,7 +529,15 @@ _returnornot_ task:
     make _book2_ permanent
     make _book3_ permanent
     make _book4_ permanent
-    start timer _final_
+    log 1105 5
+    start timer _goon_
+
+_goon_ task:
+    create foe _badthief_ every 0 minutes 1 times with 100% success
+    prompt 1046 yes _seeboss_ no _final_
+
+_seeboss_ task:
+    teleport pc to __thief_
 
 _final_ task:
     give pc nothing
@@ -536,21 +554,17 @@ _returnbook_ task:
     say 1040
     say 1041
     hide npc _thief_
-    place foe _badthief_ at __thief_
-    cast Shadow_Form spell on _badthief_
     create foe _thieves_ every 0 minutes 1 times with 100% success
 
 _dontreturnbook_ task:
     say 1042
     hide npc _thief_
-    place foe _badthief_ at __thief_
-    cast Shadow_Form spell on _badthief_
     create foe _thieves_ every 0 minutes 1 times with 100% success
 
 _injbadthief_ task:
-    injured _badthief_ saying 1043
-    remove foe _badthief_
-    place item _akagrathtome_ at __thief_
+    injured _thieves_ saying 1043
+    remove foe _thieves_
+    get item _akagrathtome_
 
 _gottombagain_ task:
     when _injbadthief_ and _gotbook_

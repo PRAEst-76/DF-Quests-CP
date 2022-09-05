@@ -21,12 +21,16 @@ A lot of strangers coming and going to __questgiver_ lately.
 I don't like the look of a lot of these strangers that have been through of late.
 
 RumorsPostfailure:  [1006]
+_tailor_ is still looking for some poor mug to marry that daughter of his.
 
 RumorsPostsuccess:  [1007]
+I hear _tailor_ finally got someone to take his daughter off his hands. Poor bastard.
 
 QuestorPostsuccess:  [1008]
+Have we met?
 
 QuestorPostFailure:   [1009]
+Have we met?
 
 Message:  1014
 "Ok, so there's this guy... a tailor. He owns
@@ -188,8 +192,8 @@ Message:  1047
 
 Message: 1200
 %qdt:
-_questgiver_ will give me the map if I
-help %g2 steal a statue from _tailorhome_
+_questgiver_ will give me the map if I help
+%g2 steal a statue from _tailorhome_
 in __tailorhome_. To do this I need to propose
 to the tailor's daughter and swap the statue
 with a fake. Then get out before they start
@@ -217,23 +221,23 @@ Item _realstatue_ item class 10 subclass 7
 
 Clock _weddingsoff_ 7.00:00 12.00:00
 Clock _fetch_ 00:01 00:03
-Clock _awkward1_ 00:01 00:03
-Clock _awkward2_ 00:01 00:03
-Clock _awkward3_ 00:01 00:03
-Clock _awkward4_ 00:01 00:03
-Clock _awkward5_ 00:01 00:03
-Clock _awkward6_ 00:01 00:03
-Clock _awkward7_ 00:01 00:03
-Clock _awkward8_ 00:01 00:03
-Clock _awkward9_ 00:01 00:03
-Clock _awkward10_ 00:01 00:03
-Clock _awkward11_ 00:01 00:03
-Clock _awkward12_ 00:01 00:03
-Clock _awkward13_ 00:01 00:03
-Clock _awkward14_ 00:01 00:03
-Clock _awkward15_ 00:01 00:03
-Clock _awkward16_ 00:01 00:03
-Clock _awkward17_ 00:01 00:03
+Clock _awkward1_ 00:01
+Clock _awkward2_ 00:01
+Clock _awkward3_ 00:01
+Clock _awkward4_ 00:01
+Clock _awkward5_ 00:01
+Clock _awkward6_ 00:01
+Clock _awkward7_ 00:01
+Clock _awkward8_ 00:01
+Clock _awkward9_ 00:01
+Clock _awkward10_ 00:01
+Clock _awkward11_ 00:01
+Clock _awkward12_ 00:01
+Clock _awkward13_ 00:01
+Clock _awkward14_ 00:01
+Clock _awkward15_ 00:01
+Clock _awkward16_ 00:01
+Clock _awkward17_ 00:01
 Clock _awkward18_ 00:01 00:03
 Clock _angrydad_ 00:01 00:03
 
