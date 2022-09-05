@@ -34,8 +34,8 @@ Have we met?
 
 Message:  1014
 "Ok, so there's this guy... a tailor. He owns
-_tailorhome_ in __tailorhome_.
-Rumour has it he's got a lot of loot stored up for his
+_tailorhome_ in __tailorhome_. Rumour
+has it he's got a lot of loot stored up for his
 daughters dowry. Problem is no-one will marry the
 girl because she looks like a pack-horse."
 
@@ -51,7 +51,7 @@ idea the way they just left it out like that. So I
 got a fake one made."
 
 Message:  1016
-"A %pct like you might fool the old guy into
+"A %lev like you might fool the old guy into
 thinking you are something serious, while you are
 in there you can swap the statues and get out.
 Just say you got called to adventure or something
@@ -76,10 +76,10 @@ Message: 1020
 "Good %hnr. To what do I owe the pleasure of your visit?"
 
 Message: 1021
-"My daughter? Well I... Her name is _daughter_.
-My only child. This shop will all be hers when I
-go, and of course that will be shared with her
-spouse. Whoever that may be..."
+"My daughter? Well I... _daughter_ is
+her name. My only beloved child. This shop will all be
+hers when I go, and of course that will be shared with
+her spouse. Whoever that may be..."
 
 Message:  1022
 "I should let you both get aquanted. Wait here
@@ -269,6 +269,7 @@ _nearstatue_ task:
 
 _thetailor_ task:
     when _nearstatue_ and _tailornear_
+    clear _qgclicked_
     say 1020
     say 1021
     say 1022

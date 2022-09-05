@@ -170,6 +170,11 @@ Message:  1046
 "Hey %ra. You got the book? We better go see the boss in
 __thief_ straight away. You coming?"
 
+Message:  1047
+"Right, let's go chief. You know the way to ___thief_."
+
+Message:  1048
+"This isn't the way to ___thief_?! What are you trying to pull? I'll take that book back myself %ra!"
 
 -- Rumours
 Message: 1080
@@ -356,7 +361,7 @@ Item _book4_ book
 
 Foe _guard_ is 2 Warrior
 Foe _adventurer_ is 1 Spellsword
-Foe _badthief_ is 1 Thief
+Foe _thegoon_ is 1 Thief
 Foe _thieves_ is 2 Thief
 
 Clock _guards_ 00:05 00:15
@@ -365,8 +370,9 @@ Clock _delivery_
 Clock _deltime_
 Clock _furtherinstructions_
 Clock _timetosteal_ 3.00:00 7.00:00
-Clock _goon_ 6.00:00 12.00:00
+Clock _goon_ 03:00 06:00
 Clock _final_
+Clock _whyiaughta_
 
 variable _atnobhome_
 variable _warned_
@@ -391,7 +397,7 @@ variable _coastisclear_
 --    place npc _nob_ at _nobhome_
     pc at _nobhome_ set _atnobhome_
 --    pc at __thief_ set _attav_
-    pc at __nobhome_ set _intown_
+--    pc at __nobhome_ set _intown_
     _mess_ used do _messread_
     _del_ used do _opendel_
     _faffletter_ used do _faffedup_
@@ -438,7 +444,6 @@ _proposition_ task:
 
 --_waiting_ task:
 --    when _proposition_ and _intown_
-
 
 _delivery_ task:
     say 1028
@@ -531,17 +536,31 @@ _returnornot_ task:
     make _book4_ permanent
     log 1105 5
     start timer _goon_
+    start timer _final_
 
 _goon_ task:
-    create foe _badthief_ every 0 minutes 1 times with 100% success
-    prompt 1046 yes _seeboss_ no _final_
+    stop timer _final_
+    create foe _thegoon_ every 0 minutes 1 times with 100% success
+    restrain foe _thegoon_
+    prompt 1046 yes _seeboss_ no _nogoon_
 
 _seeboss_ task:
-    teleport pc to __thief_
+    remove foe _thegoon_
+    add foe _thegoon_ face saying 1047
+    start timer _whyiaughta_
 
-_final_ task:
+_whyiaughta_ task:
+    say 1048
+    drop foe _thegoon_ face
+    create foe _thegoon_ every 0 minutes 1 times with 100% success
+
+_badthiefdead_ task:
+    killed _thegoon_
     give pc nothing
     end quest
+
+_nogoon_ task:
+    unrestrain foe _thegoon_
 
 _returntothief_ task:
     when _thiefclicked_ and _gotbook_

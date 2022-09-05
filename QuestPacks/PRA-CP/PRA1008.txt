@@ -61,12 +61,12 @@ Message:  1019
 "The Chosen's name was %mn"
 
 Message: 1020
-He sighs and holds out an ancient looking book to you,
-"This book, _bookofkagrath_ will explain.
+He sighs and holds out an tatty-looking book to you,
+"This ancient book, _bookofkagrath_ will explain.
 It is important to read it, and know their history.
 Once you have updated your knowledge on these peoples
-return and speak to me. If you do not return within =canyouevenread_
-days I will assume you are not up to the task."
+return and speak to me. If you do not return within a
+day I will assume you are not up to the task."
 
 Message:  1021
 "So now you know the history, you should know that a
@@ -89,7 +89,9 @@ You have taken too long to stop the return of the Kagrath.
 Darkness will surely consume these lands.
 
 Message:  1023
-"What do you want %ra? Don't you see I'm busy?"
+You notice this person appears on edge once you
+approach, "What do you want %ra? Don't you see
+I'm busy?"
 
 Message:  1024
 "You want what? I don't know anything about no Keg-ratty!
@@ -125,6 +127,9 @@ Message:  1028
 The map shows the way to ___grave_.
 That'll be where they are planning to raise this dead
 ancient king.
+<ce>
+Looks like the map was made on the back of another
+map. You should probably look at it again.
 
 Message:  1029
 You are at the purported grave of =king1_, one of
@@ -202,7 +207,8 @@ Message:  1041
 "You must go now, to the home of the collector in
 ___noblehome_ and retrieve that book, if it exists.
 It is our only chance to slay them before they
-raise an army to recover the lands in darkness!"
+raise an army to once again cover these lands in
+darkness!"
 
 Message:  1044
 "Ah. You have it. Please. Let me see!"
@@ -224,8 +230,9 @@ haste. Be ready for my return %pcf!"
 Message:  1047
 "I am glad to see you my friend. We are closer than ever.
 Here is the translation. To summarise; the Kagrathi kings
-are interred beneath _tomb_.
-Pray we are not too late. Perhaps you can reach it before
+are interred beneath _tomb_."
+<ce>
+"Pray we are not too late. Perhaps you can reach it before
 they are raised. If not, you will have a fight on your
 hands, but I am confident it is a fight you can win.
 For you are the Chosen one, sent by the divines to end
@@ -697,13 +704,15 @@ What's a cog-wrap?
 I know that book. My brother uses a copy to prop up his kitchen table. He won't part with it less his eggs fall on the floor.
 <--->
 Never heard of it? Is it spicy?
+<--->
+Fell did he? Terrible. Was he badly hurt?
 
 Message:  1151
 _questgiver_? I don't know the name. Owe you money does %g?
 <--->
 Who?
 <--->
-_questgiver_? The name doesn't ring a bell? Is %g a bell ringer? PRobably not a very good one in that case.
+_questgiver_? The name doesn't ring a bell? Is %g a bell ringer? Probably not a very good one in that case.
 
 Message:  1152
 _printer_? Is that %g2 that does books? Prints them? I can't afford books. I can't read. 
@@ -798,16 +807,13 @@ but %g wouldn't give me the map.
 Message:  1210
 %qdt:
 I got the map from _mapguy_. I should probably
-read it and see where ___grave_ is.
+read it and see where this tomb is.
 
 Message:  1204
 %qdt:
 According to the map you got from _mapguy_
 the burial place of =king1_ is beneath
 ___grave_.
-<ce>
-Looks like the map was made on the back of an
-old map. You should probably look at it again.
 
 Message: 1205
 %qdt:
@@ -893,7 +899,7 @@ Foe _lg2_ is Barbarian
 Foe _guard_ is Warrior
 Foe _bm_ is Battle_mage
 
-Clock _canyouevenread_ 2.00:00
+Clock _canyouevenread_ 1.00:00
 Clock _darkness_ 28.00:00 42.00:00
 Clock _research_ 1.00:00
 Clock _moreresearch_ 3.00:00 10.00:00
@@ -937,8 +943,16 @@ variable _gotfiles_
     have _akagrathtome_ set _gottome_
     have _bookofkagrath_ set _gotbook_
     have _file_ set _gotfiles_
-    add dialog for item _akagrathtome_
-    add dialog for item _bookofkagrath_
+    dialog link for item _akagrathtome_
+    dialog link for item _bookofkagrath_
+    dialog link for person _fakeqgiver_
+    dialog link for person _printer_
+    dialog link for location _hovel_
+--    add dialog for person _fakeqgiver_
+--    add dialog for location _hovel_
+--    add dialog for person _printer_
+--    add dialog for item _akagrathtome_
+--    add dialog for item _bookofkagrath_
     prompt 1015 yes _yes_ no _no_
 
 _yes_ task:
