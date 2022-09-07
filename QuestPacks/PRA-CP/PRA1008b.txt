@@ -159,15 +159,19 @@ the competition. Almost smart. Almost."
 
 Message:  1043
 "This is not over %pct!"
-_thief_ has dissapeared. In his haste, he
-appears to have dropped the book however.
+_thief_ has made his escape with the book.
+
+Message:  1049
+_thief_, in %g3 haste to leave appears to have dropped
+the book in the doorway.
 
 Message:  1045
 You've left it too long to get the book.
 _nob_ will have returned and be suspicious.
 
 Message:  1046
-"Hey %ra. You got the book? We better go see the boss in
+"Who was that other guy? Doesn't matter. Hey %ra!
+You got the book? We better go see the boss in
 __thief_ straight away. You coming?"
 
 Message:  1047
@@ -240,16 +244,34 @@ I received my further instructions. Matters have become
 more complex. It seems my 'friend' _thief_
 is also after _akagrathtome_.
 <ce>
-I can either steal it and give it to him and possibly
-set in motion the very situation I'm attempting to
-prevent, or keep it for myself and scarper as soon as
-I'm done. Regardless _nob_ will only be away
-for a few days so I need to do it soon.
+I can either steal it from _nobhome_ and give it to
+%g2 and possibly set in motion the very situation I'm
+attempting to prevent, or keep it for myself and scarper
+as soon as I'm done. Regardless _nob_ will
+only be away for a few days so I need to do it soon.
 
 Message:  1105
 %qdt:
 I've retrieved the book. Wasn't as straightforward as I
 was lead to believe. Now to choose who to deliver it to.
+
+Message:  1106
+%qdt:
+Seemingly my 'friend' has sent a goon to ensure I return
+the book to him at __thief_ in ___thief_
+
+Message:  1107
+I denied his request to accompany him and unsurprisingly
+he attacked me.
+
+Message:  1108
+I agreed to accompany him back to __thief_,
+to speak to my 'friend' _thief_.
+
+Message:  1109
+%qdt:
+Annoyed at my procrastination, =goon_ has tried to take the
+book for himself.
 
 -- Letters
 Message:  1200
@@ -319,10 +341,11 @@ _nob_ will spend the night at his sister's
 bedside. You should then be able to sneak into his
 home with no real problems.
 <ce>
-Once there you can take whatever you wish. We are only
-interested in one book. It's a rare and ancient book
-known as _akagrathtome_. Once you have it, bring it
-back to me at __thief_ within =final_ days.
+Once in _nobhome_ you can take whatever you wish.
+We are only interested in one book. It's a rare and
+ancient book known as _akagrathtome_. Once you have it,
+bring it back to me at __thief_  in ___thief_
+within =final_ days.
 <ce>
 You will be well rewarded.
 <ce>
@@ -397,7 +420,7 @@ variable _coastisclear_
 --    place npc _nob_ at _nobhome_
     pc at _nobhome_ set _atnobhome_
 --    pc at __thief_ set _attav_
---    pc at __nobhome_ set _intown_
+    pc at ___nobhome_ set _intown_
     _mess_ used do _messread_
     _del_ used do _opendel_
     _faffletter_ used do _faffedup_
@@ -440,6 +463,7 @@ _proposition_ task:
     say 1026
     say 1027
     log 1101 1
+    take _mess_ from pc
     start timer _delivery_
 
 --_waiting_ task:
@@ -464,7 +488,6 @@ _opendel_ task:
 
 _deltime_ task:
     get item _faffletter_ saying 1023
-    say 1023
     setplayercrime Theft
 
 _faffedup_ task:
@@ -486,6 +509,7 @@ _fooddelivery_ task:
     make _shirt_ permanent
     make _boots_ permanent
     make _trousers_ permanent
+    make _delletter_ permanent
     start timer _furtherinstructions_
 
 _furtherinstructions_ task:
@@ -534,24 +558,29 @@ _returnornot_ task:
     make _book2_ permanent
     make _book3_ permanent
     make _book4_ permanent
+    make _filetter_ permanent
     log 1105 5
-    start timer _goon_
-    start timer _final_
+--    start timer _goon_
+--    start timer _final_
+    start task _goon_
 
 _goon_ task:
-    stop timer _final_
+--    stop timer _final_
     create foe _thegoon_ every 0 minutes 1 times with 100% success
     restrain foe _thegoon_
+    log 1106 6
     prompt 1046 yes _seeboss_ no _nogoon_
 
 _seeboss_ task:
     remove foe _thegoon_
     add foe _thegoon_ face saying 1047
+    log 1108 7
     start timer _whyiaughta_
 
 _whyiaughta_ task:
     say 1048
     drop foe _thegoon_ face
+    log 1109 8
     create foe _thegoon_ every 0 minutes 1 times with 100% success
 
 _badthiefdead_ task:
@@ -561,6 +590,7 @@ _badthiefdead_ task:
 
 _nogoon_ task:
     unrestrain foe _thegoon_
+    log 1107 7
 
 _returntothief_ task:
     when _thiefclicked_ and _gotbook_
@@ -573,19 +603,21 @@ _returnbook_ task:
     say 1040
     say 1041
     hide npc _thief_
+    create foe _thegoon_ every 0 minutes 1 times with 100% success
     create foe _thieves_ every 0 minutes 1 times with 100% success
 
 _dontreturnbook_ task:
     say 1042
     hide npc _thief_
+    create foe _thegoon_ every 0 minutes 1 times with 100% success
     create foe _thieves_ every 0 minutes 1 times with 100% success
 
 _injbadthief_ task:
     injured _thieves_ saying 1043
     remove foe _thieves_
-    get item _akagrathtome_
 
 _gottombagain_ task:
-    when _injbadthief_ and _gotbook_
+    when _injbadthief_ and not _atnobhome_
+    say 1049
     give pc nothing
     end quest

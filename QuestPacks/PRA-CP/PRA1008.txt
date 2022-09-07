@@ -230,7 +230,7 @@ haste. Be ready for my return %pcf!"
 Message:  1047
 "I am glad to see you my friend. We are closer than ever.
 Here is the translation. To summarise; the Kagrathi kings
-are interred beneath _tomb_."
+are interred beneath ___tomb_."
 <ce>
 "Pray we are not too late. Perhaps you can reach it before
 they are raised. If not, you will have a fight on your
@@ -244,14 +244,15 @@ Should you fail, all of us will suffer! Good luck my
 friend!"
 
 Message:  1049
-This is it. This is _tomb_. Resting place
+This is it. This is ___tomb_. Resting place
 of the kings of Kagrath according to _akagrathtome_.
 
 Message:  1050
 "Who is there? Another victim of 'prophecy'? Ha ha!"
 
 Message:  1051
-"What ho? A %ra, and a %lev! Another chop for the pot.
+"What ho? A %ra, and a %lev!
+Another chop for the pot.
 And what a big pot this is! Join me in this stew."
 <ce>
 The man is bloodied and wide-eyed with fatigue, he has
@@ -264,11 +265,11 @@ not long. For me. For you certainly"
 
 Message:  1053
 "Me? A am me. Who are you %ra? Where are my manners?
-I am _madventurer_ of %kno. Your name is unimportant.
-It won't be yours much longer. Been here too long I
-have. I don't think I'll ever leave. I want to be the
-last. Last of the poor saps sent to 'save the world'.
-I want to see all your faces."
+I am _madventurer_ of The Knights of the Owl.
+Your name is unimportant. It won't be yours much longer.
+Been here too long I have. I don't think I'll ever
+leave. I want to be the last. Last of the poor saps
+sent to 'save the world'. I want to see all your faces."
 
 Message:  1054
 "Do you have a book for me? I'm collecting them. Many
@@ -279,8 +280,8 @@ Did you steal or buy _bookofkagrath_?"
 
 Message:  1055
 "Was it the old man who sent you? Did he shake as he
-told you of the weight of fate upon you? Or did he
-shake... with laughter! Ha Haa!"
+told you of the weight of fate upon you? Or was he
+shaking with laughter! Ha Haa!"
 <ce>
 He doubles over laughing then reaches into the pile
 behind him and throws you some books.
@@ -337,16 +338,18 @@ Message:  1063
 "I'm afraid I do not know who this dischevled man was,
 he seemed dangerous and insane and in places like this
 it is vital to take no chances. Let me introduce myself;
-I am _adventurer_ of _tmg_ in __tmg_. I am here on a
-quest of utmost importance to the safety of ____tmg_!"
+I am _adventurer_ of _tmg_ in
+__tmg_. I am here on a quest of utmost
+importance to the safety of ____tmg_!"
 
 Message:  1064
-You hold up your hand to stop him. Then tell him about
-your own quest, then about _madventurer_ and show him
-the scattered books. His face falls.
+You hold up your hand to stop _adventurer_.
+Then tell %g2 about your own quest, then about
+_madventurer_'s revelations and show the scattered
+books. _adventurer_'s face falls.
 
 Message:  1066
-"Then... what, these... kings. This whole thing. My
+"Then... what, these... kings. This whole thing? My
 brother was right. He's a historian. He'd never heard
 of the Kagrath. I laughed at his lack of knowledge.
 He was right... he... it... it was all a play."
@@ -391,9 +394,9 @@ else wants. I'm an idiot. That's what I am."
 
 Message:  1074
 "The point I'm making is... I was sent on a quest by
-_tmg_ to find a rare herb in some caves. I somehow ended
-up in an inn where that mollusc _fakeqgiver_
-suckered me. Anyway..."
+_tmg_ to find a rare herb in some caves.
+I somehow ended up in an inn where that mollusc
+_fakeqgiver_ suckered me in. Anyway..."
 
 Message:  1075
 _adventurer_ sees the look on your face,
@@ -741,9 +744,9 @@ our cart and hurried under the light of the moons to the
 next battlefield. Singing our hymns under our breath and
 cursing this land and all that crawled upon it...
 <ce>
-...at last we spied the place of interment. Weeping that
-we could not carry our kings back with us, we carried their
-bodies into the chamber...
+...at last we spied the place of interment. ___tomb_.
+Weeping that we could not carry our kings back with us,
+we carried their bodies into the chamber...
 <ce>
 ...annointed with oils, their organs treated and placed
 within the sacred jars...
@@ -837,11 +840,68 @@ ancient tome from a collector in ___noblehome_ that
 will reveal where the remaining kings are buried so I
 can slay them before they can amass an army.
 
+Message:  1211
+%qdt:
+I got _akagrathtome_ from the house of the collector,
+now to get it back to _questgiver_ in
+___questgiver_.
+
 Message:  1209
 %qdt:
 I gave _questgiver_ the _akagrathtome_.
 He needs to take it to be translated and will let me
 know when it has been done.
+
+Message:  1212
+%qdt:
+The translation of _akagrathtome_ reveals
+the burial mound of the last Kagrathi kings to be at
+____tomb_. I must go there immediately to prevent
+them all being raised or try to put them down if I'm
+too late.
+
+Message:  1213
+%qdt:
+This whole thing has been a scam to fleece gullible
+adventurers and lure them into a pit to be turned into
+zombies. I met another 'chosen' down there called
+=madventurer_ and %g had met countless others. The
+ancient tomes are fake, the Kagrath probably never
+existed. Another young mage arrived on the same 'quest'
+and we are now trying to escape so we can rain bloody
+vengeance on _questgiver_ or _fakeqgiver_
+or whatever his name is!
+
+Message:  1214
+%qdt:
+We escaped from _tomb_ and made it to _tmg_
+in __tmg_. Our story was embarrasing, but of
+great interest to the mages who want to stop this
+trickery at the source. They have given us a day to
+recouperate and then we will track _questgiver_ down.
+
+Message:  1215
+%qdt:
+The mages at _tmg_ have determined that the
+books were printed at _printers_
+in __printers_. We go there to see if they
+can tell us who their customer is.
+
+Message:  1216
+%qdt:
+The printer eventually told us they did the job for
+someone called _scammer_ at ___hovel_.
+
+Message: 1217
+%qdt:
+The old man who owns ___hovel_ told us that he was
+paid with a letter of credit from _bank_ in
+__bank_. That is our next port of call.
+
+Message:  1218
+%qdt:
+At _bank_ we found records for the letter of credit
+that point to _scamhome_ in __scamhome_.
 
 QBN:
 
@@ -902,7 +962,7 @@ Foe _bm_ is Battle_mage
 Clock _canyouevenread_ 1.00:00
 Clock _darkness_ 28.00:00 42.00:00
 Clock _research_ 1.00:00
-Clock _moreresearch_ 3.00:00 10.00:00
+Clock _moreresearch_ 1.00:00 5.00:00
 Clock _escape_ 00:04 00:12
 Clock _randr_ 08:00 
 Clock _reminder_ 08:00
@@ -1110,6 +1170,7 @@ _homeofnoble_ task:
 _book_ task:
     restore npc _questgiver_
     get item _akagrathtome_
+    log 1211 6
     clear _qgclicked_
 
 _returnwithtome_ task:
@@ -1119,18 +1180,24 @@ _returnwithtome_ task:
     say 1045
     say 1046
     log 1209 6
+    clear _qgclicked_
+    hide npc _questgiver_
     start timer _moreresearch_
 
 _moreresearch_ task:
     get item _transnote_
+    restore npc _questgiver_
 
 _thetranslation_ task:
     when _qgclicked_ and _moreresearch_
     get item _trans_ saying 1047
+    reveal _tomb_
     say 1048
+    log 1212 6
 
 _finalbattle_ task:
     when _attomb_
+    hide npc _questgiver_
     say 1049
     place npc _madventurer_ at _tomb_
     place item _bookofkagrath_ at _tomb_
@@ -1199,7 +1266,8 @@ _kingslayer_ task:
     say 1064
     say 1066
     add _adventurer_ face saying 1067
-    clear _kingattack_ _deadking3_ _deadking5_
+    hide npc _adventurer_
+    unset _kingattack_ _deadking3_ _deadking5_
     start task _kingattack_
     cast Fireball spell on _king3_
 
@@ -1209,6 +1277,7 @@ _theplay_ task:
     say 1069
     say 1070
     say 1071
+    log 1213 7
     start timer _escape_
 
 _escape_ task:
@@ -1248,6 +1317,7 @@ _explain_ task:
     say 1082
     say 1083
     say 1084
+    log 1214 8
     start timer _randr_
 
 _morning_ task:
@@ -1277,6 +1347,7 @@ _dealwiththings_ task:
     say 1089
     say 1090
     say 1091
+    log 1215 9
     place npc _printer_ at _printers_
 
 _printerclicked_ task:
@@ -1306,6 +1377,7 @@ _lg2dead_ task:
 _interrogation_ task:
     when _lg1dead_ and _lg2dead_
     say 1097
+    log 1216 10
     clear _printerclicked_
 
 _more_ task:
@@ -1323,12 +1395,14 @@ _deliveryaddress_ task:
 _payrent_ task:
     take _rent_ from pc saying 1108
     get item _creditletter_
+    log 1217 11
 
 _dontpay_ task:
     say 1109
     say 1110
     say 1111
     get item _creditletter_
+    log 1217 11
 
 _daybank_ task:
     when not _night_ and _atbank_
@@ -1346,6 +1420,8 @@ _filesystem_ task:
     say 1115
     say 1114
     say 1113
+    log 1218 12
+    restore npc _questgiver_
     place npc _questgiver_ at _scamhome_
 
 _rumbled_ task:
@@ -1396,6 +1472,8 @@ _deneument_ task:
     hide npc _questgiver_
     say 1124
     say 1125
+    change repute with _bigmage_ by +10
+    change repute with _bigfighter_ by +10
     drop _adventurer_ face
     place npc _adventurer_ at _tmg_
     start timer _runner_
