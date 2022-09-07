@@ -416,15 +416,16 @@ Message:  1077
 Use it when you think you are ready."
 
 Message:  1078
-"Ok. Let's go... Though they won't be happy with me for
-not getting those herbs from the cave. Hey. Maybe you
-could help me with that later?"
+"Ok. Let's go to _tmg_ at __tmg_.
+I need to tell them about this charade. Though they
+won't be happy with me for not getting those herbs
+from the cave. Hey. Maybe you could help me with that
+later?"
 
 Message:  1083
-"Ok. You ok? Do you need to throw up? No. Ok. We need
-to go see _bigmage_, %g must be told. Also you need to
-help explain more coherently than me and cover me for
-not doing that other thing. ok?"
+"Ok. We need to go see _bigmage_, %g must be told.
+Also you need to help explain more coherently than me
+and cover me for not doing that other thing. ok?"
 
 Message:  1079
 "Ahh, _adventurer_, there you are. Did you get lost
@@ -491,15 +492,13 @@ attempts at falsifying their age, is from only one
 press we are aware of in the region."
 
 Message:  1090
-"They are located at _printers_ in __printers_. Go
-there and... speak to them. Firmly. Locate their
-customer. End their scheme."
+"The printers are located at _printers_ in
+__printers_. Go there and... speak to them.
+Firmly. Locate their customer. End their scheme."
 
 Message:  1091
 "And _adventurer_. Don't come back until you've got
-those herbs. We're also not giving you any more
-teleport scrolls. A goat appeared here last week.
-Don't try to deny that wasn't your scroll!"
+those herbs."
 
 Message:  1092
 "%hnr. How may I help you? Would you like to place
@@ -527,7 +526,7 @@ I can do. Excuse me a moment and I will check our files."
 The man leaves for the back room.
 
 Message:  1096
-He returns. With a pair of large gentlemen.
+He returns. With a pair of _lg1_ s.
 <ce>
 "Ahem. =lg1_? =lg2_?
 Please show these two the door. And perhaps some some
@@ -539,7 +538,7 @@ Discretion and satisfaction be damned. Look, I...
 I printed those books for someone called _scammer_.
 I'm not sure where %g was from exactly as %g
 collected most of them in person, but we delivered
-some additional work to a place called _hovel_."
+some additional work to a place called ___hovel_."
 
 Message:  1098
 "That's all I know. I swear!"
@@ -557,13 +556,13 @@ I'm out hundreds of septims. No more city folk!
 Be off with you!"
 
 Message:  1103
-"I don't know who they were. Paid me with one
-of them credit letters. That's no use to me.
-When am I going to be in The Bank of ____bank_?
+"I don't know who they were! Paid me with one
+of them credit letters. That's no use to me!
+When am I going to _bank_?
 I've never even been to __bank_"
 
 Message:  1104
-"Yeah. Says The Bank of ____bank_. __bank_.
+"Yeah. Says _bank_. __bank_.
 Go and speak to them. Ask them how am I going to get
 my money? Credit letters. Bah!"
 
@@ -603,7 +602,7 @@ And don't steal anything %pcf!."
 
 Message:  1112
 "Ok, this looks like the records for the issued credit
-over the quarter..."
+notes over the last quarter..."
 
 Message:  1115
 "Ok, found the date... matching the amounts issued..."
@@ -652,12 +651,19 @@ servants, but well. Here will be fine."
 Message:  1120
 A portal suddenly opens.
 
+Message:  1131
+Ok. Ok. I surrender!
+
 Message:  1123
 Now you find yourself back in _tmg_, along with
 _adventurer_ and _questgiver_, AKA _scammer_.
 
 Message:  1121
-"Welcome back. I'll take that locator stone back
+"Welcome back. I trust you were successful. This is
+the culprit I'm guessing?"
+
+Message:  1132
+"I'll take that locator stone back
 _adventurer_. Those things are expensive,
 and we don't trust you with expensive things.
 Thank you."
@@ -724,7 +730,7 @@ Message: 1153
 _fakeqgiver_ told %fn that her boy was something special. Kid got ate by a _king7_.
 
 Message:  1154
-Owner has been trying to sell that place for years. I wouldn't use it as a latrine, though I hear some have.
+Owner has been trying to sell the place for years. I wouldn't use it as a latrine, though I hear some have.
 
 -- Corrispondence
 Message:  1100
@@ -744,9 +750,9 @@ our cart and hurried under the light of the moons to the
 next battlefield. Singing our hymns under our breath and
 cursing this land and all that crawled upon it...
 <ce>
-...at last we spied the place of interment. ___tomb_.
-Weeping that we could not carry our kings back with us,
-we carried their bodies into the chamber...
+...at last we spied the place of interment. Weeping that
+we could not take our kings back with us, we carried
+their bodies into the chamber...
 <ce>
 ...annointed with oils, their organs treated and placed
 within the sacred jars...
@@ -754,7 +760,7 @@ within the sacred jars...
 ...of the sacred ritual to be performed on the night when
 our moon is in position, the elders have hidden the texts
 with those who will await the day when our kings shall
-return to gather at the _tomb_...
+return to gather at the ___tomb_...
 
 Message:  1128
 Dear %pcn,
@@ -872,6 +878,11 @@ and we are now trying to escape so we can rain bloody
 vengeance on _questgiver_ or _fakeqgiver_
 or whatever his name is!
 
+Message:  1219
+%qdt:
+_adventurer_ wants us to go to _tmg_
+in __tmg_ and inform %g superiors about this trap.
+
 Message:  1214
 %qdt:
 We escaped from _tomb_ and made it to _tmg_
@@ -936,7 +947,7 @@ Item _mapmoney_ gold range 250 to 500
 Item _transnote_ letter used 1100
 Item _trans_ letter used 1101
 Item _telescroll_ item class 9 subclass 5
-Item _rent_ gold range 50 to 150
+Item _rent_ gold range 100 to 200
 Item _creditletter_ item class 27 subclass 2
 Item _file_ item class 1 subclass 8
 Item _reward_ gold range 3000 to 5000
@@ -992,7 +1003,6 @@ variable _gotfiles_
     place npc _mapguy_ at _tav_
     _bookofkagrath_ used do _bookread_
     _gravemap_ used do _themap_
-    _telescroll_ used do _tomagery_
     pc at _grave_ set _atgrave_
     pc at _noblehome_ set _atnoblehome_
     pc at _tomb_ set _attomb_
@@ -1278,32 +1288,37 @@ _theplay_ task:
     say 1070
     say 1071
     log 1213 7
-    start timer _escape_
+--    start timer _escape_
 
-_escape_ task:
-    play sound Zombie_1 every 0 minutes 1 times
-    say 1072
-    say 1073
-    say 1074
-    say 1075
-    prompt 1076 yes _tomagery_ no _wait_
+--_escape_ task:
+--    play sound Zombie_1 every 0 minutes 1 times
+--    say 1072
+--    say 1073
+--    say 1074
+--    say 1075
+--    prompt 1076 yes _tomagery_ no _wait_
 
-_tomagery_ task:
+--_tomagery_ task:
+--    say 1078
+--    teleport pc to _tmg_
+
+--_wait_ task:
+--    get item _telescroll_ saying 1077
+--    create foe _king3_ every 6 minutes 5 times with 100% success
+--    create foe _king5_ every 7 minutes 5 times with 100% success
+--    give item _bookofkagrath_ to _king3_
+--    give item _akagrathtome_ to _king3_
+--    give item _bookofkagrath_ to _king5_
+--    give item _akagrathtome_ to _king5_
+
+_escaped_ task:
+    when _theplay_ and not _attomb_
     say 1078
-    teleport pc to _tmg_
-
-_wait_ task:
-    get item _telescroll_ saying 1077
-    create foe _king3_ every 6 minutes 5 times with 100% success
-    create foe _king5_ every 7 minutes 5 times with 100% success
-    give item _bookofkagrath_ to _king3_
-    give item _akagrathtome_ to _king3_
-    give item _bookofkagrath_ to _king5_
-    give item _akagrathtome_ to _king5_
-
-_mages_ task:
-    when _attmg_
+    log 1219 8
     place npc _bigmage_ at _tmg_
+
+_erm_ task:
+    when _attmg_ and _theplay_
     say 1083
 
 _bigmageclicked_ task:
@@ -1319,6 +1334,7 @@ _explain_ task:
     say 1084
     log 1214 8
     start timer _randr_
+    clear _bigmageclicked_
 
 _morning_ task:
     daily from 07:00 to 12:00
@@ -1363,6 +1379,7 @@ _pressthepoint_ task:
     start timer _largemen_
 
 _largemen_ task:
+    restore npc _printer_
     create foe _lg1_ every 0 minutes 1 times with 100% success msg 1096
     create foe _lg2_ every 0 minutes 1 times with 100% success
     cast Lightning spell on _lg1_
@@ -1441,35 +1458,28 @@ _facethemusic_ task:
     say 1119
     place foe _graverobber1_ at _scamhome_
     place foe _graverobber2_ at _scamhome_
-    create foe _king6_ every 2 minutes indefinitely with nn% success
-    start timer _reenforcements_
+    create foe _king6_ every 2 minutes 2 times with 100% success
 
-_reenforcements_ task:
-    play sound magic_fizzle every 0 minutes 1 times
-    say 1120
-    create foe _guard_ every 0 minutes 1 times with 100% success
-    create foe _guard_ every 0 minutes 1 times with 100% success
-    create foe _bm_ every 0 minutes 1 times with 100% success
-    create foe _bm_ every 0 minutes 1 times with 100% success
-    restrain foe _guard_
-    restrain foe _bm_
-    start timer _backtotmg_
+_baddie1slain_ task:
+    killed _graverobber1_
 
-_backtotmg_ task:
-    teleport pc to _tmg_
-    place npc _questgiver_ at _tmg_
-    say 1123
-    clear _qgclicked_
+_baddie2slain_ task:
+    killed _graverobber2_
 
-_nothingtosay_ task:
-    when _qgclicked_ and _backtotmg_
-    say 1130
+_deadking6_ task:
+    killed _king6_
+
+_surrender_ task:
+    when _baddie1slain_ and _baddie2slain_ and _deadking6_
+    say 1131
+    add _questgiver_ face
+    clear _bigmageclicked_
 
 _deneument_ task:
-    when _bigmageclicked_ and _backtotmg_
+    when _bigmageclicked_ and _surrender_
     say 1121
     say 1122
-    hide npc _questgiver_
+    drop _questgiver_ face
     say 1124
     say 1125
     change repute with _bigmage_ by +10
