@@ -1,4 +1,4 @@
-# DF-Quests
+# DF-Quests-CP
 Pack of quests of varying degrees of quality for Daggerfall Unity 0.13.5+ (https://www.dfworkshop.net).
 
 ## What is this?
