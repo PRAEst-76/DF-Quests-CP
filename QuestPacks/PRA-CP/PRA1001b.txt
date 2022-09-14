@@ -532,7 +532,7 @@ Message: 1311
 <ce>looking adventuring party.
 
 Message:  1326
-<ce>You had the jar to the _partyt_.
+<ce>You hand the jar to the _partyt_.
 <ce>All that work for nothing.
 
 Message: 1312
