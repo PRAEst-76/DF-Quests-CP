@@ -983,7 +983,7 @@ Clock _rumbled_ 01:00 03:00
 Clock _reenforcements_ 00:05 00:10
 Clock _backtotmg_ 00:01 00:05
 Clock _runner_ 3.00:00 5.00:00
-Clock _charity_ 30.00:00
+Clock _charity_ 90.00:00
 
 variable _gotmap_
 variable _atgrave_
