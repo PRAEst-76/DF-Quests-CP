@@ -94,7 +94,7 @@ approach, "What do you want %ra? Don't you see
 I'm busy?"
 
 Message:  1024
-"You want what? I don't know anything about no Keg-ratty!
+"You want what? I don't know anything about no Keg-rat!
 I'm just here waiting for my friends. I'm not telling
 you nothing! Now get lost!"
 <ce>
@@ -133,7 +133,7 @@ map. You should probably look at it again.
 
 Message:  1029
 You are at the purported grave of =king1_, one of
-the Kagrath kings..
+the Kagrath kings.
 
 Message:  1030
 You spot a couple of shady looking people ahead.
