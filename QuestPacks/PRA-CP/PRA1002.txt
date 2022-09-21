@@ -105,15 +105,21 @@ bait back. Mop up any stragglers and then we need to
 head for the last place."
 
 Message:  1036
-Right, head for _rathouse3_. It's the last one.
+"Right, head for _rathouse3_. It's the last one.
 Then we can hit the tavern."
+
+Message:  1038
+"%pcf! Where are you going?"
+
+Message:  1039
+"Don't run off like that. This is a delicate process!"
 
 Message: 1027
 "All done my friend. Any rats that are left just
 don't know they are dead yet."
 
 Message:  1037
-"Well done %pcf! Let's go to _pub_ to get hammered."
+"Well done %pcf! Let's go to _pub_ and get hammered!"
 
 Message:  1028
 The Ratcatcher sprints into the tavern like a foal into
@@ -213,6 +219,7 @@ Clock _destroyed1_ 00:05 00:10
 Clock _destroyed2_ 00:10 00:20
 Clock _destroyed3_ 00:15 00:30
 Clock _destroyedtav_ 00:10 00:20
+Clock _leftrc_ 00:02
 Clock _plague_ 01:00 03:00
 
 Foe _rats_ is 2 Giant_rat
@@ -226,6 +233,7 @@ variable _inside2_
 variable _inside3_
 variable _abandoned_
 variable _winchester_
+variable _leftrc_
 
 --	Quest start-up:
 	start timer _timer_
@@ -238,27 +246,27 @@ variable _winchester_
     pc at _pub_ set _winchester_
 
 _firstjob_ task:
-    when _inside1_
+    when _inside1_ and not _destroyed1_ and not _abandoned_
     place foe _rats_ at _rathouse1_
     get item _lure_ saying 1021
-    have _lure_ set _working_
+    setvar _working_
     drop _questgiver_ face
     log 1101 step 1
     start timer _nest1_
 
 _secondjob_ task:
-    when _inside2_
+    when _inside2_ and not _destroyed2_ and not _abandoned_
     place foe _rats_ at _rathouse2_
     get item _lure_ saying 1023
-    have _lure_ set _working_
+    setvar _working_
     drop _questgiver_ face
     start timer _nest2_
 
 _thirdjob_ task:
-    when _inside3_
+    when _inside3_ and not _destroyed3_ and not _abandoned_
     place foe _rats_ at _rathouse3_
     get item _lure_ saying 1024
-    have _lure_ set _working_
+    setvar _working_
     drop _questgiver_ face
     start timer _nest3_
 
@@ -269,13 +277,14 @@ _drinks_ task:
     say 1028
     say 1032
     get item _lure_ saying 1033
-    have _lure_ set _working_
+    setvar _working_
     start timer _tavnest_
 
 _1done_ task:
     when _destroyed1_ and not _abandoned_ and _inside1_
     unset _working_
     clear _spawn1_
+    remove foe _rats_
     say 1025
     take _lure_ from pc
     add _questgiver_ face
@@ -289,6 +298,7 @@ _2done_ task:
     when _destroyed2_ and not _abandoned_ and _inside2_
     unset _working_
     clear _spawn2_
+    remove foe _rats_
     say 1026
     take _lure_ from pc
     add _questgiver_ face
@@ -302,6 +312,7 @@ _3done_ task:
     when _destroyed3_ and not _abandoned_ and _inside3_
     unset _working_
     clear _spawn3_
+    remove foe _rats_
     say 1027
     take _lure_ from pc
     add _questgiver_ face
@@ -315,6 +326,7 @@ _tavdone_ task:
     when _destroyedtav_ and not _abandoned_
     unset _working_
     clear _tavspawn_
+    remove foe _rats_
     say 1034
     place npc _questgiver_ at _pub_
     take _lure_ from pc
@@ -326,11 +338,11 @@ _spawn1_ task:
 
 _spawn2_ task:
 	when _inside2_ and not _2done_ and not _abandoned_
-    create foe _rats_ every 3 minutes indefinitely with 75% success
+    create foe _rats_ every 3 minutes indefinitely with 70% success
 
 _spawn3_ task:
 	when _inside3_ and not _3done_ and not _abandoned_
-    create foe _rats_ every 3 minutes indefinitely with 90% success
+    create foe _rats_ every 3 minutes indefinitely with 80% success
 
 _tavspawn_ task:
 	when _winchester_ and not _tavdone_ and not _abandoned_
@@ -342,8 +354,22 @@ _inside_ task:
 _alldone_ task:
     when _destroyed1_ and _destroyed2_ and _destroyed3_
 
-_coward_ task:
+_legit_ task:
     when _working_ and not _inside_
+    say 1038
+    start timer _leftrc_
+
+_returned_ task:
+    when _legit_ and _inside_ and not _coward_
+    stop timer _leftrc_
+    say 1039
+    start task _clearcoward_
+
+_clearcoward_ task:
+    clear _legit_
+
+_coward_ task:
+    when _leftrc_ and _working_ and not _inside_
     say 1030
     setvar _abandoned_
     stop timer _nest1_
