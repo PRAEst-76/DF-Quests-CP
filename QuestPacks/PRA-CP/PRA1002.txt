@@ -40,7 +40,7 @@ service!"
 <ce>
 "Here is your share of the bounty and have a drink on
 me. You earned it. We made a good team. I may call upon
-you again if that vermin dare threaten our lands."
+you again if that vermin dare threaten our homes."
 
 RumorsDuringQuest:  [1005]
 Did you know _questgiver_ calls himself The Ratcatcher General? What a stupid title.
@@ -134,7 +134,7 @@ You've left _questgiver_ to %g3 fate. Without
 your assistance %g is surely overcome by his
 quarry.
 <ce>
-To make matters worst the bag of bait has burst
+To make matters worse, the bag of bait has burst
 and covered you in it's contents. Rats will
 follow you for hours.
 
