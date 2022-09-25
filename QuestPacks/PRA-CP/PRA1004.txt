@@ -1320,7 +1320,7 @@ _food_ task:
     prompt 1332 yes _buy_ no _tantrum_
 
 _roomservice_ task:
-    when _feed_ or _hangry_ and _civilization_ and _unawares_
+    when _feed_ or _hangry_ and _unawares_
     stop timer _tantrum_
     prompt 1359 yes _fancymeal_ no _tantrum_
 

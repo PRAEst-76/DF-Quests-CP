@@ -24,6 +24,8 @@ QuestComplete:  [1004]
 
 RumorsDuringQuest:  [1005]
 
+-- Logs
+
 Message:  1030
 %qdt:
 _questgiver_ has employed me to take him to his
@@ -39,125 +41,129 @@ _brother_. They now both want me to help
 them to seek out their father to end the dispute.
 We need to do this within =coward2_ days.
 
+-- Dialogues
+
 Message:  1100
-Ok %pcn. We are here. Watch the shadows.
+"Ok %pcn. We are here. Watch the shadows.
 This place is garded by mercenaries, but there is
 a powerful _lich_ here. It leads them through the
-power of it's will. We must slay it quickly.
+power of it's crooked will! We must slay it quickly!"
 
 Message:  1101
-There %pcn! There is the _lich_. Quickly. End it!
+"There %pcn! There is the _lich_! Quickly! End it!"
 
 Message:  1102
-Foolish mortals. You dare intrude on the domain of...
+"Foolish mortals. You dare intrude on the domain of..."
+The creature pauses it's monologue and looks confused
+for a moment.
 <ce>
-_questgiver_? What are you doing here?
+"Wait... _questgiver_? What are you doing here?"
 
 Message:  1103
-Now %pcf! Ignore it's pratter! Less it dominate you!
+"Now %pcf! Ignore it's pratter! Less it dominate you!"
 
 Message:  1104
-What are you doing _questgiver_? Who is this %ra?
-What are you doing in my keep?
+"What are you doing here ? Who is this %ra?
+What are you doing in my keep?"
 
 Message:  1105
-This is not your keep brother! It's mine.
-I intend to take it back! %pcn is my arm!
+"This is not your keep brother! It's mine.
+I intend to take it back! %pcn is my arm!"
 
 Message:  1106
-Father left it to me when he died! It's mine by
-right, as the eldest! You are nothing but a thief!
+"Father left it to me when he died! It's mine by
+right, as the eldest! You are nothing but a thief!"
 
 Message:  1107
-He left it to you, but when you died it passed
-to me. That is the law!
+"He left it to you, but when you died it passed
+to me. That is the law!"
 
 Message:  1108
-I'm still here you welk! This is still
-my keep!
+"I'm still here you welk! This is still
+my keep!"
 
 Message:  1109
-You are dead! You're a walking corpse! Legally
-you can't own anything!
+"You are dead! You're a walking corpse! Legally
+you can't own anything!"
 <ce>
-Kill him %pcf!
+He turns back to you, "Kill him %pcf!"
 
 Message:  1110
-Stay your hand %pcf! This is my keep and
+"Stay your hand %pcf! This is my keep and
 my cretinous little brother has lead you here on
 false pretences to claim what was never his by right.
-Our father left it to me. I was the favoured son.
+Our father left it to me. I was the favoured son!"
 <ce>
 <ce>Kill the lich?
 
 Message:  1111
-No. Father loved me best. He always said so.
-He'd be horrified to see what you've become!
+"No. Father loved me best. He always said so.
+He'd be horrified to see what you've become!"
 
 Message:  1112
-Well then, why don't we ask him?
+"Well then, why don't we ask him?"
 
 Message:  1113
-What? We can't. He's dead.
+"What? We can't. He's dead."
 
 Message:  1114
-As you were at pains to point out, so am I, and
-yet here you are talking to me.
+"As you were at pains to point out, so am I, and
+yet here you are talking to me."
 <ce>
-His ghost haunts ___crypt_. We go there.
+"His ghost haunts ___crypt_. We go there.
 We ask him who get's the keep. If he says it's
-yours then I'll leave and take my people with me.
+yours then I'll leave and take my people with me."
 
 Message:  1115
-Your 'people'? This rabble of monsters and thugs?
+"Your 'people'? This rabble of monsters and thugs?
 This ridiculous %pcf! Cut this scarecrow down and
-we can put our feet up.
+we can put our feet up."
 
 Message:  1116
-Always the coward brother!
+"Always the coward brother!
 Too cowardly to come here alone. To cowardly to
 face the possibility father didn't love you like
-he loved me..!
+he loved me..!"
 
 Message:  1117
-Shut your stupid bony face!
+"Shut your stupid bony face!"
 <ce>
-%pcf!
+"%pcf!"
 <ce>
 <ce>Kill _brother_ the _lich_?
 
 Message:  1118
-Let us go. Truce until we learn the truth?
+"Let us go. Truce until we learn the truth?"
 
 Message:  1119
-Fine, but you will be the one crying to mother.
+"Fine, but you will be the one crying to mother."
 
 Message:  1120
-Mother is dead, but fine.
+"Mother is dead, but fine."
 <ce>
-%pcf. We head for ___crypt_.
+"%pcf. We head for ___crypt_.
 Let my brother learn the truth, as harsh as it
 may be, then you can take him back to whatever
-hovel you found him in.
+hovel you found him in."
 
 Message:  1121
-Who dares disturb the resting place of...
+"Who dares disturb the resting place of..."
 
 Message:  1122
-Father! It's us!
+"Father! It's us!"
 
 Message:  1123
-Oh %god! Don't I get a moments peace even in death
-from you two breech-stains!?
+"Oh %god! Don't I get a moments peace even in death
+from you two breech-stains!?"
 
 Message:  1124
-The family keep, father. Who gets it? Me or
-_brother_?
+"The family keep, father. Who gets it? Me or
+_brother_?"
 
 Message:  1125
-You left it to me! _questgiver_ has been
+"You left it to me! _questgiver_ has been
 nothing but a dissapointment to you, you told me
-yourself...
+yourself..."
 
 Message:  1126
 That's it? That's why you are here? That ruddy
@@ -245,7 +251,7 @@ Person _brother_ faction The_Necromancers male
 Person _mother_ faction Molag_Bal female
 
 Place _keep_ remote dungeon11
-Place _crypt_ remote graveyard
+Place _crypt_ remote dungeon0
 
 Item _gold_ gold
 Item _thing_ magic_item

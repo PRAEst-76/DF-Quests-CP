@@ -1,20 +1,20 @@
 schema: *name, group, membership, minReq, flag, notes
 
-PRA1001, Commoners, N, 3, 1, The Finger of Doom
-PRA1001b, Commoners, P, 3, 1, The Crypt of Doom
-PRA1002, Commoners, N, 3, 1, The Ratcatcher General
-PRA1002b, Commoners, P, 3, 1, Rage of the Ratcatcher
-PRA1002bd, Commoners, P, 3, 1, A Deal
-PRA1002bj, Commoners, P, 3, 1, Rage of the Ratcatcher / job
-PRA1002c, Commoners, P, 3, 1, The Last Ratcatcher
-PRA1003, Commoners, N, 3, 1, In Every Dream Home...
-PRA1003farm, Commoners, P, 3, 1, In Every Dream Home... a farm
-PRA1003dadhome, Commoners, P, 3, 1, In Every Dream Home... a dad
-PRA1004, Commoners, N, 3, 1, Holding The Baby
-PRA1005, Commoners, N, 5, 1, Disputed Territory
-PRA1006, Commoners, N, 3, 1, Missing Child
-PRA1007, Commoners, N, 3, 1, All Mixed Up
-PRA1008, Commoners, N, 3, 1, The Prophecy
-PRA1008deal, Commoners, P, 3, 1, A Modest Proposal
-PRA1008dealfarm, Commoners, P, 3, 1, A Modest Proposal
-PRA1008b, Commoners, P, 3, 1, Cooking the Books
+PRA1001, Commoners, N, 1, 1, The Finger of Doom
+PRA1001b, Commoners, P, 1, 1, The Crypt of Doom
+PRA1002, Commoners, N, 1, 1, The Ratcatcher General
+PRA1002b, Commoners, P, 1, 1, Rage of the Ratcatcher
+PRA1002bd, Commoners, P, 1, 1, A Deal
+PRA1002bj, Commoners, P, 1, 1, Rage of the Ratcatcher / job
+PRA1002c, Commoners, P, 1, 1, The Last Ratcatcher
+PRA1003, Commoners, N, 1, 1, In Every Dream Home...
+PRA1003farm, Commoners, P, 1, 1, In Every Dream Home... a farm
+PRA1003dadhome, Commoners, P, 1, 1, In Every Dream Home... a dad
+PRA1004, Commoners, N, 1, 1, Holding The Baby
+PRA1005, Commoners, N, 1, 1, Disputed Territory
+PRA1006, Commoners, N, 1, 1, Missing Child
+PRA1007, Commoners, N, 1, 1, All Mixed Up
+PRA1008, Commoners, N, 1, 1, The Prophecy
+PRA1008deal, Commoners, P, 1, 1, A Modest Proposal
+PRA1008dealfarm, Commoners, P, 1, 1, A Modest Proposal
+PRA1008b, Commoners, P, 1, 1, Cooking the Books

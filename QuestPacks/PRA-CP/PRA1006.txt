@@ -4,8 +4,8 @@ DisplayName: Missing Child
 QRC:
 
 QuestorOffer:  [1000]
-%t! You seem to be a capable %pct. I need help
-badly. It's our boy, %t. He's gone missing. Run
+%hnr! You seem to be a capable %pct. I need help
+badly. It's our boy, %hnr. He's gone missing. Run
 away from home we fear. We need someone to find
 him. At least make sure he's ok.
 
@@ -13,7 +13,7 @@ RefuseQuest:  [1001]
 What should we do. No-one will help us!
 
 AcceptQuest:  [1002]
-Thank you! Thank you %t. His name is _boy_. He's
+Thank you! Thank you %hnr. His name is _boy_. He's
 always been a sensitive child. We were maybe too
 hard on him. Thought we could toughen him up. We
 didn't think he'd run away. We're so worried. He's
@@ -29,22 +29,28 @@ Thank you for trying to bring him home to us.
 This will be a bleak winter.
 
 QuestComplete:  [1004]
-Thank you! Thank you %t! You don't know how much
+Thank you! Thank you %hnr! You don't know how much
 this means to us! You have reunited this family again!
 We'll take care of him. Support him, in anything he chooses.
 
 RumorsDuringQuest:  [1005]
+Lot of kids have gone missing lately. They say the dragons took them. When I say they, I mean the guys at the tavern.
+<--->
 Saw a kid in _library_ last week. In my day we played outside.
 <--->
 Saw a gang of kids push another kid into the river. It think one of them was _baddad_'s boy.
 
 RumorsPostfailure:  [1006]
+Awful what happened to that kid. Some nasty characters about and no mistake.
 
 RumorsPostsuccess:  [1007]
+I heard some creeps were stealing kids, but a %ra done for them. I'd buy that %ra a drink.
 
 QuestorPostsuccess:  [1008]
+Thank you again.
 
 QuestorPostFailure:   [1009]
+Please leave us.
 
 -- Rumours
 Message:  1020
@@ -56,12 +62,34 @@ I saw some other kids push him in the fountain once.
 _boy_ is never out of that _library_. Should be out getting up to mischief like normal kids.
 
 Message:  1022
-_otherbully_? Yeah. He lives at _obhouse_.
+_otherbully_? Yeah. Lives over at _obhouse_.
 <--->
 I see that kid looking at flowers. Not normal.
+<--->
+Hangs around with _bully_. That kid isn't a good infuence.
+
+Message:  1023
+_rumfellow_? Yeah, that's a rum one and no mistake. Lives at _rumhouse_ I believe.
+<--->
+I've seen %g2 around. I don't know where you could find %g2 though, nor why you would want to.
+
+Message:  1024
+I saw _rumfellow_ leading some kid to _rumhouse_. Not the first.
+<--->
+Someone was murdered in _rumhouse_. Some dark types have moved in since. You want to avoid that place.
+
+Message:  1025
+A nasty peice of work. His boy, _bully_ isn't much better. Lives in _bullyhouse_.
+
+Message:  1026
+Rotten child. _otherbully_ follows him around like a puppy.
+<--->
+Brat. Smashed my windows last month. Does what he wants because his dad is a thug.
+
+-- Dialogues
 
 Message:  1050
-_boy_ was here, yeah. He's always here.
+"_boy_ was here, yeah. He's always here.
 He reads a lot. I don't read. I like to look at
 the pictures.
 He stole a book, don't tell the man. Said he was
@@ -69,79 +97,285 @@ going to read it outside but some big kids took
 it and threw it away. He's not going to come back
 here without the book.
 They are at _tav_. Maybe you can go and beat 'em up?
-They might know where he went.
+They might know where he went."
 
 Message:  1051
-What's your problem %ra?
-I know nothing about no _boy_.
+"What's your problem %ra?
+I know nothing about no _boy_."
+<ce>
 <ce>Threaten the brat?
 
 Message:  1052
-Ok. Ok. We pushed him around. Took his book.
+"Ok! Ok! We pushed him around. Took his book.
 We threw it in the river. He said he's going to
 become a powerful mage and come back and send us
 to oblivion. So we threw him in the river.
-I think I saw _otherbully_ get the book out
-and take it home. Maybe it had naked ladies in it.
+I think I saw _otherbully_ get the book out and
+take it home. Maybe it had naked ladies in it."
 
 Message:  1053
-Get lost %ra!
+"Get lost %ra!"
 
 Message:  1054
-Oh, _boy_ yeah. _bully_ and the other
+"Oh, _boy_ yeah. _bully_ and the other
 kids rough him up sometimes. He reads and stuff.
 Said he wanted to be a mage. That didn't help.
 _bully_'s dad hates mages. I think they
-did stuff to him. He's an angry guy. Drinks a lot.
+did stuff to him. He's an angry guy. Drinks a lot."
 
 Message:  1055
-Oh. The book. _book_. Yeah. I read a bit.
+"Oh. The book. _book_. Yeah. I read a bit.
 Don't tell the other kids! I mean, _boy_
 is ok, but he's embarrasing. Says stupid stuff.
 Look. I like _bully_, but %g's got problems.
 His dad is the main one. If you go and beat up
-his dad, I'll give you the book. He's a bad man,
-you'll be doing everyone a favour.
+his dad, _baddad_, I'll give you the book.
+He's a bad man, you'll be doing everyone a favour."
 
 Message:  1056
-What do you want %ra? Got a beef with me?
+"What do you want %ra? Got a beef with me?"
+
+Message:  1057
+"You're going to regret walking in here %ra!"
+
+Message:  1058
+"Then why are you in my ruddy home %ra?!"
 
 Message:  1059
-Here's the book. He had some notes in it too.
+"Ok! Stop hitting me. I know when I'm beat.
+I'm outta here. You won't see me around again.
+Don't kill me %ra!"
+
+Message:  1060
+"You did it? That's wonderful! Did you make him cry?
+You didn't kill him did you? I hope not. That's
+going a bit far, but I'm sure someone would anyway.
+He's a really bad guy."
+
+Message:  1061
+"Here's the book. The kid had some notes in it too.
 Tell the other kids I burned it. I don't want to
-go in the river like _boy_.
+go in the river like _boy_."
+
+Message:  1068
+"That kid? Came here wanting to learn to be a sorceror.
+Pah. The amount of kids that just flaunce in here thinking
+we'll drop everything to bestown upon them the art!
+Asked him to show me a cantrip. Anything! Kid has no
+latent talent. I told him. 'You have no latent talent,
+kid. Come back when you have some vestage of mystic skill!'
+Ran off weeping. I bet we never see him again. We never
+do."
+
+Message:  1069
+"No. I've no idea where he went. Nor do I care. We
+are a Mages Guild, not an orphanage!"
+
+Message:  1062
+A small girl runs up to you.
+<ce>
+"Hey %hnr! You looking for that kid that was here?
+He ran out of _mages_ a few days ago. Crying, he was.
+I followed him but he saw me and yelled. I saw him go
+into the alley behind _store_. Maybe go and see if
+they saw him there."
+
+Message:  1063
+"You are looking for that kid who was hiding out back?
+Felt a bit sorry for him. Think he might have been
+an orphan. Was crying. Tried to give him some food
+but he left. Saw him talking to _rumfellow_. You
+might want to ask %g2. I'm not sure where %g lives though."
+
+Message:  1064
+"Can I help you friend?"
+
+Message: 1065
+"_boy_? No. I've not heard of him."
+
+Message:  1066
+"Of course, we don't really pay attention to their
+names. The names aren't important. Their youth is.
+Sadly you aren't young enough for our needs, but
+I'm sure we can make some use out of your parts."
+
+Message:  1067
+"What's this? Some do-gooder come for the kid?
+You have no idea who you are dealing with %ra!
+We have powerful friends. People who could
+crush you with a word. I'd tell you to turn around
+and forget you saw us, but we'll just cut you
+up instead."
+
+Message:  1075
+"You are here to take me home to my parents?
+I'm so scared. They were going to cut me into
+pieces. Take me home! I don't want to be a mage
+anymore. Mages are scary."
 
 -- Corrispondance
 Message:  1100
-I've been trying to use magic, but
-these books aren't useful. I need better ones.
-Proper magic ones like they have at mages guilds.
-There is a _mages_ in __mages_. I should go there.
-Maybe they'll let me join. 
+I bin trying to use magicks, but these books aren't
+useful. They dont say how I ackually do magic!
+I need better ones. Proper magic ones.
+like they have at mages guilds.
+There is a mages guild in __mages_.
+I should go there.
+Maybe they'll let me join them.
+
+-- Notifications
+Message: 1150
+That's the bully's dad dealt with. Now to go back
+and tell _otherbully_.
+
+Message:  1151
+This seems to be a map to ___rumdun_.
+Maybe that's where they take the kids?
+
+Message: 1155
+It's unlikely I'll find _boy_ alive at this point.
+
+-- Logs
+Message:  1200
+%qdt:
+I've been hired to find a missing child called
+_boy_ who has apparently run away from home.
+His parents don't know where he has gone so I need
+to ask around. When I find him I need to bring him
+back to _house_. Realistically if I don't find
+him within =kiddemise_ days, I'll never find him.
+
+Message:  1201
+%qdt:
+A kid in the library said _boy_ comes there a lot.
+Some other kids were pushing him around last time
+he was there and threw his book away.
+They hang out at _tav_.
+I should go speak to them.
+
+Message:  1202
+%qdt:
+I got the bully to tell me what he did. _boy_ said
+he was going to become a mage and get revenge.
+Another kid called _otherbully_ took the book.
+I should find out where %g lives.
+
+Message:  1203
+%qdt:
+_otherbully_ will give me the book if I beat
+up _bully_'s dad, _baddad_.
+
+Message:  1204
+%qdt:
+_baddad_ has been dealt with. I should get
+the book from _otherbully_ at _obhouse_.
+
+Message:  1205
+%qdt:
+I got the book from _otherbully_. It's just a
+copy of _book_,
+however there was a note inside. The note said
+_boy_ was planning to go to _mages_
+to become a powerful mage.
+
+Message:  1206
+%qdt:
+The mages gave him the cold shoulder. Another kid
+said he hid in the alley behind _store_.
+I should go there and see if anyone's seen him.
+
+Message:  1207
+%qdt:
+A customer told me the kid was seen with someone
+called _rumfellow_.
+
+Message:  1208
+%qdt:
+_rumfellow_ apparently lives at _rumhouse_.
+
+Message:  1209
+%qdt:
+At _rumhouse_ some dark types tried to kill me.
+Seems like they are doing something awful with
+the missing kids.
+
+Message:  1210
+%qdt:
+They had a map to a place called ___rumdun_.
+Perhaps they took the kids there?
+
+Message:  1211
+%qdt:
+I've found _boy_. I should get him back to his parents at _house_ in __house_.
 
 QBN:
 -- Cast
 Person _questgiver_ group Questor anyInfo 1020
 Person _boy_ faction Children male anyInfo 1021
 Person _child1_ faction Children
-Person _bully_ faction Children male
+Person _bully_ faction Children male anyInfo 1026
+Person _baddad_ group Resident4 male anyInfo 1025
 Person _otherbully_ faction Children male anyInfo 1022
+Person _aloofmage_ faction The_Mages_Guild
+Person _shopper_ group Resident2
+Person _shadybloke_ faction The_Necromancers
+Person _rumfellow_ faction The_Necromancers anyInfo 1023
 
 -- Locations
 Place _library_ local library
 Place _house_ local house
 Place _tav_ local tavern
 Place _obhouse_ local house
-Place _mages_ remote magery
+Place _bullyhouse_ local tavern
+Place _mages_ local magery
+Place _store_ local shop
+Place _rumhouse_ local house
+Place _rumdun_ remote dungeon4
+
+-- Baddies
+Foe _baddadmad_ is 1 Thief
+Foe _bdgoons_ is 2 Thief
+Foe _shadybastard_ is 1 Nightblade
+Foe _shadygoons_ is 1 Nightblade
+Foe _rumbastard_ is 1 Nightblade
 
 -- Stuff
 Item _book_ book
 Item _note_ letter used 1100
+Item _map_ map
+Item _reward_ gold
+
+-- Timers
+--1005Clock _kidtodun_ 1.00:00
+Clock _kiddemise_ 7.00:00
+Clock _magekid_ 00:03
+
+-- Variables
+variable _inrumhouse_
+variable _inrumdun_
 
 --	Quest start-up:
+    log 1200 0
+    start timer _kiddemise_
     place npc _child1_ at _library_
     place npc _questgiver_ at _house_
+    place npc _bully_ at _tav_
     place npc _otherbully_ at _obhouse_
+    place npc _baddad_ at _bullyhouse_
+    place npc _aloofmage_ at _mages_
+    place npc _boy_ at _rumdun_
+    place npc _shadybloke_ at _rumhouse_
+    place npc _rumfellow_ at _rumdun_
+    dialog link for person _bully_
+    dialog link for person _otherbully_
+    dialog link for person _rumfellow_
+    dialog link for person _baddad_
+    pc at _rumhouse_ set _inrumhouse_
+    pc at _rumdun_ set _inrumdun_
+    clear _questgiverclicked_
+
+_questgiverclicked_ task:
+    clicked npc _questgiver_
 
 _child1clicked_ task:
     clicked npc _child1_
@@ -149,7 +383,7 @@ _child1clicked_ task:
 _libkid_ task:
     when _child1clicked_
     say 1050
-    place npc _bully_ at _tav_
+    log 1201 1
 
 _bullyclicked_ task:
     clicked npc _bully_
@@ -160,6 +394,8 @@ _tavkid_ task:
 
 _threaten_ task:
     say 1052
+    add dialog for person _otherbully_
+    log 1202 2
 
 _dontthreaten_ task:
     say 1053
@@ -167,10 +403,143 @@ _dontthreaten_ task:
 _otherbullyclicked_ task:
     clicked npc _otherbully_
 
-_theotherbully_ task:
+_bookkid_ task:
+    when _otherbullyclicked_
     say 1054
     say 1055
-    get item _book_ from _otherbully_
-    get item _note_ from _otherbully_
+    add dialog for person _bully_
+    add dialog for person _baddad_
+    log 1203 3
 
-_
+_baddadclicked_ task:
+    clicked npc _baddad_
+
+_thedad_ task:
+    when _baddadclicked_
+    prompt 1056 yes _problem_ no _noproblem_
+
+_problem_ task:
+    say 1057
+    start task _bigbully_
+
+_noproblem_ task:
+    say 1058
+    start task _bigbully_
+
+_bigbully_ task:
+    hide npc _baddad_
+    place foe _baddadmad_ at _bullyhouse_
+    create foe _bdgoons_ every 0 minutes 1 times with 100% success
+
+_bigbaby_ task:
+    injured _baddadmad_ saying 1059
+    restrain foe _baddadmad_
+    remove foe _bdgoons_
+    clear _otherbullyclicked_
+    say 1150
+    log 1204 3
+
+_getbook_ task:
+    when _otherbullyclicked_ and _bigbaby_
+    say 1060
+    say 1061
+    get item _book_
+    get item _note_
+    change repute with _otherbully_ by +10
+    make _book_ permanent
+    log 1205 3
+
+_aloofmageclicked_ task:
+    clicked npc _aloofmage_
+
+_aloof_ task:
+    when _aloofmageclicked_
+    say 1068
+    say 1069
+    start timer _magekid_
+
+_magekid_ task:
+    say 1062
+    log 1206 4
+    place npc _shopper_ at _store_
+
+_shopperclicked_ task:
+    clicked npc _shopper_
+
+_shoptalk_ task:
+    when _shopperclicked_
+    say 1063
+    log 1207 5
+    add dialog for person _rumfellow_
+    rumor mill 1024
+
+--_kidtodun_ task:
+--    place npc _shadybloke_ at _rumhouse_
+--    place npc _rumfellow_ at _rumdun_
+--    place npc _boy_ at _rumdun_
+--    start timer _kiddemise_
+
+_rumfellowclicked_ task:
+    clicked npc _rumfellow_
+
+_shadyblokeclicked_ task:
+    clicked npc _shadybloke_
+
+--_rum_ task:
+--    when _rumfellowclicked_ and _inrumhouse_
+--    create foe _shadygoons_ every 0 minutes 1 times with 100% success
+--    say 1067
+--    hide npc _rumfellow_
+--    place foe _rumbastard_ at _rumhouse_
+
+_rumfinal_ task:
+    when _rumfellowclicked_ and _inrumdun_
+    create foe _shadygoons_ every 0 minutes 2 times with 100% success
+    say 1067
+    hide npc _rumfellow_
+    place foe _rumbastard_ at _rumdun_
+
+_shady_ task:
+    when _shadyblokeclicked_
+    create foe _shadygoons_ every 0 minutes 1 times with 100% success
+    say 1064
+    say 1065
+    say 1066
+    hide npc _shadybloke_
+    place foe _shadybastard_ at _rumhouse_
+    give item _map_ to _shadybastard_
+    log 1209 6
+
+_maptodun_ task:
+    clicked item _map_ say 1151
+    place npc _boy_ at _rumdun_
+    reveal _rumdun_ readmap
+    log 1210 7
+
+_boyclicked_ task:
+    clicked npc _boy_
+
+_rumbastarddead_ task:
+    killed _rumbastard_
+
+_rescued_ task:
+    when _boyclicked_ and _rumbastarddead_
+    say 1075
+    hide npc _boy_
+    add _boy_ face
+    log 1211 8
+
+_home_ task:
+    when _questgiverclicked_ and _rescued_
+    give pc _reward_
+    end quest
+
+_kiddemise_ task:
+    hide npc _rumfellow_
+    hide npc _shadybloke_
+    hide npc _boy_
+    say 1155
+
+_dead_ task:
+    when _questgiverclicked_ and _kiddemise_
+    end quest

@@ -122,9 +122,9 @@ Message:  1037
 "Well done %pcf! Let's go to _pub_ and get hammered!"
 
 Message:  1028
-The Ratcatcher sprints into the tavern like a foal into
-a spring meadow. You should catch up with him before he
-spends your share at the bar.
+The Ratcatcher sprints into the tavern like a foal
+into a spring meadow. You should catch up with him
+before he spends your share at the bar.
 
 Message:  1029
 "Cheers %pcf! Here's to a good days work!"
@@ -153,7 +153,8 @@ The Ratcacher General tosses you the bait bag, "%pcf!
 You know what to do!"
 
 Message:  1034
-"Cushty! Nest done, %pcf. Now join me for the free drink!"
+"Cushty! Nest done, %pcf. Now join me for the
+free drink!"
 
 Message:  1100
 %qdt:
@@ -219,7 +220,7 @@ Clock _destroyed1_ 00:05 00:10
 Clock _destroyed2_ 00:10 00:20
 Clock _destroyed3_ 00:15 00:30
 Clock _destroyedtav_ 00:10 00:20
-Clock _leftrc_ 00:02
+Clock _leftrc_ 00:05
 Clock _plague_ 01:00 03:00
 
 Foe _rats_ is 2 Giant_rat
@@ -233,6 +234,7 @@ variable _inside2_
 variable _inside3_
 variable _abandoned_
 variable _winchester_
+variable _runoff_
 variable _leftrc_
 
 --	Quest start-up:
@@ -246,7 +248,7 @@ variable _leftrc_
     pc at _pub_ set _winchester_
 
 _firstjob_ task:
-    when _inside1_ and not _destroyed1_ and not _abandoned_
+    when _inside1_ and not _destroyed1_ and not _abandoned_ and not _working_
     place foe _rats_ at _rathouse1_
     get item _lure_ saying 1021
     setvar _working_
@@ -255,7 +257,7 @@ _firstjob_ task:
     start timer _nest1_
 
 _secondjob_ task:
-    when _inside2_ and not _destroyed2_ and not _abandoned_
+    when _inside2_ and not _destroyed2_ and not _abandoned_ and not _working_
     place foe _rats_ at _rathouse2_
     get item _lure_ saying 1023
     setvar _working_
@@ -263,7 +265,7 @@ _secondjob_ task:
     start timer _nest2_
 
 _thirdjob_ task:
-    when _inside3_ and not _destroyed3_ and not _abandoned_
+    when _inside3_ and not _destroyed3_ and not _abandoned_ and not _working_
     place foe _rats_ at _rathouse3_
     get item _lure_ saying 1024
     setvar _working_
@@ -271,7 +273,7 @@ _thirdjob_ task:
     start timer _nest3_
 
 _drinks_ task:
-	when _alldone_ and _winchester_ and not _tavdone_
+	when _alldone_ and _winchester_ and not _tavdone_ and not _legit_
     place foe _rats_ at _pub_
     drop _questgiver_ face
     say 1028
@@ -282,9 +284,8 @@ _drinks_ task:
 
 _1done_ task:
     when _destroyed1_ and not _abandoned_ and _inside1_
-    unset _working_
+    clear _working_
     clear _spawn1_
-    remove foe _rats_
     say 1025
     take _lure_ from pc
     add _questgiver_ face
@@ -296,9 +297,8 @@ _next1_ task:
 
 _2done_ task:
     when _destroyed2_ and not _abandoned_ and _inside2_
-    unset _working_
+    clear _working_
     clear _spawn2_
-    remove foe _rats_
     say 1026
     take _lure_ from pc
     add _questgiver_ face
@@ -310,9 +310,8 @@ _next2_ task:
 
 _3done_ task:
     when _destroyed3_ and not _abandoned_ and _inside3_
-    unset _working_
+    clear _working_
     clear _spawn3_
-    remove foe _rats_
     say 1027
     take _lure_ from pc
     add _questgiver_ face
@@ -324,9 +323,8 @@ _next3_ task:
 
 _tavdone_ task:
     when _destroyedtav_ and not _abandoned_
-    unset _working_
+    clear _working_
     clear _tavspawn_
-    remove foe _rats_
     say 1034
     place npc _questgiver_ at _pub_
     take _lure_ from pc
@@ -356,17 +354,20 @@ _alldone_ task:
 
 _legit_ task:
     when _working_ and not _inside_
+    setvar _runoff_
     say 1038
     start timer _leftrc_
 
 _returned_ task:
-    when _legit_ and _inside_ and not _coward_
+    when _runoff_ and _inside_ and not _coward_
     stop timer _leftrc_
     say 1039
     start task _clearcoward_
 
 _clearcoward_ task:
+    clear _runoff_
     clear _legit_
+    clear _returned_
 
 _coward_ task:
     when _leftrc_ and _working_ and not _inside_
@@ -407,6 +408,7 @@ _pcgetsgold_ task:
     when _qgclicked_ and _tavdone_
     start quest PRA1002b
     say 1029
+    change repute with _questgiver_ by +20
 	give pc _reward_
 	end quest 
 

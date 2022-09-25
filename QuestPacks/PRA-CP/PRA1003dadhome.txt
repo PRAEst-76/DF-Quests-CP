@@ -32,7 +32,7 @@ Stay away from _dadhouse_. I hear noises. Bad noises.
 Message: 1011
 I heard he was kicked out of the Mages Guild for bad practice.
 <--->
-Noisy skeltons in that closet. That's all I'm saying.
+Noisy skeletons in that closet. That's all I'm saying.
 
 Message:  1015
 That's _father_'s place. You don't want to go there.
@@ -285,7 +285,8 @@ variable _graverobber_
     place npc _father_ at _dadhouse_
     have _remains_ set _graverobber_
     _nogumption_ used do _read_
-    add dialog for location _dadhouse_ person _father_
+    dialog link for person _father_
+    dialog link for location _dadhouse_
 
 _dadshome_ task:
     when _indadhouse_

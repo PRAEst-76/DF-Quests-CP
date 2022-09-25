@@ -586,14 +586,14 @@ _deadagain_ task:
     killed _daugdead_
 
 _ghost_ task:
-    when _mumdead_ and _daddead_ and _deadagain_ 
+    when _mumdead_ and _daddead_ 
     say 1065
     say 1066
     reveal _othergrave_
     log 1111 step 10
 
 _finalrest_ task:
-    when _finalgrave_
+    when _ghost_ and _finalgrave_
     take _heart_ from pc
     say 1067
     change repute with _daughter_ by +10

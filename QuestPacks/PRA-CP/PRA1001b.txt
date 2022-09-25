@@ -29,6 +29,12 @@ _questgiver_ died. Temple tried to help, but it was too late.
 QuestorPostsuccess:  [1008]
 Thanks for your help %pcn
 
+-- More Rumours
+Message:  1020
+The priest at _temple_? I believe he's a travelling healer froma Temple in... Cyrodill?
+<--->
+I believe he's new. Came from abroad. I think.
+
 -- Logs
 Message:  1050
 %qdt:
@@ -161,7 +167,7 @@ this is fascinating, of concern no doubt, but
 fascinating nontheless."
 
 Message:  1108
-"Demises, I said? Deaths, yes."
+"Oh Demises, I said? Deaths, yes."
 <ce>
 "I fear the victims have both perished as a result of
 the curse. We didn't pay much heed to it at first,
@@ -576,7 +582,7 @@ Item _talisman_ talisman
 Item _reward_ gold
 
 -- Cast
-Person _questgiver_ group Questor male
+Person _questgiver_ group Questor male anyInfo 1020
 Person _priest_ faction Healers male
 Person _evoker_ faction The_Mages_Guild male
 
@@ -619,6 +625,8 @@ variable _cure_
     pc at _grave_ set _atgrave_
     pc at _crypt_ set _atcrypt_
     hide npc _questgiver_
+    hide npc _priest_
+    hide npc _evoker_
     _letter_ used saying 1321 do _letterlog_
     _deathnotice1_ used do _thedeath_
     _deathnotice2_ used do _thedeath_
@@ -626,6 +634,7 @@ variable _cure_
 _notify_ task:
     get item _letter_ saying 1301
     place npc _priest_ at _temple_
+    restore npc _priest_
     start timer _deathnote1_
     rumor mill 1400
 
@@ -653,6 +662,7 @@ _nolongerfunny_ task:
     say 1307
     get item _guysample_ saying 1104
     say 1105
+    restore npc _evoker_
     place npc _evoker_ at _tmg_
     log 1051 1
     clear _priestclicked_
@@ -683,7 +693,7 @@ _nice_ task:
     when attribute Personality is at least 50
 
 _words_ task:
-    when skill Etiquette is at least 30
+    when skill Etiquette is at least 25
 
 _firstcorpse_ task:
     when _atgrave_
@@ -701,14 +711,17 @@ _nohub_ task:
 _exhume_ task:
     say 1310
 
+_nicewords_ task:
+    when _nice_ and _words_
+
 _yesexhume_ task:
-    when _exhume_ and _nice_ and _words_    
+    when _exhume_ and _nicewords_    
     say 1116
     log 1054 3
     start task _firstcorpse_
 
 _noexhume_ task:
-    when _exhume_ and not _nice_ and not _words_    
+    when _exhume_ and not _nicewords_    
     say 1118
     create foe _guards_ every 0 minutes 1 times with 100% success
     say 1126

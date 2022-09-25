@@ -36,7 +36,7 @@ _questgiver_ has had another one of %g3 turns.
 <--->
 Apparently some %ra spooked _questgiver_. Some people have no shame.
 <--->
-Some nutter is hiding under a table in __questgiver_ ___questgiver_ and they can't get %g2 to come out.
+Some nutter is hiding under a table in __questgiver_ in ___questgiver_ and they can't get %g2 to come out.
 
 --More Rumors
 Message: 1011
