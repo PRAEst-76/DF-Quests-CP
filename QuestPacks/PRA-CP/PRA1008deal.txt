@@ -383,6 +383,9 @@ _jobdone_ task:
 
 _goodbye_ task:
     when _daughternear_ and _smalltalk_ and _jobdone_
+    start task _stoptalking_
+
+_stoptalking_ task:
     stop timer _awkward1_
     stop timer _awkward2_
     stop timer _awkward3_
@@ -410,6 +413,15 @@ _getaway_ task:
 
 _failed_ task:
     when _getaway_ and not _jobdone_
+    start task _stoptalking_
+
+_steal_ task:
+    when _attailor_ and _failed_
+    start task _angrydad_
+
+_stolen_ task:
+    when _gotstat_ and _steal_
+    setvar _jobdone_
 
 _done_ task:
     when _getaway_ and _jobdone_

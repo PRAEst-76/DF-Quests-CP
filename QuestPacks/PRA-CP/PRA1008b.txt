@@ -29,7 +29,7 @@ QuestorPostsuccess:  [1008]
 QuestorPostFailure:   [1009]
 
 Message:  1018
-Now to find that collector. You should ask around.
+Now to find _questgiver_. You should ask around.
 
 Message:  1019
 You've left it too long to speak to your 'friend'.
@@ -39,7 +39,7 @@ Message:  1020
 A small man approaches you. He appears to be some
 sort of servant
 <ce>
-"Excuse me, but _nob_ is not receiving
+"Excuse me, but _questgiver_ is not receiving
 guests right now. I'm afraid you will have to leave."
 
 Message:  1021
@@ -54,7 +54,7 @@ Message:  1023
 A message is stuffed into your hand. You don't see how.
 
 Message:  1024
-"I know what you are after. _nob_ has
+"I know what you are after. _questgiver_ has
 a book you want. He also has a book I want. My
 methods of retrival are less direct and usually a
 lot more effective."
@@ -167,7 +167,7 @@ the book in the doorway.
 
 Message:  1045
 You've left it too long to get the book.
-_nob_ will have returned and be suspicious.
+_questgiver_ will have returned and be suspicious.
 
 Message:  1046
 "Who was that other guy? Doesn't matter. Hey %ra!
@@ -182,7 +182,7 @@ Message:  1048
 
 -- Rumours
 Message: 1080
-_nob_ collects books apparently. What a freak.
+_questgiver_ collects books apparently. What a freak.
 <--->
 Always has angry people coming and going.
 <--->
@@ -216,7 +216,7 @@ Message:  1101
 %qdt:
 My 'friend', _thief_ says %g can help me get
 the book from _nobhome_. They plan for me
-to make a fake food delivery to _nob_'s sister
+to make a fake food delivery to _questgiver_'s sister
 that will make her ill, but not fatally, and while
 the collector is distracted I am to steal the tome
 and whatever book _thief_ requires.
@@ -247,7 +247,7 @@ is also after _akagrathtome_.
 I can either steal it from _nobhome_ and give it to
 %g2 and possibly set in motion the very situation I'm
 attempting to prevent, or keep it for myself and scarper
-as soon as I'm done. Regardless _nob_ will
+as soon as I'm done. Regardless _questgiver_ will
 only be away for a few days so I need to do it soon.
 
 Message:  1105
@@ -337,7 +337,7 @@ Message:  1204
 <ce>
 Excellent work. I hear _sister_ is quite poorly.
 Don't worry, ___farm_ will get the blame.
-_nob_ will spend the night at his sister's
+_questgiver_ will spend the night at his sister's
 bedside. You should then be able to sneak into his
 home with no real problems.
 <ce>
@@ -354,9 +354,9 @@ You will be well rewarded.
 QBN:
 
 -- Cast
+Person _questgiver_ group Questor male anyInfo 1080
 Person _thief_ group Pawnbroker male anyInfo 1082
 Person _sister_ group Resident4 female anyInfo 1081
-Person _nob_ group Resident1 male anyInfo 1080
 
 -- Places
 Place _nobhome_ local house anyInfo 1083
@@ -408,7 +408,7 @@ variable _coastisclear_
 --    place npc _sister_ at _sishome_
 --    place npc _thief_ at __thief_
     say 1018
-    hide npc _nob_
+    hide npc _questgiver_
     hide npc _sister_
     hide npc _thief_
     add dialog for person _sister_
@@ -416,8 +416,8 @@ variable _coastisclear_
     add dialog for location _nobhome_
     dialog link for person _sister_
     dialog link for person _thief_
-    dialog link for location _nobhome_ person _nob_
---    place npc _nob_ at _nobhome_
+    dialog link for location _nobhome_ person _questgiver_
+--    place npc _questgiver_ at _nobhome_
     pc at _nobhome_ set _atnobhome_
 --    pc at __thief_ set _attav_
     pc at ___nobhome_ set _intown_

@@ -4,30 +4,29 @@ DisplayName: In Every Dream Home...
 QRC:
 
 QuestorOffer:  [1000]
-I don't need anything doing, but I know a lady in
+"I don't need anything doing, but I know a lady in
 a sad situation that is looking for someone to
 help her with a family affair, if you are
-interested in that sort of thing?
+interested in that sort of thing?"
 <ce>
-Probably won't involve fighting orcs or slaying
+"Probably won't involve fighting orcs or slaying
 dragons, but I think she is a moneyed dame, if
 that's your draw? Might drop you a few coins if
-you help her out.
+you help her out."
 
 RefuseQuest:  [1001]
-No skin off my nose. Some people just aren't into
-helping those in need, I figure.
+"No skin off my nose. Some people just aren't into
+helping those in need, I figure."
 
 AcceptQuest:  [1002]
-Well, her name is _lady_ and you'll
-find her at _ladyhome_.
+"Well, her name is _lady_ and you'll
+find her at _ladyhome_."
 <ce>
-Hopefully you can do something for the poor lass.
-She should be there for another week or so.
+"Hopefully you can do something for the poor lass.
+She should be there for another week or so."
 
 QuestFail:  [1003]
-I think _lady_ will have left _ladyhome_ by now.
-Oh well.
+_lady_ will have left _ladyhome_ by now.
 
 QuestComplete:  [1004]
 They are both at rest now together. Their troubles are over.
@@ -42,6 +41,8 @@ Heard about the tragedy at __farm_? That poor man.
 Just awful what happened to _widower_'s wife? I blame the parents.
 <--->
 Did you hear _lady_'s daughter killed herself. Probably money. It's always money.
+
+-- More rumours
 
 Message: 1010
 Be wary of that one. Acts all high and mighty, but I've seen her in some low places.
@@ -73,43 +74,43 @@ Salt of the earth. Worked all his life. Sad what happened. Really sad.
 A good man. I hear he's not taking the death of his wife well. Horrible thing.
 
 Message:  1020
-Oh hello! Sorry, you startled me. I was lost in
-my thoughts...
+"Oh hello! Sorry, you startled me. I was lost in
+my thoughts..."
 <ce>
-You have come to help? I'm not sure what you can
+"You have come to help? I'm not sure what you can
 do. I'm not sure what anyone can do now. We've
-lost our only child. Our beautiful _daughter_.
+lost our only child. Our beautiful _daughter_."
 
 Message:  1021
-You see, she was wed to a man, not of good stock,
+"You see, she was wed to a man, not of good stock,
 but a good man nonetheless. Built that farm with
 his own hands. Tried to give her a good life...
 but a few weeks past... she took her own life.
 We do not know why. She was happy and loved by
-all that knew her.
+all that knew her."
 
 Message:  1022
-Now he lies there in his rooms, unwilling to eat
+"Now he lies there in his rooms, unwilling to eat
 or speak to anyone. The farm is going to seed
 without his care; the hands are leaving, unable
 or unwilling to see him waste away from his
-heartbreak!
+heartbreak!"
 <ce>
-The maid came to me in tears, not knowing what to
-do. He will not speak to me or the girls father.
+"The maid came to me in tears, not knowing what to
+do. He will not speak to me or the girls father."
 
 Message:  1023
-I am desperate dear %pcf! Can you go to there
+"I am desperate dear %pcf! Can you go to there
 and see if you can speak to him and rouse him
-from his grief? 
+from his grief?"
 
 Message:  1024
-Thank you %pcf. That is all I ask. Perhaps such
-as you can make him see some glimmer of light!
+"Thank you %pcf. That is all I ask. Perhaps such
+as you can make him see some glimmer of light!"
 <ce>
-Please now, go to __farm_ and try to
+"Please now, go to __farm_ and try to
 stir him out of his darkness. Here is some gold
-to cover your expenses.
+to cover your expenses."
 
 Message:  1025
 You are stopped outside the farm by a servant,
@@ -151,13 +152,13 @@ considerable wealth and power."
 this land!"
 
 Message:  1032
-Then leave me, %ra. Leave me to my grief.
+"Then leave me, %ra. Leave me to my grief."
 
 Message: 1034
-Please %god. Will no one help us!
+"Please %god. Will no one help us!"
 <ce>
-Take your iron heart from these darkned lands
-less you make them darker with your presence!
+"Take your iron heart from these darkned lands
+less you make them darker with your presence!"
 
 Message:  1049
 The man looks tired and obviously has not slept,
@@ -172,7 +173,7 @@ make for ___lab_ without delay."
 Message:  1050
 "This is it. This is the place."
 <ce>
-Deep within there is an stone that needs to be
+"Deep within there is an stone that needs to be
 cleansed and prepared. However to get there we will
 probably face enemies. Harden yourself. We are almost
 there. My daughter will live once more."
@@ -188,9 +189,9 @@ little girl?! This is madness! She is dead.
 She cannot return."
 
 Message:  1053
-_lady_! You followed us here?! I can return her!
+"_lady_! You followed us here?! I can return her!
 I know how. We can have our daughter back with us.
-Back with her husband. He is lost without her!
+Back with her husband. He is lost without her!"
 
 Message:  1054
 "Her husband is dead! His grief destroyed him. His
@@ -274,6 +275,8 @@ Please %pcf!"
 Message: 1067
 <ce>I have left _daughter_'s remains with those of
 <ce>her husband. I hope they find peace here.
+
+-- Logs
 
 Message:  1100
 %qdt:

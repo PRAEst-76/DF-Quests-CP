@@ -169,7 +169,7 @@ you certain he was dead? The cultists fled? This...
 I cannot..."
 
 Message:  1036
-"I must think. I must study the prophcied texts! Please
+"I must think. I must study the histories! Please...
 Give me a day. Come back tomorrow. I... I will speak to
 you then. Here. Please. This is... profound. Tomorrow."
 
@@ -179,7 +179,8 @@ have been blessed. In the darkest of hours. We have been
 blessed!"
 <ce>
 "YOU were able to slay =king1_ only because you are
-the chosen!"
+the one sent by the divines. You are the one from the prophecy!
+You are those chosen!"
 
 Message:  1038
 "The divines have placed you here with their power to
@@ -204,11 +205,11 @@ noble. If they have the book then we must retrieve it,
 by any means necessary."
 
 Message:  1041
-"You must go now, to the home of the collector in
-___noblehome_ and retrieve that book, if it exists.
-It is our only chance to slay them before they
-raise an army to once again cover these lands in
-darkness!"
+"You must go now, to the home of the collector,
+_nob_ in ___noblehome_ and
+retrieve that book, if it exists. It is our only
+chance to stop them before they raise an army to
+once again cover these lands in darkness!"
 
 Message:  1044
 "Ah. You have it. Please. Let me see!"
@@ -842,9 +843,10 @@ Message: 1207
 According to _questgiver_ I am The Chosen One who is
 able to slay these Kagrathi kings and stop the lands
 being covered in darkness. He needs me to retrieve some
-ancient tome from a collector in ___noblehome_ that
-will reveal where the remaining kings are buried so I
-can slay them before they can amass an army.
+ancient tome from a collector called _nob_
+in ___noblehome_ that will reveal where
+the remaining kings are buried so I can stop them
+before they can amass an army.
 
 Message:  1211
 %qdt:
@@ -927,6 +929,7 @@ Person _bigfighter_ faction The_Fighters_Guild
 Person _printer_ group Tailor anyInfo 1152
 Person _scammer_ group Pawnbroker male
 Person _bursar_ faction The_Mages_Guild
+Person _nob_ group Resident1 male
 
 -- Locations
 Place _tav_ remote tavern
@@ -1152,7 +1155,7 @@ _theslayer_ task:
     log 1205 3
 
 _theprophecy_ task:
-    when _qgclicked_ and _theslayer_
+    when _qgclicked_ and _theslayer_ and not _research_
     say 1034
     say 1035
     say 1036
@@ -1175,10 +1178,13 @@ _thechosen_ task:
 
 _homeofnoble_ task:
     when _atnoblehome_
+    setvar _nobclicked_
     run quest PRA1008b then _book_ or _nobook_
 
+_nobclicked_ task:
+    clicked npc _nob_
+
 _book_ task:
-    restore npc _questgiver_
     get item _akagrathtome_
     log 1211 6
     clear _qgclicked_

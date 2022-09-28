@@ -269,9 +269,11 @@ Foe _dad_ is 1 Sorcerer
 Foe _dadguard_ is 2 Skeletal_warrior
 
 Clock _graverobbers_ 00:04 00:06
-Clock _whereremains_ 6.00:00 9.00:00 
+Clock _whereremains_
+-- 6.00:00 9.00:00 
 Clock _silence_ 1.00:00
-Clock _dadletter_ 4.00:00 6.00:00
+Clock _dadletter_
+-- 4.00:00 6.00:00
 Clock _rested_ 1.00:00
 
 variable _indadhouse_
@@ -381,7 +383,7 @@ _dadshome2_ task:
     end quest
 
 _dadletter_ task:
-    give pc _nogumption_ notify 1151
+    get item _nogumption_ saying 1151
     change repute with _father_ by -5
 
 _read_ task:
