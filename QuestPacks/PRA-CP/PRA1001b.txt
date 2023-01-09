@@ -267,9 +267,9 @@ Nothing personal, we're just greedy like that."
 Message: 1121
 "Ooh. You know, that's not fair. We planned this raid weeks ago.
 This is our crypt. We got dressed up and everything this morning.
-%rn even made us snacks for the trip!
+=partyt_ even made us snacks for the trip!
 Was up from cock-crow wrapping them up nice in parchment paper.
-You really owe us."
+You really owe us!"
 
 Message: 1123
 "Nah. Sod that. How about we takes everything?
@@ -366,14 +366,14 @@ Message: 1165
 they requested."
 
 Message:  1166
-The temple does not have much to spare, however I feel
+"The temple does not have much to spare, however I feel
 you have earned this gold for all you have done.
 We may not have helped _questgiver_ but I'm sure
 all you have done will have helped others.
-I can assure you of that.
+I can assure you of that."
 
 Message:  1167
-Goodbye %pcf. I hope you never have to encounter such foulness
+"Goodbye %pcf. I hope you never have to encounter such foulness
 again, but if you do, you will know where to find me."
 
 -- Corrispondence
