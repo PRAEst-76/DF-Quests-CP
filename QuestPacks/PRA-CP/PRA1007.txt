@@ -87,69 +87,69 @@ you may have to... subdue %g2. I'd say %g probably
 needs a bit of a lie down."
 
 Message: 1055
-_questgiver_? Yes, %g was here. Wouldn't leave.
+"_questgiver_? Yes, %g was here. Wouldn't leave.
 Hid under the table saying a %ra was trying
-"inner-act" with %g2. Crazy if you ask me.
+'inner-act' with %g2. Crazy if you ask me."
 <ce>
-Ran off towards __questgiver_ ___questgiver_. Glad to be shot of %g2.
+"Ran off towards __questgiver_ ___questgiver_. Glad to be shot of %g2."
 <--->
-Yes. _questgiver_ was here. Hiding in the corner
-there.
+"Yes. _questgiver_ was here. Hiding in the corner
+there."
 <ce>
-Was here all night in fact. I offered %g2 some
-food but %g just muttered about __questgiver_ ___questgiver_.
+"Was here all night in fact. I offered %g2 some
+food but %g just muttered about __questgiver_ ___questgiver_."
 <ce>
-You might want to check there.
+"You might want to check there."
 <--->
-I'm sorry, you've just missed %g. Hid out in
-corner. Seemed agitated.
+"I'm sorry, you've just missed %g. Hid out in
+corner. Seemed agitated."
 <ce>
-Talked about __questgiver_ ___questgiver_.
+"Talked about __questgiver_ ___questgiver_."
 
 Message:  1057
-You still haven't found _questgiver_? As you can
-see %g hasn't shown up here.
+"You still haven't found _questgiver_? As you can
+see %g hasn't shown up here."
 <ce>
-Try asking if anyone has any news, if they can't
-tell you about _questgiver_ directly.
+"Try asking if anyone has any news, if they can't
+tell you about _questgiver_ directly."
 
 Message:  1059
-No! It's you. What do you want from me? Leave me
-alone!
+"No! It's you. What do you want from me? Leave me
+alone!"
 
 Message:  1060
-Please help me. I don't know how I got here. I
-just want to go home.
+"Please help me. I don't know how I got here. I
+just want to go home."
 <ce>
-_local0_ sent you? Oh thank you. Please take me home!
+"_local0_ sent you? Oh thank you. Please take me home!"
 
 Message:  1061
-Glad you brought _questgiver_ back, %pcf.
+"Glad you brought _questgiver_ back, %pcf.
 Can you bring %g2 to __temple_?
 I spoke to the Healer, _doctor_ at
 _temple_ there and they have a
-new treatment they want to try.
+new treatment they want to try."
 
 Message:  1062
-%oth, you look like that worg, %n. Is that me?
+"%oth, you look like that worg, %n. Is that me?"
 <--->
-You are by any chance %n, are we?
+"You are by any chance %n, are we?"
 <--->
-Wait a minute. You're not %n, we are?
+"Wait a minute. You're not %n, we they?"
 
 Message:  1063
-Ah, _questgiver_ I was expecting you.
+"Ah, _questgiver_ I was expecting you.
 I hear the potion we gave you has lost it's
-effectiveness somewhat.
+effectiveness somewhat."
 <ce>
-Not to fear, we have a new one to try. It should
-help keep those nasty thoughts at bay
+"Not to fear, we have a new one to try. It should
+help keep those nasty thoughts at bay."
 <ce>
-And thank you, %pcf, for bringing %g2 to us.
-We can take it from here.
+"And thank you, %pcf, for bringing %g2 to us.
+We can take it from here."
 
 Message:  1064
-This should cover your expenses.
+"This should cover your expenses."
 
 --Logs
 Message:  1150

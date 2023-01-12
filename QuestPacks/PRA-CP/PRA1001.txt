@@ -57,7 +57,7 @@ I heared _questgiver_ had some kind of personal problem, but you sorted it out. 
 QuestorPostsuccess:  [1008]
 Thanks again for your help with my... little incident, %pcf.
 <--->
-I trust that my, erm, issue... is still just between us?
+I trust that my, ah... issue... is still just between us?
 
 Message:  1020
 You have dealt with _questgiver_'s accidental nether
